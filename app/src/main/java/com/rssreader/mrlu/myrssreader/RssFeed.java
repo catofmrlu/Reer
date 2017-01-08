@@ -39,7 +39,7 @@ public class RSSFeed {
         for (int i = 0; i < size; i++) {
             HashMap<String, Object> item = new HashMap<String, Object>();
             item.put(RSSItem.TITLE, itemlist.get(i).getTitle());
-            item.put(RSSItem.PUBDATE, itemlist.getPubDate());
+            item.put(RSSItem.PUBDATE, itemlist.get(i).getPubdate());
             data.add(item);
         }
         return data;
