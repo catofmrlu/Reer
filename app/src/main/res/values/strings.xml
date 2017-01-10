@@ -1,9 +1,30 @@
 <resources>
-    <string name="app_name">MyRssReader</string>
+
+    <string name="app_name">Rer</string>
+
+    <!--登陆页面-->
     <string name="select_text_login">请选择一个服务登陆</string>
     <string name="feedly_text_login">feedly</string>
     <string name="localhost_text_login">本地用户</string>
     <string name="backfeed_text_login">出现问题？点这里反馈</string>
+
+    <!--设置页面-->
+    <string name="nightMode_text_settings">夜间模式</string>
+    <string name="scrollMark_text_settings">滚动标为已读</string>
+    <string name="_text_settings">夜间模式</string>
+
+    <!--未读列表页面-->
+
+
+
+
+    <!--标记列表页面-->
+
+
+
+
+
+
 
 
 </resources>

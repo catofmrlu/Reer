@@ -39,14 +39,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     OkHttpClient mOkHttpClient;
 
-
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
