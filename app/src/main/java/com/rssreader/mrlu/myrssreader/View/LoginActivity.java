@@ -1,10 +1,12 @@
-package com.rssreader.mrlu.myrssreader;
+package com.rssreader.mrlu.myrssreader.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.rssreader.mrlu.myrssreader.R;
 
 
 public class LoginActivity extends AppCompatActivity {

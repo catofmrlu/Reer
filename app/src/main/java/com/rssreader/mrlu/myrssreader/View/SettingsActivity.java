@@ -1,7 +1,9 @@
-package com.rssreader.mrlu.myrssreader;
+package com.rssreader.mrlu.myrssreader.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.rssreader.mrlu.myrssreader.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

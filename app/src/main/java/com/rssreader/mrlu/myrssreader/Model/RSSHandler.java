@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader;
+package com.rssreader.mrlu.myrssreader.Model;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

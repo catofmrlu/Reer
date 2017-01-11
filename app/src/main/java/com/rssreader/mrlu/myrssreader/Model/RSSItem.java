@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader;
+package com.rssreader.mrlu.myrssreader.Model;
 
 /**
  * Created by Mr Lu on 2017/1/6.
