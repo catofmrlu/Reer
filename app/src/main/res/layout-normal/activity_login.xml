@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#5bb989">
+
+    <ImageView
+        android:src= "@drawable/icon"
+        android:layout_marginTop= "80dp"
+        android:layout_marginBottom= "50dp"
+
+        android:layout_width="90dp"
+        android:layout_height="90dp" />
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginBottom="50dp"
+
+        android:text="@string/select_text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_dark" />
+
+
+    <Button
+        android:id="@+id/btn_feedly"
+        android:layout_marginBottom="20dp"
+
+        android:textStyle="bold"
+        android:text="@string/feedly_text_login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
+        android:minHeight="39dp" />
+
+    <Button
+
+
+        android:id="@+id/btn_localhost"
+        android:textStyle="bold"
+        android:text="@string/localhost_text_login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
+        android:minHeight="39dp" />
+
+
+    <TextView
+        android:autoLink="email"
+        android:linksClickable="true"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/backfeed_text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

@@ -32,7 +32,8 @@ dependencies {
     compile 'com.android.support:support-v4:22.1.1'
     compile 'com.miomin:shswiperefreshlayout:1.2.0'
     compile 'org.xutils:xutils:3.3.40'
-    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.squareup.okio:okio:1.11.0'
 
 
 }
