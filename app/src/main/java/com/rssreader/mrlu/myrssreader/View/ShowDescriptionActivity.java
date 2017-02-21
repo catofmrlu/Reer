@@ -11,6 +11,7 @@ import com.rssreader.mrlu.myrssreader.R;
 
 public class ShowDescriptionActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
