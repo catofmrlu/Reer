@@ -13,26 +13,27 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".View.LoginActivity">
 
-            <!--
-                                <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
-            -->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".View.ListActivity">
-
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".View.ShowDescriptionActivity" />
         <activity android:name=".View.SettingsActivity" />
         <activity android:name=".Test.NetworkTestActivity">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Test.ViewpagerTestActivity">
 
