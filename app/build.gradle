@@ -35,5 +35,8 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     compile 'com.squareup.okio:okio:1.11.0'
 
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+
+
 
 }
