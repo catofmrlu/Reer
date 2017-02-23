@@ -43,7 +43,8 @@ import okhttp3.Response;
 
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    public String RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+    public String RSS_URL;
+//            = "http://free.apprcn.com/category/ios/feed/";
     public final String tag = "RSSReader";
     private RSSFeed feed = null;
 
@@ -110,6 +111,10 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        //取出带来的rssLink
+        Bundle bundle = this.getIntent().getExtras();
+        RSS_URL = bundle.getString("rssLink");
 
         getFeed(RSS_URL);
 
