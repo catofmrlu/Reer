@@ -1,5 +1,6 @@
 package com.rssreader.mrlu.myrssreader.View;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +25,11 @@ public class LoginActivity extends AppCompatActivity {
         btnLocalhost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "该功能将在后续版本提供，敬请期待", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(LoginActivity.this, "该功能将在后续版本提供，敬请期待", Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(LoginActivity.this, InputRssLinkActivity.class);
+
+                startActivity(intent);
             }
         });
 
