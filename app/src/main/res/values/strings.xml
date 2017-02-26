@@ -19,4 +19,9 @@
     <!--标记列表页面-->
 
 
+    <!--查询RSS列表页面-->
+    <string name="et_rssQuery_hint" translatable="false">请输入要订阅的rss名称</string>
+    <string name="btn_rssQuery" translatable="false">query</string>
+
+
 </resources>

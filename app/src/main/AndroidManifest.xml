@@ -13,19 +13,21 @@
         android:theme="@style/Theme.AppCompat">
         <activity android:name=".View.LoginActivity">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".View.ListActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".View.ShowDescriptionActivity" />
         <activity android:name=".View.SettingsActivity" />
@@ -37,8 +39,25 @@
             <!-- </intent-filter> -->
 
         </activity>
-        <activity android:name=".Test.ViewpagerTestActivity"></activity>
-        <activity android:name=".View.InputRssLinkActivity"></activity>
+
+         <!--<intent-filter> -->
+         <!--<action android:name="android.intent.action.MAIN" /> -->
+
+
+         <!--<category android:name="android.intent.category.LAUNCHER" /> -->
+         <!--</intent-filter> -->
+
+        <activity android:name=".View.InputRssLinkActivity" />
+        <activity android:name=".Test.DownPullActivity" />
+        <activity android:name=".View.FeedlyRssQuery" />
+        <activity android:name=".Test.viewpagerTest">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

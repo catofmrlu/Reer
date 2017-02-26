@@ -5,12 +5,15 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -45,14 +48,17 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public String RSS_URL;
 //            = "http://free.apprcn.com/category/ios/feed/";
-    public final String tag = "RSSReader";
+    public  String tag = "RSSReader";
     private RSSFeed feed = null;
 
 //    OkHttpClient mOkHttpClient;
     InputSource isc;
 
-
     public RequestQueue mRequestQueue;
+
+    SwipeRefreshLayout mSrl;
+
+    private SimpleAdapter adapter;
 
 //
 //    Handler handler = new Handler() {
@@ -106,7 +112,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 //
 //    };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,21 +121,39 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         Bundle bundle = this.getIntent().getExtras();
         RSS_URL = bundle.getString("rssLink");
 
+        mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
+
+        mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        refreshed();
+                        // 停止刷新
+                        mSrl.setRefreshing(false);
+                    }
+                }, 2000); // 2秒后发送消息，停止刷新
+
+                Toast.makeText(ListActivity.this, "刷新完成！", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
         getFeed(RSS_URL);
 
-
 //        showListView();
-
 
     }
 
     //获取feed
     private void getFeed(String urlString) {
 
-
 //        final String feedString;
         try {
-
 
             //新建SAX--xml解析工厂类
             SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -143,7 +166,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
             reader.setContentHandler(rssHander);
 
-
 //                URL url = new URL(urlString);
 
 
@@ -152,9 +174,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                     new com.android.volley.Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-
-//                            feedString = response;
-//
 
                             Log.i("respone:", response);
 
@@ -173,6 +192,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                                     reader.parse(isc);
 
                                     feed = rssHander.getFeed();
+
+                                    Log.i("Title", "title:" + feed.getTitle());
+
+                                    tag = feed.getTitle();
+
+
 
                                     if (feed == null){
                                         Log.e("feed", "feed为空");
@@ -304,7 +329,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
             setTitle(tag);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(this, feed.getAllItemsForListView(),
+        adapter = new SimpleAdapter(this, feed.getAllItemsForListView(),
                 android.R.layout.simple_list_item_2, new String[]{
                 RSSItem.TITLE, RSSItem.PUBDATE
         },
@@ -330,8 +355,16 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         itemIntent.putExtra("android.intent.extra.rssItem", bundle);
 
         startActivityForResult(itemIntent, 0);
+
     }
 
+    //下拉刷新数据
+    void refreshed(){
+        adapter.notifyDataSetChanged();
+
+        mSrl.setRefreshing(false);
+
+    }
 
 //        class MyTask extends AsyncTask<URL, Void, String> {
 //
