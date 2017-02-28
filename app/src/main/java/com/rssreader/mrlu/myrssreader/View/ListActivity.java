@@ -118,10 +118,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_list);
 
         //取出带来的rssLink
-        Bundle bundle = this.getIntent().getExtras();
-        RSS_URL = bundle.getString("rssLink");
-
+//        Bundle bundle = this.getIntent().getExtras();
+//        RSS_URL = bundle.getString("rssLink");
+//
+        RSS_URL = "";
         mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
+
 
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
