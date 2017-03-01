@@ -1,11 +1,8 @@
 package com.rssreader.mrlu.myrssreader.View;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
-import android.os.SystemClock;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -19,9 +16,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.rssreader.mrlu.myrssreader.Model.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.RSSHandler;
-import com.rssreader.mrlu.myrssreader.Model.RSSItem;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 import com.rssreader.mrlu.myrssreader.R;
 
 import org.xml.sax.InputSource;
@@ -29,20 +26,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 

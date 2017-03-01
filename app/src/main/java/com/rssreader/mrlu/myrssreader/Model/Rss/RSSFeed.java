@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.Model;
+package com.rssreader.mrlu.myrssreader.Model.Rss;
 
 import java.util.ArrayList;
 import java.util.HashMap;
