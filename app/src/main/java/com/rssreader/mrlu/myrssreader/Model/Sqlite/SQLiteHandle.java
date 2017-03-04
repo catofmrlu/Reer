@@ -57,7 +57,7 @@ public class SQLiteHandle {
             String link = cursor.getString(cursor.getColumnIndex("RssLink"));
 
             //打印查询的数据
-            Log.i("查询数据打印", name + "\n" + description + "\n" + link);
+            System.out.println(name + "\n" + description + "\n" + link);
 
         }
         db.close();

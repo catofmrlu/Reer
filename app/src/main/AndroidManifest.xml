@@ -13,12 +13,10 @@
         android:theme="@style/Theme.AppCompat">
         <activity android:name=".View.LoginActivity">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
         </activity>
         <activity android:name=".View.ListActivity">
 
@@ -50,12 +48,12 @@
         <activity android:name=".View.InputRssLinkActivity" />
         <activity android:name=".Test.DownPullActivity" />
         <activity android:name=".View.FeedlyRssQuery" />
-        <activity android:name=".View.viewpagerTest">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".View.mainView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
