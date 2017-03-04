@@ -1,12 +1,15 @@
-package com.rssreader.mrlu.myrssreader.View;
+package com.rssreader.mrlu.myrssreader.View.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -19,7 +22,9 @@ import com.android.volley.toolbox.Volley;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
+import com.rssreader.mrlu.myrssreader.View.ShowDescriptionActivity;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -27,20 +32,24 @@ import org.xml.sax.XMLReader;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+/**
+ * Created by LuXin on 2017/2/26.
+ */
+
+public class unReadFragment extends Fragment implements AdapterView.OnItemClickListener{
+
 
     public String RSS_URL;
-//            = "http://free.apprcn.com/category/ios/feed/";
+    //            = "http://free.apprcn.com/category/ios/feed/";
     public  String tag = "RSSReader";
     private RSSFeed feed = null;
 
-//    OkHttpClient mOkHttpClient;
+    //    OkHttpClient mOkHttpClient;
     InputSource isc;
 
     public RequestQueue mRequestQueue;
@@ -49,69 +58,25 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private SimpleAdapter adapter;
 
-//
-//    Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//
-//            try {
-//
-//                //新建SAX--xml解析工厂类
-//                SAXParserFactory factory = SAXParserFactory.newInstance();
-//
-//                SAXParser parser = factory.newSAXParser();
-//
-//                XMLReader reader = parser.getXMLReader();
-//
-//                RSSHandler rssHander = new RSSHandler();
-//
-//                Response response = (Response) msg.obj;
-//                System.out.println(response.body().string());
-//
-//                is = response.body().byteStream();
-//
-//                Log.i("间隔", "请求执行完成");
-//
-//                try {
-//                    if (is != null) {
-//                        isc = new InputSource(is);
-//
-//                        Log.e("IS", "IS转换完成");
-//
-//                        Log.e("IS", isc.toString());
-//
-//                        reader.parse(isc);
-//
-//                        feed = rssHander.getFeed();
-//
-//                    } else {
-//                        Log.e("is", "is为空");
-//                    }
-//
-//                    showListView();
-//                } catch (Exception e) {
-//                    Log.e("is转换", e.getMessage());
-//                }
-//
-//            } catch (Exception e) {
-//                Log.e("hander", e.toString());
-//            }
-//        }
-//
-//
-//    };
+    ListView itemlist;
 
+    View view;
+
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_list, container, false);
+
 
         //取出带来的rssLink
 //        Bundle bundle = this.getIntent().getExtras();
 //        RSS_URL = bundle.getString("rssLink");
 //
-        RSS_URL = "";
-        mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
+        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+
+        mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
+
 
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -127,7 +92,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 }, 2000); // 2秒后发送消息，停止刷新
 
-                Toast.makeText(ListActivity.this, "刷新完成！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -135,12 +100,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
         getFeed(RSS_URL);
 
-//        showListView();
-
+        return view;
     }
 
+
     //获取feed
-    private void getFeed(String urlString) {
+    private void getFeed(final String urlString) {
 
 //        final String feedString;
         try {
@@ -158,8 +123,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
 //                URL url = new URL(urlString);
 
-
-            mRequestQueue = Volley.newRequestQueue(this);
+            mRequestQueue = Volley.newRequestQueue(getContext());
             StringRequest mStringRequest = new StringRequest(urlString,
                     new com.android.volley.Response.Listener<String>() {
                         @Override
@@ -167,7 +131,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
                             Log.i("respone:", response);
 
-                            Log.i("间隔", "请求执行完成");
+
+
+                         Log.i("间隔", "请求执行完成");
 
                             InputStream is = new ByteArrayInputStream(response.getBytes());
 
@@ -186,6 +152,14 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                                     Log.i("Title", "title:" + feed.getTitle());
 
                                     tag = feed.getTitle();
+
+                                    //response返回把feed存入数据库
+                                    SQLiteHandle mSqliteHandler = new SQLiteHandle(getContext());
+                                    mSqliteHandler.insert("AllFeeds", feed.getTitle(), "sss", urlString);
+
+                                    Log.i("sqliite插入", "插入feed成功");
+
+                                    mSqliteHandler.query("AllFeeds");
 
 
 
@@ -216,7 +190,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
             );
 
             mRequestQueue.add(mStringRequest);
-
 
         } catch (ParserConfigurationException e1) {
             e1.printStackTrace();
@@ -311,16 +284,19 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //列表显示获取的RSS
     private void showListView() {
-        ListView itemlist = (ListView) findViewById(R.id.lv_rssList);
+        itemlist = (ListView) view.findViewById(R.id.lv_rssList);
         if (feed == null) {
-            setTitle("访问的RSS无效");
+
+//            view.setTitle("访问的RSS无效");
+            Log.i("tag", "访问的RSS无效");
             return;
         } else {
-            setTitle(tag);
+
+//            setTitle(tag);
+            Log.i("tag", "tag");
         }
 
-
-        adapter = new SimpleAdapter(this, feed.getAllItemsForListView(),
+        adapter = new SimpleAdapter(getContext(), feed.getAllItemsForListView(),
                 android.R.layout.simple_list_item_2, new String[]{
                 RSSItem.TITLE, RSSItem.PUBDATE
         },
@@ -335,7 +311,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //处理列表的单击事件
     public void onItemClick(AdapterView parent, View v, int position, long id) {
-        Intent itemIntent = new Intent(this, ShowDescriptionActivity.class);
+        Intent itemIntent = new Intent(getContext(), ShowDescriptionActivity.class);
 
         Bundle bundle = new Bundle();
         bundle.putString("title", feed.getItem(position).getTitle());
@@ -352,6 +328,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     //下拉刷新数据
     void refreshed(){
 
+
         int count1 = feed.Count();
         System.out.println(count1);
 
@@ -362,7 +339,10 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         int count2  = feed.addItem(rssItem);
         System.out.println(count2);
 
+
         adapter.notifyDataSetChanged();
+
+//        mSrl.setRefreshing(false);
 
     }
 
@@ -380,5 +360,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 //
 //            }
 //        }
+
 
 }

@@ -67,7 +67,6 @@ public class RSSItem {
         return PUBDATE;
     }
 
-
     public String toString() {
         if (title.length() > 20) {
             return title.substring(0, 42) + "...";

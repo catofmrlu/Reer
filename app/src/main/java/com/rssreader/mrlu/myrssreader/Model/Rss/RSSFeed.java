@@ -17,6 +17,12 @@ public class RSSFeed {
     private int itemcount = 0;
     private List<RSSItem> itemlist;
 
+    public int Count(){
+
+        return itemlist.size();
+
+    }
+
     public RSSFeed() {
         itemlist = new Vector(0);
     }
@@ -40,6 +46,7 @@ public class RSSFeed {
             item.put(RSSItem.TITLE, itemlist.get(i).getTitle());
             item.put(RSSItem.PUBDATE, itemlist.get(i).getPubdate());
             data.add(item);
+
         }
         return data;
     }

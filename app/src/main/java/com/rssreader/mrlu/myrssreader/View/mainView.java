@@ -11,16 +11,13 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.rssreader.mrlu.myrssreader.R;
-import com.rssreader.mrlu.myrssreader.View.fragment.AddressFragment;
-import com.rssreader.mrlu.myrssreader.View.fragment.FrdFragment;
-import com.rssreader.mrlu.myrssreader.View.fragment.SettingFragment;
-import com.rssreader.mrlu.myrssreader.View.fragment.WeixinFragment;
+import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
+import com.rssreader.mrlu.myrssreader.View.fragment.unReadFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class viewpagerTest extends FragmentActivity implements View.OnClickListener {
-
+public class mainView extends FragmentActivity implements View.OnClickListener {
 
 
         //声明ViewPager
@@ -33,14 +30,10 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
         //四个Tab对应的布局
         private LinearLayout mTabWeixin;
         private LinearLayout mTabFrd;
-        private LinearLayout mTabAddress;
-        private LinearLayout mTabSetting;
 
         //四个Tab对应的ImageButton
         private ImageButton mImgWeixin;
         private ImageButton mImgFrd;
-        private ImageButton mImgAddress;
-        private ImageButton mImgSetting;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -50,15 +43,14 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
             initViews();//初始化控件
             initEvents();//初始化事件
             initDatas();//初始化数据
+
         }
 
     private void initDatas() {
         mFragments = new ArrayList<>();
         //将四个Fragment加入集合中
-        mFragments.add(new WeixinFragment());
-        mFragments.add(new FrdFragment());
-        mFragments.add(new AddressFragment());
-        mFragments.add(new SettingFragment());
+        mFragments.add(new unReadFragment());
+        mFragments.add(new starredFragment());
 
         //初始化适配器
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -104,8 +96,6 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
         //设置四个Tab的点击事件
         mTabWeixin.setOnClickListener(this);
         mTabFrd.setOnClickListener(this);
-        mTabAddress.setOnClickListener(this);
-        mTabSetting.setOnClickListener(this);
 
     }
 
@@ -115,13 +105,9 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
 
         mTabWeixin = (LinearLayout) findViewById(R.id.id_tab_weixin);
         mTabFrd = (LinearLayout) findViewById(R.id.id_tab_frd);
-        mTabAddress = (LinearLayout) findViewById(R.id.id_tab_address);
-        mTabSetting = (LinearLayout) findViewById(R.id.id_tab_setting);
 
         mImgWeixin = (ImageButton) findViewById(R.id.id_tab_weixin_img);
         mImgFrd = (ImageButton) findViewById(R.id.id_tab_frd_img);
-        mImgAddress = (ImageButton) findViewById(R.id.id_tab_address_img);
-        mImgSetting = (ImageButton) findViewById(R.id.id_tab_setting_img);
 
     }
 
@@ -138,12 +124,6 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
             case R.id.id_tab_frd:
                 selectTab(1);
                 break;
-            case R.id.id_tab_address:
-                selectTab(2);
-                break;
-            case R.id.id_tab_setting:
-                selectTab(3);
-                break;
         }
     }
 
@@ -151,16 +131,10 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
         //根据点击的Tab设置对应的ImageButton为绿色
         switch (i) {
             case 0:
-                mImgWeixin.setImageResource(R.drawable.icon);
+                mImgWeixin.setImageResource(R.drawable.feed_read);
                 break;
             case 1:
-                mImgFrd.setImageResource(R.drawable.icon);
-                break;
-            case 2:
-                mImgAddress.setImageResource(R.drawable.icon);
-                break;
-            case 3:
-                mImgSetting.setImageResource(R.drawable.icon);
+                mImgFrd.setImageResource(R.drawable.long_press_starred);
                 break;
         }
         //设置当前点击的Tab所对应的页面
@@ -169,10 +143,8 @@ public class viewpagerTest extends FragmentActivity implements View.OnClickListe
 
     //将四个ImageButton设置为灰色
     private void resetImgs() {
-        mImgWeixin.setImageResource(R.drawable.icon);
-        mImgFrd.setImageResource(R.drawable.icon);
-        mImgAddress.setImageResource(R.drawable.icon);
-        mImgSetting.setImageResource(R.drawable.icon);
+        mImgWeixin.setImageResource(R.drawable.feed_read);
+        mImgFrd.setImageResource(R.drawable.long_press_starred);
     }
 }
 

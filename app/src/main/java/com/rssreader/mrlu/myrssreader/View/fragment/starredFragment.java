@@ -13,11 +13,11 @@ import com.rssreader.mrlu.myrssreader.R;
  * Created by LuXin on 2017/2/26.
  */
 
-public class FrdFragment extends Fragment {
+public class starredFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab2, container, false);
+        View view = inflater.inflate(R.layout.activity_list, container, false);
         return view;
     }
 }
