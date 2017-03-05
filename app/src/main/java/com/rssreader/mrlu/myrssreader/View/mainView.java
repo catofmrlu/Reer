@@ -1,10 +1,12 @@
 package com.rssreader.mrlu.myrssreader.View;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -14,37 +16,57 @@ import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
 import com.rssreader.mrlu.myrssreader.View.fragment.unReadFragment;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class mainView extends FragmentActivity implements View.OnClickListener {
 
 
-        //声明ViewPager
-        private ViewPager mViewPager;
-        //适配器
-        private FragmentPagerAdapter mAdapter;
-        //装载Fragment的集合
-        private List<Fragment> mFragments;
+    //声明ViewPager
+    private ViewPager mViewPager;
+    //适配器
+    private FragmentPagerAdapter mAdapter;
+    //装载Fragment的集合
+    private List<Fragment> mFragments;
 
-        //四个Tab对应的布局
-        private LinearLayout mTabWeixin;
-        private LinearLayout mTabFrd;
+    //四个Tab对应的布局
+    private LinearLayout mTabWeixin;
+    private LinearLayout mTabFrd;
 
-        //四个Tab对应的ImageButton
-        private ImageButton mImgWeixin;
-        private ImageButton mImgFrd;
+    //四个Tab对应的ImageButton
+    private ImageButton mImgWeixin;
+    private ImageButton mImgFrd;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            setContentView(R.layout.main);
-            initViews();//初始化控件
-            initEvents();//初始化事件
-            initDatas();//初始化数据
 
-        }
+    String RSS_URL;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.main);
+
+
+        //取出带来的rssLink
+        Bundle bundle = this.getIntent().getExtras();
+        RSS_URL = bundle.getString("rssLink");
+
+        Log.i("传递值打印mainView", RSS_URL);
+
+
+
+        initViews();//初始化控件
+        initEvents();//初始化事件
+        initDatas();//初始化数据
+        selectTab(0);
+
+        //EventBus发送消息
+        EventBus.getDefault().post(RSS_URL);
+
+
+    }
 
     private void initDatas() {
         mFragments = new ArrayList<>();
@@ -132,9 +154,15 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
         switch (i) {
             case 0:
                 mImgWeixin.setImageResource(R.drawable.feed_read);
+                mTabWeixin.setBackgroundColor(Color.parseColor("#00acc1"));
+                mTabFrd.setBackgroundColor(Color.parseColor("#393a3f"));
                 break;
             case 1:
                 mImgFrd.setImageResource(R.drawable.long_press_starred);
+                mTabFrd.setBackgroundColor(Color.parseColor("#fd4181"));
+                mTabWeixin.setBackgroundColor(Color.parseColor("#393a3f"));
+
+
                 break;
         }
         //设置当前点击的Tab所对应的页面

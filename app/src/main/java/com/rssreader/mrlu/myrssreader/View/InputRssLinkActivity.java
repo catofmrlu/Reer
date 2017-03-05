@@ -33,8 +33,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
 
                 //传递rss链接到网络请求部分InputRssLink类
-
-                Intent intent = new Intent(InputRssLinkActivity.this, ListActivity.class);
+                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
 
                 Bundle bundle = new Bundle();
 

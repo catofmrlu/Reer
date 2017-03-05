@@ -25,12 +25,14 @@ public class SQLiteHandle {
 
     public void insert(String sqlTable, String rssName, String rssDescription, String rssLink) {
         db = mSqlHelper.getWritableDatabase();
+
 //        ContentValues values = new ContentValues();
 //        values.put("RssName", rssTitle);
 //        values.put("RssDescription", rssDescription);
 //        values.put("RssLink", rssLink);
 //
 //        db.insert(sqlTable, null, values);
+
         String sql_insert = "insert into " + sqlTable
                 + "(RssName, RssPubdate, RssLink) values" + "('" + rssName + "','" + rssDescription
                 + "','" + rssLink + "'" + ")";

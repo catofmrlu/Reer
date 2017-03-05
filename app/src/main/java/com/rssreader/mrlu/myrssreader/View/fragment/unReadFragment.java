@@ -26,6 +26,8 @@ import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.View.ShowDescriptionActivity;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -69,14 +71,16 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         view = inflater.inflate(R.layout.activity_list, container, false);
 
 
-        //取出带来的rssLink
-//        Bundle bundle = this.getIntent().getExtras();
-//        RSS_URL = bundle.getString("rssLink");
-//
-        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+
+//        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
 
         mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
 
+
+        //注册EventBus接收者
+        EventBus.getDefault().register(this);
+
+        Log.i("传递值打印Frame", RSS_URL);
 
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -154,12 +158,12 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                                     tag = feed.getTitle();
 
                                     //response返回把feed存入数据库
-                                    SQLiteHandle mSqliteHandler = new SQLiteHandle(getContext());
-                                    mSqliteHandler.insert("AllFeeds", feed.getTitle(), "sss", urlString);
+//                                    SQLiteHandle mSqliteHandler = new SQLiteHandle(getContext());
+//                                    mSqliteHandler.insert("AllFeeds", "dddd", "sss", urlString);
 
                                     Log.i("sqliite插入", "插入feed成功");
 
-                                    mSqliteHandler.query("AllFeeds");
+//                                    mSqliteHandler.query("AllFeeds");
 
 
 
@@ -344,6 +348,17 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
 //        mSrl.setRefreshing(false);
 
+    }
+
+    @Subscribe
+    public void onEvent(String data) {
+        RSS_URL = data;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 
 //        class MyTask extends AsyncTask<URL, Void, String> {
