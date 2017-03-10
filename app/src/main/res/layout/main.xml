@@ -6,13 +6,14 @@
     android:layout_height="match_parent">
     <!--<include layout="@layout/top"/>-->
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
+    <com.rssreader.mrlu.myrssreader.View.CustomView.NoScrollViewPager
+        android:id="@+id/id_noviewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-    </android.support.v4.view.ViewPager>
+    </com.rssreader.mrlu.myrssreader.View.CustomView.NoScrollViewPager>
 
-    <include layout="@layout/bottom"/>
+    <include layout="@layout/bottom"
+        android:id="@+id/lay_bottom"/>
 </LinearLayout>

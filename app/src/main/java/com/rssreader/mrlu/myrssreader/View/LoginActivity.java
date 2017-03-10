@@ -27,13 +27,13 @@ public class LoginActivity extends AppCompatActivity {
         Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
         Button btnFeedly = (Button) findViewById(R.id.btn_feedly);
 
-        //创建数据库及数据表
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//
-////                mSqlHelper = new RssSqliteHelper(LoginActivity.this, "Rss", null, 1);
-////                mSqlHelper.getWritableDatabase();
+//        创建数据库及数据表
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+//                mSqlHelper = new RssSqliteHelper(LoginActivity.this, "Rss", null, 1);
+//                mSqlHelper.getWritableDatabase();
 //
 //                SQLiteHandle mSqlHandle = new SQLiteHandle(LoginActivity.this);
 //                mSqlHandle.insert("AllFeeds", "SSSS", "dddd", "11ssssddssss");
@@ -41,9 +41,9 @@ public class LoginActivity extends AppCompatActivity {
 //                Log.i("数据库插入", "插入成功！！");
 //
 //                mSqlHandle.query("AllFeeds");
-//
-//            }
-//        }).start();
+
+            }
+        }).start();
 
 
         btnLocalhost.setOnClickListener(new View.OnClickListener() {
