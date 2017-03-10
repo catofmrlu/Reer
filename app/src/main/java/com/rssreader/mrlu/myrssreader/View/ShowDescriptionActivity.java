@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.rssreader.mrlu.myrssreader.R;
 
+import java.net.URL;
+
 public class ShowDescriptionActivity extends AppCompatActivity {
 
 
@@ -26,6 +28,8 @@ public class ShowDescriptionActivity extends AppCompatActivity {
             if (bundle == null){
                 content = "不好意思，程序出现错误╮(╯_╰)╭";
             }else {
+
+//                URL url = bundle.getString()
                 content = bundle.getString("title") + "\n\n"
                 + bundle.getString("pubDate") + "\n\n"
                         + bundle.getString("description").replace('\n', ' ')

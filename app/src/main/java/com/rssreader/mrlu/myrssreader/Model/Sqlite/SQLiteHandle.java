@@ -1,12 +1,9 @@
 package com.rssreader.mrlu.myrssreader.Model.Sqlite;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
-import com.rssreader.mrlu.myrssreader.View.LoginActivity;
 
 /**
  * Created by LuXin on 2017/2/28.

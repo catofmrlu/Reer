@@ -1,6 +1,9 @@
 package com.rssreader.mrlu.myrssreader.View.fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -10,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -19,10 +23,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
-import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.View.ShowDescriptionActivity;
 
@@ -43,12 +50,11 @@ import javax.xml.parsers.SAXParserFactory;
  * Created by LuXin on 2017/2/26.
  */
 
-public class unReadFragment extends Fragment implements AdapterView.OnItemClickListener{
-
+public class unReadFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     public String RSS_URL;
     //            = "http://free.apprcn.com/category/ios/feed/";
-    public  String tag = "RSSReader";
+    public String tag = "RSSReader";
     private RSSFeed feed = null;
 
     //    OkHttpClient mOkHttpClient;
@@ -58,12 +64,23 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     SwipeRefreshLayout mSrl;
 
+    SwipeMenuListView mSwipeMenuListView;
+
     private SimpleAdapter adapter;
 
     ListView itemlist;
 
     View view;
 
+    //手指按下的点为(x1, y1)手指离开屏幕的点为(x2, y2)
+    float x1 = 0;
+    float x2 = 0;
+    float y1 = 0;
+    float y2 = 0;
+
+    Window window;
+
+//    HttpHeaderParser
 
     @Nullable
     @Override
@@ -71,11 +88,14 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         view = inflater.inflate(R.layout.activity_list, container, false);
 
 
-
-//        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+        RSS_URL = "https://www.zhihu.com/rss";
+//                "http://free.apprcn.com/category/ios/feed/";
 
         mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
 
+        mSwipeMenuListView = (SwipeMenuListView) view.findViewById(R.id.lv_rssList);
+
+        window = getActivity().getWindow();
 
         //注册EventBus接收者
         EventBus.getDefault().register(this);
@@ -102,14 +122,99 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         });
 
 
+        SwipeMenuCreator creator = new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                // create "open" item
+                SwipeMenuItem openItem = new SwipeMenuItem(
+                        getContext());
+                // set item background
+                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+                        0xCE)));
+                // set item width
+                openItem.setWidth(90);
+                // set item title
+                openItem.setTitle("Open");
+                // set item title fontsize
+                openItem.setTitleSize(15);
+                // set item title font color
+                openItem.setTitleColor(Color.WHITE);
+                // add to menu
+                menu.addMenuItem(openItem);
+                // create "delete" item
+                SwipeMenuItem deleteItem = new SwipeMenuItem(
+                        getContext());
+                // set item background
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
+                        0x3F, 0x25)));
+                // set item width
+                deleteItem.setWidth(90);
+                // set a icon
+                deleteItem.setIcon(R.drawable.feed_read);
+                // add to menu
+                menu.addMenuItem(deleteItem);
+            }
+        };
+        // set creator
+        mSwipeMenuListView.setMenuCreator(creator);
+
         getFeed(RSS_URL);
 
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            //透明状态栏
+//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//            //透明导航栏
+//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+////
+////                        View layBottom = findViewById(R.id.lay_bottom);
+////
+////
+////                        layBottom.setVisibility(View.GONE);
+//        }
+//
+//        mSrl.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//
+//                switch (event.getAction()) {
+//                    case MotionEvent.ACTION_DOWN:
+//                        y1 = event.getY();
+//                        break;
+//                    case MotionEvent.ACTION_MOVE:
+//                        y2 = event.getY();
+//                        break;
+//                    default:
+//                        break;
+//
+//                }
+//
+//                if (y1 - y2 >= 40) {
+//
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//                        //透明状态栏
+//                        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//                        //透明导航栏
+//                        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+////
+////                        View layBottom = findViewById(R.id.lay_bottom);
+////
+////
+////                        layBottom.setVisibility(View.GONE);
+//                    }
+//                }
+//
+//                return false;
+//
+//            }
+//        });
+
         return view;
+
     }
 
 
     //获取feed
-    private void getFeed(final String urlString) {
+    private void getFeed(String urlString) {
 
 //        final String feedString;
         try {
@@ -136,8 +241,7 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                             Log.i("respone:", response);
 
 
-
-                         Log.i("间隔", "请求执行完成");
+                            Log.i("间隔", "请求执行完成");
 
                             InputStream is = new ByteArrayInputStream(response.getBytes());
 
@@ -166,10 +270,11 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 //                                    mSqliteHandler.query("AllFeeds");
 
 
-
-                                    if (feed == null){
+                                    if (feed == null) {
                                         Log.e("feed", "feed为空");
-                                    }else {Log.i("恭喜！", "feed通过");}
+                                    } else {
+                                        Log.i("恭喜！", "feed通过");
+                                    }
 
                                 } else {
                                     Log.e("is", "is为空");
@@ -285,7 +390,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 ////            return rssHander.getFeed();
 //
 
-
     //列表显示获取的RSS
     private void showListView() {
         itemlist = (ListView) view.findViewById(R.id.lv_rssList);
@@ -319,9 +423,9 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
         Bundle bundle = new Bundle();
         bundle.putString("title", feed.getItem(position).getTitle());
-        bundle.putString("description", feed.getItem(position).getTitle());
-        bundle.putString("link", feed.getItem(position).getTitle());
-        bundle.putString("pubdate", feed.getItem(position).getTitle());
+        bundle.putString("description", feed.getItem(position).getDescription());
+        bundle.putString("link", feed.getItem(position).getLink());
+        bundle.putString("pubdate", feed.getItem(position).getPubdate());
 
         itemIntent.putExtra("android.intent.extra.rssItem", bundle);
 
@@ -330,17 +434,21 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     }
 
     //下拉刷新数据
-    void refreshed(){
+    void refreshed() {
 
 
+        //打印未添加数据前的项目数
         int count1 = feed.Count();
         System.out.println(count1);
 
+
+        //添加一个数据
         RSSItem rssItem = new RSSItem();
         rssItem.setTitle("我是新加来的");
         rssItem.setPubdate("2017.12.23");
 
-        int count2  = feed.addItem(rssItem);
+        //打印已添加数据前的项目数
+        int count2 = feed.addItem(rssItem);
         System.out.println(count2);
 
 
@@ -350,31 +458,22 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     }
 
+
     @Subscribe
-    public void onEvent(String data) {
+    public void onevent(String data) {
         RSS_URL = data;
+        Log.i("发送成功", "rss:" + RSS_URL);
+
+        getFeed(RSS_URL);
+
+        adapter.notifyDataSetChanged();
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         EventBus.getDefault().unregister(this);
     }
 
-//        class MyTask extends AsyncTask<URL, Void, String> {
-//
-//            @Override
-//            protected String doInBackground(URL... params) {
-//
-//                return null;
-//            }
-//
-//            @Override
-//            protected void onPostExecute(String s) {
-//                super.onPostExecute(s);
-//
-//            }
-//        }
 
 
 }
