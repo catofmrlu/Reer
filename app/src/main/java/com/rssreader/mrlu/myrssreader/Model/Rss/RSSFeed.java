@@ -12,12 +12,17 @@ import java.util.Vector;
 
 public class RSSFeed {
 
-    private String title = null;
-    private String pubdate = null;
+    private String name = null;
+    private String feedDescription = null;
+
+
+    private String feedLink = null;
+
     private int itemcount = 0;
     private List<RSSItem> itemlist;
 
-    public int Count(){
+
+    public int Count() {
 
         return itemlist.size();
 
@@ -55,26 +60,33 @@ public class RSSFeed {
         return itemlist;
     }
 
-    public String getPubdate() {
-        return pubdate;
-    }
-
     int getItemcount() {
         return itemcount;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setPubdate(String pubdate) {
-        this.pubdate = pubdate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getFeedDescription() {
+        return feedDescription;
     }
 
+    public void setFeedDescription(String feedDescription) {
+        this.feedDescription = feedDescription;
+    }
+
+    public String getFeedLink() {
+        return feedLink;
+    }
+
+    public void setFeedLink(String feedLink) {
+        this.feedLink = feedLink;
+    }
 
 
 }

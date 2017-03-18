@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,80 +87,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_list, container, false);
-
-
-        RSS_URL = "https://www.zhihu.com/rss";
-//                "http://free.apprcn.com/category/ios/feed/";
-
-        mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
-
-        mSwipeMenuListView = (SwipeMenuListView) view.findViewById(R.id.lv_rssList);
-
-        window = getActivity().getWindow();
-
-        //注册EventBus接收者
-        EventBus.getDefault().register(this);
-
-        Log.i("传递值打印Frame", RSS_URL);
-
-        mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        refreshed();
-                        // 停止刷新
-                        mSrl.setRefreshing(false);
-                    }
-                }, 2000); // 2秒后发送消息，停止刷新
-
-                Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-        SwipeMenuCreator creator = new SwipeMenuCreator() {
-            @Override
-            public void create(SwipeMenu menu) {
-                // create "open" item
-                SwipeMenuItem openItem = new SwipeMenuItem(
-                        getContext());
-                // set item background
-                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                        0xCE)));
-                // set item width
-                openItem.setWidth(90);
-                // set item title
-                openItem.setTitle("Open");
-                // set item title fontsize
-                openItem.setTitleSize(15);
-                // set item title font color
-                openItem.setTitleColor(Color.WHITE);
-                // add to menu
-                menu.addMenuItem(openItem);
-                // create "delete" item
-                SwipeMenuItem deleteItem = new SwipeMenuItem(
-                        getContext());
-                // set item background
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-                        0x3F, 0x25)));
-                // set item width
-                deleteItem.setWidth(90);
-                // set a icon
-                deleteItem.setIcon(R.drawable.feed_read);
-                // add to menu
-                menu.addMenuItem(deleteItem);
-            }
-        };
-        // set creator
-        mSwipeMenuListView.setMenuCreator(creator);
-
-        getFeed(RSS_URL);
-
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //            //透明状态栏
 //            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -207,8 +134,85 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 //
 //            }
 //        });
+        init();
+        getFeed(RSS_URL);
 
         return view;
+    }
+
+    public void init(){
+
+
+        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+//                "http://free.apprcn.com/category/ios/feed/";
+
+        mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
+
+        mSwipeMenuListView = (SwipeMenuListView) view.findViewById(R.id.lv_rssList);
+
+        window = getActivity().getWindow();
+
+        //注册EventBus接收者
+        EventBus.getDefault().register(this);
+
+        Log.i("传递值打印Frame", RSS_URL);
+
+        mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        refreshed();
+                        // 停止刷新
+                        mSrl.setRefreshing(false);
+                    }
+                }, 2000); // 2秒后发送消息，停止刷新
+
+                Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        //listview左滑部分
+        SwipeMenuCreator creator = new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                // create "open" item
+                SwipeMenuItem openItem = new SwipeMenuItem(
+                        getContext());
+                // set item background
+                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+                        0xCE)));
+                // set item width
+                openItem.setWidth(dp2px(90));
+                // set item title
+                openItem.setTitle("Open");
+                // set item title fontsize
+                openItem.setTitleSize(15);
+                // set item title font color
+                openItem.setTitleColor(Color.WHITE);
+                // add to menu
+                menu.addMenuItem(openItem);
+                // create "delete" item
+                SwipeMenuItem deleteItem = new SwipeMenuItem(
+                        getContext());
+                // set item background
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
+                        0x3F, 0x25)));
+                // set item width
+                deleteItem.setWidth(dp2px(90));
+                // set a icon
+                deleteItem.setIcon(R.drawable.feed_read);
+                // add to menu
+                menu.addMenuItem(deleteItem);
+            }
+        };
+        // set creator
+        mSwipeMenuListView.setMenuCreator(creator);
 
     }
 
@@ -257,9 +261,9 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
                                     feed = rssHander.getFeed();
 
-                                    Log.i("Title", "title:" + feed.getTitle());
+                                    Log.i("Title", "title:" + feed.getName());
 
-                                    tag = feed.getTitle();
+                                    tag = feed.getName();
 
                                     //response返回把feed存入数据库
 //                                    SQLiteHandle mSqliteHandler = new SQLiteHandle(getContext());
@@ -306,6 +310,11 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
             e1.printStackTrace();
         }
 
+    }
+
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                getResources().getDisplayMetrics());
     }
 //            //新建SAX--xml解析工厂类
 //            SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -390,7 +399,7 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 ////            return rssHander.getFeed();
 //
 
-    //列表显示获取的RSS
+    //列表显示获取的RSS项目
     private void showListView() {
         itemlist = (ListView) view.findViewById(R.id.lv_rssList);
         if (feed == null) {

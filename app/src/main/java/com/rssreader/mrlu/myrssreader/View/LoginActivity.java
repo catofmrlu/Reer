@@ -32,15 +32,21 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-//                mSqlHelper = new RssSqliteHelper(LoginActivity.this, "Rss", null, 1);
-//                mSqlHelper.getWritableDatabase();
-//
-//                SQLiteHandle mSqlHandle = new SQLiteHandle(LoginActivity.this);
-//                mSqlHandle.insert("AllFeeds", "SSSS", "dddd", "11ssssddssss");
-//
-//                Log.i("数据库插入", "插入成功！！");
-//
-//                mSqlHandle.query("AllFeeds");
+                try {
+
+                    mSqlHelper = new RssSqliteHelper(LoginActivity.this, "Rss", null, 1);
+                    mSqlHelper.getWritableDatabase();
+
+                    SQLiteHandle mSqlHandle = new SQLiteHandle(LoginActivity.this);
+                    mSqlHandle.insert("AllFeeds", "SSSS", "dddd", "11ssssddssss");
+
+                    Log.i("数据库插入", "插入成功！！");
+
+                    mSqlHandle.query("AllFeeds");
+
+                }catch (Exception e){
+                    Log.e("database", "问题在：" + e.toString());
+                }
 
             }
         }).start();

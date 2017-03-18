@@ -87,8 +87,14 @@ public class RSSHandler extends DefaultHandler {
 
         switch (currentState) {
             case RSS_TITLE:
+
+            if (rssItem != null) {
                 rssItem.setTitle(theString);
                 currentState = 0;
+            }else{
+                rssFeed.setName(theString);
+                currentState = 0;
+            }
                 return;
 
 
@@ -99,8 +105,15 @@ public class RSSHandler extends DefaultHandler {
 
 
             case RSS_DESCRIPTION:
-                rssItem.setDescription(theString);
-                currentState = 0;
+
+                if (rssItem != null) {
+                    rssItem.setDescription(theString);
+                    currentState = 0;
+                }else{
+                    rssFeed.setFeedDescription(theString);
+                    currentState = 0;
+                }
+
                 return;
 
 

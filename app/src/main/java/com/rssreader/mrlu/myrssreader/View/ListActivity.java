@@ -183,9 +183,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
                                     feed = rssHander.getFeed();
 
-                                    Log.i("Title", "title:" + feed.getTitle());
+                                    Log.i("Title", "title:" + feed.getName());
 
-                                    tag = feed.getTitle();
+                                    tag = feed.getName();
 
 
 

@@ -18,7 +18,7 @@ public class NoScrollViewPager  extends ViewPager{
         super(context);
     }
 
-    public void setScanScroll(boolean isCanScroll) {
+    public void setIsScroll(boolean isCanScroll) {
         this.isCanScroll = isCanScroll;
     }
     @Override
