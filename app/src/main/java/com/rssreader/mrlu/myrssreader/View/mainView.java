@@ -33,7 +33,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
 
 
     //声明ViewPager
-    private NoScrollViewPager mNoScrollViewPager;
+    private ViewPager mNoScrollViewPager;
     //适配器
     private FragmentPagerAdapter mAdapter;
     //装载Fragment的集合
@@ -60,8 +60,8 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
     float y1 = 0;
     float y2 = 0;
 
-    private View mLayFrame;
-    SwipeMenuListView mSwipeMenuListView;
+//    private View mLayFrame;
+//    SwipeMenuListView mSwipeMenuListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +69,17 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
+        //ButterKnife绑定
         ButterKnife.bind(this);
 
         window = getWindow();
 
 //        final Window window = getWindow();
 
-        mLayFrame = findViewById(R.id.id_noviewpager);
+        mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
+//
+//        //禁止viewpager滑动
+//        mNoScrollViewPager.setIsScroll(false);
 //
 //        mSwipeMenuListView = (SwipeMenuListView) layFrame.findViewById(R.id.lv_rssList);
 //
@@ -240,7 +244,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
 
     private void initDatas() {
         mFragments = new ArrayList<>();
-        //将四个Fragment加入集合中
+        //将两个Fragment加入集合中
         mFragments.add(new unReadFragment());
         mFragments.add(new starredFragment());
 
@@ -286,7 +290,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
     }
 
     private void initEvents() {
-        //设置四个Tab的点击事件
+        //设置两个Tab的点击事件
         mTabWeixin.setOnClickListener(this);
         mTabFrd.setOnClickListener(this);
 
@@ -294,7 +298,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
 
     //初始化控件
     private void initViews() {
-        mNoScrollViewPager = (NoScrollViewPager) findViewById(R.id.id_noviewpager);
+        mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
 
         mTabWeixin = (LinearLayout) findViewById(R.id.id_tab_weixin);
         mTabFrd = (LinearLayout) findViewById(R.id.id_tab_frd);
@@ -306,7 +310,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        //先将四个ImageButton置为灰色
+        //先将两个ImageButton置为灰色
         resetImgs();
 
         //根据点击的Tab切换不同的页面及设置对应的ImageButton为绿色
@@ -339,7 +343,7 @@ public class mainView extends FragmentActivity implements View.OnClickListener {
         mNoScrollViewPager.setCurrentItem(i);
     }
 
-    //将四个ImageButton设置为灰色
+    //将两个ImageButton设置为灰色
     private void resetImgs() {
         mTabFrd.setBackgroundColor(Color.parseColor("#393a3f"));
         mTabWeixin.setBackgroundColor(Color.parseColor("#393a3f"));
