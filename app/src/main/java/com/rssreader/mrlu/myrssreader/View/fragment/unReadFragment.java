@@ -31,7 +31,9 @@ import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
+import com.rssreader.mrlu.myrssreader.View.ListActivity;
 import com.rssreader.mrlu.myrssreader.View.ShowDescriptionActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -42,6 +44,13 @@ import org.xml.sax.XMLReader;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.ExecutionException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -73,77 +82,26 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     View view;
 
-    //手指按下的点为(x1, y1)手指离开屏幕的点为(x2, y2)
-    float x1 = 0;
-    float x2 = 0;
-    float y1 = 0;
-    float y2 = 0;
-
     Window window;
 
-//    HttpHeaderParser
+    List<Map<String, Object>> mRssUnreadList;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_list, container, false);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            //透明状态栏
-//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            //透明导航栏
-//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-////
-////                        View layBottom = findViewById(R.id.lay_bottom);
-////
-////
-////                        layBottom.setVisibility(View.GONE);
-//        }
-//
-//        mSrl.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//
-//                switch (event.getAction()) {
-//                    case MotionEvent.ACTION_DOWN:
-//                        y1 = event.getY();
-//                        break;
-//                    case MotionEvent.ACTION_MOVE:
-//                        y2 = event.getY();
-//                        break;
-//                    default:
-//                        break;
-//
-//                }
-//
-//                if (y1 - y2 >= 40) {
-//
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//                        //透明状态栏
-//                        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//                        //透明导航栏
-//                        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-////
-////                        View layBottom = findViewById(R.id.lay_bottom);
-////
-////
-////                        layBottom.setVisibility(View.GONE);
-//                    }
-//                }
-//
-//                return false;
-//
-//            }
-//        });
+
+
         init();
         getFeed(RSS_URL);
+
 
         return view;
     }
 
-    public void init(){
+    public void init() {
 
-
-        RSS_URL = "http://free.apprcn.com/category/ios/feed/";
+        RSS_URL = "http://www.feng.com/rss.xml";
 //                "http://free.apprcn.com/category/ios/feed/";
 
         mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
@@ -152,10 +110,11 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
         window = getActivity().getWindow();
 
-        //注册EventBus接收者
-        EventBus.getDefault().register(this);
 
-        Log.i("传递值打印Frame", RSS_URL);
+        //注册EventBus接收者
+//        EventBus.getDefault().register(this);
+//        Log.i("传递值打印Frame", RSS_URL);
+
 
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -168,10 +127,10 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                         refreshed();
                         // 停止刷新
                         mSrl.setRefreshing(false);
+                        Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
                     }
                 }, 2000); // 2秒后发送消息，停止刷新
 
-                Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -216,11 +175,14 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     }
 
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                getResources().getDisplayMetrics());
+    }
 
     //获取feed
-    private void getFeed(String urlString) {
+    private void getFeed(final String urlString) {
 
-//        final String feedString;
         try {
 
             //新建SAX--xml解析工厂类
@@ -253,31 +215,61 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                                 if (is != null) {
                                     isc = new InputSource(is);
 
-                                    Log.e("IS", "IS转换完成");
+                                    Log.i("IS", "IS转换完成");
 
-                                    Log.e("IS", isc.toString());
+                                    Log.i("IS", isc.toString());
 
                                     reader.parse(isc);
 
                                     feed = rssHander.getFeed();
-
-                                    Log.i("Title", "title:" + feed.getName());
-
-                                    tag = feed.getName();
-
-                                    //response返回把feed存入数据库
-//                                    SQLiteHandle mSqliteHandler = new SQLiteHandle(getContext());
-//                                    mSqliteHandler.insert("AllFeeds", "dddd", "sss", urlString);
-
-                                    Log.i("sqliite插入", "插入feed成功");
-
-//                                    mSqliteHandler.query("AllFeeds");
 
 
                                     if (feed == null) {
                                         Log.e("feed", "feed为空");
                                     } else {
                                         Log.i("恭喜！", "feed通过");
+
+                                        System.out.println("---------/n" + feed.Count());
+
+                                        mRssUnreadList = new ArrayList<>();
+                                        Map<String, Object> map = new HashMap<String, Object>();
+                                        map.put("rssName", "全部未读");
+                                        map.put("rssCount", /*feed.Count()*/"www");
+                                        mRssUnreadList.add(map);
+
+                                        Map<String, Object> map1 = new HashMap<String, Object>();
+                                        map1.put("rssName", /*feed.getName()*/"sss");
+                                        map1.put("rssCount", /*feed.Count()*/"ssssss");
+                                        mRssUnreadList.add(map1);
+
+                                        Log.i("过程标记", "list装载完成");
+//                                        try {
+//
+//                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getContext());
+//
+//                                            sqLiteHandle.queryAllFeeds("AllFeeds");
+//
+//                                            if (!sqLiteHandle.urlQuery(urlString)) {
+//                                                //异步将feed插入数据库
+//                                                new Thread(new Runnable() {
+//                                                    @Override
+//                                                    public void run() {
+//                                                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(),
+//                                                                RSS_URL);
+//
+//                                                        feed.isInserted = true;
+//
+//                                                        sqLiteHandle.queryAllFeeds("AllFeeds");
+//                                                    }
+//                                                }).start();
+//                                            } else {
+//                                                Log.i("数据库", "已插入！");
+//                                            }
+
+//                                        } catch (Exception e) {
+//                                            Log.e("sql数据库问题", e.getMessage());
+//                                        }
+
                                     }
 
                                 } else {
@@ -289,6 +281,8 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                             }
 
                             showListView();
+                            Log.i("过程标记", "list显示完成");
+
                         }
                     },
 
@@ -304,103 +298,18 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
             mRequestQueue.add(mStringRequest);
 
-        } catch (ParserConfigurationException e1) {
-            e1.printStackTrace();
-        } catch (SAXException e1) {
-            e1.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
         }
 
     }
 
-    private int dp2px(int dp) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
-                getResources().getDisplayMetrics());
-    }
-//            //新建SAX--xml解析工厂类
-//            SAXParserFactory factory = SAXParserFactory.newInstance();
-//
-//            SAXParser parser = factory.newSAXParser();
-//
-//            XMLReader reader = parser.getXMLReader();
-//
-//            RSSHandler rssHander = new RSSHandler();
-
-//
-//                new Thread() {
-//                    @Override
-//                    public void run() {
-    ///okhttp3 网络连接
-
-//                        mOkHttpClient = new OkHttpClient();
-//                        Request.Builder requestBuilder = new Request.Builder().url(url);
-//
-//                        //可以省略，默认是GET请求
-//                        requestBuilder.method("GET", null);
-//                        Request request = requestBuilder.build();
-//                        Call mcall = mOkHttpClient.newCall(request);
-//                        mcall.enqueue(new Callback() {
-//                            @Override
-//                            public void onFailure(Call call, IOException e) {
-//                                Log.e("netWorkFailure", e.toString());
-//
-//                            }
-//
-//                            @Override
-//                            public void onResponse(Call call, Response response) throws IOException {
-//
-//                                if (response.isSuccessful()) {
-//
-//
-//                                    Log.i("responeSuccess", "返回成功了");
-//
-//                                    String responeNode = response.body().string();
-//                                    Log.i("body", "str4---" + responeNode);
-//
-//
-//                                    Message msg = Message.obtain();
-//                                    msg.obj = response;
-////                                    msg.what = 1;//区分哪一个线程发送的消息
-//                                    handler.sendMessage(msg);
-//
-////                                    is = response.body().byteStream();
-//
-//
-//                                } else {
-//                                    System.out.println("返回失败");
-//                                }
-//                            }
-//
-//                        });
-//
-//                    }
-//                }.start();
-//
-////            SystemClock.sleep(2000);
-//
-////            Log.i("间隔", "请求执行完成");
-////
-////            try {
-////                if (is != null) {
-////                    isc = new InputSource(is);
-////
-////                    Log.e("IS", "IS转换完成");
-////                } else {
-////                    Log.e("is", "is为空");
-////                }
-////
-////
-////                reader.parse(isc);
-////
-////
-////                Log.e("saxJiexi", "chenggong");
-////            } catch (SAXException e) {
-////                Log.i("SAX", e.toString());
-////            }
-////            return rssHander.getFeed();
-//
-
     //列表显示获取的RSS项目
     private void showListView() {
+        Log.i("过程标记", "进入showListView()");
+
         itemlist = (ListView) view.findViewById(R.id.lv_rssList);
         if (feed == null) {
 
@@ -410,15 +319,16 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         } else {
 
 //            setTitle(tag);
-            Log.i("tag", "tag");
+            Log.i("tag", feed.getName());
         }
 
-        adapter = new SimpleAdapter(getContext(), feed.getAllItemsForListView(),
-                android.R.layout.simple_list_item_2, new String[]{
-                RSSItem.TITLE, RSSItem.PUBDATE
+
+        adapter = new SimpleAdapter(getContext(), mRssUnreadList,
+                R.layout.rsslist_item, new String[]{
+                "rssName", "rssCount"
         },
                 new int[]{
-                        android.R.id.text1, android.R.id.text2
+                        R.id.tv_rssName, R.id.tv_rssCount
                 });
 
         itemlist.setAdapter(adapter);
@@ -428,15 +338,21 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     //处理列表的单击事件
     public void onItemClick(AdapterView parent, View v, int position, long id) {
-        Intent itemIntent = new Intent(getContext(), ShowDescriptionActivity.class);
+        Intent itemIntent = new Intent(getContext(), ListActivity.class);
 
         Bundle bundle = new Bundle();
-        bundle.putString("title", feed.getItem(position).getTitle());
-        bundle.putString("description", feed.getItem(position).getDescription());
-        bundle.putString("link", feed.getItem(position).getLink());
-        bundle.putString("pubdate", feed.getItem(position).getPubdate());
+//        bundle.putString("title", feed.getItem(position).getTitle());
+//        bundle.putString("description", feed.getItem(position).getDescription());
+//        bundle.putString("link", feed.getItem(position).getLink());
+//        bundle.putString("pubdate", feed.getItem(position).getPubdate());
+//
+//        mRssUnreadList.get(position)
 
-        itemIntent.putExtra("android.intent.extra.rssItem", bundle);
+
+        bundle.putSerializable("feed", feed);
+
+//        itemIntent.putExtra("android.intent.rssItem", bundle);
+        itemIntent.putExtras(bundle);
 
         startActivityForResult(itemIntent, 0);
 
@@ -445,28 +361,9 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     //下拉刷新数据
     void refreshed() {
 
-
-        //打印未添加数据前的项目数
-        int count1 = feed.Count();
-        System.out.println(count1);
-
-
-        //添加一个数据
-        RSSItem rssItem = new RSSItem();
-        rssItem.setTitle("我是新加来的");
-        rssItem.setPubdate("2017.12.23");
-
-        //打印已添加数据前的项目数
-        int count2 = feed.addItem(rssItem);
-        System.out.println(count2);
-
-
         adapter.notifyDataSetChanged();
 
-//        mSrl.setRefreshing(false);
-
     }
-
 
     @Subscribe
     public void onevent(String data) {
@@ -478,11 +375,11 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         adapter.notifyDataSetChanged();
     }
 
-    @Override
-    public void onDestroy() {
-        EventBus.getDefault().unregister(this);
-    }
-
+//    @Override
+//    public void onDestroy() {
+//        EventBus.getDefault().unregister(this);
+//        super.onDestroy();
+//    }
 
 
 }

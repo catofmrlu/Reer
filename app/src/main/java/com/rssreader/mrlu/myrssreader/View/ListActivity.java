@@ -35,290 +35,42 @@ import javax.xml.parsers.SAXParserFactory;
 
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    public String RSS_URL;
-//            = "http://free.apprcn.com/category/ios/feed/";
     public  String tag = "RSSReader";
-    private RSSFeed feed = null;
 
-//    OkHttpClient mOkHttpClient;
-    InputSource isc;
+    private RequestQueue mRequestQueue;
 
-    public RequestQueue mRequestQueue;
-
-    SwipeRefreshLayout mSrl;
+    private SwipeRefreshLayout mSrl;
 
     private SimpleAdapter adapter;
+    RSSFeed feed;
 
-//
-//    Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//
-//            try {
-//
-//                //新建SAX--xml解析工厂类
-//                SAXParserFactory factory = SAXParserFactory.newInstance();
-//
-//                SAXParser parser = factory.newSAXParser();
-//
-//                XMLReader reader = parser.getXMLReader();
-//
-//                RSSHandler rssHander = new RSSHandler();
-//
-//                Response response = (Response) msg.obj;
-//                System.out.println(response.body().string());
-//
-//                is = response.body().byteStream();
-//
-//                Log.i("间隔", "请求执行完成");
-//
-//                try {
-//                    if (is != null) {
-//                        isc = new InputSource(is);
-//
-//                        Log.e("IS", "IS转换完成");
-//
-//                        Log.e("IS", isc.toString());
-//
-//                        reader.parse(isc);
-//
-//                        feed = rssHander.getFeed();
-//
-//                    } else {
-//                        Log.e("is", "is为空");
-//                    }
-//
-//                    showListView();
-//                } catch (Exception e) {
-//                    Log.e("is转换", e.getMessage());
-//                }
-//
-//            } catch (Exception e) {
-//                Log.e("hander", e.toString());
-//            }
-//        }
-//
-//
-//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        //取出带来的rssLink
-//        Bundle bundle = this.getIntent().getExtras();
-//        RSS_URL = bundle.getString("rssLink");
-//
-        RSS_URL = "";
         mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
 
-        mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
+        Intent intent = getIntent();
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
+        if (intent != null){
 
-                        refreshed();
-                        // 停止刷新
-                        mSrl.setRefreshing(false);
-                    }
-                }, 2000); // 2秒后发送消息，停止刷新
+//            Bundle bundle = intent.getExtras();
+//            feed = (RSSFeed) bundle.getSerializable("feed");
 
-                Toast.makeText(ListActivity.this, "刷新完成！", Toast.LENGTH_SHORT).show();
+            feed = (RSSFeed) intent.getSerializableExtra("feed");
 
-            }
-        });
-
-
-        getFeed(RSS_URL);
-
-//        showListView();
-
-    }
-
-    //获取feed
-    private void getFeed(String urlString) {
-
-//        final String feedString;
-        try {
-
-            //新建SAX--xml解析工厂类
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-
-            SAXParser parser = factory.newSAXParser();
-
-            final XMLReader reader = parser.getXMLReader();
-
-            final RSSHandler rssHander = new RSSHandler();
-
-            reader.setContentHandler(rssHander);
-
-//                URL url = new URL(urlString);
-
-
-            mRequestQueue = Volley.newRequestQueue(this);
-            StringRequest mStringRequest = new StringRequest(urlString,
-                    new com.android.volley.Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-
-                            Log.i("respone:", response);
-
-                            Log.i("间隔", "请求执行完成");
-
-                            InputStream is = new ByteArrayInputStream(response.getBytes());
-
-                            try {
-                                if (is != null) {
-                                    isc = new InputSource(is);
-
-                                    Log.e("IS", "IS转换完成");
-
-                                    Log.e("IS", isc.toString());
-
-                                    reader.parse(isc);
-
-                                    feed = rssHander.getFeed();
-
-                                    Log.i("Title", "title:" + feed.getName());
-
-                                    tag = feed.getName();
-
-
-
-                                    if (feed == null){
-                                        Log.e("feed", "feed为空");
-                                    }else {Log.i("恭喜！", "feed通过");}
-
-                                } else {
-                                    Log.e("is", "is为空");
-                                }
-
-                            } catch (Exception e) {
-                                Log.e("is转换", e.getMessage());
-                            }
-
-                            showListView();
-                        }
-                    },
-
-                    new com.android.volley.Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                            Log.e("error", error.getMessage());
-                        }
-                    }
-
-            );
-
-            mRequestQueue.add(mStringRequest);
-
-
-        } catch (ParserConfigurationException e1) {
-            e1.printStackTrace();
-        } catch (SAXException e1) {
-            e1.printStackTrace();
+        }else {
+            Log.e("intent错误", "intent为空");
         }
 
+        showListView();
     }
-//            //新建SAX--xml解析工厂类
-//            SAXParserFactory factory = SAXParserFactory.newInstance();
-//
-//            SAXParser parser = factory.newSAXParser();
-//
-//            XMLReader reader = parser.getXMLReader();
-//
-//            RSSHandler rssHander = new RSSHandler();
-
-//
-//                new Thread() {
-//                    @Override
-//                    public void run() {
-    ///okhttp3 网络连接
-
-//                        mOkHttpClient = new OkHttpClient();
-//                        Request.Builder requestBuilder = new Request.Builder().url(url);
-//
-//                        //可以省略，默认是GET请求
-//                        requestBuilder.method("GET", null);
-//                        Request request = requestBuilder.build();
-//                        Call mcall = mOkHttpClient.newCall(request);
-//                        mcall.enqueue(new Callback() {
-//                            @Override
-//                            public void onFailure(Call call, IOException e) {
-//                                Log.e("netWorkFailure", e.toString());
-//
-//                            }
-//
-//                            @Override
-//                            public void onResponse(Call call, Response response) throws IOException {
-//
-//                                if (response.isSuccessful()) {
-//
-//
-//                                    Log.i("responeSuccess", "返回成功了");
-//
-//                                    String responeNode = response.body().string();
-//                                    Log.i("body", "str4---" + responeNode);
-//
-//
-//                                    Message msg = Message.obtain();
-//                                    msg.obj = response;
-////                                    msg.what = 1;//区分哪一个线程发送的消息
-//                                    handler.sendMessage(msg);
-//
-////                                    is = response.body().byteStream();
-//
-//
-//                                } else {
-//                                    System.out.println("返回失败");
-//                                }
-//                            }
-//
-//                        });
-//
-//                    }
-//                }.start();
-//
-////            SystemClock.sleep(2000);
-//
-////            Log.i("间隔", "请求执行完成");
-////
-////            try {
-////                if (is != null) {
-////                    isc = new InputSource(is);
-////
-////                    Log.e("IS", "IS转换完成");
-////                } else {
-////                    Log.e("is", "is为空");
-////                }
-////
-////
-////                reader.parse(isc);
-////
-////
-////                Log.e("saxJiexi", "chenggong");
-////            } catch (SAXException e) {
-////                Log.i("SAX", e.toString());
-////            }
-////            return rssHander.getFeed();
-//
-
 
     //列表显示获取的RSS
     private void showListView() {
         ListView itemlist = (ListView) findViewById(R.id.lv_rssList);
-        if (feed == null) {
-            setTitle("访问的RSS无效");
-            return;
-        } else {
-            setTitle(tag);
-        }
-
 
         adapter = new SimpleAdapter(this, feed.getAllItemsForListView(),
                 android.R.layout.simple_list_item_2, new String[]{
@@ -337,6 +89,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView parent, View v, int position, long id) {
         Intent itemIntent = new Intent(this, ShowDescriptionActivity.class);
 
+        //传递rssItem的内容
         Bundle bundle = new Bundle();
         bundle.putString("title", feed.getItem(position).getTitle());
         bundle.putString("description", feed.getItem(position).getTitle());
@@ -348,37 +101,5 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         startActivityForResult(itemIntent, 0);
 
     }
-
-    //下拉刷新数据
-    void refreshed(){
-
-        int count1 = feed.Count();
-        System.out.println(count1);
-
-        RSSItem rssItem = new RSSItem();
-        rssItem.setTitle("我是新加来的");
-        rssItem.setPubdate("2017.12.23");
-
-        int count2  = feed.addItem(rssItem);
-        System.out.println(count2);
-
-        adapter.notifyDataSetChanged();
-
-    }
-
-//        class MyTask extends AsyncTask<URL, Void, String> {
-//
-//            @Override
-//            protected String doInBackground(URL... params) {
-//
-//                return null;
-//            }
-//
-//            @Override
-//            protected void onPostExecute(String s) {
-//                super.onPostExecute(s);
-//
-//            }
-//        }
 
 }

@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="colorValue" format="color" />
+    <attr name="floatValue" format="float" />
+    <attr name="integerValue" format="integer" />
+    <attr name="booleanValue" format="boolean" />
+    <attr name="dimensionValue" format="dimension" />
+    <attr name="stringValue" format="string" />
+    <attr name="referenceValue" format="color|reference" />
+    <attr name="imageValue" format="reference"/>
+
+    <attr name="curVisibility">
+        <enum name="show" value="0" />
+        <!-- Not displayed, but taken into account during layout (space is left for it). -->
+        <enum name="inshow" value="1" />
+        <!-- Completely hidden, as if the view had not been added. -->
+        <enum name="hide" value="2" />
+    </attr>
+
+</resources>

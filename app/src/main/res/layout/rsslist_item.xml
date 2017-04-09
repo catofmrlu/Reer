@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:paddingLeft="20dp"
+        android:textSize="15dp"
+        android:id="@+id/tv_rssName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+
+        android:paddingLeft="130dp"
+        android:textSize="15dp"
+        android:id="@+id/tv_rssCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

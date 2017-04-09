@@ -11,7 +11,10 @@
     <!--设置页面-->
     <string name="nightMode_text_settings" translatable="false">夜间模式</string>
     <string name="scrollMark_text_settings" translatable="false">滚动标为已读</string>
+    <string name="scrollMark_description_settings" translatable="false">在阅读列表中，通过滑动滚出的项目将标记为已读</string>
+
     <string name="_text_settings" translatable="false">夜间模式</string>
+
 
     <!--未读列表页面-->
 
@@ -22,6 +25,13 @@
     <!--查询RSS列表页面-->
     <string name="et_rssQuery_hint" translatable="false">请输入要订阅的rss名称</string>
     <string name="btn_rssQuery" translatable="false">query</string>
+
+    <string name="title_activity_open_screen">openScreenActivity</string>
+    <string name="openScreen_text">\?\n阅读\n能改变什么呢</string>
+
+    <!--about页面-->
+    <string name="app_edition">0.6</string>
+    <string name="app_email">lxxlxx8888@outlook.com</string>
 
 
 </resources>

@@ -1,5 +1,7 @@
 package com.rssreader.mrlu.myrssreader.Model.Rss;
 
+import android.util.Log;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -21,6 +23,8 @@ public class RSSHandler extends DefaultHandler {
     final int RSS_DESCRIPTION = 3;
     final int RSS_CATEGORY = 4;
     final int RSS_PUBDATE = 5;
+
+    private boolean mIsItemTitle = false;
 
 
     public RSSHandler() {
@@ -46,6 +50,7 @@ public class RSSHandler extends DefaultHandler {
             return;
         }
         if (localName.equals("item")) {
+            mIsItemTitle = true;
             rssItem = new RSSItem();
             return;
         }
@@ -85,16 +90,21 @@ public class RSSHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
         String theString = new String(ch, start, length);
 
+//        if (theString.indexOf(" &#8211; ") != -1) {
+//            theString.replace(" &#8211; ", "");
+//        }
+
         switch (currentState) {
             case RSS_TITLE:
 
-            if (rssItem != null) {
-                rssItem.setTitle(theString);
-                currentState = 0;
-            }else{
-                rssFeed.setName(theString);
-                currentState = 0;
-            }
+                if (mIsItemTitle) {
+                    rssItem.setTitle(theString);
+                    currentState = 0;
+                } else {
+                    Log.i("title", theString);
+                    rssFeed.setName(theString);
+                    currentState = 0;
+                }
                 return;
 
 
@@ -106,10 +116,10 @@ public class RSSHandler extends DefaultHandler {
 
             case RSS_DESCRIPTION:
 
-                if (rssItem != null) {
+                if (mIsItemTitle) {
                     rssItem.setDescription(theString);
                     currentState = 0;
-                }else{
+                } else {
                     rssFeed.setFeedDescription(theString);
                     currentState = 0;
                 }

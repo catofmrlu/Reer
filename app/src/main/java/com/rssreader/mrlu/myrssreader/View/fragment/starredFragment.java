@@ -17,7 +17,10 @@ public class starredFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_list, container, false);
+        View view;
+
+        //判断是否有标记项，来处理加载不同的view
+        view= inflater.inflate(R.layout.black_starred, container, false);
         return view;
     }
 }

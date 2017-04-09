@@ -1,5 +1,6 @@
 package com.rssreader.mrlu.myrssreader.Model.Rss;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +11,9 @@ import java.util.Vector;
  * Created by Mr Lu on 2017/1/6.
  */
 
-public class RSSFeed {
+public class RSSFeed implements Serializable {
+
+    public boolean isInserted = false;
 
     private String name = null;
     private String feedDescription = null;
