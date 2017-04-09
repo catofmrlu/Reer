@@ -13,6 +13,5 @@ public class MainActivity11 extends AppCompatActivity {
         setTheme(R.style.NightTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main11);
-        Log.e("ss", "sss");
     }
 }
