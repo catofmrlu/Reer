@@ -8,4 +8,67 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <!--<item name="android:colorBackground">#000000</item> 也可以设置背景色以及menu中的其他属性-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
+    </style>
+
+    <style name="setting_switch_text">
+        <item name="android:textColor">@color/md_black_color_code</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="NoTitleTheme_black" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="android:background">@color/black_overlay</item>
+
+    </style>
+
+    <style name="DayTheme" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorValue">@color/md_cyan_50_color_code</item>
+        <item name="floatValue">0.35</item>
+        <item name="integerValue">33</item>
+        <item name="booleanValue">true</item>
+        <item name="dimensionValue">16dp</item>
+        <!-- 如果string类型不是填的引用而是直接放一个字符串,在布局文件中使用正常,但代码里获取的就有问题 -->
+        <item name="stringValue">@string/scrollMark_description_settings</item>
+        <item name="referenceValue">@drawable/sun83</item>
+        <item name="imageValue">@drawable/sun83</item>
+        <item name="curVisibility">show</item>
+    </style>
+    <style name="NightTheme" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorValue">@color/black_overlay</item>
+        <item name="floatValue">1.44</item>
+        <item name="integerValue">55</item>
+        <item name="booleanValue">false</item>
+        <item name="dimensionValue">18sp</item>
+        <item name="stringValue">@string/scrollMark_description_settings</item>
+        <item name="referenceValue">@drawable/btn_check_on_disabled_holo_light</item>
+        <item name="imageValue">@drawable/feed_loading</item>
+        <item name="curVisibility">hide</item>
+    </style>
+
 </resources>

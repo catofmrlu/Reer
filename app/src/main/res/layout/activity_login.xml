@@ -54,6 +54,7 @@
 
     <TextView
         android:autoLink="email"
+
         android:linksClickable="true"
         android:textColor="@color/colorPrimary"
         android:text="@string/backfeed_text_login"

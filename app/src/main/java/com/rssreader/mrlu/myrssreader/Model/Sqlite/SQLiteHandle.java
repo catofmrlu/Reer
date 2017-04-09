@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.security.PublicKey;
+
 /**
  * Created by LuXin on 2017/2/28.
  */
@@ -20,7 +22,7 @@ public class SQLiteHandle {
 
     }
 
-    public void insert(String sqlTable, String rssName, String rssDescription, String rssLink) {
+    public void insertFeed(String rssName, String rssDescription, String rssLink) {
         db = mSqlHelper.getWritableDatabase();
 
 //        ContentValues values = new ContentValues();
@@ -30,8 +32,8 @@ public class SQLiteHandle {
 //
 //        db.insert(sqlTable, null, values);
 
-        String sql_insert = "insert into " + sqlTable
-                + "(RssName, RssPubdate, RssLink) values" + "('" + rssName + "','" + rssDescription
+        String sql_insert = "insert into AllFeeds"
+                + "(RssName, RssDescription, RssLink) values" + "('" + rssName + "','" + rssDescription
                 + "','" + rssLink + "'" + ")";
 
         //打印SQL执行语句验证是否正确
@@ -42,24 +44,56 @@ public class SQLiteHandle {
 
     }
 
-    public void query(String sqlTable) {
+    public void queryAllFeeds(String sqlTable) {
         db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
 
-        Cursor cursor = db.query(sqlTable, null, null, null, null, null, null);
+        Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                String name = cursor.getString(cursor.getColumnIndex("RssName"));
+                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
+                String link = cursor.getString(cursor.getColumnIndex("RssLink"));
 
-        while (cursor.moveToNext()){
-            String name = cursor.getString(cursor.getColumnIndex("RssName"));
-            String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
-            String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+                //打印查询的数据
+                System.out.println(name + "---" + description + "---" + link);
 
-            //打印查询的数据
-            System.out.println(name + "\n" + description + "\n" + link);
+            }
 
+        }else {
+            Log.e("查询allFeeds", "没有数据！！");
         }
         db.close();
 
+    }
+
+    public boolean urlQuery(String url) {
+
+        boolean isUrl = false;
+
+        db = mSqlHelper.getWritableDatabase();
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        while (cursor.moveToNext()) {
+            String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+
+            if (url.equals(link.trim())) {
+                isUrl = true;
+                break;
+
+            } else {
+                isUrl = false;
+            }
+        }
+
+        db.close();
+
+        return isUrl;
     }
 }

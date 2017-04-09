@@ -1,5 +1,6 @@
 package com.rssreader.mrlu.myrssreader.View;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -100,13 +101,38 @@ public class RssFeedListActivity extends AppCompatActivity {
         lvRssList.setAdapter(adapter);
         lvRssList.setSelection(0);
 
-
         lvRssList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                switch (position) {
+                    case 0:
+                        setIntentString("http://free.apprcn.com/category/ios/feed/");
+                        break;
+
+                    case 1:
+                        setIntentString("https://www.zhihu.com/rss");
+                        break;
+
+                    default:
+                        break;
+                }
+
             }
         });
+    }
+
+    //传入要跳转的rssLink
+    public void setIntentString(String rssLink) {
+
+        Intent rssListIntent = new Intent(RssFeedListActivity.this, mainView.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("rssLink", rssLink);
+
+        rssListIntent.putExtra("android.intent.extra.rssFeed", bundle);
+
+        startActivity(rssListIntent);
     }
 
     //转换dp与px
