@@ -26,4 +26,9 @@
         <enum name="hide" value="2" />
     </attr>
 
+    <!--切换主题使用-->
+    <attr name="button_bg" format="reference|color" />
+    <attr name="activity_bg" format="reference|color" />
+    <attr name="text_cl" format="reference|color" />
+
 </resources>

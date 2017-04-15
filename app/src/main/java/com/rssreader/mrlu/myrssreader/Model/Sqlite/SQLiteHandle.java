@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.security.Principal;
 import java.security.PublicKey;
 
 /**
@@ -67,6 +68,42 @@ public class SQLiteHandle {
         }
         db.close();
 
+    }
+
+
+    public Cursor queryAllFeeds(){
+
+        db = mSqlHelper.getWritableDatabase();
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        db.close();
+
+        return cursor;
+
+    }
+
+    public boolean queryHasFeed(){
+
+        boolean isHasFeed;
+        db = mSqlHelper.getWritableDatabase();
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        if (cursor != null)
+            isHasFeed = true;
+        else
+            isHasFeed = false;
+
+        db.close();
+
+        return isHasFeed;
     }
 
     public boolean urlQuery(String url) {

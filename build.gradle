@@ -17,6 +17,9 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://raw.githubusercontent.com/miomin/mvn-repo-ione/master" }
+
+        maven { url "https://jitpack.io" }
+
     }
 }
 

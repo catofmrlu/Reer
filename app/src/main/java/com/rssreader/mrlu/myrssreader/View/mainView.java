@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.rssreader.mrlu.myrssreader.R;
+import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
 import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
 import com.rssreader.mrlu.myrssreader.View.fragment.unReadFragment;
 
@@ -28,7 +29,7 @@ import butterknife.ButterKnife;
 
 import static com.rssreader.mrlu.myrssreader.R.color.ReadBlue;
 
-public class mainView extends AppCompatActivity implements View.OnClickListener {
+public class mainView extends MAppCompatActivity implements View.OnClickListener {
 
     //声明ViewPager
     private ViewPager mNoScrollViewPager;
@@ -48,7 +49,7 @@ public class mainView extends AppCompatActivity implements View.OnClickListener 
     String rssUrl;
 
     //0为day，1为night
-    public static int Swith_Mode = 0;
+    public static int Swith_Mode = 1;
 
     public ImageView nightSwith;
 
@@ -56,9 +57,12 @@ public class mainView extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
 
         //取消actionBar
-        setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
+        setTheme(R.style.DayTheme);
 
         super.onCreate(savedInstanceState);
+
+//        Intent intent = getIntent();
+//        int result = intent.get
 
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
@@ -83,14 +87,15 @@ public class mainView extends AppCompatActivity implements View.OnClickListener 
                     case 0:
                         nightSwith.setImageResource(R.drawable.sun83);
                         Swith_Mode = 1;
-                        finish();
-                        setTheme(R.style.NoTitleTheme_black);
+                        mainView.this.getApplication().setTheme(R.style.NightTheme);
                         recreate();
                         Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
                         nightSwith.setImageResource(R.drawable.stormy1);
                         Swith_Mode = 0;
+                        mainView.this.getApplication().setTheme(R.style.DayTheme);
+                        recreate();
                         Toast.makeText(mainView.this, "已切换为日间模式", Toast.LENGTH_SHORT).show();
                         break;
                 }
@@ -153,7 +158,7 @@ public class mainView extends AppCompatActivity implements View.OnClickListener 
     private void initDatas() {
         mFragments = new ArrayList<>();
         //将两个Fragment加入集合中
-        mFragments.add(new unReadFragment());
+        mFragments.add(new unReadFragment11());
         mFragments.add(new starredFragment());
 
         //初始化适配器
