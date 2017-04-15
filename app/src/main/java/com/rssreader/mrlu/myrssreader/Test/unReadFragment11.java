@@ -1,7 +1,9 @@
-package com.rssreader.mrlu.myrssreader.View.fragment;
+package com.rssreader.mrlu.myrssreader.Test;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -30,27 +32,20 @@ import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.View.ListActivity;
-import com.rssreader.mrlu.myrssreader.View.ShowDescriptionActivity;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.concurrent.ExecutionException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -60,48 +55,74 @@ import javax.xml.parsers.SAXParserFactory;
  * Created by LuXin on 2017/2/26.
  */
 
-public class unReadFragment extends Fragment implements AdapterView.OnItemClickListener {
+public class unReadFragment11 extends Fragment implements AdapterView.OnItemClickListener {
 
-    public String RSS_URL;
+//    public String RSS_URL;
     //            = "http://free.apprcn.com/category/ios/feed/";
+    //    OkHttpClient mOkHttpClient;
+
     public String tag = "RSSReader";
     private RSSFeed feed = null;
-
-    //    OkHttpClient mOkHttpClient;
     InputSource isc;
-
     public RequestQueue mRequestQueue;
-
-    SwipeRefreshLayout mSrl;
-
-    SwipeMenuListView mSwipeMenuListView;
-
     private SimpleAdapter adapter;
-
-    ListView itemlist;
+    List<Map<String, Object>> mRssUnreadList;
+    SQLiteHandle mSqLiteHandle;
+    public int rssItemCount = 0;
 
     View view;
-
+    SwipeRefreshLayout mSrl;
     Window window;
-
-    List<Map<String, Object>> mRssUnreadList;
+    SwipeMenuListView mSwipeMenuListView;
+    ListView itemlist;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.activity_list, container, false);
+        int a = 0;
+        mSqLiteHandle = new SQLiteHandle(getContext());
 
-        init();
-        getFeed(RSS_URL);
+//        if (mSqLiteHandle.queryHasFeed()){
+        if (a == 1) {
+            view = inflater.inflate(R.layout.activity_list, container, false);
 
+            init();
 
+            Cursor cursor = mSqLiteHandle.queryAllFeeds();
+
+            mRssUnreadList = new ArrayList<>();
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("rssName", "全部未读");
+            map.put("rssCount", rssItemCount);
+            mRssUnreadList.add(map);
+
+            if (cursor != null) {
+                while (cursor.moveToNext()) {
+//                String name = cursor.getString(cursor.getColumnIndex("RssName"));
+//                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
+                    String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+//
+//                //打印查询的数据
+//                System.out.println(name + "---" + description + "---" + link);
+
+                    getFeed(link);
+
+                }
+
+            }
+
+        } else {
+            view = inflater.inflate(R.layout.black_unread, container, false);
+
+        }
         return view;
+
     }
 
     public void init() {
 
-        RSS_URL = "http://www.feng.com/rss.xml";
+//        RSS_URL = "http://www.feng.com/rss.xml";
 //                "http://free.apprcn.com/category/ios/feed/";
 
         mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
@@ -223,52 +244,56 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
                                     feed = rssHander.getFeed();
 
+                                    //累加各个feed的item数
+                                    rssItemCount += feed.Count();
 
                                     if (feed == null) {
                                         Log.e("feed", "feed为空");
                                     } else {
                                         Log.i("恭喜！", "feed通过");
 
-                                        System.out.println("---------/n" + feed.Count());
+                                        System.out.println("---------/n" + feed.Count() + "/n------");
 
-                                        mRssUnreadList = new ArrayList<>();
                                         Map<String, Object> map = new HashMap<String, Object>();
-                                        map.put("rssName", "全部未读");
-                                        map.put("rssCount", /*feed.Count()*/"www");
+                                        map.put("rssName", feed.getName());
+                                        map.put("rssCount", feed.Count());
                                         mRssUnreadList.add(map);
 
-                                        Map<String, Object> map1 = new HashMap<String, Object>();
-                                        map1.put("rssName", /*feed.getName()*/"sss");
-                                        map1.put("rssCount", /*feed.Count()*/"ssssss");
-                                        mRssUnreadList.add(map1);
-
                                         Log.i("过程标记", "list装载完成");
-//                                        try {
-//
-//                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getContext());
-//
-//                                            sqLiteHandle.queryAllFeeds("AllFeeds");
-//
-//                                            if (!sqLiteHandle.urlQuery(urlString)) {
-//                                                //异步将feed插入数据库
-//                                                new Thread(new Runnable() {
-//                                                    @Override
-//                                                    public void run() {
-//                                                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(),
-//                                                                RSS_URL);
-//
-//                                                        feed.isInserted = true;
-//
-//                                                        sqLiteHandle.queryAllFeeds("AllFeeds");
-//                                                    }
-//                                                }).start();
-//                                            } else {
-//                                                Log.i("数据库", "已插入！");
-//                                            }
+                                        try {
 
-//                                        } catch (Exception e) {
-//                                            Log.e("sql数据库问题", e.getMessage());
-//                                        }
+                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getContext());
+
+                                            sqLiteHandle.queryAllFeeds("AllFeeds");
+
+                                            if (!sqLiteHandle.urlQuery(urlString)) {
+                                                //异步将feed插入数据库
+                                                new Thread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(),
+                                                                urlString);
+
+                                                        feed.isInserted = true;
+
+                                                        SharedPreferences sharedPreferences = getContext().getSharedPreferences("sp", Context.MODE_PRIVATE);
+
+                                                        SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
+
+                                                        editor.putBoolean("isHasFeed", true);
+
+                                                        editor.commit();//提交修改
+
+                                                        sqLiteHandle.queryAllFeeds("AllFeeds");
+                                                    }
+                                                }).start();
+                                            } else {
+                                                Log.i("数据库", "已插入！");
+                                            }
+
+                                        } catch (Exception e) {
+                                            Log.e("sql数据库问题", e.getMessage());
+                                        }
 
                                     }
 
@@ -365,15 +390,15 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     }
 
-    @Subscribe
-    public void onevent(String data) {
-        RSS_URL = data;
-        Log.i("发送成功", "rss:" + RSS_URL);
-
-        getFeed(RSS_URL);
-
-        adapter.notifyDataSetChanged();
-    }
+//    @Subscribe
+//    public void onevent(String data) {
+//        RSS_URL = data;
+//        Log.i("发送成功", "rss:" + RSS_URL);
+//
+//        getFeed(RSS_URL);
+//
+//        adapter.notifyDataSetChanged();
+//    }
 
 //    @Override
 //    public void onDestroy() {

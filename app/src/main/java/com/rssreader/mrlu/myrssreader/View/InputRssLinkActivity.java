@@ -41,7 +41,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 intent.putExtras(bundle);
 
-                startActivity(intent);
+                startActivityForResult(intent, 1);
             }
         });
     }
