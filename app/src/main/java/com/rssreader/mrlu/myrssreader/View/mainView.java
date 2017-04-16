@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+
 import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -20,7 +22,6 @@ import android.widget.Toast;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
 import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
-import com.rssreader.mrlu.myrssreader.View.fragment.unReadFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
 
         //取消actionBar
-        setTheme(R.style.DayTheme);
+        setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
 
         super.onCreate(savedInstanceState);
 
@@ -85,17 +86,17 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 //点击切换日间/夜间图标
                 switch (Swith_Mode) {
                     case 0:
-                        nightSwith.setImageResource(R.drawable.sun83);
+//                        nightSwith.setImageResource(R.drawable.sun83);
                         Swith_Mode = 1;
-                        mainView.this.getApplication().setTheme(R.style.NightTheme);
-                        recreate();
+//                        mainView.this.getApplication().setTheme(R.style.NightTheme);
+//                        recreate();
                         Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
-                        nightSwith.setImageResource(R.drawable.stormy1);
+//                        nightSwith.setImageResource(R.drawable.stormy1);
                         Swith_Mode = 0;
-                        mainView.this.getApplication().setTheme(R.style.DayTheme);
-                        recreate();
+//                        mainView.this.getApplication().setTheme(R.style.DayTheme);
+//                        recreate();
                         Toast.makeText(mainView.this, "已切换为日间模式", Toast.LENGTH_SHORT).show();
                         break;
                 }
@@ -141,9 +142,9 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         //EventBus发送消息
 //        EventBus.getDefault().post(rssUrl);
 
-        initViews();//初始化控件
-        initEvents();//初始化事件
-        initDatas();//初始化数据
+        initView();//初始化控件
+        initEvent();//初始化事件
+        initData();//初始化数据
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //
@@ -155,7 +156,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         selectTab(0);
     }
 
-    private void initDatas() {
+    private void initData() {
         mFragments = new ArrayList<>();
         //将两个Fragment加入集合中
         mFragments.add(new unReadFragment11());
@@ -178,7 +179,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         //不要忘记设置ViewPager的适配器
         mNoScrollViewPager.setAdapter(mAdapter);
         //设置ViewPager的切换监听
-        mNoScrollViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mNoScrollViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             //页面滚动事件
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -202,14 +203,14 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         });
     }
 
-    private void initEvents() {
+    private void initEvent() {
         //设置两个Tab的点击事件
         mTabUnread.setOnClickListener(this);
         mTabStarred.setOnClickListener(this);
     }
 
     //初始化控件
-    private void initViews() {
+    private void initView() {
         mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
 
         mTabUnread = (LinearLayout) findViewById(R.id.id_tab_weixin);

@@ -80,11 +80,9 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        int a = 0;
-        mSqLiteHandle = new SQLiteHandle(getContext());
+        mSqLiteHandle = new SQLiteHandle(getActivity());
 
-//        if (mSqLiteHandle.queryHasFeed()){
-        if (a == 1) {
+        if (mSqLiteHandle.queryHasFeed()) {
             view = inflater.inflate(R.layout.activity_list, container, false);
 
             init();
@@ -148,7 +146,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                         refreshed();
                         // 停止刷新
                         mSrl.setRefreshing(false);
-                        Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "刷新完成！", Toast.LENGTH_SHORT).show();
                     }
                 }, 2000); // 2秒后发送消息，停止刷新
 
@@ -163,7 +161,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             public void create(SwipeMenu menu) {
                 // create "open" item
                 SwipeMenuItem openItem = new SwipeMenuItem(
-                        getContext());
+                        getActivity());
                 // set item background
                 openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
                         0xCE)));
@@ -179,7 +177,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 menu.addMenuItem(openItem);
                 // create "delete" item
                 SwipeMenuItem deleteItem = new SwipeMenuItem(
-                        getContext());
+                        getActivity());
                 // set item background
                 deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
                         0x3F, 0x25)));
@@ -219,7 +217,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
 //                URL url = new URL(urlString);
 
-            mRequestQueue = Volley.newRequestQueue(getContext());
+            mRequestQueue = Volley.newRequestQueue(getActivity());
             StringRequest mStringRequest = new StringRequest(urlString,
                     new com.android.volley.Response.Listener<String>() {
                         @Override
@@ -262,7 +260,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                                         Log.i("过程标记", "list装载完成");
                                         try {
 
-                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getContext());
+                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
 
                                             sqLiteHandle.queryAllFeeds("AllFeeds");
 
@@ -276,7 +274,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
                                                         feed.isInserted = true;
 
-                                                        SharedPreferences sharedPreferences = getContext().getSharedPreferences("sp", Context.MODE_PRIVATE);
+                                                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
 
                                                         SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
 
@@ -348,7 +346,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         }
 
 
-        adapter = new SimpleAdapter(getContext(), mRssUnreadList,
+        adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
                 R.layout.rsslist_item, new String[]{
                 "rssName", "rssCount"
         },
@@ -363,7 +361,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     //处理列表的单击事件
     public void onItemClick(AdapterView parent, View v, int position, long id) {
-        Intent itemIntent = new Intent(getContext(), ListActivity.class);
+        Intent itemIntent = new Intent(getActivity(), ListActivity.class);
 
         Bundle bundle = new Bundle();
 //        bundle.putString("title", feed.getItem(position).getTitle());

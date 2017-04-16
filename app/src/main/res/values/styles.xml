@@ -57,19 +57,19 @@
         <item name="imageValue">@drawable/sun83</item>
         <item name="curVisibility">show</item>
     </style>
-    <style name="NightTheme" parent="Theme.AppCompat">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorValue">@color/black_overlay</item>
-        <item name="floatValue">1.44</item>
-        <item name="integerValue">55</item>
-        <item name="booleanValue">false</item>
-        <item name="dimensionValue">18sp</item>
-        <item name="stringValue">@string/scrollMark_description_settings</item>
-        <item name="referenceValue">@drawable/btn_check_on_disabled_holo_light</item>
-        <item name="imageValue">@drawable/feed_loading</item>
-        <item name="curVisibility">hide</item>
-    </style>
+    <!--<style name="NightTheme" parent="Theme.AppCompat">-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="colorValue">@color/black_overlay</item>-->
+        <!--<item name="floatValue">1.44</item>-->
+        <!--<item name="integerValue">55</item>-->
+        <!--<item name="booleanValue">false</item>-->
+        <!--<item name="dimensionValue">18sp</item>-->
+        <!--<item name="stringValue">@string/scrollMark_description_settings</item>-->
+        <!--<item name="referenceValue">@drawable/btn_check_on_disabled_holo_light</item>-->
+        <!--<item name="imageValue">@drawable/feed_loading</item>-->
+        <!--<item name="curVisibility">hide</item>-->
+    <!--</style>-->
 
 
 

@@ -20,11 +20,13 @@ public class SQLiteHandle {
     public SQLiteHandle(Context context) {
 
         mSqlHelper = new RssSqliteHelper(context, "Rss", null, 1);
+        db = mSqlHelper.getWritableDatabase();
+
 
     }
 
-    public void insertFeed(String rssName, String rssDescription, String rssLink) {
-        db = mSqlHelper.getWritableDatabase();
+    public synchronized void  insertFeed(String rssName, String rssDescription, String rssLink) {
+//        db = mSqlHelper.getWritableDatabase();
 
 //        ContentValues values = new ContentValues();
 //        values.put("RssName", rssTitle);
@@ -45,8 +47,8 @@ public class SQLiteHandle {
 
     }
 
-    public void queryAllFeeds(String sqlTable) {
-        db = mSqlHelper.getWritableDatabase();
+    public synchronized void queryAllFeeds(String sqlTable) {
+//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
@@ -71,7 +73,7 @@ public class SQLiteHandle {
     }
 
 
-    public Cursor queryAllFeeds(){
+    public synchronized Cursor queryAllFeeds(){
 
         db = mSqlHelper.getWritableDatabase();
 
@@ -86,7 +88,7 @@ public class SQLiteHandle {
 
     }
 
-    public boolean queryHasFeed(){
+    public synchronized boolean queryHasFeed(){
 
         boolean isHasFeed;
         db = mSqlHelper.getWritableDatabase();
@@ -106,11 +108,11 @@ public class SQLiteHandle {
         return isHasFeed;
     }
 
-    public boolean urlQuery(String url) {
+    public synchronized boolean urlQuery(String url) {
 
         boolean isUrl = false;
 
-        db = mSqlHelper.getWritableDatabase();
+//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
