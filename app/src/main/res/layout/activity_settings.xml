@@ -119,7 +119,7 @@
         </LinearLayout>
 
         <Switch
-            android:id="@+id/tb_nightMode"
+            android:id="@+id/tb_nightde"
             style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
         </LinearLayout>
 
         <Switch
-            android:id="@+id/tb_nightMode"
+            android:id="@+id/tb_nightMo"
             style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
