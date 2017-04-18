@@ -68,6 +68,8 @@ public class SQLiteHandle {
         }else {
             Log.e("查询allFeeds", "没有数据！！");
         }
+
+        cursor.close();
         db.close();
 
     }

@@ -28,38 +28,49 @@ public class openScreenActivity extends AppCompatActivity {
 
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
-        boolean isHasFeed = sharedPreferences.getBoolean("isHasFeed", false);
 
-        if (isHasFeed) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    SystemClock.sleep(2000);
+        if (sharedPreferences != null) {
+            boolean isHasFeed = sharedPreferences.getBoolean("isHasFeed", false);
 
-                    Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
+            if (isHasFeed) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        SystemClock.sleep(2000);
 
-                    startActivity(intent);
+                        Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
 
-                    finish();
+                        startActivity(intent);
+
+                        finish();
+                    }
                 }
+
+                ).start();
+
+            } else {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        SystemClock.sleep(2000);
+                        Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
+                }).start();
             }
-
-            ).start();
-
         } else {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     SystemClock.sleep(2000);
-
                     Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
-
                     startActivity(intent);
-
                     finish();
                 }
+            });
 
-            }).start();
         }
     }
 }
