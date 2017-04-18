@@ -282,7 +282,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
                                                         editor.commit();//提交修改
 
-                                                        sqLiteHandle.queryAllFeeds("AllFeeds");
+                                                         sqLiteHandle.queryAllFeeds("AllFeeds");
                                                     }
                                                 }).start();
                                             } else {
