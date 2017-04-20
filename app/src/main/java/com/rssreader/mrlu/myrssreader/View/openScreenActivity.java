@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -30,18 +31,18 @@ public class openScreenActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
 
         if (sharedPreferences != null) {
-            boolean isHasFeed = sharedPreferences.getBoolean("isHasFeed", false);
 
-            if (isHasFeed) {
+            boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", false);
+
+            if (isEnterAppearPages) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+
                         SystemClock.sleep(2000);
 
                         Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
-
                         startActivity(intent);
-
                         finish();
                     }
                 }
@@ -49,6 +50,7 @@ public class openScreenActivity extends AppCompatActivity {
                 ).start();
 
             } else {
+                Log.i("首次跳转", "跳到引导页1");
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -61,6 +63,8 @@ public class openScreenActivity extends AppCompatActivity {
                 }).start();
             }
         } else {
+            Log.i("首次跳转", "跳到引导页2");
+
             new Thread(new Runnable() {
                 @Override
                 public void run() {

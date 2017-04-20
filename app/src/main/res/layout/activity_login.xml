@@ -29,13 +29,10 @@
         android:id="@+id/btn_feedly"
         android:layout_marginBottom="20dp"
 
-        android:textStyle="bold"
         android:text="@string/feedly_text_login"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:background="@color/colorAccent"
-        android:textColor="@android:color/background_light"
+        style="@style/md_button"
         android:minHeight="39dp" />
 
     <Button

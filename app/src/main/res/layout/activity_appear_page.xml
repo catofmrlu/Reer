@@ -3,30 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.rssreader.mrlu.myrssreader.View.AppearPageActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-
+3
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_appear"
-            android:layout_width="344dp"
-            android:layout_height="551dp"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"/>
 
         <com.viewpagerindicator.CirclePageIndicator
             android:id="@+id/indicator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="8dp"
             android:padding="10dp" />
-
-    </LinearLayout>
 
 
 </LinearLayout>
