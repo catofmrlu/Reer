@@ -57,6 +57,12 @@
         <item name="imageValue">@drawable/sun83</item>
         <item name="curVisibility">show</item>
     </style>
+
+    <style name="md_button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/background_light</item>
+    </style>
     <!--<style name="NightTheme" parent="Theme.AppCompat">-->
         <!--<item name="windowActionBar">false</item>-->
         <!--<item name="windowNoTitle">true</item>-->
