@@ -2,6 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
 android {
+
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions{
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
+
     signingConfigs {
         config {
             keyAlias 'Reer'
@@ -60,4 +70,26 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+///LeanCloud SDK部分
+    // LeanCloud 基础包
+    compile ('cn.leancloud.android:avoscloud-sdk:v3.+')
+
+    // 推送与实时聊天需要的包
+    compile ('cn.leancloud.android:avoscloud-push:v3.+@aar'){transitive = true}
+
+    // LeanCloud 统计包
+    compile ('cn.leancloud.android:avoscloud-statistics:v3.+')
+
+    // LeanCloud 用户反馈包
+    compile ('cn.leancloud.android:avoscloud-feedback:v3.+@aar')
+
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile ('cn.leancloud.android:avoscloud-sns:v3.+@aar')
+    compile ('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
+    // 目前新浪微博官方只提供 jar 包的集成方式
+    // 请手动下载新浪微博 SDK 的 jar 包，将其放在 libs 目录下进行集成
+
+    // LeanCloud 应用内搜索包
+//    compile ('cn.leancloud.android:avoscloud-search:v3.+@aar')
 }
