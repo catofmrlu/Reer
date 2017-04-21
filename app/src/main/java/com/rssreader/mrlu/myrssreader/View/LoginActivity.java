@@ -3,6 +3,7 @@ package com.rssreader.mrlu.myrssreader.View;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,7 +17,6 @@ import com.rssreader.mrlu.myrssreader.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    RssSqliteHelper mSqlHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,22 +45,6 @@ public class LoginActivity extends AppCompatActivity {
             Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
             Button btnFeedly = (Button) findViewById(R.id.btn_feedly);
 
-//        创建数据库及数据表
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    try {
-
-                        mSqlHelper = new RssSqliteHelper(LoginActivity.this, "Rss", null, 1);
-                        mSqlHelper.getWritableDatabase();
-
-                    } catch (Exception e) {
-                        Log.e("database", "问题在：" + e.toString());
-                    }
-
-                }
-            }).start();
 
 
             btnLocalhost.setOnClickListener(new View.OnClickListener() {

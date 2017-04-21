@@ -55,9 +55,9 @@ dependencies {
     compile 'com.github.zzz40500:ThemeDemo:0.1'
     compile 'fr.avianey.com.viewpagerindicator:library:2.4.1.1'
     compile 'cn.carbs.android:AutoZoomInImageView:1.0.0'
-    testCompile 'junit:junit:4.12'
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     compile 'com.android.support:support-v4:25.2.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }

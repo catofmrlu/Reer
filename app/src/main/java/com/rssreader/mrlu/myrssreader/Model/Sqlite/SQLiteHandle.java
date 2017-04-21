@@ -14,18 +14,16 @@ import java.security.PublicKey;
 
 public class SQLiteHandle {
 
-    RssSqliteHelper mSqlHelper;
-    SQLiteDatabase db;
+    private RssSqliteHelper mSqlHelper;
+    private SQLiteDatabase db;
 
     public SQLiteHandle(Context context) {
 
-        mSqlHelper = new RssSqliteHelper(context, "Rss", null, 1);
-        db = mSqlHelper.getWritableDatabase();
-
+        db = mSqlHelper.getInstance(context);
 
     }
 
-    public synchronized void  insertFeed(String rssName, String rssDescription, String rssLink) {
+    public  void  insertFeed(String rssName, String rssDescription, String rssLink) {
 //        db = mSqlHelper.getWritableDatabase();
 
 //        ContentValues values = new ContentValues();
@@ -47,7 +45,7 @@ public class SQLiteHandle {
 
     }
 
-    public synchronized void queryAllFeeds(String sqlTable) {
+    public  void queryAllFeeds(String sqlTable) {
 //        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
@@ -75,9 +73,9 @@ public class SQLiteHandle {
     }
 
 
-    public synchronized Cursor queryAllFeeds(){
+    public  Cursor queryAllFeeds(){
 
-        db = mSqlHelper.getWritableDatabase();
+//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
@@ -90,10 +88,10 @@ public class SQLiteHandle {
 
     }
 
-    public synchronized boolean queryHasFeed(){
+    public  boolean queryHasFeed(){
 
         boolean isHasFeed;
-        db = mSqlHelper.getWritableDatabase();
+//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
@@ -110,7 +108,7 @@ public class SQLiteHandle {
         return isHasFeed;
     }
 
-    public synchronized boolean urlQuery(String url) {
+    public  boolean urlQuery(String url) {
 
         boolean isUrl = false;
 

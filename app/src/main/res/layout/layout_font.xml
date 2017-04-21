@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_font"
+        android:text="我是鲁新新，Mr Lu cat of lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_font1"
+        android:text="我是鲁新新，Mr Lu cat of lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:typeface="monospace"
+        android:id="@+id/tv_font2"
+        android:text="我是鲁新新，Mr Lu cat of lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:typeface="sans"
+        android:id="@+id/tv_font3"
+        android:text="我是鲁新新，Mr Lu cat of lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:typeface="serif"
+        android:id="@+id/tv_font4"
+        android:text="我是鲁新新，Mr Lu cat of lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
