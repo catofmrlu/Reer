@@ -3,6 +3,7 @@ package com.rssreader.mrlu.myrssreader.View;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.RssSqliteHelper;
 import com.rssreader.mrlu.myrssreader.R;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -27,6 +29,7 @@ import static android.R.attr.button;
 
 public class AppearPageActivity extends AppCompatActivity {
 
+    RssSqliteHelper mSqlHelper;
 
     @BindView(R.id.vp_appear)
     ViewPager vpAppear;
@@ -60,6 +63,23 @@ public class AppearPageActivity extends AppCompatActivity {
             circlePageIndicator.setViewPager(vpAppear);
 
             Log.i("过程打印", "viewpager装载完成");
+
+            //        创建数据库及数据表
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                    try {
+
+                        mSqlHelper = new RssSqliteHelper(AppearPageActivity.this, "Rss", null, 1);
+                        mSqlHelper.getWritableDatabase();
+
+                    } catch (Exception e) {
+                        Log.e("database", "问题在：" + e.toString());
+                    }
+
+                }
+            }).start();
 
             Button button = (Button) view3.findViewById(R.id.btn_appear);
 
