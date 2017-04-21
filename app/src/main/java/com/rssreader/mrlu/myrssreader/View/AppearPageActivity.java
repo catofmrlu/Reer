@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.avos.avoscloud.AVOSCloud;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.RssSqliteHelper;
 import com.rssreader.mrlu.myrssreader.R;
 import com.viewpagerindicator.CirclePageIndicator;
