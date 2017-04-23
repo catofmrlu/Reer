@@ -65,22 +65,22 @@ public class AppearPageActivity extends AppCompatActivity {
 
             Log.i("过程打印", "viewpager装载完成");
 
-            //        创建数据库及数据表
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    try {
-
-                        mSqlHelper = new RssSqliteHelper(AppearPageActivity.this, "Rss", null, 1);
-                        mSqlHelper.getWritableDatabase();
-
-                    } catch (Exception e) {
-                        Log.e("database", "问题在：" + e.toString());
-                    }
-
-                }
-            }).start();
+//            //        创建数据库及数据表
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//
+//                    try {
+//
+//                        mSqlHelper = new RssSqliteHelper(AppearPageActivity.this, "Rss", null, 1);
+//                        mSqlHelper.getWritableDatabase();
+//
+//                    } catch (Exception e) {
+//                        Log.e("database", "问题在：" + e.toString());
+//                    }
+//
+//                }
+//            }).start();
 
             Button button = (Button) view3.findViewById(R.id.btn_appear);
 

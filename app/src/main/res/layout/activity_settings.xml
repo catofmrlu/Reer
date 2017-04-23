@@ -66,12 +66,12 @@
 
             <TextView
                 style="@style/setting_switch_text"
-                android:text="@string/scrollMark_text_settings" />
+                android:text="@string/openscreen_setting" />
 
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/scrollMark_description_settings" />
+                android:text="@string/openscreen_description_setting" />
 
         </LinearLayout>
 
@@ -79,15 +79,16 @@
             style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:paddingLeft="90dp" />
     </LinearLayout>
 
 
     <TextView
-        android:paddingTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
+        android:paddingTop="15dp"
         android:text="阅读"
         android:textColor="@color/md_teal_500_color_code" />
 
@@ -126,116 +127,5 @@
             android:paddingLeft="90dp" />
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:paddingLeft="10dp">
-
-            <TextView
-                style="@style/setting_switch_text"
-                android:text="@string/scrollMark_text_settings" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="@string/scrollMark_description_settings" />
-
-        </LinearLayout>
-
-        <Switch
-            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="90dp" />
-    </LinearLayout>
-
-
-    <TextView
-        android:paddingTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:text="阅读"
-        android:textColor="@color/md_teal_500_color_code" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:paddingLeft="10dp">
-
-            <TextView
-                style="@style/setting_switch_text"
-                android:text="@string/scrollMark_text_settings" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="@string/scrollMark_description_settings"
-                android:textColor="@color/md_grey_500_color_code" />
-
-        </LinearLayout>
-
-        <Switch
-            android:id="@+id/tb_nightMo"
-            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="90dp" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:paddingLeft="10dp">
-
-            <TextView
-                style="@style/setting_switch_text"
-                android:text="@string/scrollMark_text_settings" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="@string/scrollMark_description_settings" />
-
-        </LinearLayout>
-
-        <Switch
-            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="90dp" />
-    </LinearLayout>
 
 </LinearLayout>

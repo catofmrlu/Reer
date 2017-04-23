@@ -13,7 +13,9 @@
     <string name="scrollMark_text_settings" translatable="false">滚动标为已读</string>
     <string name="scrollMark_description_settings" translatable="false">在阅读列表中，通过滑动滚出的项目将标记为已读</string>
 
-    <string name="_text_settings" translatable="false">夜间模式</string>
+    <string name="openscreen_setting" translatable="false">是否启用开屏动画</string>
+    <string name="openscreen_description_setting" translatable="false">打开或关闭应用启动时的展示动画</string>
+
 
 
     <!--未读列表页面-->

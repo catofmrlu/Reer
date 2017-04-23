@@ -1,23 +1,24 @@
 package com.rssreader.mrlu.myrssreader.View;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.PersistableBundle;
-import android.os.SystemClock;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
+import android.os.SystemClock;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 
 import com.rssreader.mrlu.myrssreader.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import cn.carbs.android.library.AutoZoomInImageView;
+
 public class openScreenActivity extends AppCompatActivity {
+
+
+    @BindView(R.id.im_openPic)
+    AutoZoomInImageView imOpenPic;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,14 @@ public class openScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_open_screen);
+        ButterKnife.bind(this);
+
+
+//        SystemClock.sleep(1000);
+
+//        imOpenPic.init()
+//                .startZoomInByScaleDeltaAndDuration(0.3f, 1000, 1000);//放大增量是0.3，放大时间是1000毫秒，放大开始时间是1000毫秒以后
+
 
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
@@ -39,7 +48,7 @@ public class openScreenActivity extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        SystemClock.sleep(2000);
+                        SystemClock.sleep(3000);
 
                         Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
                         startActivity(intent);
@@ -51,30 +60,25 @@ public class openScreenActivity extends AppCompatActivity {
 
             } else {
                 Log.i("首次跳转", "跳到引导页1");
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        SystemClock.sleep(2000);
-                        Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-
-                }).start();
+                skipAppearPageActivity();
             }
         } else {
             Log.i("首次跳转", "跳到引导页2");
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    SystemClock.sleep(2000);
-                    Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-
+            skipAppearPageActivity();
         }
+    }
+
+    private void skipAppearPageActivity() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SystemClock.sleep(3000);
+                Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }).start();
     }
 }
