@@ -2,18 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
     tools:context="com.rssreader.mrlu.myrssreader.View.openScreenActivity">
 
-    <TextView
-        android:id="@+id/fullscreen_content"
+    <cn.carbs.android.library.AutoZoomInImageView
+        android:id="@+id/im_openPic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/openScreen_text"
-        android:textColor="#33b5e5"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:src="@drawable/open_pic" />
 
 </LinearLayout>
