@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //如果数据库存在feed，直接跳转到mainView
         if (isHasFeed) {
+            Log.i("过程打印", "存在feed，跳转到mainview");
 
             Intent intent = new Intent(this, mainView.class);
 
@@ -55,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, mainView.class);
 
                     startActivity(intent);
+                    finish();
                 }
             });
 
