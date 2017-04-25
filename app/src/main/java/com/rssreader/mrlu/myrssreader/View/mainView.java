@@ -76,6 +76,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
         nightSwith = (ImageView) findViewById(R.id.iv_night_swith);
         ImageView imgAdd = (ImageView) findViewById(R.id.iv_add);
+        ImageView ivUpdate = (ImageView) findViewById(R.id.iv_update);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_feedList);
         setSupportActionBar(toolbar);
@@ -108,7 +109,8 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
+                finish();
             }
         });
 
@@ -273,6 +275,12 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+    }
 }
 
 

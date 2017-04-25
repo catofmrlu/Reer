@@ -99,6 +99,8 @@ public class AppearPageActivity extends AppCompatActivity {
 
                     editor.commit();//提交修改
 
+                    Log.i("过程打印", "以后不会出现引导页");
+
                     finish();
                 }
             });

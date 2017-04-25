@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 
 public class InputRssLinkActivity extends AppCompatActivity {
@@ -29,20 +30,34 @@ public class InputRssLinkActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Log.e("rssLink打印", etRssLink.getText().toString());
+                String link = etRssLink.getText().toString();
 
+                Log.i("rssLink打印", link);
+
+                SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+                sqLiteHandle.insertFeed("威锋网", "威锋网", link);
+
+                sqLiteHandle.queryAllFeeds();
+
+                //关闭数据库
+                sqLiteHandle.dbClose();
 
                 //传递rss链接到网络请求部分InputRssLink类
                 Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
 
                 Bundle bundle = new Bundle();
 
-                bundle.putString("rssLink", etRssLink.getText().toString());
+                bundle.putString("rssLink", link);
 
                 intent.putExtras(bundle);
 
-                startActivityForResult(intent, 1);
+                //
+                setResult(1, intent);
+                finish();
             }
         });
     }
+
+
+
 }

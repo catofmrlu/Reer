@@ -13,7 +13,6 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
 
     private static RssSqliteHelper rssSqliteHelper;
 
-
     public RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -42,7 +41,6 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "RssDescription varchar,"
                 + "RssLink varchar)");
         Log.i("创建数据表", "创建已读items表成功！");
-
 
         db.execSQL("create table StarItems" + "(" + "_id integer primary key,"
                 + "RssTitle varchar,"

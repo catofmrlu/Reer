@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -39,6 +41,7 @@ import com.rssreader.mrlu.myrssreader.View.ListActivity;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
+import org.xutils.db.table.DbBase;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -80,39 +83,57 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        mSqLiteHandle = new SQLiteHandle(getActivity());
 
-        if (mSqLiteHandle.queryHasFeed()) {
-            view = inflater.inflate(R.layout.activity_list, container, false);
+        try {
 
-            init();
+            mSqLiteHandle = new SQLiteHandle(getActivity());
+            Log.i("过程打印", "创建mSqLiteHandle完成");
 
-            Cursor cursor = mSqLiteHandle.queryAllFeeds();
+            if (mSqLiteHandle.queryHasFeed()) {
+                Log.i("过程打印", "存在Feed");
 
-            mRssUnreadList = new ArrayList<>();
-            Map<String, Object> map = new HashMap<String, Object>();
-            map.put("rssName", "全部未读");
-            map.put("rssCount", rssItemCount);
-            mRssUnreadList.add(map);
+                mSqLiteHandle.queryAllFeeds();
 
-            if (cursor != null) {
-                while (cursor.moveToNext()) {
+                view = inflater.inflate(R.layout.activity_list, container, false);
+                Log.i("过程打印", "view创建完成");
+
+                init();
+                Log.i("过程打印", "初始化完成");
+
+                Cursor cursor = mSqLiteHandle.queryAllFeeds();
+
+                Log.i("过程打印", "queryAllFeeds查询完成");
+
+                mRssUnreadList = new ArrayList<>();
+                Map<String, Object> map = new HashMap<String, Object>();
+                map.put("rssName", "全部未读");
+                map.put("rssCount", rssItemCount);
+                mRssUnreadList.add(map);
+
+                if (cursor != null) {
+                    while (cursor.moveToNext()) {
 //                String name = cursor.getString(cursor.getColumnIndex("RssName"));
 //                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
-                    String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+                        String link = cursor.getString(cursor.getColumnIndex("RssLink"));
 //
 //                //打印查询的数据
 //                System.out.println(name + "---" + description + "---" + link);
 
-                    getFeed(link);
+                        getFeed(link);
+                    }
 
                 }
+                cursor.close();
+                mSqLiteHandle.dbClose();
+
+            } else {
+                Log.i("过程打印", "不存在Feed");
+                view = inflater.inflate(R.layout.black_unread, container, false);
 
             }
 
-        } else {
-            view = inflater.inflate(R.layout.black_unread, container, false);
-
+        }catch (SQLException e){
+            Log.e("sqlite问题", e.getMessage());
         }
         return view;
 
@@ -150,10 +171,8 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                     }
                 }, 2000); // 2秒后发送消息，停止刷新
 
-
             }
         });
-
 
         //listview左滑部分
         SwipeMenuCreator creator = new SwipeMenuCreator() {
@@ -387,6 +406,8 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         adapter.notifyDataSetChanged();
 
     }
+
+
 
 //    @Subscribe
 //    public void onevent(String data) {

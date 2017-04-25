@@ -14,24 +14,14 @@ import java.security.PublicKey;
 
 public class SQLiteHandle {
 
-    private RssSqliteHelper mSqlHelper;
     private SQLiteDatabase db;
 
     public SQLiteHandle(Context context) {
-
-        db = mSqlHelper.getInstance(context);
-
+        //RssSqliteHelper mSqlHelper;
+        db = RssSqliteHelper.getInstance(context);
     }
 
-    public  void  insertFeed(String rssName, String rssDescription, String rssLink) {
-//        db = mSqlHelper.getWritableDatabase();
-
-//        ContentValues values = new ContentValues();
-//        values.put("RssName", rssTitle);
-//        values.put("RssDescription", rssDescription);
-//        values.put("RssLink", rssLink);
-//
-//        db.insert(sqlTable, null, values);
+    public void insertFeed(String rssName, String rssDescription, String rssLink) {
 
         String sql_insert = "insert into AllFeeds"
                 + "(RssName, RssDescription, RssLink) values" + "('" + rssName + "','" + rssDescription
@@ -41,11 +31,11 @@ public class SQLiteHandle {
         Log.i("sql语句验证", sql_insert);
 
         db.execSQL(sql_insert);
-        db.close();
+//        db.close();
 
     }
 
-    public  void queryAllFeeds(String sqlTable) {
+    public void queryAllFeeds(String sqlTable) {
 //        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
@@ -60,20 +50,19 @@ public class SQLiteHandle {
 
                 //打印查询的数据
                 System.out.println(name + "---" + description + "---" + link);
-
             }
 
-        }else {
+        } else {
             Log.e("查询allFeeds", "没有数据！！");
         }
 
         cursor.close();
-        db.close();
+//        db.close();
 
     }
 
 
-    public  Cursor queryAllFeeds(){
+    public Cursor queryAllFeeds() {
 
 //        db = mSqlHelper.getWritableDatabase();
 
@@ -82,13 +71,13 @@ public class SQLiteHandle {
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
 
-        db.close();
+//        db.close();
 
         return cursor;
 
     }
 
-    public  boolean queryHasFeed(){
+    public boolean queryHasFeed() {
 
         boolean isHasFeed;
 //        db = mSqlHelper.getWritableDatabase();
@@ -98,17 +87,17 @@ public class SQLiteHandle {
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
 
-        if (cursor != null)
+      if (cursor.getCount() != 0)
             isHasFeed = true;
         else
             isHasFeed = false;
 
-        db.close();
+//        db.close();
 
         return isHasFeed;
     }
 
-    public  boolean urlQuery(String url) {
+    public boolean urlQuery(String url) {
 
         boolean isUrl = false;
 
@@ -131,8 +120,12 @@ public class SQLiteHandle {
             }
         }
 
-        db.close();
+//        db.close();
 
         return isUrl;
+    }
+
+    public void dbClose(){
+        db.close();
     }
 }
