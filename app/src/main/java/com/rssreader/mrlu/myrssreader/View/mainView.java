@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
 import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
@@ -68,6 +69,8 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.ReadBlue), 0);
+
         //ButterKnife绑定
         ButterKnife.bind(this);
 
@@ -87,14 +90,14 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 //点击切换日间/夜间图标
                 switch (Swith_Mode) {
                     case 0:
-//                        nightSwith.setImageResource(R.drawable.sun83);
+                        nightSwith.setImageResource(R.drawable.sun83);
                         Swith_Mode = 1;
 //                        mainView.this.getApplication().setTheme(R.style.NightTheme);
 //                        recreate();
                         Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
-//                        nightSwith.setImageResource(R.drawable.stormy1);
+                        nightSwith.setImageResource(R.drawable.stormy1);
                         Swith_Mode = 0;
 //                        mainView.this.getApplication().setTheme(R.style.DayTheme);
 //                        recreate();

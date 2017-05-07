@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.RssSqliteHelper;
 import com.rssreader.mrlu.myrssreader.R;
 
@@ -41,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login);
+
+            StatusBarUtil.setColor(this,getResources().getColor(R.color.log),0);
 
 
             Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
