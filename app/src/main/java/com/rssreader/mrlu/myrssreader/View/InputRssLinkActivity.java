@@ -1,6 +1,7 @@
 package com.rssreader.mrlu.myrssreader.View;
 
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
+
+import java.util.logging.Logger;
 
 public class InputRssLinkActivity extends AppCompatActivity {
 
@@ -34,13 +37,20 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 Log.i("rssLink打印", link);
 
-                SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-                sqLiteHandle.insertFeed("威锋网", "威锋网", link);
+                try {
 
-                sqLiteHandle.queryAllFeeds();
 
-                //关闭数据库
-                sqLiteHandle.dbClose();
+                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+                    sqLiteHandle.insertFeed("威锋网", "威锋网", link);
+
+                    sqLiteHandle.queryAllFeeds();
+
+                    //关闭数据库
+                    sqLiteHandle.dbClose();
+
+                }catch (SQLException e){
+                    Log.e("数据库添加feed问题", e.getMessage());
+                }
 
                 //传递rss链接到网络请求部分InputRssLink类
                 Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
@@ -50,6 +60,8 @@ public class InputRssLinkActivity extends AppCompatActivity {
                 bundle.putString("rssLink", link);
 
                 intent.putExtras(bundle);
+
+                startActivity(intent);
 
                 //
                 setResult(1, intent);

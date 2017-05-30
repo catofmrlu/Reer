@@ -8,4 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 为菜单项设置style -->
+    21     <style name="item_style">
+    22
+    23         <item name="android:textAppearance">?android:attr/textAppearance</item>
+    24         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    25         <item name="android:textSize">18sp</item>
+    26         <item name="android:paddingLeft">16dp</item>
+    27         <item name="android:paddingRight">32dp</item>
+    28         <item name="android:paddingTop">8dp</item>
+    29         <item name="android:paddingBottom">8dp</item>
+    30         <item name="android:drawablePadding">16dp</item>
+             <item name="android:gravity">center_vertical</item>
+         </style>
+
+    <!-- 为分隔条设置style -->
+        <style name="category_style">
+             <item name="android:textStyle">bold</item>
+             <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+             <item name="android:textSize">14sp</item>
+             <item name="android:textAllCaps">true</item>
+
+            <item name="android:gravity">center_vertical</item><item name="android:paddingLeft">16dp</item>
+
+            <item name="android:singleLine">true</item>
+            <item name="android:ellipsize">end</item>
+         </style>
 </resources>

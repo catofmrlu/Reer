@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 
 import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,6 +31,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 
 import static com.rssreader.mrlu.myrssreader.R.color.ReadBlue;
+import static com.rssreader.mrlu.myrssreader.R.color.log;
 
 public class mainView extends MAppCompatActivity implements View.OnClickListener {
 
@@ -92,14 +94,14 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                     case 0:
                         nightSwith.setImageResource(R.drawable.sun83);
                         Swith_Mode = 1;
-//                        mainView.this.getApplication().setTheme(R.style.NightTheme);
+//                        mainView_test.this.getApplication().setTheme(R.style.NightTheme);
 //                        recreate();
                         Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
                         nightSwith.setImageResource(R.drawable.stormy1);
                         Swith_Mode = 0;
-//                        mainView.this.getApplication().setTheme(R.style.DayTheme);
+//                        mainView_test.this.getApplication().setTheme(R.style.DayTheme);
 //                        recreate();
                         Toast.makeText(mainView.this, "已切换为日间模式", Toast.LENGTH_SHORT).show();
                         break;
@@ -113,7 +115,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             public void onClick(View v) {
                 Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
                 startActivityForResult(intent, 1);
-                finish();
+//                finish();
             }
         });
 
@@ -282,6 +284,27 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+    }
+
+    //双击back健退出
+    private int sum = 0;
+    @Override
+    public void onBackPressed() {
+        Log.i("onBackPressed", "点击了back键");
+        Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT);
+
+        sum++;
+        Log.i("onBackPressed", "sum = " + sum);
+        switch (sum){
+            case 1:
+                Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT).show();
+                break;
+            case 2:
+                finish();
+                break;
+            default:
+                break;
+        }
 
     }
 }
