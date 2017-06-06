@@ -39,11 +39,10 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 try {
 
-
                     SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
                     sqLiteHandle.insertFeed("威锋网", "威锋网", link);
 
-                    sqLiteHandle.queryAllFeeds();
+//                    sqLiteHandle.queryAllFeeds();
 
                     //关闭数据库
                     sqLiteHandle.dbClose();
@@ -53,19 +52,18 @@ public class InputRssLinkActivity extends AppCompatActivity {
                 }
 
                 //传递rss链接到网络请求部分InputRssLink类
-                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
-
-                Bundle bundle = new Bundle();
-
-                bundle.putString("rssLink", link);
-
-                intent.putExtras(bundle);
-
-                startActivity(intent);
-
-                //
-                setResult(1, intent);
-                finish();
+//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
+//
+//                Bundle bundle = new Bundle();
+//
+//                bundle.putString("rssLink", link);
+//
+//                intent.putExtras(bundle);
+//
+//                startActivity(intent);
+//
+//                setResult(1, intent);
+//                finish();
             }
         });
     }

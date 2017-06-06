@@ -130,6 +130,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 Log.i("过程打印", "不存在Feed");
                 view = inflater.inflate(R.layout.black_unread, container, false);
 
+                mSqLiteHandle.dbClose();
             }
 
         }catch (SQLException e){

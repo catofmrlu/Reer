@@ -34,4 +34,5 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     compile 'net.simonvt.menudrawer:menudrawer:3.0.6'
+    compile 'com.jakewharton:butterknife:8.6.0'
 }
