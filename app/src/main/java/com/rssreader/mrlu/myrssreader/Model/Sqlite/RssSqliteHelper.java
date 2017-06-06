@@ -7,21 +7,25 @@ import android.util.Log;
 
 /**
  * Created by LuXin on 2017/2/28.
+ * 该类使用单例模式
  */
-
 public class RssSqliteHelper extends SQLiteOpenHelper {
 
     private static RssSqliteHelper rssSqliteHelper;
 
-    public RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    private RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
 
     public static SQLiteDatabase getInstance(Context context) {
         if (rssSqliteHelper == null) {
-            // 指定数据库名为student，需修改时在此修改；此处使用默认工厂；指定版本为1
-            rssSqliteHelper = new RssSqliteHelper(context, "Rss", null, 1);
+
+            synchronized (RssSqliteHelper.class){
+                if (rssSqliteHelper == null){
+                    rssSqliteHelper = new RssSqliteHelper(context, "Rss", null, 1);
+                }
+            }
         }
         return rssSqliteHelper.getWritableDatabase();
     }

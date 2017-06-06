@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">STest</string>
-    <string name="close">STest</string>
+
+    <string name="close">close</string>
+    <string name="open">open</string>
+
 
 </resources>

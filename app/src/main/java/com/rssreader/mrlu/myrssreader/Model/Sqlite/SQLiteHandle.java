@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.avos.avoscloud.LogUtil;
+
 import java.security.Principal;
 import java.security.PublicKey;
 
@@ -17,11 +19,11 @@ public class SQLiteHandle {
     private SQLiteDatabase db;
 
     public SQLiteHandle(Context context) {
-        //RssSqliteHelper mSqlHelper;
         db = RssSqliteHelper.getInstance(context);
     }
 
     public void insertFeed(String rssName, String rssDescription, String rssLink) {
+        Log.i("sqlite", "开始");
 
         String sql_insert = "insert into AllFeeds"
                 + "(RssName, RssDescription, RssLink) values" + "('" + rssName + "','" + rssDescription
@@ -37,6 +39,7 @@ public class SQLiteHandle {
 
     public void queryAllFeeds(String sqlTable) {
 //        db = mSqlHelper.getWritableDatabase();
+        Log.i("sqlite", "开始");
 
         //开启事务
         db.beginTransaction();
@@ -63,6 +66,7 @@ public class SQLiteHandle {
 
 
     public Cursor queryAllFeeds() {
+        Log.i("sqlite", "开始");
 
 //        db = mSqlHelper.getWritableDatabase();
 
@@ -78,6 +82,7 @@ public class SQLiteHandle {
     }
 
     public boolean queryHasFeed() {
+        Log.i("sqlite", "开始");
 
         boolean isHasFeed;
 //        db = mSqlHelper.getWritableDatabase();
@@ -87,7 +92,7 @@ public class SQLiteHandle {
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
 
-      if (cursor.getCount() != 0)
+        if (cursor.getCount() != 0)
             isHasFeed = true;
         else
             isHasFeed = false;
@@ -98,10 +103,10 @@ public class SQLiteHandle {
     }
 
     public boolean urlQuery(String url) {
+        Log.i("sqlite", "开始");
 
         boolean isUrl = false;
 
-//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
@@ -120,12 +125,14 @@ public class SQLiteHandle {
             }
         }
 
-//        db.close();
-
         return isUrl;
+
     }
 
-    public void dbClose(){
+    public void dbClose() {
         db.close();
+        Log.i("sqlite", "关闭");
     }
+
+
 }
