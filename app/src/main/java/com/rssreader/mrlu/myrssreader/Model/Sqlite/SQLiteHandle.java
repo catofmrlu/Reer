@@ -5,11 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.avos.avoscloud.LogUtil;
-
-import java.security.Principal;
-import java.security.PublicKey;
-
 /**
  * Created by LuXin on 2017/2/28.
  */

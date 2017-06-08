@@ -47,7 +47,13 @@ public class InputRssLinkActivity extends AppCompatActivity {
                     //关闭数据库
                     sqLiteHandle.dbClose();
 
-                }catch (SQLException e){
+                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+                    sqLiteHandle.queryAllFeeds("AllFeeds");
+                    sqLiteHandle.dbClose();
+
+
+
+                } catch (SQLException e) {
                     Log.e("数据库添加feed问题", e.getMessage());
                 }
 
@@ -67,7 +73,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
 }
