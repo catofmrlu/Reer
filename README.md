@@ -10,13 +10,17 @@
 
 用户选择：
 
-![Screenshot_1496997814](https://ws1.sinaimg.cn/large/006tKfTcgy1fgf1pz8u1bj30u01hc0uq.jpg)
-
-
+![Screenshot_1496997814](/Users/LuXin/Desktop/Screenshot_1496997814.png)
 
 ---
 
 阅读界面：
 
-![Screenshot_1496997846](https://ws2.sinaimg.cn/large/006tKfTcgy1fgf1q01m8rj30u01hcdhb.jpg)
+![Screenshot_1496997846](/Users/LuXin/Desktop/Screenshot_1496997846.png)
+
+
+
+---
+
+
 
