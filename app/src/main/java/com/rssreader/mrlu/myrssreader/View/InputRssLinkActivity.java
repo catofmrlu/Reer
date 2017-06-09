@@ -1,10 +1,8 @@
 package com.rssreader.mrlu.myrssreader.View;
 
-import android.content.Intent;
 import android.database.SQLException;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,8 +10,6 @@ import android.widget.EditText;
 
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
-
-import java.util.logging.Logger;
 
 public class InputRssLinkActivity extends AppCompatActivity {
 
@@ -46,10 +42,10 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                     //关闭数据库
                     sqLiteHandle.dbClose();
-
-                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-                    sqLiteHandle.queryAllFeeds("AllFeeds");
-                    sqLiteHandle.dbClose();
+//
+//                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+//                    sqLiteHandle.queryAllFeeds("AllFeeds");
+//                    sqLiteHandle.dbClose();
 
 
 
