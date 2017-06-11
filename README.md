@@ -10,7 +10,7 @@
 
 开屏页面:
 
-![Screenshot_1497192840](/Users/LuXin/Desktop/Screenshot_1497192840.png)
+![Screenshot_1497192840](https://ws1.sinaimg.cn/large/006tKfTcgy1fghuihfxlmj307v0e0jrd.jpg)
 
 ---
 
