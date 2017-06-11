@@ -8,6 +8,12 @@
 
 **界面**
 
+开屏页面:
+
+![Screenshot_1497192840](/Users/LuXin/Desktop/Screenshot_1497192840.png)
+
+---
+
 用户选择：
 
 ![Screenshot_1496997814](https://ws2.sinaimg.cn/large/006tKfTcgy1fgf1uxjbwfj307y0e5mx9.jpg)
