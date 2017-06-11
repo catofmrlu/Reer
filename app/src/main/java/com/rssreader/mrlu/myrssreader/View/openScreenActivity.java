@@ -16,10 +16,6 @@ import cn.carbs.android.library.AutoZoomInImageView;
 
 public class openScreenActivity extends AppCompatActivity {
 
-
-    @BindView(R.id.im_openPic)
-    AutoZoomInImageView imOpenPic;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 //        setTheme(R.style.FullscreenTheme);
