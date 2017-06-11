@@ -10,9 +10,7 @@ import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.carbs.android.library.AutoZoomInImageView;
 
 public class openScreenActivity extends AppCompatActivity {
 
