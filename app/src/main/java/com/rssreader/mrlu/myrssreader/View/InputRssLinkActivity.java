@@ -28,13 +28,13 @@ public class InputRssLinkActivity extends AppCompatActivity {
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("过程打印", "search已点击");
 
                 String link = mEtRssLink.getText().toString();
 
                 Log.i("rssLink打印", link);
 
                 try {
-
                     SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
                     sqLiteHandle.insertFeed("威锋网", "威锋网", link);
 

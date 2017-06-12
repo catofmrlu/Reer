@@ -12,22 +12,22 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <EditText
+            android:textSize="15dp"
             android:id="@+id/et_rssLink"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
             android:hint="请输入rss" />
 
         <ImageView
             android:id="@+id/iv_rss_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/search" />
 
         <!--<Button-->
@@ -41,5 +41,7 @@
         <!--style="@style/Base.AlertDialog.AppCompat.Light" />-->
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
