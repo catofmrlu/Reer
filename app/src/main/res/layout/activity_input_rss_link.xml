@@ -11,24 +11,35 @@
     tools:context="com.rssreader.mrlu.myrssreader.View.InputRssLinkActivity">
 
 
-    <EditText
-        android:layout_centerHorizontal="true"
-        android:id="@+id/et_rssLink"
-        android:layout_marginTop="50dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="请输入rss"
-        />
+        android:orientation="horizontal">
 
+        <EditText
+            android:id="@+id/et_rssLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:hint="请输入rss" />
 
-    <Button
-        android:id="@+id/btn_done"
-        android:text="done"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/et_rssLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Base.AlertDialog.AppCompat.Light" />
+        <ImageView
+            android:id="@+id/iv_rss_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search" />
+
+        <!--<Button-->
+        <!--android:id="@+id/btn_done"-->
+        <!--android:text="done"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_below="@+id/et_rssLink"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/Base.AlertDialog.AppCompat.Light" />-->
+
+    </LinearLayout>
 
 </RelativeLayout>
