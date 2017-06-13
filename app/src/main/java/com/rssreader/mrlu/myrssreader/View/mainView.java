@@ -41,11 +41,9 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     private FragmentPagerAdapter mAdapter;
     //装载Fragment的集合
     private List<Fragment> mFragments;
-
     //四个Tab对应的布局
     private LinearLayout mTabUnread;
     private LinearLayout mTabStarred;
-
     //四个Tab对应的ImageButton
     private ImageButton mImgWeixin;
     private ImageButton mImgFrd;

@@ -49,6 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -118,8 +119,14 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 //
 //                //打印查询的数据
 //                System.out.println(name + "---" + description + "---" + link);
+                        try {
+                            getFeed(link);
 
-                        getFeed(link);
+                        }catch (Exception e){
+                            Log.e("getFeed", e.getMessage());
+                            view = inflater.inflate(R.layout.unload_unread, container, false);
+
+                        }
                     }
 
                 }
@@ -280,20 +287,26 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                                         Log.i("过程标记", "list装载完成");
                                         try {
 
-                                            final SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
+                                            SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
 
-                                            sqLiteHandle.queryAllFeeds("AllFeeds");
+//                                            sqLiteHandle.queryAllFeeds("AllFeeds");
 
                                             if (!sqLiteHandle.urlQuery(urlString)) {
+
+                                                sqLiteHandle.dbClose();
+
                                                 //异步将feed插入数据库
                                                 new Thread(new Runnable() {
                                                     @Override
                                                     public void run() {
+                                                        SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
+
                                                         sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(),
                                                                 urlString);
 
                                                         feed.isInserted = true;
 
+                                                        //插入sp文件设置值
                                                         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
 
                                                         SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
@@ -353,30 +366,36 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     private void showListView() {
         Log.i("过程标记", "进入showListView()");
 
-        itemlist = (ListView) view.findViewById(R.id.lv_rssList);
-        if (feed == null) {
+        try {
+
+
+            itemlist = (ListView) view.findViewById(R.id.lv_rssList);
+            if (feed == null) {
 
 //            view.setTitle("访问的RSS无效");
-            Log.i("tag", "访问的RSS无效");
-            return;
-        } else {
+                Log.i("tag", "访问的RSS无效");
+                return;
+            } else {
 
 //            setTitle(tag);
-            Log.i("tag", feed.getName());
+                Log.i("tag", feed.getName());
+            }
+
+
+            adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
+                    R.layout.rsslist_item, new String[]{
+                    "rssName", "rssCount"
+            },
+                    new int[]{
+                            R.id.tv_rssName, R.id.tv_rssCount
+                    });
+
+            itemlist.setAdapter(adapter);
+            itemlist.setOnItemClickListener(this);
+            itemlist.setSelection(0);
+        }catch (Exception e){
+            Log.i("list显示", e.getMessage());
         }
-
-
-        adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
-                R.layout.rsslist_item, new String[]{
-                "rssName", "rssCount"
-        },
-                new int[]{
-                        R.id.tv_rssName, R.id.tv_rssCount
-                });
-
-        itemlist.setAdapter(adapter);
-        itemlist.setOnItemClickListener(this);
-        itemlist.setSelection(0);
     }
 
     //处理列表的单击事件
