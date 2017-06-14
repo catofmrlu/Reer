@@ -32,6 +32,7 @@ import butterknife.ButterKnife;
 
 import static com.rssreader.mrlu.myrssreader.R.color.ReadBlue;
 import static com.rssreader.mrlu.myrssreader.R.color.log;
+import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 public class mainView extends MAppCompatActivity implements View.OnClickListener {
 
@@ -69,7 +70,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.ReadBlue), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(md_teal_a700_color_code), 0);
 
         //ButterKnife绑定
         ButterKnife.bind(this);
@@ -250,14 +251,14 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             case 0:
                 //mImgWeixin.setImageResource(R.drawable.feed_read);
                 mTabStarred.setBackgroundColor(Color.parseColor("#393a3f"));
-                mTabUnread.setBackgroundColor(getResources().getColor(ReadBlue));
+                mTabUnread.setBackgroundColor(getResources().getColor(md_teal_a700_color_code));
                 break;
             case 1:
                 //EventBus发送消息
 //                EventBus.getDefault().post(rssUrl);
                 //mImgFrd.setImageResource(R.drawable.long_press_starred);
                 mTabUnread.setBackgroundColor(Color.parseColor("#393a3f"));
-                mTabStarred.setBackgroundColor(getResources().getColor(ReadBlue));
+                mTabStarred.setBackgroundColor(getResources().getColor(md_teal_a700_color_code));
                 break;
         }
         //设置当前点击的Tab所对应的页面
