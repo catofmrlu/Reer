@@ -91,14 +91,14 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 //点击切换日间/夜间图标
                 switch (Swith_Mode) {
                     case 0:
-                        nightSwith.setImageResource(R.drawable.sun83);
+                        nightSwith.setImageResource(R.drawable.swich_day);
                         Swith_Mode = 1;
 //                        mainView_test.this.getApplication().setTheme(R.style.NightTheme);
 //                        recreate();
                         Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
-                        nightSwith.setImageResource(R.drawable.stormy1);
+                        nightSwith.setImageResource(R.drawable.swich_night);
                         Swith_Mode = 0;
 //                        mainView_test.this.getApplication().setTheme(R.style.DayTheme);
 //                        recreate();
