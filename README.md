@@ -24,9 +24,7 @@
 
 阅读界面：
 
-![Screenshot_1496997846](https://ws3.sinaimg.cn/large/006tKfTcgy1fgf1uwxx5lj308k0f73yk.jpg)
-
-
+![Screenshot_1496997846](/Users/LuXin/Desktop/Screenshot_1497427742.png)
 
 ---
 
