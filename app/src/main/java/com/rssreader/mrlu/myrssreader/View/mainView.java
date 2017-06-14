@@ -303,6 +303,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 break;
             default:
                 break;
+
         }
 
     }
