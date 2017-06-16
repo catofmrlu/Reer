@@ -15,6 +15,7 @@ public class SQLiteHandle {
 
     public SQLiteHandle(Context context) {
         db = RssSqliteHelper.getInstance(context);
+        Log.i("sqlite", "db打开");
     }
 
     public void insertFeed(String rssName, String rssDescription, String rssLink) {
@@ -127,6 +128,7 @@ public class SQLiteHandle {
     public void dbClose() {
         db.close();
         Log.i("sqlite", "关闭");
+//        this.finalize();qq
     }
 
 
