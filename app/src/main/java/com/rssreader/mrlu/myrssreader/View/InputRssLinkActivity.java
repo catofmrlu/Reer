@@ -38,6 +38,8 @@ public class InputRssLinkActivity extends AppCompatActivity {
                     SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
                     sqLiteHandle.insertFeed("威锋网", "威锋网", link);
 
+                    Log.i("间隔", "------------------");
+
 //                    sqLiteHandle.queryAllFeeds();
 
                     //关闭数据库
@@ -46,7 +48,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
 //                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
 //                    sqLiteHandle.queryAllFeeds("AllFeeds");
 //                    sqLiteHandle.dbClose();
-
 
                 } catch (SQLException e) {
                     Log.e("数据库添加feed问题", e.getMessage());
