@@ -29,7 +29,6 @@ public class SQLiteHandle {
         Log.i("sql语句验证", sql_insert);
 
         db.execSQL(sql_insert);
-//        db.close();
 
     }
 
@@ -56,7 +55,6 @@ public class SQLiteHandle {
         }
 
         cursor.close();
-//        db.close();
 
     }
 
@@ -64,14 +62,10 @@ public class SQLiteHandle {
     public Cursor queryAllFeeds() {
         Log.i("sqlite", "开始");
 
-//        db = mSqlHelper.getWritableDatabase();
-
         //开启事务
         db.beginTransaction();
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
-
-//        db.close();
 
         return cursor;
 
@@ -81,7 +75,6 @@ public class SQLiteHandle {
         Log.i("sqlite", "开始");
 
         boolean isHasFeed;
-//        db = mSqlHelper.getWritableDatabase();
 
         //开启事务
         db.beginTransaction();
@@ -122,7 +115,6 @@ public class SQLiteHandle {
         }
 
         return isUrl;
-
     }
 
     public void dbClose() {
