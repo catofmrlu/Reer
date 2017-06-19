@@ -61,31 +61,25 @@ import javax.xml.parsers.SAXParserFactory;
 
 public class unReadFragment11 extends Fragment implements AdapterView.OnItemClickListener {
 
-//    public String RSS_URL;
-    //            = "http://free.apprcn.com/category/ios/feed/";
-    //    OkHttpClient mOkHttpClient;
-
     public String tag = "RSSReader";
     private RSSFeed feed = null;
     InputSource isc;
     private RequestQueue mRequestQueue;
     private SimpleAdapter adapter;
-    private List<Map<String, Object>> mRssUnreadList;
+    private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;
-    public int rssItemCount = 0;
+//    public int rssItemCount = 0;
+    public String rssItemCount = "12";
 
     View view;
-    View view1;
-//    SwipeRefreshLayout mSrl;
     Window window;
-    private SwipeMenuListView mSwipeMenuListView;
+//    private SwipeMenuListView mSwipeMenuListView;
+    ListView mSwipeMenuListView;
     ListView itemlist;
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
 
         try {
 
@@ -93,11 +87,12 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             Log.i("过程打印", "创建mSqLiteHandle完成");
 
 //            if (mSqLiteHandle.queryHasFeed()) {
-            if (true){
+            if (true) {
                 Log.i("过程打印", "存在Feed");
 
-
 //                mSqLiteHandle.queryAllFeeds();
+
+                view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
                 init();
                 Log.i("过程打印", "初始化完成");
@@ -107,12 +102,11 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 Log.i("过程打印", "queryAllFeeds查询完成");
 
                 mRssUnreadList = new ArrayList<>();
-                Map<String, Object> map = new HashMap<String, Object>();
+                Map<String, String> map = new HashMap<String, String>();
                 map.put("rssName", "全部未读");
-                map.put("rssCount", rssItemCount);
+                map.put("rssCount",  rssItemCount);
                 mRssUnreadList.add(map);
 
-                view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
                 showListView();
                 Log.i("过程标记", "list显示完成");
@@ -148,7 +142,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
             }
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             Log.e("sqlite问题", e.getMessage());
         }
         return view;
@@ -157,39 +151,10 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     public void init() {
 
-//        RSS_URL = "http://www.feng.com/rss.xml";
-//                "http://free.apprcn.com/category/ios/feed/";
+        mSwipeMenuListView = (ListView) view.findViewById(R.id.lv_rssList);
 
-//        mSrl = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
+      /*  window = getActivity().getWindow();
 
-        mSwipeMenuListView = (SwipeMenuListView) view.findViewById(R.id.lv_rssList);
-
-        window = getActivity().getWindow();
-
-        //注册EventBus接收者
-//        EventBus.getDefault().register(this);
-//        Log.i("传递值打印Frame", RSS_URL);
-
-//
-//        mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                        refreshed();
-//                        // 停止刷新
-//                        mSrl.setRefreshing(false);
-//                        Toast.makeText(getActivity(), "刷新完成！", Toast.LENGTH_SHORT).show();
-//                    }
-//                }, 2000); // 2秒后发送消息，停止刷新
-//
-//            }
-//        });
-
-        //listview左滑部分
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
@@ -223,18 +188,22 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 menu.addMenuItem(deleteItem);
             }
         };
+
         // set creator
-        mSwipeMenuListView.setMenuCreator(creator);
+        mSwipeMenuListView.setMenuCreator(creator);*/
 
     }
 
+    //endregion
     private int dp2px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 getResources().getDisplayMetrics());
     }
 
+
+    //region getfeed部分
     //获取feed
-    private void getFeed(final String urlString) {
+   /* private void getFeed(final String urlString) {
 
         try {
 
@@ -322,7 +291,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
                                                         editor.commit();//提交修改
 
-                                                         sqLiteHandle.queryAllFeeds("AllFeeds");
+                                                        sqLiteHandle.queryAllFeeds("AllFeeds");
                                                     }
                                                 }).start();
                                             } else {
@@ -368,6 +337,9 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         }
 
     }
+*/
+   //endregion
+
 
     //列表显示获取的RSS项目
     private void showListView() {
@@ -387,7 +359,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 Log.i("tag", feed.getName());
             }
 
-
             adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
                     R.layout.rsslist_item, new String[]{
                     "rssName", "rssCount"
@@ -399,7 +370,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             itemlist.setAdapter(adapter);
             itemlist.setOnItemClickListener(this);
             itemlist.setSelection(0);
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.i("list显示", e.getMessage());
         }
     }
@@ -425,11 +396,14 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     }
 
+
+
+    //region ？：未来待处理部分
+
     //下拉刷新数据
 //    void refreshed() {
 //        adapter.notifyDataSetChanged();
 //    }
-
 
 
 //    @Subscribe
@@ -448,5 +422,5 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 //        super.onDestroy();
 //    }
 
-
+    //endregion
 }
