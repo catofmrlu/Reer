@@ -68,12 +68,12 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     private SimpleAdapter adapter;
     private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;
-//    public int rssItemCount = 0;
+    //    public int rssItemCount = 0;
     public String rssItemCount = "12";
 
     View view;
     Window window;
-//    private SwipeMenuListView mSwipeMenuListView;
+    //    private SwipeMenuListView mSwipeMenuListView;
     ListView mSwipeMenuListView;
     ListView itemlist;
 
@@ -81,91 +81,77 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        try {
 
-//            mSqLiteHandle = new SQLiteHandle(getActivity());
-            Log.i("过程打印", "创建mSqLiteHandle完成");
+        mSqLiteHandle = new SQLiteHandle(getActivity());
+        Log.i("过程打印", "创建mSqLiteHandle完成");
+        Cursor cursor = mSqLiteHandle.queryAllFeeds();
 
-//            if (mSqLiteHandle.queryHasFeed()) {
-            if (true) {
-                Log.i("过程打印", "存在Feed");
+        if (cursor != null) {
+            Log.i("过程打印", "存在Feed");
 
-//                mSqLiteHandle.queryAllFeeds();
+            view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
-                view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
+            Log.i("过程打印", "queryAllFeeds查询完成");
 
-//                init();
-                Log.i("过程打印", "初始化完成");
+            mRssUnreadList = new ArrayList<>();
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("rssName", "全部未读");
+            map.put("rssCount", rssItemCount);
+            mRssUnreadList.add(map);
 
-//                Cursor cursor = mSqLiteHandle.queryAllFeeds();
+            //region 测试listview
 
-                Log.i("过程打印", "queryAllFeeds查询完成");
-
-                //region 测试listview
-                mRssUnreadList = new ArrayList<>();
-                Map<String, String> map = new HashMap<String, String>();
-                map.put("rssName", "全部未读");
-                map.put("rssCount",  rssItemCount);
-                mRssUnreadList.add(map);
-
-                Map<String, String> map1 = new HashMap<String, String>();
-                map1.put("rssName", "威锋网");
-                map1.put("rssCount",  "15");
-                mRssUnreadList.add(map1);
-
-                Map<String, String> map2 = new HashMap<String, String>();
-                map2.put("rssName", "IT之家");
-                map2.put("rssCount",  "20");
-                mRssUnreadList.add(map2);
-
-                Map<String, String> map3 = new HashMap<String, String>();
-                map3.put("rssName", "好奇心日报");
-                map3.put("rssCount",  "8");
-                mRssUnreadList.add(map3);
-
-                Map<String, String> map4 = new HashMap<String, String>();
-                map4.put("rssName", "果壳");
-                map4.put("rssCount",  "5");
-                mRssUnreadList.add(map4);
-                //endregion
-
-                showListView();
-                Log.i("过程标记", "list显示完成");
-//                if (cursor != null) {
-//                    while (cursor.moveToNext()) {
-////                String name = cursor.getString(cursor.getColumnIndex("RssName"));
-////                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
-//                        String link = cursor.getString(cursor.getColumnIndex("RssLink"));
-////
-////                //打印查询的数据
-////                System.out.println(name + "---" + description + "---" + link);
-//                        try {
-//                            getFeed(link);
 //
-//                        }catch (Exception e){
-//                            Log.e("getFeed", e.getMessage());
-//                            view = inflater.inflate(R.layout.unload_unread, container, false);
+//                Map<String, String> map1 = new HashMap<String, String>();
+//                map1.put("rssName", "威锋网");
+//                map1.put("rssCount",  "15");
+//                mRssUnreadList.add(map1);
 //
-//                        }
-//                    }
+//                Map<String, String> map2 = new HashMap<String, String>();
+//                map2.put("rssName", "IT之家");
+//                map2.put("rssCount",  "20");
+//                mRssUnreadList.add(map2);
 //
-//                }
-//                cursor.close();
-//                mSqLiteHandle.dbClose();
-//                mSqLiteHandle = null;
+//                Map<String, String> map3 = new HashMap<String, String>();
+//                map3.put("rssName", "好奇心日报");
+//                map3.put("rssCount",  "8");
+//                mRssUnreadList.add(map3);
+//
+//                Map<String, String> map4 = new HashMap<String, String>();
+//                map4.put("rssName", "果壳");
+//                map4.put("rssCount",  "5");
+//                mRssUnreadList.add(map4);
+            //endregion
 
-            } else {
-                Log.i("过程打印", "不存在Feed");
-                view = inflater.inflate(R.layout.black_unread, container, false);
+            showListView();
+            Log.i("过程标记", "list显示完成");
+            while (cursor.moveToNext()) {
+                String name = cursor.getString(cursor.getColumnIndex("RssName"));
+//                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
+                String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+                Log.i("查询数据库", name + "\n" + link);
+//
+//                //打印查询的数据
+//                System.out.println(name + "---" + description + "---" + link);
+                try {
+//                    getFeed(link);
 
-//                mSqLiteHandle.dbClose();
-//                mSqLiteHandle = null;
+                } catch (Exception e) {
+                    Log.e("getFeed", e.getMessage());
+                    view = inflater.inflate(R.layout.unload_unread, container, false);
 
+                }
             }
+            cursor.close();
+            mSqLiteHandle.dbClose();
+            mSqLiteHandle = null;
 
-        } catch (SQLException e) {
-            Log.e("sqlite问题", e.getMessage());
+        } else {
+            Log.i("过程打印", "不存在Feed");
+            view = inflater.inflate(R.layout.black_unread, container, false);
+
         }
+
         return view;
 
     }
@@ -215,12 +201,10 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     }
 
-    //endregion
     private int dp2px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 getResources().getDisplayMetrics());
     }
-
 
     //region getfeed部分
     //获取feed
@@ -359,7 +343,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     }
 */
-   //endregion
+    //endregion
 
 
     //列表显示获取的RSS项目
@@ -416,7 +400,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         startActivityForResult(itemIntent, 0);
 
     }
-
 
 
     //region ？：未来待处理部分
