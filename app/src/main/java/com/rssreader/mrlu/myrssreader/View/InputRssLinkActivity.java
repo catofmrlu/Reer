@@ -44,6 +44,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                     //关闭数据库
                     sqLiteHandle.dbClose();
+                    sqLiteHandle = null;
 //
 //                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
 //                    sqLiteHandle.queryAllFeeds("AllFeeds");
