@@ -208,7 +208,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     //region getfeed部分
     //获取feed
-   /* private void getFeed(final String urlString) {
+    private void getFeed(final String urlString) {
 
         try {
 
@@ -260,10 +260,10 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
                                         System.out.println("---------/n" + feed.Count() + "/n------");
 
-                                        Map<String, Object> map = new HashMap<String, Object>();
-                                        map.put("rssName", feed.getName());
-                                        map.put("rssCount", feed.Count());
-                                        mRssUnreadList.add(map);
+//                                        Map<String, Object> map = new HashMap<String, Object>();
+//                                        map.put("rssName", feed.getName());
+//                                        map.put("rssCount", feed.Count());
+//                                        mRssUnreadList.add(map);
 
                                         Log.i("过程标记", "list装载完成");
                                         try {
@@ -342,7 +342,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         }
 
     }
-*/
     //endregion
 
 

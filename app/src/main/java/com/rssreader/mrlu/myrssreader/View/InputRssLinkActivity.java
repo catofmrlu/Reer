@@ -1,23 +1,48 @@
 package com.rssreader.mrlu.myrssreader.View;
 
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
+
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 public class InputRssLinkActivity extends AppCompatActivity {
 
 
     private EditText mEtRssLink;
     private ImageView mIvRssSearch;
+
+    private RSSFeed feed = null;
+    InputSource isc;
+    private RequestQueue mRequestQueue;
+    private SQLiteHandle mSqLiteHandle;
+    public int rssItemCount = 0;
+
+    View view;
+    Window window;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,59 +59,99 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 Log.i("rssLink打印", link);
 
-                try {
-                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-                    sqLiteHandle.insertFeed("威锋网", "威锋网", link);
 
-                    Log.i("间隔", "------------------");
-
-//                    sqLiteHandle.queryAllFeeds();
-
-                    //关闭数据库
-                    sqLiteHandle.dbClose();
-                    sqLiteHandle = null;
-//
-//                    sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-//                    sqLiteHandle.queryAllFeeds("AllFeeds");
-//                    sqLiteHandle.dbClose();
-
-                } catch (SQLException e) {
-                    Log.e("数据库添加feed问题", e.getMessage());
-                }
-
-                //传递rss链接到网络请求部分InputRssLink类
-//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
-//
-//                Bundle bundle = new Bundle();
-//
-//                bundle.putString("rssLink", link);
-//
-//                intent.putExtras(bundle);
-//
-//                startActivity(intent);
-//
-//                setResult(1, intent);
-//                finish();
             }
-        });
+
+            //region getfeed部分
+            //获取feed
+            private void getFeed(final String urlString) {
+
+                try {
+
+                    //新建SAX--xml解析工厂类
+                    SAXParserFactory factory = SAXParserFactory.newInstance();
+
+                    SAXParser parser = factory.newSAXParser();
+
+                    final XMLReader reader = parser.getXMLReader();
+
+                    final RSSHandler rssHander = new RSSHandler();
+
+                    reader.setContentHandler(rssHander);
+
+                    mRequestQueue = Volley.newRequestQueue(getBaseContext());
+                    StringRequest mStringRequest = new StringRequest(urlString,
+                            new com.android.volley.Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+
+                                    Log.i("respone:", response);
+
+
+                                    Log.i("间隔", "请求执行完成");
+
+                                    InputStream is = new ByteArrayInputStream(response.getBytes());
+try {
+
+
+    if (is != null) {
+        isc = new InputSource(is);
+
+        Log.i("IS", "IS转换完成");
+
+        Log.i("IS", isc.toString());
+
+        reader.parse(isc);
+
+        feed = rssHander.getFeed();
+
+        //累加各个feed的item数
+        rssItemCount += feed.Count();
+
+        if (feed == null) {
+            Log.e("feed", "feed为空");
+        } else {
+            Log.i("恭喜！", "feed通过");
+
+            System.out.println("---------/n" + feed.Count() + "/n------");
+
+
+        }
     }
+}catch (IOException e){
+    Log.e("IO错误", e.getMessage());
+}catch (SAXException e){
+    Log.e("sax错误", e.getMessage());
+
+}
+
+                                }
+                            },
+
+                            new com.android.volley.Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                    Log.e("error", error.getMessage());
+                                }
+                            }
+
+                    );
+
+                    mRequestQueue.add(mStringRequest);
+
+                }catch (Exception e){
+                    Log.e("获取feed", e.getMessage());
+
+                }
+            }
+
+            });
+        }
 
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
         mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
-    }
-
-    private void submit() {
-        // validate
-        String rssLink = mEtRssLink.getText().toString().trim();
-        if (TextUtils.isEmpty(rssLink)) {
-            Toast.makeText(this, "请输入rss", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // TODO validate success, do something
-
-
     }
 }
