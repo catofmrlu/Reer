@@ -1,5 +1,6 @@
 package com.rssreader.mrlu.myrssreader.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -24,9 +25,11 @@ import org.xml.sax.XMLReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
 
 public class InputRssLinkActivity extends AppCompatActivity {
 
@@ -55,10 +58,21 @@ public class InputRssLinkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("过程打印", "search已点击");
 
-                String link = mEtRssLink.getText().toString();
+                final String link = mEtRssLink.getText().toString();
 
                 Log.i("rssLink打印", link);
 
+                //异步请求feed数据，并插入到数据库
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getFeed(link);
+                    }
+                }).start();
+
+                //跳转到主界面
+                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
+                startActivity(intent);
 
             }
 
@@ -91,39 +105,47 @@ public class InputRssLinkActivity extends AppCompatActivity {
                                     Log.i("间隔", "请求执行完成");
 
                                     InputStream is = new ByteArrayInputStream(response.getBytes());
-try {
+                                    try {
+
+                                        if (is != null) {
+                                            isc = new InputSource(is);
+
+                                            Log.i("IS", "IS转换完成");
+
+                                            Log.i("IS", isc.toString());
+
+                                            reader.parse(isc);
+                                            feed = rssHander.getFeed();
+
+                                            //累加各个feed的item数
+//                                            rssItemCount += feed.Count();
+
+                                            if (feed == null) {
+                                                Log.e("feed", "feed为空");
+                                            } else {
+                                                Log.i("恭喜！", "feed通过");
+
+                                                System.out.println("---------/n" + feed.Count() + "/n------");
+
+                                                try {
 
 
-    if (is != null) {
-        isc = new InputSource(is);
+                                                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+                                                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
 
-        Log.i("IS", "IS转换完成");
+                                                    sqLiteHandle.dbClose();
+                                                    sqLiteHandle = null;
+                                                } catch (Exception e) {
+                                                    Log.e("sqllite插入", e.getMessage());
+                                                }
+                                            }
+                                        }
+                                    } catch (IOException e) {
+                                        Log.e("IO错误", e.getMessage());
+                                    } catch (SAXException e) {
+                                        Log.e("sax错误", e.getMessage());
 
-        Log.i("IS", isc.toString());
-
-        reader.parse(isc);
-
-        feed = rssHander.getFeed();
-
-        //累加各个feed的item数
-        rssItemCount += feed.Count();
-
-        if (feed == null) {
-            Log.e("feed", "feed为空");
-        } else {
-            Log.i("恭喜！", "feed通过");
-
-            System.out.println("---------/n" + feed.Count() + "/n------");
-
-
-        }
-    }
-}catch (IOException e){
-    Log.e("IO错误", e.getMessage());
-}catch (SAXException e){
-    Log.e("sax错误", e.getMessage());
-
-}
+                                    }
 
                                 }
                             },
@@ -140,18 +162,19 @@ try {
 
                     mRequestQueue.add(mStringRequest);
 
-                }catch (Exception e){
+                } catch (Exception e) {
                     Log.e("获取feed", e.getMessage());
 
                 }
             }
 
-            });
-        }
+        });
+    }
 
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
         mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
     }
+
 }
