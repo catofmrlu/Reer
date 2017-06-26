@@ -2,18 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_teal_300_color_code"
-    android:gravity="center_horizontal|bottom"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/md_green_400_color_code"
     >
 
-
+    <ImageView
+        android:paddingBottom="80dp"
+        android:src="@drawable/ap3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_appear"
         style="@style/md_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_height="30dp"
 
-        android:text="享受阅读" />
+        android:text="享受阅读"
+        android:textSize="14dp" />
 </LinearLayout>
