@@ -8,10 +8,10 @@
     >
 
     <ImageView
-        android:paddingBottom="80dp"
+        android:paddingBottom="50dp"
         android:src="@drawable/ap3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="285dp"
+        android:layout_height="503dp" />
 
     <Button
         android:textStyle="normal"

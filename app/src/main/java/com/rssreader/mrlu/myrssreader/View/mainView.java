@@ -2,6 +2,7 @@ package com.rssreader.mrlu.myrssreader.View;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.hardware.camera2.CaptureResult;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -11,6 +12,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -307,6 +309,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         }
 
     }
+
 }
 
 
