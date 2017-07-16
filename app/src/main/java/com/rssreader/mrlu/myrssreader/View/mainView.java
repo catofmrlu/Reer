@@ -2,17 +2,14 @@ package com.rssreader.mrlu.myrssreader.View;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.hardware.camera2.CaptureResult;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 
 import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
+import com.rssreader.mrlu.myrssreader.Controller.AboutActivity;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
 import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
@@ -32,8 +30,6 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 
-import static com.rssreader.mrlu.myrssreader.R.color.ReadBlue;
-import static com.rssreader.mrlu.myrssreader.R.color.log;
 import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 public class mainView extends MAppCompatActivity implements View.OnClickListener {

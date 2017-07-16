@@ -103,7 +103,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.AboutActivity" />
+        <activity android:name=".Controller.AboutActivity" />
         <activity android:name=".View.AppearPageActivity"/>
 
             <!-- <intent-filter> -->
