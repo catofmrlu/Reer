@@ -56,7 +56,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;
     //    public int rssItemCount = 0;
-    public String rssItemCount = "12";
+    public String rssItemCount = "0";
 
     View view;
     Window window;

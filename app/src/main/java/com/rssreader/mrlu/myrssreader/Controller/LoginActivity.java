@@ -58,6 +58,15 @@ public class LoginActivity extends AppCompatActivity {
 
                     startActivity(intent);
                     finish();
+
+                    //插入sp文件设置值isHasFeed,再次启动app时不再显示login页面
+                    SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences("sp", Context.MODE_PRIVATE);
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
+
+                    editor.putBoolean("isHasFeed", true);
+
+                    editor.commit();//提交修改
                 }
             });
 
