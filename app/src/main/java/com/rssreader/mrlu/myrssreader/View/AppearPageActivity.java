@@ -3,7 +3,6 @@ package com.rssreader.mrlu.myrssreader.View;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -14,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.avos.avoscloud.AVOSCloud;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.RssSqliteHelper;
 import com.rssreader.mrlu.myrssreader.R;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -24,8 +22,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static android.R.attr.button;
 
 
 public class AppearPageActivity extends AppCompatActivity {
