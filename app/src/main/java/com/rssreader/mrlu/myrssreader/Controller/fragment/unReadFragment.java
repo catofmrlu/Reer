@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.View.fragment;
+package com.rssreader.mrlu.myrssreader.Controller.fragment;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -30,7 +30,7 @@ import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.R;
-import com.rssreader.mrlu.myrssreader.View.ListActivity;
+import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.xml.sax.InputSource;

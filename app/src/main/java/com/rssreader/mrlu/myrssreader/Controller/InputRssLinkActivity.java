@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.View;
+package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +25,6 @@ import org.xml.sax.XMLReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.SQLException;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;

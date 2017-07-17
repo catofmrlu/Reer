@@ -25,7 +25,7 @@ import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
-import com.rssreader.mrlu.myrssreader.View.ListActivity;
+import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;

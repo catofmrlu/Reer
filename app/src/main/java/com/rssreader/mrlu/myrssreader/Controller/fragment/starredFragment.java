@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.View.fragment;
+package com.rssreader.mrlu.myrssreader.Controller.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

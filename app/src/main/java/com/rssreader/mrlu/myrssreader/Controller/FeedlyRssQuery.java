@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.View;
+package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

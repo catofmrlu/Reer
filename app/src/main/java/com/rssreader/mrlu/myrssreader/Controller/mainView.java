@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.View;
+package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,10 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
-import com.rssreader.mrlu.myrssreader.Controller.AboutActivity;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
-import com.rssreader.mrlu.myrssreader.View.fragment.starredFragment;
+import com.rssreader.mrlu.myrssreader.Controller.fragment.starredFragment;
 
 import java.util.ArrayList;
 import java.util.List;

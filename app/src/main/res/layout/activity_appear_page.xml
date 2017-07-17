@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/md_green_400_color_code"
-    tools:context="com.rssreader.mrlu.myrssreader.View.AppearPageActivity">
+    tools:context="com.rssreader.mrlu.myrssreader.Controller.AppearPageActivity">
 
 
 

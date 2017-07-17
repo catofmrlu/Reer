@@ -37,7 +37,7 @@
         </activity>
         <!-- 反馈组件 END -->
 
-        <activity android:name=".View.LoginActivity">
+        <activity android:name=".Controller.LoginActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -46,7 +46,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".View.ListActivity">
+        <activity android:name=".Controller.ListActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -55,8 +55,8 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".View.ShowDescriptionActivity" />
-        <activity android:name=".View.SettingsActivity">
+        <activity android:name=".Controller.ShowDescriptionActivity" />
+        <activity android:name=".Controller.SettingsActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -71,7 +71,7 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
 
-        <activity android:name=".View.InputRssLinkActivity" />
+        <activity android:name=".Controller.InputRssLinkActivity" />
         <activity android:name=".Test.LeanCloudTest" >
              <!--<intent-filter>-->
              <!--<action android:name="android.intent.action.MAIN" />-->
@@ -79,8 +79,8 @@
              <!--</intent-filter>-->
             </activity>
 
-        <activity android:name=".View.FeedlyRssQuery" />
-        <activity android:name=".View.mainView">
+        <activity android:name=".Controller.FeedlyRssQuery" />
+        <activity android:name=".Controller.mainView">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -89,7 +89,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".View.RssFeedListActivity">
+        <activity android:name=".Controller.RssFeedListActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -97,14 +97,14 @@
             <!-- </intent-filter> -->
 
         </activity>
-        <activity android:name=".View.openScreenActivity">
+        <activity android:name=".Controller.openScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Controller.AboutActivity" />
-        <activity android:name=".View.AppearPageActivity"/>
+        <activity android:name=".Controller.AppearPageActivity"/>
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->

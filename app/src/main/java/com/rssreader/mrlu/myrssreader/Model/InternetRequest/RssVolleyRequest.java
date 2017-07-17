@@ -1,4 +1,4 @@
-package com.rssreader.mrlu.myrssreader.InternetRequest;
+package com.rssreader.mrlu.myrssreader.Model.InternetRequest;
 
 import android.content.Context;
 import android.util.Log;
@@ -7,10 +7,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 /**
  * Created by LuXin on 2017/4/25.
