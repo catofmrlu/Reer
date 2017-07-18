@@ -1,0 +1,11 @@
+pluginRepositories {
+  maven {
+    url 'maven-repo'
+  }
+  gradlePluginPortal()
+  ivy {
+    url 'ivy-repo'
+  }
+}
+
+rootProject.name = 'custom-repositories'
