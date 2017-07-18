@@ -91,7 +91,7 @@ public class AppearPageActivity extends AppCompatActivity {
 
                     SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
 
-                    editor.putBoolean("isEnterAppearPages", true);
+                    editor.putBoolean("isEnterAppearPages", false);
 
                     editor.commit();//提交修改
 

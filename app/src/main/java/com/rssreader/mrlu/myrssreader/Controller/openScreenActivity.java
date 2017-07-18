@@ -36,18 +36,29 @@ public class openScreenActivity extends AppCompatActivity {
 
 
 
-            if (isEnterAppearPages) {
+            if (!isEnterAppearPages) {
 
                 //如果数据库存在feed，直接跳转到mainView
                 if (isHasFeed) {
-                    Log.i("过程打印", "存在feed，跳转到mainview");
 
-                    Intent intent = new Intent(this, mainView.class);
+                    new Runnable(){
+                        @Override
+                        public void run() {
+                            SystemClock.sleep(3000);
 
-                    Bundle bundle = new Bundle();
+                            Log.i("过程打印", "存在feed，跳转到mainview");
+
+                            Intent intent = new Intent(openScreenActivity.this, mainView.class);
+
+                            Bundle bundle = new Bundle();
+
+                            startActivity(intent);
+                            finish();
+
+                        }
+                    }.run();
 
 
-                    startActivity(intent);
                 }else {
                     new Thread(new Runnable() {
                         @Override
