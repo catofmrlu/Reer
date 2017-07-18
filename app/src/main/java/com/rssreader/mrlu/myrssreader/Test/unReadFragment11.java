@@ -12,7 +12,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -21,11 +20,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
-import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -59,9 +58,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     public String rssItemCount = "0";
 
     View view;
-    Window window;
-    //    private SwipeMenuListView mSwipeMenuListView;
-    ListView mSwipeMenuListView;
     ListView itemlist;
 
     @Nullable

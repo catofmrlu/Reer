@@ -23,13 +23,6 @@ public class openScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_open_screen);
         ButterKnife.bind(this);
 
-
-//        SystemClock.sleep(1000);
-
-//        imOpenPic.init()
-//                .startZoomInByScaleDeltaAndDuration(0.3f, 1000, 1000);//放大增量是0.3，放大时间是1000毫秒，放大开始时间是1000毫秒以后
-
-
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
 
@@ -37,20 +30,38 @@ public class openScreenActivity extends AppCompatActivity {
 
             boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", false);
 
+            //从sp文件中取出isHasFeed,判断是否显示初始页
+            boolean isHasFeed = sharedPreferences.getBoolean("isHasFeed", false);
+
+
+
+
             if (isEnterAppearPages) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
 
-                        SystemClock.sleep(3000);
+                //如果数据库存在feed，直接跳转到mainView
+                if (isHasFeed) {
+                    Log.i("过程打印", "存在feed，跳转到mainview");
 
-                        Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
+                    Intent intent = new Intent(this, mainView.class);
+
+                    Bundle bundle = new Bundle();
+
+
+                    startActivity(intent);
+                }else {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            SystemClock.sleep(3000);
+
+                            Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).start();
                 }
 
-                ).start();
 
             } else {
                 Log.i("首次跳转", "跳到引导页1");
