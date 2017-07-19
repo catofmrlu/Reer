@@ -31,17 +31,14 @@ public class openScreenActivity extends AppCompatActivity {
             boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", false);
 
             //从sp文件中取出isHasFeed,判断是否显示初始页
-            boolean isHasFeed = sharedPreferences.getBoolean("isHasFeed", false);
-
-
-
+            boolean isLoadLoginPage = sharedPreferences.getBoolean("isLoadLoginPage", false);
 
             if (!isEnterAppearPages) {
 
                 //如果数据库存在feed，直接跳转到mainView
-                if (isHasFeed) {
+                if (isLoadLoginPage) {
 
-                    new Runnable(){
+                    new Thread(new Runnable(){
                         @Override
                         public void run() {
                             SystemClock.sleep(3000);
@@ -50,14 +47,11 @@ public class openScreenActivity extends AppCompatActivity {
 
                             Intent intent = new Intent(openScreenActivity.this, mainView.class);
 
-                            Bundle bundle = new Bundle();
-
                             startActivity(intent);
                             finish();
 
                         }
-                    }.run();
-
+                    }).start();
 
                 }else {
                     new Thread(new Runnable() {

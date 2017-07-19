@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -37,13 +36,12 @@ public class InputRssLinkActivity extends AppCompatActivity {
     private ImageView mIvRssSearch;
 
     private RSSFeed feed = null;
-    InputSource isc;
+    private InputSource isc;
     private RequestQueue mRequestQueue;
-    private SQLiteHandle mSqLiteHandle;
     public int rssItemCount = 0;
 
-    View view;
-    Window window;
+    public InputRssLinkActivity() {
+    }
 
 
     @Override

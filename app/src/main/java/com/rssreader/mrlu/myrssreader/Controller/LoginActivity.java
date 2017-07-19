@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
 
-                editor.putBoolean("isHasFeed", true);
+                editor.putBoolean("isLoadLoginPage", true);
 
                 editor.commit();//提交修改
 
