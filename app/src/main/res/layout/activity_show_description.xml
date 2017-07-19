@@ -6,18 +6,30 @@
     android:orientation="vertical">
 
     <TextView
-
-        android:id="@+id/content"
+        android:textColor="@color/md_black_color_code"
+        android:padding="10dp"
+        android:text="我是标题"
+        android:textSize="20dp"
+        android:id="@+id/tv_titile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0"
-        android:autoLink="all"
-        android:text="" />
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/back"
+    <ScrollView
+        android:id="@+id/sl_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="返回" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/black_overlay"
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:autoLink="all"
+            android:padding="5dp"
+            android:text="@string/sample_content"
+            android:textSize="18dp" />
+    </ScrollView>
+
+
 </LinearLayout>
 

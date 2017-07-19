@@ -43,7 +43,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
     public InputRssLinkActivity() {
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,15 +80,12 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                     //新建SAX--xml解析工厂类
                     SAXParserFactory factory = SAXParserFactory.newInstance();
-
                     SAXParser parser = factory.newSAXParser();
-
                     final XMLReader reader = parser.getXMLReader();
-
                     final RSSHandler rssHander = new RSSHandler();
-
                     reader.setContentHandler(rssHander);
 
+                    //Volley请求xml部分
                     mRequestQueue = Volley.newRequestQueue(getBaseContext());
                     StringRequest mStringRequest = new StringRequest(urlString,
                             new com.android.volley.Response.Listener<String>() {
@@ -101,6 +97,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                                     Log.i("间隔", "请求执行完成");
 
+                                    //转换respone由InputStream为InputSource类型
                                     InputStream is = new ByteArrayInputStream(response.getBytes());
                                     try {
 
@@ -126,24 +123,24 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                                                 try {
 
-
                                                     SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
                                                     sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
 
                                                     sqLiteHandle.dbClose();
+
                                                     sqLiteHandle = null;
                                                 } catch (Exception e) {
-                                                    Log.e("sqllite插入", e.getMessage());
+                                                    Log.e("sqllite插入问题", e.getMessage());
                                                 }
                                             }
-                                        }
+                                        } else
+                                            Log.e("is转化问题", "is为空");
+
                                     } catch (IOException e) {
                                         Log.e("IO错误", e.getMessage());
                                     } catch (SAXException e) {
                                         Log.e("sax错误", e.getMessage());
-
                                     }
-
                                 }
                             },
 
@@ -151,6 +148,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
                                 @Override
                                 public void onErrorResponse(VolleyError error) {
 
+                                    Log.e("respone error", "respone错误");
                                     Log.e("error", error.getMessage());
                                 }
                             }
@@ -167,7 +165,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
         });
     }
-
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);

@@ -1,15 +1,14 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.rssreader.mrlu.myrssreader.R;
-
-import java.net.URL;
 
 public class ShowDescriptionActivity extends AppCompatActivity {
 
@@ -18,6 +17,33 @@ public class ShowDescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_description);
+
+        ScrollView slContent = (ScrollView) findViewById(R.id.sl_content);
+        TextView tvTitile = (TextView) findViewById(R.id.tv_titile);
+
+        slContent.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                float startY = 0;
+                float endY = 0;
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        startY = event.getY();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        endY = event.getY();
+                        break;
+
+                }
+
+                //根据endY-startY的值来判断乡下或向上滑，进而进行处理
+
+                if (startY - endY > 50)
+
+
+                return false;
+            }
+        });
 
         String content = null;
         Intent startingIntent = getIntent();
@@ -41,17 +67,11 @@ public class ShowDescriptionActivity extends AppCompatActivity {
 
         }
 
-        TextView textView = (TextView) findViewById(R.id.content);
-        textView.setText(content);
 
-        Button backBtn = (Button) findViewById(R.id.back);
 
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        TextView textView = (TextView) findViewById(R.id.tv_content);
+//        textView.setText(content);
+
     }
 
 
