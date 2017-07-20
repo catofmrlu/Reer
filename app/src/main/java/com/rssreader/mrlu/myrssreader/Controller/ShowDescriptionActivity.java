@@ -13,13 +13,18 @@ import com.rssreader.mrlu.myrssreader.R;
 public class ShowDescriptionActivity extends AppCompatActivity {
 
 
+    private TextView tvTitile;
+    private ScrollView slContent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_description);
 
-        ScrollView slContent = (ScrollView) findViewById(R.id.sl_content);
-        TextView tvTitile = (TextView) findViewById(R.id.tv_titile);
+
+        slContent = (ScrollView) findViewById(R.id.sl_content);
+        tvTitile = (TextView) findViewById(R.id.tv_titile);
+
 
         slContent.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -38,8 +43,11 @@ public class ShowDescriptionActivity extends AppCompatActivity {
 
                 //根据endY-startY的值来判断乡下或向上滑，进而进行处理
 
-                if (startY - endY > 50)
-
+                if (startY - endY > 50){
+                    tvTitile.setVisibility(com.mingle.widget.View.GONE);
+                }
+                else if (endY - startY > 50)
+                    tvTitile.setVisibility(com.mingle.widget.View.VISIBLE);
 
                 return false;
             }
