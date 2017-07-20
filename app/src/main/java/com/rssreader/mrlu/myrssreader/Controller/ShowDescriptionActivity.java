@@ -42,7 +42,6 @@ public class ShowDescriptionActivity extends AppCompatActivity {
                 }
 
                 //根据endY-startY的值来判断乡下或向上滑，进而进行处理
-
                 if (startY - endY > 50){
                     tvTitile.setVisibility(com.mingle.widget.View.GONE);
                 }
