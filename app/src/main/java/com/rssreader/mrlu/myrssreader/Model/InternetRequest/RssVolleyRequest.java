@@ -36,7 +36,7 @@ public class RssVolleyRequest {
     private InputSource isc;
     private RSSFeed feed;
 
-    RssVolleyRequest(Context context) {
+    public RssVolleyRequest(Context context) {
         mContext = context;
     }
 
