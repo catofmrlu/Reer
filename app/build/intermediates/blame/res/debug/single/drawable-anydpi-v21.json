@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_radio_button_unchecked_black_24dp.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_radio_button_unchecked_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    }
+]

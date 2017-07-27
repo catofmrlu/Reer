@@ -1,0 +1,217 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-82:12
+	package
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:3:5-45
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:8:5-79
+MERGED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.READ_LOGS
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:22-65
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:10:22-72
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:11:22-73
+application
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:14:5-80:19
+MERGED from [com.miomin:shswiperefreshlayout:1.2.0] /Users/luxin/.android/build-cache/3b54c46ef21962c841e39ccf55720b81d5519eb0/output/AndroidManifest.xml:11:5-15:19
+MERGED from [org.xutils:xutils:3.3.40] /Users/luxin/.android/build-cache/40c88c08e1092fe37b3a4eb78cb74a0128c29374/output/AndroidManifest.xml:12:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luxin/.android/build-cache/1bc6e3285a7ba30511c80d643616283680e119fb/output/AndroidManifest.xml:9:5-20
+MERGED from [cn.carbs.android:AutoZoomInImageView:1.0.0] /Users/luxin/.android/build-cache/7c2a2127ed61d3838cb125b5e8cc87f05284acb0/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.jaeger.statusbarutil:library:1.4.0] /Users/luxin/.android/build-cache/f72d5465b38005c6f31a84b2415a80c665f3416a/output/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/b90e58557ec2e848e3b57d6c298cceec0cfe1bf2/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/9cedc8b8c663d1feeb9b498053912d00124b23ad/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/luxin/.android/build-cache/e6ccf2d6ce8e205db2878f2e50a12f4f39a15a73/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/luxin/.android/build-cache/14f3f52b7bbb8eb4aa9f42e891c4ee8347653a4b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/luxin/.android/build-cache/ccac2a93f181152a7a5d011fb102ecb514c29df7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luxin/.android/build-cache/bea5a9ae9b60ab5705f707d0bfe5a4401fdf994e/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luxin/.android/build-cache/d310a4850e62c127e4f9bc5e40451f6b9988af71/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luxin/.android/build-cache/777009b7d1c057af50bf4555530959156c2600e4/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/luxin/.android/build-cache/7ff6d557bdfb4e9290b1fb6eaf7775869b193146/output/AndroidManifest.xml:29:5-20
+	android:screenOrientation
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:19:9-45
+	android:label
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:18:9-41
+	android:supportsRtl
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:20:9-35
+	android:configChanges
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:16:9-70
+	android:allowBackup
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:15:9-35
+	android:icon
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:17:9-38
+	android:theme
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:21:9-65
+service#com.avos.avoscloud.PushService
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:25:9-66
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:25:18-63
+receiver#com.avos.avoscloud.AVBroadcastReceiver
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:9-32:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:19-72
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:27:13-31:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:28:17-79
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:28:25-76
+action#android.intent.action.USER_PRESENT
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:29:25-74
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:17-79
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:25-76
+activity#com.avos.avoscloud.feedback.ThreadActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:36:9-88
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:36:19-76
+activity#com.rssreader.mrlu.myrssreader.Controller.LoginActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:39:9-41:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:39:19-59
+activity#com.rssreader.mrlu.myrssreader.Controller.ListActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:42:9-44:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:42:19-58
+activity#com.rssreader.mrlu.myrssreader.Controller.ShowDescriptionActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:45:9-50:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:45:19-69
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:46:13-49:29
+action#android.intent.action.MAIN
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:48:17-77
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:48:27-74
+activity#com.rssreader.mrlu.myrssreader.Controller.SettingsActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:51:9-54:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:51:19-62
+activity#com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:57:9-69
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:57:19-66
+activity#com.rssreader.mrlu.myrssreader.Test.LeanCloudTest
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:58:9-60:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:58:19-53
+activity#com.rssreader.mrlu.myrssreader.Controller.FeedlyRssQuery
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:62:9-63
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:62:19-60
+activity#com.rssreader.mrlu.myrssreader.Controller.mainView
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:63:9-65:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:63:19-54
+activity#com.rssreader.mrlu.myrssreader.Controller.RssFeedListActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:66:9-69:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:66:19-65
+activity#com.rssreader.mrlu.myrssreader.Controller.openScreenActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:70:9-75:20
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:70:19-64
+activity#com.rssreader.mrlu.myrssreader.Controller.AboutActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:76:9-62
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:76:19-59
+activity#com.rssreader.mrlu.myrssreader.Controller.AppearPageActivity
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:77:9-67
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:77:19-64
+uses-sdk
+INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/luxin/.android/build-cache/301f003ec71b58e0435141a485a89bfb96042464/output/AndroidManifest.xml:18:5-42
+MERGED from [com.miomin:shswiperefreshlayout:1.2.0] /Users/luxin/.android/build-cache/3b54c46ef21962c841e39ccf55720b81d5519eb0/output/AndroidManifest.xml:7:5-9:41
+MERGED from [org.xutils:xutils:3.3.40] /Users/luxin/.android/build-cache/40c88c08e1092fe37b3a4eb78cb74a0128c29374/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.baoyz.swipemenulistview:library:1.3.0] /Users/luxin/.android/build-cache/a2d6747615378bd9b4d8dc8305aa22054c991e3e/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton:butterknife:8.4.0] /Users/luxin/.android/build-cache/d6c8277a0171e885f63584e1344dcb8ca25d558a/output/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luxin/.android/build-cache/1bc6e3285a7ba30511c80d643616283680e119fb/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.zzz40500:ThemeDemo:0.1] /Users/luxin/.android/build-cache/7bc055f502092211e23d4869f09e59a7437bc026/output/AndroidManifest.xml:7:5-9:41
+MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] /Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/AndroidManifest.xml:8:5-43
+MERGED from [cn.carbs.android:AutoZoomInImageView:1.0.0] /Users/luxin/.android/build-cache/7c2a2127ed61d3838cb125b5e8cc87f05284acb0/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jaeger.statusbarutil:library:1.4.0] /Users/luxin/.android/build-cache/f72d5465b38005c6f31a84b2415a80c665f3416a/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/b90e58557ec2e848e3b57d6c298cceec0cfe1bf2/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/9cedc8b8c663d1feeb9b498053912d00124b23ad/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/luxin/.android/build-cache/e602813c7eabb1b9f2f5d65ffe2727d79ff4ab55/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/luxin/.android/build-cache/e6ccf2d6ce8e205db2878f2e50a12f4f39a15a73/output/AndroidManifest.xml:20:5-44
+MERGED from [cn.leancloud.android:avoscloud-push:v3.16.4] /Users/luxin/.android/build-cache/8b1a31e81cc2401d7501601a947155f6bf812e10/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:25.3.1] /Users/luxin/.android/build-cache/14f3f52b7bbb8eb4aa9f42e891c4ee8347653a4b/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/luxin/.android/build-cache/ccac2a93f181152a7a5d011fb102ecb514c29df7/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luxin/.android/build-cache/bea5a9ae9b60ab5705f707d0bfe5a4401fdf994e/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luxin/.android/build-cache/d310a4850e62c127e4f9bc5e40451f6b9988af71/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luxin/.android/build-cache/777009b7d1c057af50bf4555530959156c2600e4/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/luxin/.android/build-cache/7ff6d557bdfb4e9290b1fb6eaf7775869b193146/output/AndroidManifest.xml:21:5-23:58
+MERGED from [cn.leancloud.android:avoscloud-feedback:v3.16.4] /Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/b90e58557ec2e848e3b57d6c298cceec0cfe1bf2/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luxin/.android/build-cache/9cedc8b8c663d1feeb9b498053912d00124b23ad/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/luxin/.android/build-cache/e602813c7eabb1b9f2f5d65ffe2727d79ff4ab55/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/luxin/.android/build-cache/e6ccf2d6ce8e205db2878f2e50a12f4f39a15a73/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/luxin/.android/build-cache/14f3f52b7bbb8eb4aa9f42e891c4ee8347653a4b/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/luxin/.android/build-cache/ccac2a93f181152a7a5d011fb102ecb514c29df7/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luxin/.android/build-cache/bea5a9ae9b60ab5705f707d0bfe5a4401fdf994e/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luxin/.android/build-cache/d310a4850e62c127e4f9bc5e40451f6b9988af71/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luxin/.android/build-cache/777009b7d1c057af50bf4555530959156c2600e4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/luxin/.android/build-cache/7ff6d557bdfb4e9290b1fb6eaf7775869b193146/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/AndroidManifest.xml:26:9-47
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:13:5-66
+	android:name
+		ADDED from [cn.leancloud.android:avoscloud-sns:v3.16.4] /Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/AndroidManifest.xml:13:22-63

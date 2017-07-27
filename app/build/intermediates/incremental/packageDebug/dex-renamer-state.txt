@@ -1,0 +1,7 @@
+#Thu Jul 20 21:07:34 CST 2017
+base.0=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex
+base.1=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec
+file.0=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72/classes.dex
