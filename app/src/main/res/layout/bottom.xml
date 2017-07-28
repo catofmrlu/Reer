@@ -21,11 +21,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/feed_read"
             android:background="#00000000"/>
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:text="微信"/>-->
     </LinearLayout>
     <LinearLayout
         android:id="@+id/id_tab_frd"
@@ -42,53 +37,5 @@
             android:layout_height="wrap_content"
             android:src="@drawable/long_press_starred"
             android:background="#00000000"/>
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:text="朋友"/>-->
     </LinearLayout>
-    <!--<LinearLayout-->
-        <!--android:id="@+id/id_tab_address"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="vertical">-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/id_tab_address_img"-->
-            <!--android:clickable="false"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/icon"-->
-            <!--android:background="#00000000"/>-->
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:text="通讯录"/>-->
-    <!--</LinearLayout>-->
-    <!--<LinearLayout-->
-        <!--android:id="@+id/id_tab_setting"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="vertical">-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/id_tab_setting_img"-->
-            <!--android:clickable="false"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/icon"-->
-            <!--android:background="#00000000"/>-->
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:text="设置"/>-->
-    <!--</LinearLayout>-->
-
 </LinearLayout>

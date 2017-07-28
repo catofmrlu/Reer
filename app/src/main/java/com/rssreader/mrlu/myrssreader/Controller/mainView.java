@@ -136,26 +136,9 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             }
         });
 
-        //取出带来的rssLink
-//        Bundle bundle = this.getIntent().getExtras();
-//        rssUrl = bundle.getString("rssLink");
-//
-//        Log.i("传递值打印mainView", rssUrl);
-
-        //EventBus发送消息
-//        EventBus.getDefault().post(rssUrl);
-
         initView();//初始化控件
         initEvent();//初始化事件
         initData();//初始化数据
-
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//
-//            //透明状态栏
-//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-////            //透明导航栏
-////            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-//        }
         selectTab(0);
     }
 
