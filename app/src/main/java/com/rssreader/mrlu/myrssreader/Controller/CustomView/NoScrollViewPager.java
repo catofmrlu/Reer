@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 
 /**
  * Created by LuXin on 2017/3/11.
+ * reset on 2017/8/1
  */
 
 public class NoScrollViewPager  extends ViewPager{
@@ -22,10 +23,8 @@ public class NoScrollViewPager  extends ViewPager{
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent arg0) {
-
         return false;
     }
-
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         return false;
