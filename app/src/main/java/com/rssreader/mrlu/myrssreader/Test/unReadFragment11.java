@@ -90,9 +90,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 //                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
                 String link = cursor.getString(cursor.getColumnIndex("RssLink"));
                 Log.i("查询数据库", name + "\n" + link);
-//
-//                //打印查询的数据
-//                System.out.println(name + "---" + description + "---" + link);
                 try {
 //                    getFeed(link);
 
