@@ -1,6 +1,5 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -49,43 +48,47 @@ public class InputRssLinkActivity extends AppCompatActivity {
                 }).start();
 
                 //跳转到主界面
-                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
-                startActivity(intent);
+//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
+//                startActivity(intent);
 
             }
         });
     }
 
-
     //region getfeed部分
     //获取feed
     private void getFeed(final String urlString) {
-
+        try {
         //调用volley请求xml并解析后返后每个添加源的RssFeed对象
         RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
         RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
 
-        //判断feed是否为空
-        if (feed == null) {
-            Log.e("feed", "feed为空");
-        } else {
-            Log.i("恭喜！", "feed通过");
+            //判断feed是否为空
+            if (feed == null) {
+                Log.e("feed", "feed为空");
+            } else {
+                Log.i("恭喜！", "feed通过");
 
-            //统计添加源的项目数
-            System.out.println("---------/n" + feed.Count() + "/n------");
+                //统计添加源的项目数
+                System.out.println("---------/n" + feed.Count() + "/n------");
 
-            try {
+                try {
 
-                SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-                sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
+                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
 
-                sqLiteHandle.dbClose();
+                    sqLiteHandle.dbClose();
 
-                sqLiteHandle = null;
-            } catch (Exception e) {
-                Log.e("sqllite插入问题", e.getMessage());
+                    sqLiteHandle = null;
+                } catch (Exception e) {
+                    Log.e("sqllite插入问题", e.getMessage());
 
+                }
             }
+        }catch (Exception e){
+            Log.e(" 读取feed", e.toString());
+        }finally {
+
         }
     }
 

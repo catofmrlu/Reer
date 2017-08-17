@@ -282,6 +282,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/301f003ec71b58e0435141a485a89bfb96042464/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fb76b75152f6fba194635de0407ec36df59b7f61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/android-sdk-macosx/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
         jumboMode="true"
         optimize="true"
@@ -376,7 +385,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0d0de65178afe9647a8878bf208140b4607b7229">
+        sha1="49e233530692e38acb545f49835083693be6df49">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
     </item>
     <item

@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.ArrayMap;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -33,7 +34,6 @@ import org.xml.sax.XMLReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -77,11 +77,17 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             Log.i("过程打印", "queryAllFeeds查询完成");
 
             mRssUnreadList = new ArrayList<>();
-            Map<String, String> map = new HashMap<String, String>();
-            map.put("rssName", "全部未读");
-            map.put("rssCount", rssItemCount);
-            mRssUnreadList.add(map);
 
+//            Map<String, String> map = new HashMap<String, String>();
+//            map.put("rssName", "全部未读");
+//            map.put("rssCount", rssItemCount);
+//            mRssUnreadList.add(map);
+
+
+            ArrayMap arrayMap = new ArrayMap();
+            arrayMap.put("rssName", "全部未读");
+            arrayMap.put("rssCount", rssItemCount);
+            mRssUnreadList.add(arrayMap);
 
             showListView();
             Log.i("过程标记", "list显示完成");

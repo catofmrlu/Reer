@@ -37,44 +37,55 @@ public class RSSHandler extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
+        try {
 
-        rssFeed = new RSSFeed();
-        rssItem = new RSSItem();
 
+            rssFeed = new RSSFeed();
+            rssItem = new RSSItem();
+        } catch (Exception e) {
+            Log.e("exception", e.toString());
+        }
     }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if (localName.equals("channel")) {
+        try {
+
+
+            if (localName.equals("channel")) {
+                currentState = 0;
+                return;
+            }
+            if (localName.equals("item")) {
+                mIsItemTitle = true;
+                rssItem = new RSSItem();
+                return;
+            }
+            if (localName.equals("title")) {
+                currentState = RSS_TITLE;
+                return;
+            }
+            if (localName.equals("description")) {
+                currentState = RSS_DESCRIPTION;
+                return;
+            }
+            if (localName.equals("link")) {
+                currentState = RSS_LINK;
+                return;
+            }
+            if (localName.equals("category")) {
+                currentState = RSS_CATEGORY;
+                return;
+            }
+            if (localName.equals("pubDate")) {
+                currentState = RSS_PUBDATE;
+                return;
+            }
             currentState = 0;
-            return;
+
+        } catch (Exception e) {
+            Log.e("sax解析", e.toString());
         }
-        if (localName.equals("item")) {
-            mIsItemTitle = true;
-            rssItem = new RSSItem();
-            return;
-        }
-        if (localName.equals("title")) {
-            currentState = RSS_TITLE;
-            return;
-        }
-        if (localName.equals("description")) {
-            currentState = RSS_DESCRIPTION;
-            return;
-        }
-        if (localName.equals("link")) {
-            currentState = RSS_LINK;
-            return;
-        }
-        if (localName.equals("category")) {
-            currentState = RSS_CATEGORY;
-            return;
-        }
-        if (localName.equals("pubDate")) {
-            currentState = RSS_PUBDATE;
-            return;
-        }
-        currentState = 0;
 
     }
 
@@ -93,55 +104,59 @@ public class RSSHandler extends DefaultHandler {
 //        if (theString.indexOf(" &#8211; ") != -1) {
 //            theString.replace(" &#8211; ", "");
 //        }
+        try {
 
-        switch (currentState) {
-            case RSS_TITLE:
 
-                if (mIsItemTitle) {
-                    rssItem.setTitle(theString);
+            switch (currentState) {
+                case RSS_TITLE:
+
+                    if (mIsItemTitle) {
+                        rssItem.setTitle(theString);
+                        currentState = 0;
+                    } else {
+                        Log.i("title", theString);
+                        rssFeed.setName(theString);
+                        currentState = 0;
+                    }
+                    return;
+
+
+                case RSS_LINK:
+                    rssItem.setLink(theString);
                     currentState = 0;
-                } else {
-                    Log.i("title", theString);
-                    rssFeed.setName(theString);
+                    return;
+
+
+                case RSS_DESCRIPTION:
+
+                    if (mIsItemTitle) {
+                        rssItem.setDescription(theString);
+                        currentState = 0;
+                    } else {
+                        rssFeed.setFeedDescription(theString);
+                        currentState = 0;
+                    }
+
+                    return;
+
+
+                case RSS_CATEGORY:
+                    rssItem.setCategory(theString);
                     currentState = 0;
-                }
-                return;
+                    return;
 
 
-            case RSS_LINK:
-                rssItem.setLink(theString);
-                currentState = 0;
-                return;
-
-
-            case RSS_DESCRIPTION:
-
-                if (mIsItemTitle) {
-                    rssItem.setDescription(theString);
+                case RSS_PUBDATE:
+                    rssItem.setPubdate(theString);
                     currentState = 0;
-                } else {
-                    rssFeed.setFeedDescription(theString);
-                    currentState = 0;
-                }
+                    return;
 
-                return;
-
-
-            case RSS_CATEGORY:
-                rssItem.setCategory(theString);
-                currentState = 0;
-                return;
-
-
-            case RSS_PUBDATE:
-                rssItem.setPubdate(theString);
-                currentState = 0;
-                return;
-
-            default:
-                return;
+                default:
+                    return;
+            }
+        } catch (Exception e) {
+            Log.e("sax解析", e.toString());
         }
-
 
     }
 

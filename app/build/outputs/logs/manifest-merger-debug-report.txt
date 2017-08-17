@@ -109,16 +109,6 @@ activity#com.rssreader.mrlu.myrssreader.Controller.ShowDescriptionActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:45:9-50:20
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:45:19-69
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:46:13-49:29
-action#android.intent.action.MAIN
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:17-69
-	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:48:17-77
-	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:48:27-74
 activity#com.rssreader.mrlu.myrssreader.Controller.SettingsActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:51:9-54:20
 	android:name
@@ -147,6 +137,16 @@ activity#com.rssreader.mrlu.myrssreader.Controller.openScreenActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:70:9-75:20
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:70:19-64
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:71:13-74:29
+action#android.intent.action.MAIN
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:72:13-65
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:72:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:73:13-73
+	android:name
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:73:23-70
 activity#com.rssreader.mrlu.myrssreader.Controller.AboutActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:76:9-62
 	android:name

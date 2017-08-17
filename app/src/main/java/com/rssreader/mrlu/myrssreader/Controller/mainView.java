@@ -204,7 +204,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         mImgWeixin = (ImageButton) findViewById(R.id.id_tab_weixin_img);
         mImgFrd = (ImageButton) findViewById(R.id.id_tab_frd_img);
-
     }
 
     @Override
