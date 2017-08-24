@@ -37,8 +37,6 @@ public class RssHanderByPull {
             InputStream is = conn.getInputStream();
             Log.i("is流获取", "success!!");
 
-            PullParser(is);
-
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             StringBuilder sb = new StringBuilder();
 
@@ -59,6 +57,7 @@ public class RssHanderByPull {
             }
             Log.i("is转化为string", sb.toString());
 
+//            PullParser(is);
 
         } catch (Exception e) {
             Log.e("转化url-error", e.getMessage());
@@ -84,7 +83,7 @@ public class RssHanderByPull {
             // 只要不是文档结束事件，就一直循环
             while (eventType != XmlPullParser.END_DOCUMENT) {
 
-                Log.i("xml解析", "进入开始节点！！");
+//                Log.i("xml解析", "进入开始节点！！");
 
                 switch (eventType) {
                     case XmlPullParser.START_DOCUMENT:
@@ -136,7 +135,7 @@ public class RssHanderByPull {
                     case XmlPullParser.END_TAG:
 
                         String itemEndItem = parser.getName();
-                        if (itemEndItem == "item") {
+                        if (itemEndItem.equals("item")) {
                             mFeed.addItem(mItem);
                             mItem = null;
                         }
