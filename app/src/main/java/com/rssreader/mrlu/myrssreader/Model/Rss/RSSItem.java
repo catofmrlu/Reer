@@ -15,6 +15,10 @@ public class RSSItem {
     private String pubdate = null;
 
 
+    private String author = null;
+
+
+
     public RSSItem() {
     }
 
@@ -65,6 +69,14 @@ public class RSSItem {
 
     public static String getPUBDATE() {
         return PUBDATE;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String toString() {

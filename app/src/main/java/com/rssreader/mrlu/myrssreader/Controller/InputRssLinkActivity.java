@@ -7,9 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssVolleyRequest;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
 
@@ -60,10 +59,13 @@ public class InputRssLinkActivity extends AppCompatActivity {
     private void getFeed(final String urlString) {
         try {
         //调用volley请求xml并解析后返后每个添加源的RssFeed对象
-        RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
-        RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
+//        RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
+//        RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
+            RssHanderByPull rssHanderByPull = new RssHanderByPull();
 
-            //判断feed是否为空
+            RSSFeed feed = rssHanderByPull.parseRss(urlString);
+
+                //判断feed是否为空
             if (feed == null) {
                 Log.e("feed", "feed为空");
             } else {
@@ -74,12 +76,12 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 try {
 
-                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
-
-                    sqLiteHandle.dbClose();
-
-                    sqLiteHandle = null;
+//                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
+//                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
+//
+//                    sqLiteHandle.dbClose();
+//
+//                    sqLiteHandle = null;
                 } catch (Exception e) {
                     Log.e("sqllite插入问题", e.getMessage());
 

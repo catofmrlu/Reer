@@ -8,18 +8,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 /**
  * Created by LuXin on 2017/4/25.
@@ -45,11 +36,11 @@ public class RssVolleyRequest {
         try {
 
             //新建SAX--xml解析工厂类
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser parser = factory.newSAXParser();
-            final XMLReader reader = parser.getXMLReader();
-            final RSSHandler rssHander = new RSSHandler();
-            reader.setContentHandler(rssHander);
+//            SAXParserFactory factory = SAXParserFactory.newInstance();
+//            SAXParser parser = factory.newSAXParser();
+//            final XMLReader reader = parser.getXMLReader();
+//            final RSSHandler rssHander = new RSSHandler();
+//            reader.setContentHandler(rssHander);
 
             //Volley请求xml部分
             mRequestQueue = Volley.newRequestQueue(mContext);
@@ -64,27 +55,26 @@ public class RssVolleyRequest {
                             Log.i("间隔", "请求执行完成");
 
                             //转换respone由InputStream为InputSource类型
-                            InputStream is = new ByteArrayInputStream(response.getBytes());
+//                            InputStream is = new ByteArrayInputStream(response.getBytes());
                             try {
 
-                                if (is != null) {
+//                                if (is != null) {
+//
+//
+//                                    isc = new InputSource(is);
+//
+//                                    Log.i("IS", "IS转换完成");
+//
+//                                    Log.i("IS", isc.toString());
+//
+//                                    reader.parse(isc);
+//                                    feed = rssHander.getFeed();
 
 
-                                    isc = new InputSource(is);
 
-                                    Log.i("IS", "IS转换完成");
-
-                                    Log.i("IS", isc.toString());
-
-                                    reader.parse(isc);
-                                    feed = rssHander.getFeed();
-
-                                }
-
-                            } catch (SAXException e) {
+                            } catch (Exception e) {
                                 e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
+
                             }
 
                         }

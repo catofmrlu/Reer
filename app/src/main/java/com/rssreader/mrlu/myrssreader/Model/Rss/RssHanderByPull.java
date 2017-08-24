@@ -30,6 +30,7 @@ public class RssHanderByPull {
             conn.setDoInput(true);
             conn.connect();
             InputStream is = conn.getInputStream();
+            Log.i("is流获取", "success!!");
 
             PullParser(is);
 
@@ -44,41 +45,62 @@ public class RssHanderByPull {
         return mFeed;
     }
 
-    public RSSFeed PullParser(InputStream is){
+    public void PullParser(InputStream is){
 
         try {
             // 使用工厂类XmlPullParserFactory
             XmlPullParserFactory pullFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = pullFactory.newPullParser();
 
+            Log.i("xml解析", "即将开始！！");
+
             parser.setInput(is, "UTF-8");
             int eventType = parser.getEventType();
             // 只要不是文档结束事件，就一直循环
             while (eventType != XmlPullParser.END_DOCUMENT){
+
+                Log.i("xml解析", "进入开始节点！！");
+
                 switch (eventType){
                     case XmlPullParser.START_DOCUMENT:
                         mFeed = new RSSFeed();
+                        Log.i("xml解析", "进入START_DOCUMENT！！");
+
                         break;
                     case XmlPullParser.START_TAG:
 
                         String itemStartName = parser.getName();
 
+                        Log.i("xml解析", itemStartName + "！！");
+
                         switch (itemStartName){
                             case "title":
-                                mFeed.setName(parser.nextText());
+                                if (mItem == null)
+                                    mFeed.setName(parser.nextText());
+                                mItem.setTitle(parser.nextText());
                                 break;
                             case "link":
-                                mFeed.setFeedLink(parser.nextText());
+                                if (mItem == null)
+                                    mFeed.setFeedLink(parser.nextText());
+                                mItem.setLink(parser.nextText());
                                 break;
 
                             case "pubDate":
-                                mFeed.setPubDate(parser.nextText());
+                                if (mItem == null)
+                                    mFeed.setPubDate(parser.nextText());
+                                mItem.setPubdate(parser.nextText());
                                 break;
                             case "description":
-                                mFeed.setFeedDescription(parser.nextText());
+                                if (mItem == null)
+                                    mFeed.setFeedDescription(parser.nextText());
+                                mItem.setDescription(parser.nextText());
+                                Log.i("打印rss内容", mItem.getDescription());
                                 break;
                             case "item":
                                 mItem = new RSSItem();
+                                break;
+                            case "author":
+                                mItem.setAuthor(parser.nextText());
                                 break;
                         }
                         break;
@@ -87,8 +109,9 @@ public class RssHanderByPull {
                         String itemEndItem = parser.getName();
                         if (itemEndItem == "item"){
                             mFeed.addItem(mItem);
+                            mItem = null;
                         }
-
+                        break;
                 }
             }
 
@@ -96,6 +119,5 @@ public class RssHanderByPull {
         }catch (Exception e){
             Log.e("PullParser方法部分", e.getMessage());
         }
-        return mFeed;
     }
 }
