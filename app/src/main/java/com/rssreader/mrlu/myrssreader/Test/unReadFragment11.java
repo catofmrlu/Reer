@@ -88,7 +88,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
             while (cursor.moveToNext()) {
                 String name = cursor.getString(cursor.getColumnIndex("RssName"));
-//                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
                 String link = cursor.getString(cursor.getColumnIndex("RssLink"));
                 Log.i("查询数据库", name + "\n" + link);
                 try {
@@ -140,8 +139,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             final RSSHandler rssHander = new RSSHandler();
 
             reader.setContentHandler(rssHander);
-
-//                URL url = new URL(urlString);
 
             mRequestQueue = Volley.newRequestQueue(getActivity());
             StringRequest mStringRequest = new StringRequest(urlString,

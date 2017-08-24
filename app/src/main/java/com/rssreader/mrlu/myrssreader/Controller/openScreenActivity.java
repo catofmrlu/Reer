@@ -48,6 +48,7 @@ public class openScreenActivity extends AppCompatActivity {
                             Intent intent = new Intent(openScreenActivity.this, mainView.class);
 
                             startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
                             finish();
 
                         }
@@ -62,6 +63,7 @@ public class openScreenActivity extends AppCompatActivity {
 
                             Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
                             startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
                             finish();
                         }
                     }).start();
@@ -87,6 +89,7 @@ public class openScreenActivity extends AppCompatActivity {
                 SystemClock.sleep(3000);
                 Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
                 startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 finish();
             }
         }).start();

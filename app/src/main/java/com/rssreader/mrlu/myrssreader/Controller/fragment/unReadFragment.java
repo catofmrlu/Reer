@@ -106,7 +106,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 //        EventBus.getDefault().register(this);
 //        Log.i("传递值打印Frame", RSS_URL);
 
-
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {

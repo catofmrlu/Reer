@@ -111,6 +111,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             public void onClick(View v) {
                 Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
                 startActivityForResult(intent, 1);
+                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 //                finish();
             }
         });

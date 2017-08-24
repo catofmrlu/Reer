@@ -14,6 +14,8 @@ int anim design_fab_in 0x7f04000c
 int anim design_fab_out 0x7f04000d
 int anim design_snackbar_in 0x7f04000e
 int anim design_snackbar_out 0x7f04000f
+int anim zoomin 0x7f040010
+int anim zoomout 0x7f040011
 int animator design_appbar_state_list_animator 0x7f050000
 int attr actionBarDivider 0x7f010082
 int attr actionBarItemBackground 0x7f010083

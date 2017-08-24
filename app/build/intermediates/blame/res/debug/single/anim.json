@@ -24,6 +24,10 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/anim/zoomin.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/anim/zoomin.xml"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/anim/abc_fade_in.xml"
     },
@@ -62,5 +66,9 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
         "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/anim/zoomout.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/anim/zoomout.xml"
     }
 ]

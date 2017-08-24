@@ -1,4 +1,4 @@
-#Thu Aug 24 22:28:34 CST 2017
+#Fri Aug 25 01:54:54 CST 2017
 file.9=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1bacab431c2281c02ebcf8ad05b19f30b0a5e53/classes.dex
 base.10=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_41492a8ce7aa6a99a0f6544cb4a2303275e06ec6
 file.8=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_6f2ca566f8655782eb36182dae5cae871ced90db/classes.dex
