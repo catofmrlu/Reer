@@ -21,6 +21,16 @@ public class RSSFeed implements Serializable {
 
     private String feedLink = null;
 
+    public String getPubDate() {
+        return pubDate;
+    }
+
+    public void setPubDate(String pubDate) {
+        this.pubDate = pubDate;
+    }
+
+    private String pubDate= null;
+
     private int itemcount = 0;
     private List<RSSItem> itemlist;
 

@@ -32,12 +32,12 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
-        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
@@ -176,10 +176,6 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avoscloud_feedback_user_reply_background.9.png",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/drawable-hdpi-v4/avoscloud_feedback_user_reply_background.9.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -210,18 +206,6 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/design_ic_visibility.png",
         "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/drawable-hdpi-v4/design_ic_visibility.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avoscloud_feedback_thread_actionbar_back.png",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/drawable-hdpi-v4/avoscloud_feedback_thread_actionbar_back.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avoscloud_feedback_dev_reply_background.9.png",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/drawable-hdpi-v4/avoscloud_feedback_dev_reply_background.9.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/avoscloud_feedback_notification.9.png",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/drawable-hdpi-v4/avoscloud_feedback_notification.9.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png",

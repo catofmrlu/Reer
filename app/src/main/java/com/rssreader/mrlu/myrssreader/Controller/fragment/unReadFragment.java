@@ -32,7 +32,6 @@ import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 
-import org.greenrobot.eventbus.Subscribe;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -357,15 +356,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     }
 
-    @Subscribe
-    public void onevent(String data) {
-        RSS_URL = data;
-        Log.i("发送成功", "rss:" + RSS_URL);
-
-        getFeed(RSS_URL);
-
-        adapter.notifyDataSetChanged();
-    }
 
 //    @Override
 //    public void onDestroy() {

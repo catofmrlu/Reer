@@ -78,12 +78,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
             mRssUnreadList = new ArrayList<>();
 
-//            Map<String, String> map = new HashMap<String, String>();
-//            map.put("rssName", "全部未读");
-//            map.put("rssCount", rssItemCount);
-//            mRssUnreadList.add(map);
-
-
             ArrayMap arrayMap = new ArrayMap();
             arrayMap.put("rssName", "全部未读");
             arrayMap.put("rssCount", rssItemCount);
@@ -91,6 +85,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
             showListView();
             Log.i("过程标记", "list显示完成");
+
             while (cursor.moveToNext()) {
                 String name = cursor.getString(cursor.getColumnIndex("RssName"));
 //                String description = cursor.getString(cursor.getColumnIndex("RssDescription"));

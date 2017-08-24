@@ -1,4 +1,4 @@
-#Fri Aug 18 00:00:46 CST 2017
+#Thu Aug 24 13:01:23 CST 2017
 base.0=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2
 renamed.0=classes.dex
 file.0=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex

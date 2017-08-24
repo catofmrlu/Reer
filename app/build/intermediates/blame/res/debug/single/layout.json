@@ -144,10 +144,6 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/avoscloud_sns_web_activity.xml",
-        "source": "/Users/luxin/.android/build-cache/f9174ac4686c5673eaa0efd0347cb98defb5b400/output/res/layout/avoscloud_sns_web_activity.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/activity_viewpager_test.xml",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/activity_viewpager_test.xml"
     },
@@ -228,10 +224,6 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/avoscloud_feedback_dev_reply.xml",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/layout/avoscloud_feedback_dev_reply.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/layout/select_dialog_multichoice_material.xml"
     },
@@ -284,16 +276,8 @@
         "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/avoscloud_feedback_user_reply.xml",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/layout/avoscloud_feedback_user_reply.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/activity_about.xml"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/avoscloud_feedback_thread_actionbar.xml",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/layout/avoscloud_feedback_thread_actionbar.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/rssfeed_item.xml",
@@ -330,10 +314,6 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/layout/notification_template_lines_media.xml"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/avoscloud_feedback_activity_conversation.xml",
-        "source": "/Users/luxin/.android/build-cache/ee75131fdb2db52f89165a748feaaed0b9a281e8/output/res/layout/avoscloud_feedback_activity_conversation.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",

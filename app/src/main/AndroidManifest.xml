@@ -2,14 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rssreader.mrlu.myrssreader">
 
-    <!-- 基础模块（必须加入以下声明）START -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 基础模块（必须加入以下声明）END -->
 
     <application
         android:allowBackup="true"
@@ -20,62 +18,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- 实时通信模块、推送（均需要加入以下声明） START -->
-        <!-- 实时通信模块、推送都要使用 PushService -->
-        <service android:name="com.avos.avoscloud.PushService" />
-        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
-        <!-- 实时通信模块、推送 END -->
-
-        <!-- 反馈组件（需要加入以下声明）START -->
-        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity"></activity>
-        <!-- 反馈组件 END -->
-
-        <activity android:name=".Controller.LoginActivity">
-
-        </activity>
-        <activity android:name=".Controller.ListActivity">
-
-        </activity>
+        <activity android:name=".Controller.LoginActivity" />
+        <activity android:name=".Controller.ListActivity" />
         <activity android:name=".Controller.ShowDescriptionActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Controller.SettingsActivity">
-
-
-        </activity>
-
-
+        <activity android:name=".Controller.SettingsActivity" />
         <activity android:name=".Controller.InputRssLinkActivity" />
-        <activity android:name=".Test.LeanCloudTest">
-
-        </activity>
-
         <activity android:name=".Controller.FeedlyRssQuery" />
-        <activity android:name=".Controller.mainView">
-
-        </activity>
-        <activity android:name=".Controller.RssFeedListActivity">
-
-
-        </activity>
+        <activity android:name=".Controller.mainView" />
+        <activity android:name=".Controller.RssFeedListActivity" />
         <activity android:name=".Controller.openScreenActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Controller.AboutActivity" />
         <activity android:name=".Controller.AppearPageActivity" />
-
 
     </application>
 

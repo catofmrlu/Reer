@@ -133,13 +133,6 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <color name="avoscloud_feedback_back_background">#333333</color>
-    <color name="avoscloud_feedback_input_wrap_background">#f8f8f8</color>
-    <color name="avoscloud_feedback_text_gray">#898989</color>
-    <color name="avoscloud_feedback_thread_actionbar_blue">#56b8f4</color>
-    <color name="avoscloud_feedback_thread_header_background">#000</color>
-    <color name="avoscloud_feedback_white">#fff</color>
-    <color name="avoscloud_timestamp_gray">#888</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -1035,14 +1028,6 @@
     <string name="app_email">lxxlxx8888@outlook.com</string>
     <string name="app_name" translatable="false">Reer</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="avoscloud_feedback_app_name">AvosCloudFeedback</string>
-    <string name="avoscloud_feedback_contact_hint">Contact information</string>
-    <string name="avoscloud_feedback_input_hint">Write your feedback</string>
-    <string name="avoscloud_feedback_just_now">Just Now</string>
-    <string name="avoscloud_feedback_new_item">Got new reply </string>
-    <string name="avoscloud_feedback_select_image">Select Image</string>
-    <string name="avoscloud_feedback_send_text">Send</string>
-    <string name="avoscloud_feedback_thread_activity_title">Feedback</string>
     <string name="backfeed_text_login" translatable="false">出现问题？点这里反馈</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btn_rssQuery" translatable="false">query</string>
