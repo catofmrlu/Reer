@@ -1,47 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_input_rss_link"
     android:layout_width="match_parent"
+    android:paddingTop="5dp"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity">
 
 
     <LinearLayout
+        android:gravity="center"
         android:id="@+id/ll_search"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
 
+        <ImageView
+            android:src="@drawable/back_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
         <EditText
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:id="@+id/et_rssLink"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:hint="请输入rss" />
+            android:hint="@string/et_rsslink_hint" />
 
         <ImageView
             android:id="@+id/iv_rss_search"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/search" />
 
-        <!--<Button-->
-        <!--android:id="@+id/btn_done"-->
-        <!--android:text="done"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:layout_below="@+id/et_rssLink"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--style="@style/Base.AlertDialog.AppCompat.Light" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/md_green_400_color_code"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/tv_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <GridLayout
+            android:id="@+id/gv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:columnCount="4"
+            android:rowCount="4"
+
+            android:stretchMode="columnWidth">
+
+            <ImageView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:src="@drawable/ithome"
+                style="@style/recommend_style"/>
+            <LinearLayout
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:orientation="vertical"
+                style="@style/recommend_style">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zhihu"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+                <ImageView
+                    android:src="@drawable/ifar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <!--<ImageView-->
+                <!--android:src="@drawable/zhihu"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"/>-->
+            <!--<ImageView-->
+            <!--android:src="@drawable/ifar"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="50dp"/>-->
+
+            <ImageView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wephone"
+                style="@style/recommend_style" />
+
+
+            <ImageView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kef"
+                style="@style/recommend_style" />
+
+
+            <ImageView
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kej"
+                android:layout_height="100dp"
+                style="@style/recommend_style"
+                android:layout_rowSpan="2"/>
+
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/huxiu_f"
+                style="@style/recommend_style" />
+
+
+
+
+        </GridLayout>
 
     </LinearLayout>
 
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

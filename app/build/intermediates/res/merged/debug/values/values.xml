@@ -1033,6 +1033,7 @@
     <string name="btn_rssQuery" translatable="false">query</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="et_rssQuery_hint" translatable="false">请输入要订阅的rss名称</string>
+    <string name="et_rsslink_hint">请输入要添加的Rss链接</string>
     <string name="feedly_text_login" translatable="false">feedly</string>
     <string name="localhost_text_login" translatable="false">本地用户</string>
     <string name="nightMode_text_settings" translatable="false">夜间模式</string>
@@ -1072,6 +1073,7 @@
     <string name="select_text_login" translatable="false">请选择一个服务登陆</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_open_screen">openScreenActivity</string>
+    <string name="tv_recommend">为你推荐</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -2653,6 +2655,13 @@
         <item name="android:textStyle">bold</item>
         <item name="android:background">@color/colorAccent</item>
         <item name="android:textColor">@android:color/background_light</item>
+    </style>
+    <style name="recommend_style">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <!--<item name="android:layout_columnWeight">1</item>-->
+        <!--<item name="android:layout_columnWeight">1</item>-->
+
     </style>
     <style name="setting_switch_text">
         <item name="android:textColor">@color/md_black_color_code</item>
