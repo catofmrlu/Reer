@@ -64,10 +64,6 @@
         "source": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/drawable-hdpi/vpi__tab_unselected_pressed_holo.9.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/wephone.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/wephone.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/weifeng.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/weifeng.png"
     },

@@ -1,15 +1,20 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
+
+import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 
 public class InputRssLinkActivity extends AppCompatActivity {
@@ -28,6 +33,10 @@ public class InputRssLinkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_rss_link);
         initView();
+
+
+        //设置弹出键盘
+//        showSoftInputFromWindow(this, mEtRssLink);
 
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +106,17 @@ public class InputRssLinkActivity extends AppCompatActivity {
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
         mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
+        ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
+
+        StatusBarUtil.setColor(this, getResources().getColor(md_teal_a700_color_code), 0);
+
+    }
+
+    public static void showSoftInputFromWindow(Activity activity, EditText editText) {
+        editText.setFocusable(true);
+        editText.setFocusableInTouchMode(true);
+        editText.requestFocus();
+        activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 }
 

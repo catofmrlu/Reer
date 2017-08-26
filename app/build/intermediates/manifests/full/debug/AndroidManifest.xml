@@ -36,7 +36,9 @@
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.SettingsActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.FeedlyRssQuery" />
-        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.mainView" />
+        <activity
+            android:name="com.rssreader.mrlu.myrssreader.Controller.mainView"
+            android:launchMode="singleInstance" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.RssFeedListActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.openScreenActivity" >
             <intent-filter>

@@ -41,7 +41,7 @@ public class openScreenActivity extends AppCompatActivity {
                     new Thread(new Runnable(){
                         @Override
                         public void run() {
-                            SystemClock.sleep(3000);
+                            SystemClock.sleep(1500);
 
                             Log.i("过程打印", "存在feed，跳转到mainview");
 
@@ -59,7 +59,7 @@ public class openScreenActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            SystemClock.sleep(3000);
+                            SystemClock.sleep(1500);
 
                             Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
                             startActivity(intent);
@@ -86,7 +86,7 @@ public class openScreenActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                SystemClock.sleep(3000);
+                SystemClock.sleep(1500);
                 Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);

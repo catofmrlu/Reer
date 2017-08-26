@@ -28,9 +28,10 @@
     <Button
         android:id="@+id/btn_feedly"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/rec_tr"
 
         android:text="@string/feedly_text_login"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         style="@style/md_button"
         android:minHeight="39dp" />
@@ -41,10 +42,10 @@
         android:id="@+id/btn_localhost"
         android:textStyle="bold"
         android:text="@string/localhost_text_login"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rec_tr"
         android:textColor="@android:color/background_light"
         android:minHeight="39dp" />
 

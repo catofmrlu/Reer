@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="df29ca9244c9528cc42ec5a81f84d96c92bf7e80">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="81091b53ff91ff87308d0d7e041a05b0823ed430">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
     </item>
 
 </items>

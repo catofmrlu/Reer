@@ -47,7 +47,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rec_tr"
         android:textColor="@android:color/background_light"
         android:minHeight="39dp" />
 

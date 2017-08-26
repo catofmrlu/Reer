@@ -136,6 +136,10 @@
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rec.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/rec.xml"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -178,6 +182,10 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rec_tr.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/rec_tr.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",

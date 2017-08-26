@@ -27,7 +27,8 @@
         <activity android:name=".Controller.SettingsActivity" />
         <activity android:name=".Controller.InputRssLinkActivity" />
         <activity android:name=".Controller.FeedlyRssQuery" />
-        <activity android:name=".Controller.mainView" />
+        <activity android:name=".Controller.mainView"
+            android:launchMode="singleInstance"/>
         <activity android:name=".Controller.RssFeedListActivity" />
         <activity android:name=".Controller.openScreenActivity">
             <intent-filter>
