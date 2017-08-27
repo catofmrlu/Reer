@@ -1171,7 +1171,7 @@ int id action_mode_bar 0x7f0c0071
 int id action_mode_bar_stub 0x7f0c0070
 int id action_mode_close_button 0x7f0c0053
 int id action_text 0x7f0c00b2
-int id actions 0x7f0c00c0
+int id actions 0x7f0c00bf
 int id activity_chooser_view_content 0x7f0c0054
 int id activity_down_pull 0x7f0c0085
 int id activity_feedly_rss_query 0x7f0c0086
@@ -1232,7 +1232,7 @@ int id hide 0x7f0c0011
 int id home 0x7f0c0004
 int id homeAsUp 0x7f0c0021
 int id icon 0x7f0c0059
-int id icon_group 0x7f0c00c1
+int id icon_group 0x7f0c00c0
 int id id_noviewpager 0x7f0c00ae
 int id id_tab_frd 0x7f0c00a0
 int id id_tab_frd_img 0x7f0c00a1
@@ -1283,7 +1283,7 @@ int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007
 int id radio 0x7f0c006d
 int id right 0x7f0c003a
-int id right_icon 0x7f0c00bf
+int id right_icon 0x7f0c00c1
 int id right_side 0x7f0c00ba
 int id screen 0x7f0c002d
 int id scroll 0x7f0c0029
