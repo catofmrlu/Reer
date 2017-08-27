@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="22"
+    abi="x86"
+    api-level="24"
     build-mode="HOT_WARM"
-    density="xxhdpi"
+    density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1503666159819"
+    timestamp="1503850591526"
     token="5797826513916792651"
     verifier="COMPATIBLE" >
 
@@ -29,19 +29,16 @@
 
     <build
         build-mode="FULL"
-        timestamp="1503664055938"
+        timestamp="1503847922941"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -50,19 +47,22 @@
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/outputs/apk/app-debug.apk"
@@ -70,30 +70,43 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1503665734293"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1503850120828"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1503850465411"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1503850510638"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1503666159819"
+        timestamp="1503850591526"
         verifier="COMPATIBLE" >
         <artifact
             location="/Users/luxin/工程/github/Reer/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"

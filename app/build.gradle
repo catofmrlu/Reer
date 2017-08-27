@@ -24,7 +24,7 @@ android {
     buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.rssreader.mrlu.myrssreader"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -51,7 +51,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile 'com.miomin:shswiperefreshlayout:1.2.0'
     compile 'org.xutils:xutils:3.3.40'
     compile 'com.mcxiaoke.volley:library:1.0.19'
