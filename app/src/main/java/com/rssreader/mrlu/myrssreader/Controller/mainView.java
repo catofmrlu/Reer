@@ -126,10 +126,13 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                     case 1:
                         intent.setClass(mainView.this, SettingsActivity.class);
                         startActivity(intent);
+                        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                         break;
                     case 2:
                         intent.setClass(mainView.this, AboutActivity.class);
                         startActivity(intent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
                         break;
                 }
 
@@ -269,19 +272,28 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     private int sum = 0;
     @Override
     public void onBackPressed() {
-        Log.i("onBackPressed", "点击了back键");
-        Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT);
+//        Log.i("onBackPressed", "点击了back键");
+//        Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT);
 
+        long startTime = 0;
+        long endTime = 0;
         sum++;
         Log.i("onBackPressed", "sum = " + sum);
         switch (sum){
             case 1:
                 Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT).show();
+                startTime = System.currentTimeMillis();// 当前时间对应的毫秒数
+                Log.i("打印时间start：", Long.toString(startTime));
+
                 break;
             case 2:
-                finish();
-                break;
-            default:
+                endTime = System.currentTimeMillis();// 当前时间对应的毫秒数
+                Log.i("打印时间end：", Long.toString(endTime));
+                if (endTime - startTime < 1500) {
+                    Log.i("打印时间--间距：", Long.toString(endTime - startTime));
+                    finish();
+                }
+                sum = 0;
                 break;
 
         }

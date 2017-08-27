@@ -108,6 +108,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/feed_loading.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/dajia.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/dajia.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/long_press_unstarred.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/long_press_unstarred.png"
     },

@@ -17,6 +17,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/iv_back"
             android:paddingRight="10dp"
             android:src="@drawable/back_1"
             android:layout_width="25dp"
@@ -90,6 +91,7 @@
             </LinearLayout>
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/huxiu_f"
@@ -111,6 +113,7 @@
                 style="@style/recommend_style"/>
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/doubanmovie"
@@ -123,9 +126,42 @@
                 android:src="@drawable/kef"
                 style="@style/recommend_style"/>
 
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:src="@drawable/zuoandushu"
+                style="@style/recommend_style"/>
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:src="@drawable/dajia"
+                style="@style/recommend_style"/>
+
+
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="2"
+                android:src="@drawable/songshu"
+                style="@style/recommend_style"/>
+
 
 
         </GridLayout>
+
+        <TextView
+            android:padding="5dp"
+            android:background="@drawable/style_tv_tag"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="asssss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
 

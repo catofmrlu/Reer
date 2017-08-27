@@ -104,6 +104,10 @@
         "source": "/Users/luxin/.android/build-cache/10c169e79672d765d6a9d9d2fa5fd36c17c6c04d/output/res/drawable/design_fab_background.xml"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/style_tv_tag.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/style_tv_tag.xml"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable/abc_tab_indicator_material.xml"
     },

@@ -20,28 +20,28 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/wephone.jpeg"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
-        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
+        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
-        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
@@ -80,16 +80,20 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/huxiu_f.jpg"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
-        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/kej.jpg",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/kej.jpg"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/jianshu.jpg",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/jianshu.jpg"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/songshu.jpeg",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/songshu.jpeg"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png",
@@ -146,6 +150,10 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
         "source": "/Users/luxin/.android/build-cache/916d1b2529fa7a349db760df78eb1c38fb3740dc/output/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/zuoandushu.jpg",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/zuoandushu.jpg"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
