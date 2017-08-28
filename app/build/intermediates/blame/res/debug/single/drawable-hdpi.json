@@ -32,6 +32,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/add_rss.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/search_.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/search_.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/all_subscriptions_button.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/all_subscriptions_button.png"
     },

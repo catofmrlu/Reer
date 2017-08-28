@@ -17,11 +17,11 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_marginRight="10dp"
             android:id="@+id/iv_back"
-            android:paddingRight="10dp"
             android:src="@drawable/back_1"
-            android:layout_width="25dp"
-            android:layout_height="25dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
 
         <EditText
             android:padding="5dp"
@@ -29,16 +29,16 @@
             android:selectAllOnFocus="true"
             android:textSize="15sp"
             android:id="@+id/et_rssLink"
-            android:layout_width="290dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:hint="@string/et_rsslink_hint" />
 
         <ImageView
-            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/iv_rss_search"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/search" />
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search_" />
 
     </LinearLayout>
 

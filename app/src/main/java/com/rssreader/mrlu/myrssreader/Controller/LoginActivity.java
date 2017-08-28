@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.log), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_teal_a700_color_code), 0);
 
         Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
         Button btnFeedly = (Button) findViewById(R.id.btn_feedly);
