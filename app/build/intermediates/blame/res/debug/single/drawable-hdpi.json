@@ -100,6 +100,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/sun83.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/dajia.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/dajia.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/vpi__tab_selected_pressed_holo.9.png",
         "source": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/drawable-hdpi/vpi__tab_selected_pressed_holo.9.png"
     },
@@ -108,20 +112,12 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/feed_loading.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/dajia.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/dajia.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/long_press_unstarred.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/long_press_unstarred.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/vpi__tab_unselected_holo.9.png",
         "source": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/drawable-hdpi/vpi__tab_unselected_holo.9.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_radio_button_unchecked_black_24dp.png",
-        "source": "/Users/luxin/工程/github/Reer/app/build/generated/res/pngs/debug/drawable-hdpi/ic_radio_button_unchecked_black_24dp.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ithome.png",

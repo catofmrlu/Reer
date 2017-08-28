@@ -20,10 +20,6 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/long_press_unread.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_radio_button_unchecked_black_24dp.png",
-        "source": "/Users/luxin/工程/github/Reer/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_radio_button_unchecked_black_24dp.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi/long_press_unstarred.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/long_press_unstarred.png"
     },
