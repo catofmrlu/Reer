@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -41,9 +40,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     //四个Tab对应的布局
     private LinearLayout mTabUnread;
     private LinearLayout mTabStarred;
-    //四个Tab对应的ImageButton
-    private ImageButton mImgWeixin;
-    private ImageButton mImgFrd;
 
     String rssUrl;
 
@@ -204,9 +200,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         mTabUnread = (LinearLayout) findViewById(R.id.id_tab_weixin);
         mTabStarred = (LinearLayout) findViewById(R.id.id_tab_frd);
-
-        mImgWeixin = (ImageButton) findViewById(R.id.id_tab_weixin_img);
-        mImgFrd = (ImageButton) findViewById(R.id.id_tab_frd_img);
     }
 
     @Override
