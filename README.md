@@ -18,7 +18,7 @@
 
 用户选择：
 
-![Screenshot_1503913131](/Users/luxin/Desktop/Screenshot_1503913131.png)
+![Screenshot_1503913131](https://ws1.sinaimg.cn/large/006tKfTcgy1fizmk27y79j308i0f4dfy.jpg)
 
 ---
 
@@ -32,4 +32,4 @@
 
 添加rss源界面：
 
-![Screenshot_1503913142](/Users/luxin/Desktop/Screenshot_1503913142.png)
+![Screenshot_1503913142](https://ws1.sinaimg.cn/large/006tKfTcgy1fizmk1qxduj308i0f4dgr.jpg)

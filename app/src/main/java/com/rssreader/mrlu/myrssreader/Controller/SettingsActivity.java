@@ -9,7 +9,6 @@ import android.widget.Switch;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -20,18 +19,17 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        ButterKnife.bind(this);
 
         //从sp文件中取出isScrollToRead,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
         boolean isScrollToRead = sharedPreferences.getBoolean("isScrollToRead", false);
 
-        if (isScrollToRead) {
-
-            tbNightMode.setChecked(true);
-        } else {
-            tbNightMode.setChecked(false);
-        }
+//        if (isScrollToRead) {
+//
+//            tbNightMode.setChecked(true);
+//        } else {
+//            tbNightMode.setChecked(false);
+//        }
 
     }
 }

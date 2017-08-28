@@ -10,8 +10,6 @@ import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.R;
 
-import butterknife.ButterKnife;
-
 public class openScreenActivity extends AppCompatActivity {
 
     @Override
@@ -19,9 +17,7 @@ public class openScreenActivity extends AppCompatActivity {
 //        setTheme(R.style.FullscreenTheme);
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_open_screen);
-        ButterKnife.bind(this);
 
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
