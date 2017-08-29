@@ -7,6 +7,15 @@
     android:gravity="center_horizontal"
     tools:context="com.rssreader.mrlu.myrssreader.Controller.AboutActivity">
 
+
+    <TextView
+        android:background="@color/appBaseColor"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="关于Reer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
     <ImageView
         android:src= "@drawable/icon"
         android:layout_marginTop= "80dp"

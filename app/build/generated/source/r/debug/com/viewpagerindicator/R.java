@@ -48,25 +48,25 @@ public final class R {
         public static final int default_underline_indicator_fades = 0x7f090009;
     }
     public static final class color {
-        public static final int default_circle_indicator_fill_color = 0x7f0b0019;
-        public static final int default_circle_indicator_page_color = 0x7f0b001a;
-        public static final int default_circle_indicator_stroke_color = 0x7f0b001b;
-        public static final int default_line_indicator_selected_color = 0x7f0b001c;
-        public static final int default_line_indicator_unselected_color = 0x7f0b001d;
-        public static final int default_title_indicator_footer_color = 0x7f0b001e;
-        public static final int default_title_indicator_selected_color = 0x7f0b001f;
-        public static final int default_title_indicator_text_color = 0x7f0b0020;
-        public static final int default_underline_indicator_selected_color = 0x7f0b0021;
-        public static final int vpi__background_holo_dark = 0x7f0b0157;
-        public static final int vpi__background_holo_light = 0x7f0b0158;
-        public static final int vpi__bright_foreground_disabled_holo_dark = 0x7f0b0159;
-        public static final int vpi__bright_foreground_disabled_holo_light = 0x7f0b015a;
-        public static final int vpi__bright_foreground_holo_dark = 0x7f0b015b;
-        public static final int vpi__bright_foreground_holo_light = 0x7f0b015c;
-        public static final int vpi__bright_foreground_inverse_holo_dark = 0x7f0b015d;
-        public static final int vpi__bright_foreground_inverse_holo_light = 0x7f0b015e;
-        public static final int vpi__dark_theme = 0x7f0b0178;
-        public static final int vpi__light_theme = 0x7f0b0179;
+        public static final int default_circle_indicator_fill_color = 0x7f0b001a;
+        public static final int default_circle_indicator_page_color = 0x7f0b001b;
+        public static final int default_circle_indicator_stroke_color = 0x7f0b001c;
+        public static final int default_line_indicator_selected_color = 0x7f0b001d;
+        public static final int default_line_indicator_unselected_color = 0x7f0b001e;
+        public static final int default_title_indicator_footer_color = 0x7f0b001f;
+        public static final int default_title_indicator_selected_color = 0x7f0b0020;
+        public static final int default_title_indicator_text_color = 0x7f0b0021;
+        public static final int default_underline_indicator_selected_color = 0x7f0b0022;
+        public static final int vpi__background_holo_dark = 0x7f0b0158;
+        public static final int vpi__background_holo_light = 0x7f0b0159;
+        public static final int vpi__bright_foreground_disabled_holo_dark = 0x7f0b015a;
+        public static final int vpi__bright_foreground_disabled_holo_light = 0x7f0b015b;
+        public static final int vpi__bright_foreground_holo_dark = 0x7f0b015c;
+        public static final int vpi__bright_foreground_holo_light = 0x7f0b015d;
+        public static final int vpi__bright_foreground_inverse_holo_dark = 0x7f0b015e;
+        public static final int vpi__bright_foreground_inverse_holo_light = 0x7f0b015f;
+        public static final int vpi__dark_theme = 0x7f0b0179;
+        public static final int vpi__light_theme = 0x7f0b017a;
     }
     public static final class dimen {
         public static final int default_circle_indicator_radius = 0x7f070058;

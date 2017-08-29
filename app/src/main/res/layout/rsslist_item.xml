@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
     <TextView
-        android:paddingLeft="20dp"
+        android:layout_marginLeft="20dp"
         android:textSize="15dp"
         android:id="@+id/tv_rssName"
         android:layout_width="150dp"
@@ -14,7 +14,7 @@
 
     <TextView
 
-        android:paddingLeft="130dp"
+        android:layout_marginLeft="180dp"
         android:textSize="15dp"
         android:id="@+id/tv_rssCount"
         android:layout_width="wrap_content"

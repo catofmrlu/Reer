@@ -2,11 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp">
+    android:orientation="vertical">
 
     <TextView
+        android:background="@color/appBaseColor"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="设置"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:paddingTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
@@ -45,7 +52,7 @@
             style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="90dp" />
+            android:paddingLeft="120dp" />
     </LinearLayout>
 
 
@@ -80,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:paddingLeft="90dp" />
+            android:paddingLeft="120dp" />
     </LinearLayout>
 
 
@@ -96,14 +103,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
-        android:paddingTop="15dp"
+        android:paddingTop="10dp"
         android:text="阅读"
         android:textColor="@color/md_teal_500_color_code" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
@@ -113,7 +119,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="vertical"
-            android:paddingLeft="10dp">
+            android:layout_marginLeft="10dp">
 
             <TextView
                 style="@style/setting_switch_text"
@@ -132,7 +138,7 @@
             style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="90dp" />
+            android:layout_marginLeft="120dp" />
     </LinearLayout>
 
 

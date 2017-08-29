@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Switch;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.BindView;
+
+import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -19,6 +22,10 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
+
+
 
         //从sp文件中取出isScrollToRead,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
