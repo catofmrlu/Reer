@@ -27,6 +27,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 
+import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 public class mainView extends MAppCompatActivity implements View.OnClickListener {
@@ -62,7 +63,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
-        StatusBarUtil.setColor(this, getResources().getColor(md_teal_a700_color_code), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
 
         //ButterKnife绑定
         ButterKnife.bind(this);

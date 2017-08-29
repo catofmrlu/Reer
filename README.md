@@ -33,3 +33,24 @@
 添加rss源界面：
 
 ![Screenshot_1503913142](https://ws1.sinaimg.cn/large/006tKfTcgy1fizmk1qxduj308i0f4dgr.jpg)
+
+
+
+---
+
+设置界面：
+
+![Screenshot_1503998236](https://ws4.sinaimg.cn/large/006tKfTcgy1fj0pu15eqrj308i0f4wf0.jpg)
+
+
+
+---
+
+关于界面：
+
+![Screenshot_1503998242](https://ws4.sinaimg.cn/large/006tKfTcgy1fj0pu06nvoj308i0f474f.jpg)
+
+
+
+---
+
