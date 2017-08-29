@@ -38,6 +38,9 @@ public class InputRssLinkActivity extends AppCompatActivity {
         //设置弹出键盘
 //        showSoftInputFromWindow(this, mEtRssLink);
 
+
+        setTheme(R.style.AppTheme);
+
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -28,6 +28,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/back_1.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/guizi.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/guizi.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/add_rss.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/add_rss.png"
     },
