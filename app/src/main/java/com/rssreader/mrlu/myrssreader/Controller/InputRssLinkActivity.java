@@ -14,33 +14,43 @@ import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 
 public class InputRssLinkActivity extends AppCompatActivity {
 
 
+    @BindView(R.id.iv_back)
+    ImageView ivBack;
+
     private EditText mEtRssLink;
     private ImageView mIvRssSearch;
 
     public int rssItemCount = 0;
 
-    public InputRssLinkActivity() {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_rss_link);
+        ButterKnife.bind(this);
         initView();
 
 
         //设置弹出键盘
 //        showSoftInputFromWindow(this, mEtRssLink);
 
+        //返回按钮
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
-        setTheme(R.style.AppTheme);
-
+        //搜索按钮
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,18 +76,22 @@ public class InputRssLinkActivity extends AppCompatActivity {
         });
     }
 
+    //解析xml部分
     //region getfeed部分
     //获取feed
     private void getFeed(final String urlString) {
         try {
-        //调用volley请求xml并解析后返后每个添加源的RssFeed对象
-//        RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
-//        RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
-            RssHanderByPull rssHanderByPull = new RssHanderByPull();
 
+            //1、调用volley请求xml并通过SAX解析后返后每个添加源的RssFeed对象
+            //RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
+            //RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
+
+
+            //2、使用pull方法解析xml部分
+            RssHanderByPull rssHanderByPull = new RssHanderByPull();
             RSSFeed feed = rssHanderByPull.parseRss(urlString);
 
-                //判断feed是否为空
+            //判断feed是否为空
             if (feed == null) {
                 Log.e("feed", "feed为空");
             } else {
@@ -99,10 +113,8 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.e(" 读取feed", e.toString());
-        }finally {
-
         }
     }
 
@@ -115,6 +127,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
     }
 
+    //键盘自动弹出
     public static void showSoftInputFromWindow(Activity activity, EditText editText) {
         editText.setFocusable(true);
         editText.setFocusableInTouchMode(true);

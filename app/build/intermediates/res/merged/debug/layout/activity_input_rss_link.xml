@@ -25,7 +25,7 @@
 
         <EditText
             android:padding="5dp"
-            android:background="@drawable/rec"
+            android:background="@drawable/rec_zhijian"
             android:selectAllOnFocus="true"
             android:textSize="15sp"
             android:id="@+id/et_rssLink"
