@@ -25,11 +25,11 @@
 
         <EditText
             android:padding="5dp"
-            android:background="@drawable/rec_zhijian"
+            android:background="@drawable/rec"
             android:selectAllOnFocus="true"
             android:textSize="15sp"
             android:id="@+id/et_rssLink"
-            android:layout_width="330dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:hint="@string/et_rsslink_hint" />
 
