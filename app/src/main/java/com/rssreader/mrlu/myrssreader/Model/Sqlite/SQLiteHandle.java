@@ -118,6 +118,7 @@ public class SQLiteHandle {
     }
 
     public void dbClose() {
+        db.endTransaction();
         db.close();
         Log.i("sqlite", "关闭");
     }

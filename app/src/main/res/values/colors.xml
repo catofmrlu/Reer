@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#393a3f</color>
-    <color name="colorPrimaryDark">#2b3ca7</color>
-    <color name="colorAccent">#fd4181</color>
     <color name="green">#FF00BC00</color>
     <color name="OrangeYellow">#FFFF6A00</color>
     <color name="ReadBlue">#0099cc</color>
     <color name="appBaseColor">@color/md_teal_a700_color_code</color>
     <color name="log">#5bb989</color>
-
-
-
 
 
     <!-- red -->
@@ -326,5 +320,15 @@
     <color name="md_blue_grey_900_color_code">#263238</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <!--日夜间模式-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="nightColorPrimary">#3b3b3b</color>
+    <color name="nightColorPrimaryDark">#383838</color>
+    <color name="nightColorAccent">#a72b55</color>
+
 
 </resources>

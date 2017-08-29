@@ -14,17 +14,12 @@ import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
 
 
 public class InputRssLinkActivity extends AppCompatActivity {
-
-
-    @BindView(R.id.iv_back)
-    ImageView ivBack;
 
     private EditText mEtRssLink;
     private ImageView mIvRssSearch;
@@ -38,42 +33,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initView();
 
-
-        //设置弹出键盘
-//        showSoftInputFromWindow(this, mEtRssLink);
-
-        //返回按钮
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        //搜索按钮
-        mIvRssSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("过程打印", "search已点击");
-
-                final String link = mEtRssLink.getText().toString();
-
-                Log.i("rssLink打印", link);
-
-                //利用跳转时间，异步请求feed数据，并插入到数据库
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        getFeed(link);
-                    }
-                }).start();
-
-                //跳转到主界面
-//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
-//                startActivity(intent);
-
-            }
-        });
     }
 
     //解析xml部分
@@ -124,6 +83,41 @@ public class InputRssLinkActivity extends AppCompatActivity {
         ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
 
         StatusBarUtil.setColor(this, getResources().getColor(md_teal_a700_color_code), 0);
+
+        //设置弹出键盘
+//        showSoftInputFromWindow(this, mEtRssLink);
+
+        //返回按钮
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        //搜索按钮
+        mIvRssSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("过程打印", "search已点击");
+
+                final String link = mEtRssLink.getText().toString();
+
+                Log.i("rssLink打印", link);
+
+                //利用跳转时间，异步请求feed数据，并插入到数据库
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getFeed(link);
+                    }
+                }).start();
+
+                //跳转到主界面
+//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
+//                startActivity(intent);
+            }
+        });
 
     }
 

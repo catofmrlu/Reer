@@ -147,9 +147,9 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#fd4181</color>
-    <color name="colorPrimary">#393a3f</color>
-    <color name="colorPrimaryDark">#2b3ca7</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
     <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
     <color name="default_circle_indicator_page_color">#00000000</color>
     <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
@@ -448,6 +448,9 @@
     <color name="md_yellow_a200_color_code">#ffff00</color>
     <color name="md_yellow_a400_color_code">#ffea00</color>
     <color name="md_yellow_a700_color_code">#ffd600</color>
+    <color name="nightColorAccent">#a72b55</color>
+    <color name="nightColorPrimary">#3b3b3b</color>
+    <color name="nightColorPrimaryDark">#383838</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
@@ -1083,11 +1086,13 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="background">@android:color/white</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -2118,7 +2123,7 @@
         <item name="integerValue">33</item>
         <item name="booleanValue">true</item>
         <item name="dimensionValue">16dp</item>
-        
+        <!-- 如果string类型不是填的引用而是直接放一个字符串,在布局文件中使用正常,但代码里获取的就有问题 -->
         <item name="stringValue">@string/scrollMark_description_settings</item>
         <item name="referenceValue">@drawable/sun83</item>
         <item name="imageValue">@drawable/sun83</item>
@@ -2134,14 +2139,16 @@
         <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
         <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
     </style>
-    <style name="NoTitleTheme_black" parent="Theme.AppCompat.NoActionBar">
-        
-
-        <item name="android:background">@color/black_overlay</item>
-
+    <style name="NightAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/nightColorPrimary</item>
+        <item name="colorPrimaryDark">@color/nightColorPrimaryDark</item>
+        <item name="colorAccent">@color/nightColorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="background">@color/nightColorPrimaryDark</item>
     </style>
     <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
-        <item name="overlapAnchor">false</item>  
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2474,7 +2481,7 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
-        
+        <!--<item name="android:colorBackground">#000000</item> 也可以设置背景色以及menu中的其他属性-->
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
     <style name="Widget">
@@ -2658,8 +2665,8 @@
     <style name="recommend_style">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
-        
-        
+        <!--<item name="android:layout_columnWeight">1</item>-->
+        <!--<item name="android:layout_columnWeight">1</item>-->
 
     </style>
     <style name="setting_switch_text">

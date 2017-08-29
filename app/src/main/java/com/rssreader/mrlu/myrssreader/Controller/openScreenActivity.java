@@ -8,6 +8,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.R;
 
 public class openScreenActivity extends AppCompatActivity {
@@ -18,6 +19,9 @@ public class openScreenActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_screen);
+
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_white_color_code), 0);
+
 
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
