@@ -65,9 +65,11 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             theme = savedInstanceState.getInt("theme");
             setTheme(theme);
         }
-        setContentView(R.layout.main);
 
         StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
+
+        setContentView(R.layout.main);
+
 
         //ButterKnife绑定
         ButterKnife.bind(this);
@@ -141,7 +143,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                     case 2:
                         intent.setClass(mainView.this, AboutActivity.class);
                         startActivity(intent);
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 
                         break;
                 }

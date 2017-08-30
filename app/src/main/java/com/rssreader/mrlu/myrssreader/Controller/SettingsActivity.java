@@ -21,9 +21,9 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
         setContentView(R.layout.activity_settings);
 
-        StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
 
 
 

@@ -2,8 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
 android {
-
-    //为了解决部分第三方库重复打包了META-INF的问题
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
@@ -39,9 +37,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
+            shrinkResources true
+
         }
-    }
-    productFlavors {
     }
 
 }

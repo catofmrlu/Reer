@@ -9,8 +9,8 @@
     <ImageView
 
         android:src="@drawable/guizi"
-        android:layout_width="80dp"
-        android:layout_height="80dp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
 
 
     <TextView

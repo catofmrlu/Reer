@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/md_green_400_color_code"
-    >
+    android:background="@color/md_light_green_a700_color_code">
 
     <ImageView
         android:paddingBottom="50dp"
@@ -17,9 +17,10 @@
         android:textStyle="normal"
         android:id="@+id/btn_appear"
         style="@style/md_button"
+        android:background="@drawable/rec_appearpager"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
 
         android:text="享受阅读"
-        android:textSize="16dp" />
+        android:textSize="16sp" />
 </LinearLayout>

@@ -8219,12 +8219,12 @@
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 63,
+                        "startLine": 65,
                         "startColumn": 4,
-                        "startOffset": 2700,
-                        "endLine": 70,
+                        "startOffset": 2793,
+                        "endLine": 72,
                         "endColumn": 12,
-                        "endOffset": 3142
+                        "endOffset": 3235
                     }
                 }
             },
@@ -10064,12 +10064,12 @@
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 72,
+                        "startLine": 74,
                         "startColumn": 4,
-                        "startOffset": 3148,
-                        "endLine": 79,
+                        "startOffset": 3241,
+                        "endLine": 81,
                         "endColumn": 12,
-                        "endOffset": 3618
+                        "endOffset": 3711
                     }
                 }
             },
@@ -12798,43 +12798,51 @@
                     "startLine": 2659,
                     "startColumn": 4,
                     "startOffset": 190286,
-                    "endLine": 2663,
+                    "endLine": 2665,
                     "endColumn": 12,
-                    "endOffset": 190559
-                },
-                "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2664,
-                    "startColumn": 4,
-                    "startOffset": 190564,
-                    "endLine": 2670,
-                    "endColumn": 12,
-                    "endOffset": 190849
+                    "endOffset": 190652
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 53,
+                        "startLine": 47,
                         "startColumn": 4,
-                        "startOffset": 2371,
-                        "endLine": 59,
+                        "startOffset": 2092,
+                        "endLine": 53,
                         "endColumn": 12,
-                        "endOffset": 2656
+                        "endOffset": 2458
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 2671,
+                    "startLine": 2666,
                     "startColumn": 4,
-                    "startOffset": 190854,
-                    "endLine": 2676,
+                    "startOffset": 190657,
+                    "endLine": 2672,
                     "endColumn": 12,
-                    "endOffset": 191149
+                    "endOffset": 190942
+                },
+                "from": {
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 2464,
+                        "endLine": 61,
+                        "endColumn": 12,
+                        "endOffset": 2749
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2673,
+                    "startColumn": 4,
+                    "startOffset": 190947,
+                    "endLine": 2678,
+                    "endColumn": 12,
+                    "endOffset": 191242
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml"

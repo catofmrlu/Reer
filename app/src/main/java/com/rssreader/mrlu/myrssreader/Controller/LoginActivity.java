@@ -21,9 +21,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.appBaseColor), 0);
         setContentView(R.layout.activity_login);
 
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.appBaseColor), 0);
 
         Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
         Button btnFeedly = (Button) findViewById(R.id.btn_feedly);
@@ -32,11 +32,12 @@ public class LoginActivity extends AppCompatActivity {
         btnLocalhost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(LoginActivity.this, "该功能将在后续版本提供，敬请期待", Toast.LENGTH_SHORT).show();
+//              Toast.makeText(LoginActivity.this, "该功能将在后续版本提供，敬请期待", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(LoginActivity.this, mainView.class);
-
                 startActivity(intent);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
                 finish();
 
                 //插入sp文件设置值isHasFeed,再次启动app时不再显示login页面

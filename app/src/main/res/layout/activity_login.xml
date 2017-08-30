@@ -54,7 +54,7 @@
         android:autoLink="email"
 
         android:linksClickable="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/md_grey_800_color_code"
         android:text="@string/backfeed_text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
