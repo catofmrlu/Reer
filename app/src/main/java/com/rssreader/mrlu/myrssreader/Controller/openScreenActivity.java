@@ -17,7 +17,7 @@ public class openScreenActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
 //        setTheme(R.style.FullscreenTheme);
         super.onCreate(savedInstanceState);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_grey_50_color_code), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_grey_200_color_code), 0);
         setContentView(R.layout.activity_open_screen);
 
 
@@ -25,7 +25,7 @@ public class openScreenActivity extends AppCompatActivity {
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
 
-        if (false) {
+        if (sharedPreferences != null) {
 
             boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", false);
 
