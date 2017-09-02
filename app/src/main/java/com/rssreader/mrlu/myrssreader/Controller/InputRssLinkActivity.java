@@ -16,7 +16,7 @@ import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.ButterKnife;
 
-import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
+import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 
 
 public class InputRssLinkActivity extends AppCompatActivity {
@@ -82,7 +82,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
         mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
         ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
 
-        StatusBarUtil.setColor(this, getResources().getColor(md_teal_a700_color_code), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
 
         //设置弹出键盘
 //        showSoftInputFromWindow(this, mEtRssLink);

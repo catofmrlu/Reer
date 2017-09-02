@@ -58,12 +58,80 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/scrollMark_description_settings"
-                        android:textColor="@color/md_grey_500_color_code" />
+                        android:text="@string/scrollMark_description_settings" />
 
                 </LinearLayout>
 
                 <Switch
+                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="120dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/setting_switch_text"
+                        android:text="@string/openscreen_setting" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/openscreen_description_setting" />
+
+                </LinearLayout>
+
+                <Switch
+                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:paddingLeft="120dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/setting_switch_text"
+                        android:text="启用夜间模式" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="打开夜间模式以便在夜晚保护眼睛" />
+
+                </LinearLayout>
+
+                <Switch
+
                     android:id="@+id/tb_nightMode"
                     style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
                     android:layout_width="wrap_content"
@@ -72,47 +140,12 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        style="@style/setting_switch_text"
-                        android:text="@string/openscreen_setting" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/openscreen_description_setting" />
-
-                </LinearLayout>
-
-                <Switch
-                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:paddingLeft="120dp" />
-            </LinearLayout>
-
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.7dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/md_blue_grey_200_color_code" />
+                android:layout_marginRight="10dp" />
 
 
             <TextView
@@ -120,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:text="阅读"
+                android:text="存储"
                 android:textColor="@color/md_teal_500_color_code" />
 
             <LinearLayout
@@ -144,208 +177,17 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/scrollMark_description_settings"
-                        android:textColor="@color/md_grey_500_color_code" />
+                        android:text="@string/scrollMark_description_settings"/>
 
                 </LinearLayout>
 
                 <Switch
-                    android:id="@+id/tb_nightd"
+                    android:id="@+id/tb_night"
                     style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="120dp" />
             </LinearLayout>
-
-
-            <!--无用部分-->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.7dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/md_blue_grey_200_color_code" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:text="阅读"
-                android:textColor="@color/md_teal_500_color_code" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/setting_switch_text"
-                        android:text="@string/scrollMark_text_settings" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/scrollMark_description_settings"
-                        android:textColor="@color/md_grey_500_color_code" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/tb_nightde"
-                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="120dp" />
-            </LinearLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.7dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/md_blue_grey_200_color_code" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:text="阅读"
-                android:textColor="@color/md_teal_500_color_code" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/setting_switch_text"
-                        android:text="@string/scrollMark_text_settings" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/scrollMark_description_settings"
-                        android:textColor="@color/md_grey_500_color_code" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/tb_ightde"
-                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="120dp" />
-            </LinearLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.7dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/md_blue_grey_200_color_code" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:text="阅读"
-                android:textColor="@color/md_teal_500_color_code" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        style="@style/setting_switch_text"
-                        android:text="@string/scrollMark_text_settings" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/scrollMark_description_settings"
-                        android:textColor="@color/md_grey_500_color_code" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/tb_nigtMode"
-                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="120dp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        style="@style/setting_switch_text"
-                        android:text="@string/openscreen_setting" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/openscreen_description_setting" />
-
-                </LinearLayout>
-
-                <Switch
-                    style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:paddingLeft="120dp" />
-            </LinearLayout>
-
 
         </LinearLayout>
     </ScrollView>

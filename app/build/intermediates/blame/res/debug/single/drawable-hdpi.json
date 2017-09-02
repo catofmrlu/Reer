@@ -16,10 +16,6 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/stormy1.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/open_pic.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/open_pic.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/back_1.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/back_1.png"
     },
@@ -38,10 +34,6 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/all_subscriptions_button.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/all_subscriptions_button.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/plus32.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/plus32.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/vpi__tab_selected_focused_holo.9.png",
@@ -74,10 +66,6 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/feed_read.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/feed_read.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/plus33.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/plus33.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/search.png",
