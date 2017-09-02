@@ -18,9 +18,9 @@
         android:id="@+id/btn_appear"
         style="@style/md_button"
         android:background="@drawable/rec_appearpager"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-
+        android:layout_gravity="center"
         android:text="享受阅读"
         android:textSize="16sp" />
 </LinearLayout>

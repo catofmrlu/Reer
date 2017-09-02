@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.RssSqliteHelper;
 import com.rssreader.mrlu.myrssreader.R;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -24,11 +25,6 @@ import java.util.List;
 public class AppearPageActivity extends AppCompatActivity {
 
     RssSqliteHelper mSqlHelper;
-//
-//    @BindView(R.id.vp_appear)
-//    ViewPager vpAppear;
-//    @BindView(R.id.indicator)
-//    CirclePageIndicator indicator;
 
     private CirclePageIndicator circlePageIndicator;
     private List<View> views = new ArrayList<View>();
@@ -37,8 +33,7 @@ public class AppearPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appear_page);
-//        ButterKnife.bind(this);
-
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_light_green_a700_color_code), 0);
 
         try {
 

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,9 +20,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.appBaseColor), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_teal_a700_color_code), 0);
         setContentView(R.layout.activity_login);
-
 
         Button btnLocalhost = (Button) findViewById(R.id.btn_localhost);
         Button btnFeedly = (Button) findViewById(R.id.btn_feedly);
@@ -42,14 +40,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 //插入sp文件设置值isHasFeed,再次启动app时不再显示login页面
                 SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences("sp", Context.MODE_PRIVATE);
-
                 SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
 
-                editor.putBoolean("isLoadLoginPage", true);
+                editor.putBoolean("isLoadLoginPage", false);
 
                 editor.commit();//提交修改
-
-                Log.i("sp", "已设置: isHasFeed为true");
             }
         });
 
