@@ -28,7 +28,6 @@ public class openScreenActivity extends AppCompatActivity {
         if (sharedPreferences != null) {
 
             boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", false);
-
             //从sp文件中取出isHasFeed,判断是否显示初始页
             boolean isLoadLoginPage = sharedPreferences.getBoolean("isLoadLoginPage", false);
 
@@ -48,7 +47,7 @@ public class openScreenActivity extends AppCompatActivity {
 
                             startActivity(intent);
                             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-                            finish();
+                            openScreenActivity.this.finish();
 
                         }
                     }).start();
@@ -63,7 +62,7 @@ public class openScreenActivity extends AppCompatActivity {
                             Intent intent = new Intent(openScreenActivity.this, LoginActivity.class);
                             startActivity(intent);
                             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-                            finish();
+                            openScreenActivity.this.finish();
                         }
                     }).start();
                 }
@@ -89,7 +88,7 @@ public class openScreenActivity extends AppCompatActivity {
                 Intent intent = new Intent(openScreenActivity.this, AppearPageActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                finish();
+                openScreenActivity.this.finish();
             }
         }).start();
     }

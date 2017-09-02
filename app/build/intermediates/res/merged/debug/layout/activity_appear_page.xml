@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/md_light_green_a700_color_code"
         android:layout_gravity="bottom|center"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/vp_appear"  />

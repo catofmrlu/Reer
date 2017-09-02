@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:5-
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:22-65
 application
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:5-43:19
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:5-49:19
 MERGED from [com.miomin:shswiperefreshlayout:1.2.0] /Users/luxin/.android/build-cache/3b54c46ef21962c841e39ccf55720b81d5519eb0/output/AndroidManifest.xml:11:5-15:19
 MERGED from [org.xutils:xutils:3.3.40] /Users/luxin/.android/build-cache/40c88c08e1092fe37b3a4eb78cb74a0128c29374/output/AndroidManifest.xml:12:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luxin/.android/build-cache/1bc6e3285a7ba30511c80d643616283680e119fb/output/AndroidManifest.xml:9:5-20
@@ -55,7 +55,7 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luxin/.android/bu
 	android:icon
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:12:9-38
 	android:theme
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:16:9-68
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:16:9-44
 activity#com.rssreader.mrlu.myrssreader.Controller.LoginActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:18:9-62
 	android:name
@@ -109,7 +109,7 @@ ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:40:9
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:40:19-59
 activity#com.rssreader.mrlu.myrssreader.Controller.AppearPageActivity
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:41:9-67
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:41:9-47:20
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:41:19-64
 uses-sdk

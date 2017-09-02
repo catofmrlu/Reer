@@ -31,8 +31,7 @@
     <style name="md_button" parent="Widget.AppCompat.Button.Colored">
         <item name="android:paddingLeft">5dp</item>
         <item name="android:paddingRight">5dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
+         <item name="android:paddingBottom">2dp</item>
         <item name="android:textColor">@android:color/background_light</item>
     </style>
 
@@ -52,7 +51,9 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="background">@android:color/white</item>
     </style>
+    
+    <style name="AppBaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/appBaseColor</item>
 
-
-
+    </style>
 </resources>

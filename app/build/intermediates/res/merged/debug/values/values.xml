@@ -1087,8 +1087,12 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/appBaseColor</item>
+
+    </style>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2127,7 +2131,7 @@
         <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
     </style>
     <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
-        <item name="overlapAnchor">false</item>  
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2460,7 +2464,7 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
-        
+        <!--<item name="android:colorBackground">#000000</item> 也可以设置背景色以及menu中的其他属性-->
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
     <style name="Widget">
@@ -2639,15 +2643,14 @@
     <style name="md_button" parent="Widget.AppCompat.Button.Colored">
         <item name="android:paddingLeft">5dp</item>
         <item name="android:paddingRight">5dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
+         <item name="android:paddingBottom">2dp</item>
         <item name="android:textColor">@android:color/background_light</item>
     </style>
     <style name="recommend_style">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
-        
-        
+        <!--<item name="android:layout_columnWeight">1</item>-->
+        <!--<item name="android:layout_columnWeight">1</item>-->
 
     </style>
     <style name="setting_switch_text">

@@ -20,32 +20,29 @@ import com.viewpagerindicator.CirclePageIndicator;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 
 public class AppearPageActivity extends AppCompatActivity {
 
     RssSqliteHelper mSqlHelper;
-
-    @BindView(R.id.vp_appear)
-    ViewPager vpAppear;
-    @BindView(R.id.indicator)
-    CirclePageIndicator indicator;
+//
+//    @BindView(R.id.vp_appear)
+//    ViewPager vpAppear;
+//    @BindView(R.id.indicator)
+//    CirclePageIndicator indicator;
 
     private CirclePageIndicator circlePageIndicator;
-    //    viewpager mpagerAdapter;
     private List<View> views = new ArrayList<View>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appear_page);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
 
 
         try {
 
+            ViewPager viewPager = (ViewPager) findViewById(R.id.vp_appear);
             circlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
             LayoutInflater minflater = LayoutInflater.from(this);
             View view1 = minflater.inflate(R.layout.appearpage_1, null);
@@ -54,29 +51,30 @@ public class AppearPageActivity extends AppCompatActivity {
             views.add(view1);
             views.add(view2);
             views.add(view3);
+
             MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter(views);
 
-            vpAppear.setAdapter(myViewPagerAdapter);
-            circlePageIndicator.setViewPager(vpAppear);
+            viewPager.setAdapter(myViewPagerAdapter);
+            circlePageIndicator.setViewPager(viewPager);
 
             Log.i("过程打印", "viewpager装载完成");
 
-//            //        创建数据库及数据表
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                    try {
-//
-//                        mSqlHelper = new RssSqliteHelper(AppearPageActivity.this, "Rss", null, 1);
-//                        mSqlHelper.getWritableDatabase();
-//
-//                    } catch (Exception e) {
-//                        Log.e("database", "问题在：" + e.toString());
-//                    }
-//
-//                }
-//            }).start();
+            //        创建数据库及数据表
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                    try {
+
+                        mSqlHelper = new RssSqliteHelper(AppearPageActivity.this, "Rss", null, 1);
+                        mSqlHelper.getWritableDatabase();
+
+                    } catch (Exception e) {
+                        Log.e("database", "问题在：" + e.toString());
+                    }
+
+                }
+            }).start();
 
             Button button = (Button) view3.findViewById(R.id.btn_appear);
 

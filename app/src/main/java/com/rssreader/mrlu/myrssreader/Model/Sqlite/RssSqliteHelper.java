@@ -13,7 +13,7 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
 
     private static RssSqliteHelper rssSqliteHelper;
 
-    private RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 

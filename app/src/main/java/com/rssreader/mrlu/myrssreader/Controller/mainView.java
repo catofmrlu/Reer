@@ -281,8 +281,11 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 endTime = System.currentTimeMillis();// 当前时间对应的毫秒数
                 if (endTime - startTime < 1500) {
                     finish();
+                }else {
+                    Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT).show();
+                    startTime = System.currentTimeMillis();// 当前时间对应的毫秒数
+                    sum = 1;
                 }
-                sum = 0;
                 break;
 
         }
