@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="45dp"
     xmlns:Android="http://schemas.android.com/tools"
-    android:background="@color/md_teal_a700_color_code">
+    android:background="@color/appBaseColor">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tb_feedList"
@@ -38,7 +38,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:paddingRight="10dp"
-                    android:src="@drawable/swich_night" />
+                    android:src="@drawable/swich" />
 
                 <ImageView
                     android:id="@+id/iv_add"

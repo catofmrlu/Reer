@@ -9,6 +9,7 @@
     <include layout="@layout/top"/>
 
     <android.support.v4.view.ViewPager
+        android:background="@color/main_back"
         android:id="@+id/id_noviewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

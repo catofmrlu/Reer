@@ -17,7 +17,7 @@ public class openScreenActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
 //        setTheme(R.style.FullscreenTheme);
         super.onCreate(savedInstanceState);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_grey_200_color_code), 0);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.md_white_color_code), 0);
         setContentView(R.layout.activity_open_screen);
 
 

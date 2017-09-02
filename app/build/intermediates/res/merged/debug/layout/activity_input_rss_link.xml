@@ -86,6 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"/>
                 <ImageView
+                    android:background="@color/md_green_300_color_code"
                     android:src="@drawable/ifar"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"/>

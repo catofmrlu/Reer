@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/swich_night.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/swich_night.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ifar.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/ifar.png"
     },
@@ -74,10 +70,6 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/weifeng.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/weifeng.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/swich_day.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/swich_day.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/feed_read.png",

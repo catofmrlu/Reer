@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.app.MAppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -49,9 +50,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
     public ImageView nightSwith;
 
-    // 默认是日间模式
-    private int theme = R.style.AppTheme;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -60,16 +58,9 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         super.onCreate(savedInstanceState);
 
-        //判断是否有主题存储
-        if (savedInstanceState != null) {
-            theme = savedInstanceState.getInt("theme");
-            setTheme(theme);
-        }
-
         StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
 
         setContentView(R.layout.main);
-
 
         //ButterKnife绑定
         ButterKnife.bind(this);
@@ -88,32 +79,26 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(mainView.this, "sorry，夜间模式正在修改，望见谅", Toast.LENGTH_SHORT).show();
+                try {
+                    //点击切换日间/夜间图标
+                    switch (Swith_Mode) {
+                        case 0:
+                            Swith_Mode = 1;
+                            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            recreate();
+                            Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 1:
+                            Swith_Mode = 0;
+                            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                            recreate();
 
-
-//                try {
-//                    //点击切换日间/夜间图标
-//                    switch (Swith_Mode) {
-//                        case 0:
-//                            nightSwith.setImageResource(R.drawable.swich_day);
-//                            Swith_Mode = 1;
-//                            theme = R.style.NightAppTheme;
-//                            setTheme(R.style.NightAppTheme);
-//                            mainView.this.recreate();
-//                            Toast.makeText(mainView.this, "已切换为夜间模式", Toast.LENGTH_SHORT).show();
-//                            break;
-//                        case 1:
-//                            nightSwith.setImageResource(R.drawable.swich_night);
-//                            Swith_Mode = 0;
-//                            theme = R.style.AppTheme;
-//                            setTheme(R.style.AppTheme);
-//                            mainView.this.recreate();
-//                            Toast.makeText(mainView.this, "已切换为日间模式", Toast.LENGTH_SHORT).show();
-//                            break;
-//                    }
-//                }catch (Exception e){
-//                    Log.i("切换日夜间部分", e.getMessage());
-//                }
+                            Toast.makeText(mainView.this, "已切换为日间模式", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                } catch (Exception e) {
+                    Log.i("切换日夜间部分", e.getMessage());
+                }
             }
         });
 
@@ -304,18 +289,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
     }
 
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("theme", theme);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        theme = savedInstanceState.getInt("theme");
-    }
 
 }
 

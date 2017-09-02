@@ -55,7 +55,7 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luxin/.android/bu
 	android:icon
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:12:9-38
 	android:theme
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:16:9-65
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:16:9-68
 activity#com.rssreader.mrlu.myrssreader.Controller.LoginActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:18:9-62
 	android:name

@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/md_blue_grey_50_color_code"
+        android:background="@color/main_back"
         android:orientation="vertical">
 
         <LinearLayout

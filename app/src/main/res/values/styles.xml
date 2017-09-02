@@ -28,23 +28,6 @@
         <item name="android:textSize">16dp</item>
     </style>
 
-
-
-    <style name="DayTheme" parent="Theme.AppCompat">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorValue">@color/md_cyan_50_color_code</item>
-        <item name="floatValue">0.35</item>
-        <item name="integerValue">33</item>
-        <item name="booleanValue">true</item>
-        <item name="dimensionValue">16dp</item>
-        <!-- 如果string类型不是填的引用而是直接放一个字符串,在布局文件中使用正常,但代码里获取的就有问题 -->
-        <item name="stringValue">@string/scrollMark_description_settings</item>
-        <item name="referenceValue">@drawable/sun83</item>
-        <item name="imageValue">@drawable/sun83</item>
-        <item name="curVisibility">show</item>
-    </style>
-
     <style name="md_button" parent="Widget.AppCompat.Button.Colored">
         <item name="android:paddingLeft">5dp</item>
         <item name="android:paddingRight">5dp</item>
@@ -61,8 +44,6 @@
 
     </style>
 
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -70,15 +51,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="background">@android:color/white</item>
-    </style>
-
-    <style name="NightAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/nightColorPrimary</item>
-        <item name="colorPrimaryDark">@color/nightColorPrimaryDark</item>
-        <item name="colorAccent">@color/nightColorAccent</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="background">@color/nightColorPrimaryDark</item>
     </style>
 
 
