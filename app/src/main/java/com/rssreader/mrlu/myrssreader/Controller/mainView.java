@@ -116,6 +116,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("ontouch", "onClick");
                 Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.zoomin, R.anim.zoomout);

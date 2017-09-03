@@ -3,8 +3,10 @@
     <color name="green">#FF00BC00</color>
     <color name="OrangeYellow">#FFFF6A00</color>
     <color name="ReadBlue">#0099cc</color>
+    <!--app的基本色调-->
     <color name="appBaseColor">@color/md_teal_a700_color_code</color>
     <color name="log">#5bb989</color>
+    <!--floatactionbutton的背景色-->
     <color name="float_btn">@color/md_teal_a700_color_code</color>
 
     <color name="main_back">@color/md_white_color_code</color>
