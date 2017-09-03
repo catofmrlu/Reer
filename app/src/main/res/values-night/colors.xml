@@ -5,6 +5,8 @@
     <color name="ReadBlue">#0099cc</color>
     <color name="appBaseColor">@color/md_grey_900_color_code</color>
     <color name="log">#5bb989</color>
+    <color name="float_btn">@color/md_pink_400_color_code</color>
+
 
     <color name="main_back">@color/md_grey_600_color_code</color>
 

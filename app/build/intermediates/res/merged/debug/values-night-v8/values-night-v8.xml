@@ -7,6 +7,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="float_btn">@color/md_pink_400_color_code</color>
     <color name="green">#FF00BC00</color>
     <color name="log">#5bb989</color>
     <color name="main_back">@color/md_grey_600_color_code</color>

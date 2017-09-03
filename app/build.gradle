@@ -62,5 +62,5 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     testCompile 'junit:junit:4.12'
-
+    compile 'com.android.support:design:26.0.0-alpha1'
 }

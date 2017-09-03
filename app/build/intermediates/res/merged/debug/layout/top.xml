@@ -41,13 +41,6 @@
                     android:src="@drawable/swich" />
 
                 <ImageView
-                    android:id="@+id/iv_add"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:paddingRight="10dp"
-                    android:src="@drawable/add_rss" />
-
-                <ImageView
                     android:layout_width="1dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"

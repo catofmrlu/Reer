@@ -3,6 +3,7 @@ package com.rssreader.mrlu.myrssreader.Controller;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -69,10 +70,13 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
         nightSwith = (ImageView) findViewById(R.id.iv_night_swith);
-        ImageView imgAdd = (ImageView) findViewById(R.id.iv_add);
+
+
+//        ImageView imgAdd = (ImageView) findViewById(R.id.iv_add);
         ImageView ivUpdate = (ImageView) findViewById(R.id.iv_update);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_feedList);
+
         setSupportActionBar(toolbar);
 
         nightSwith.setOnClickListener(new View.OnClickListener() {
@@ -101,15 +105,20 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 }
             }
         });
+        View view = getLayoutInflater().inflate(R.layout.activity_rss_feed_list, null);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
+        if (floatingActionButton == null){
+            Log.e("floatingActionButton", "：--空");
+        }else
+            Log.e("floatingActionButton", "：--存在");
 
-        //处理点击add按钮点击事件
-        imgAdd.setOnClickListener(new View.OnClickListener() {
+//        处理点击add按钮点击事件
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
-                startActivityForResult(intent, 1);
+                startActivity(intent);
                 overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-//                finish();
             }
         });
 
@@ -219,6 +228,11 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             case R.id.id_tab_frd:
                 selectTab(1);
                 break;
+//            case R.id.fab_add:
+//                Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
+//                startActivityForResult(intent, 1);
+//                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+//                break;
         }
     }
 
