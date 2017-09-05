@@ -47,7 +47,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
     //0为day，1为night
     public static int Swith_Mode = 1;
-
     public ImageView nightSwith;
 
     @Override
@@ -105,25 +104,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             }
         });
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_add);
 
-//        View view = getLayoutInflater().inflate(R.layout.activity_rss_feed_list, null);
-//        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
-//        if (floatingActionButton == null){
-//            Log.e("floatingActionButton", "：--空");
-//        }else
-//            Log.e("floatingActionButton", "：--存在" + ":" +  floatingActionButton.getId());
-
-//        处理点击add按钮点击事件
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i("ontouch", "onClick");
-//                Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
-//                startActivity(intent);
-//                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-//            }
-//        });
 
         //处理toolbar的menu的点击事件
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -231,11 +212,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             case R.id.id_tab_frd:
                 selectTab(1);
                 break;
-//            case R.id.fab_add:
-//                Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
-//                startActivityForResult(intent, 1);
-//                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-//                break;
         }
     }
 

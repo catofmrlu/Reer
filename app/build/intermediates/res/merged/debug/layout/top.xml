@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="45dp"
     xmlns:Android="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/appBaseColor">
 
     <android.support.v7.widget.Toolbar
@@ -65,5 +66,14 @@
 
 
     </android.support.v7.widget.Toolbar>
+
+    <!--<com.zhl.userguideview.UserGuideView-->
+        <!--android:id="@+id/ugv_main_daynight"-->
+        <!--app:HighlightViewStyle="circle"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:tipView="@drawable/jt_down_right"-->
+        <!--app:MaskBlurStyle="solid"-->
+        <!--app:maskColor="@color/md_grey_700_color_code" />-->
 
 </LinearLayout>

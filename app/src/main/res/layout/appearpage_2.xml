@@ -5,11 +5,18 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/md_light_green_a700_color_code"
-    >
+    android:weightSum="1">
 
     <ImageView
         android:src="@drawable/ap2"
-        android:layout_width="296dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textColor="@color/md_white_color_code"
+        android:layout_marginTop="50dp"
+        android:text="RSS链接直接添加"
+        android:textSize="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

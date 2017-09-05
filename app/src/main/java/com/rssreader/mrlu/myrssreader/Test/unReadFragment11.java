@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.util.ArrayMap;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -17,13 +16,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
-import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
@@ -36,6 +35,7 @@ import org.xml.sax.XMLReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -66,6 +66,8 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        final FloatingActionButton fab = null;
+        Log.i("过程打印", "重建了unread");
 
         mSqLiteHandle = new SQLiteHandle(getActivity());
         Log.i("过程打印", "创建mSqLiteHandle完成");
@@ -78,24 +80,29 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
             Log.i("过程打印", "queryAllFeeds查询完成");
 
-            FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_add);
 
-            fab.setOnClickListener(new View.OnClickListener() {
+//            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
+
+//            boolean isLoadGuideView = sharedPreferences.getBoolean("isLoadGuideView", true);
+//            Log.i("isLoadGuideView", String.valueOf(isLoadGuideView));
+
+            FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
+            floatingActionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("ontouch", "onClick");
                     Intent intent = new Intent(getActivity(), InputRssLinkActivity.class);
                     startActivity(intent);
                     getActivity().overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+
                 }
             });
-
+//
             mRssUnreadList = new ArrayList<>();
 
-            ArrayMap arrayMap = new ArrayMap();
-            arrayMap.put("rssName", "全部未读");
-            arrayMap.put("rssCount", rssItemCount);
-            mRssUnreadList.add(arrayMap);
+            HashMap<String, String> hashMap = new HashMap<String, String>();
+            hashMap.put("rssName", "全部未读");
+            hashMap.put("rssCount", rssItemCount);
+            mRssUnreadList.add(hashMap);
 
             showListView();
             Log.i("过程标记", "list显示完成");
@@ -124,7 +131,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         }
 
         return view;
-
     }
 
     public void init() {
@@ -296,16 +302,26 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     //处理列表的单击事件
     public void onItemClick(AdapterView parent, View v, int position, long id) {
-        Intent itemIntent = new Intent(getActivity(), ListActivity.class);
 
-        Bundle bundle = new Bundle();
+        try {
 
-        bundle.putSerializable("feed", feed);
 
-//        itemIntent.putExtra("android.intent.rssItem", bundle);
-        itemIntent.putExtras(bundle);
+            Toast.makeText(getActivity(), "解析系统暂不可用", Toast.LENGTH_SHORT).show();
 
-        startActivityForResult(itemIntent, 0);
+//        Intent itemIntent = new Intent(getActivity(), ListActivity.class);
+//
+//        Bundle bundle = new Bundle();
+//
+//        bundle.putSerializable("feed", feed);
+//
+////        itemIntent.putExtra("android.intent.rssItem", bundle);
+//        itemIntent.putExtras(bundle);
+//
+//        startActivityForResult(itemIntent, 0);
+
+        }catch (Exception e){
+            Log.i("error", e.getMessage());
+        }
 
     }
 
