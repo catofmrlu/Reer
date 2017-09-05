@@ -3,7 +3,6 @@ package com.rssreader.mrlu.myrssreader.Controller;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -105,23 +104,26 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 }
             }
         });
-        View view = getLayoutInflater().inflate(R.layout.activity_rss_feed_list, null);
-        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
-        if (floatingActionButton == null){
-            Log.e("floatingActionButton", "：--空");
-        }else
-            Log.e("floatingActionButton", "：--存在");
+
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_add);
+
+//        View view = getLayoutInflater().inflate(R.layout.activity_rss_feed_list, null);
+//        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
+//        if (floatingActionButton == null){
+//            Log.e("floatingActionButton", "：--空");
+//        }else
+//            Log.e("floatingActionButton", "：--存在" + ":" +  floatingActionButton.getId());
 
 //        处理点击add按钮点击事件
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("ontouch", "onClick");
-                Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.i("ontouch", "onClick");
+//                Intent intent = new Intent(mainView.this, InputRssLinkActivity.class);
+//                startActivity(intent);
+//                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+//            }
+//        });
 
         //处理toolbar的menu的点击事件
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {

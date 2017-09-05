@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <ListView
@@ -10,6 +11,8 @@
         android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        app:rippleColor="@color/md_pink_a400_color_code"
         android:id="@+id/fab_add"
         android:elevation="6dp"
         android:background="@color/float_btn"

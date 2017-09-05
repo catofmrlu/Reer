@@ -776,8 +776,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <colgroup align="left" />
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>show</code></td><td>0</td><td></td></tr>
-<tr><td><code>inshow</code></td><td>1</td><td></td></tr>
-<tr><td><code>hide</code></td><td>2</td><td></td></tr>
+<tr><td><code>inshow</code></td><td>1</td><td> Not displayed, but taken into account during layout (space is left for it). </td></tr>
+<tr><td><code>hide</code></td><td>2</td><td> Completely hidden, as if the view had not been added. </td></tr>
 </table>
          */
         public static final int curVisibility=0x7f010006;
@@ -4622,6 +4622,8 @@ containing a value of this type.
         public static final int Base_Widget_Design_TabLayout=0x7f0800d4;
         public static final int FullscreenActionBarStyle=0x7f0800d5;
         public static final int FullscreenTheme=0x7f0800d6;
+        /** 设置不覆盖锚点
+         */
         public static final int OverflowMenuStyle=0x7f0800d7;
         public static final int Platform_AppCompat=0x7f08001f;
         public static final int Platform_AppCompat_Light=0x7f080020;
@@ -4849,6 +4851,9 @@ containing a value of this type.
         public static final int Widget_IconPageIndicator=0x7f080183;
         public static final int Widget_TabPageIndicator=0x7f080184;
         public static final int md_button=0x7f080185;
+        /** <item name="android:layout_columnWeight">1</item>
+<item name="android:layout_columnWeight">1</item>
+         */
         public static final int recommend_style=0x7f080186;
         public static final int setting_switch_text=0x7f080187;
     }

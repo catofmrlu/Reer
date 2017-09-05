@@ -32,10 +32,10 @@ MERGED from [org.xutils:xutils:3.3.40] /Users/luxin/.android/build-cache/40c88c0
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luxin/.android/build-cache/1bc6e3285a7ba30511c80d643616283680e119fb/output/AndroidManifest.xml:9:5-20
 MERGED from [com.jaeger.statusbarutil:library:1.4.0] /Users/luxin/.android/build-cache/f72d5465b38005c6f31a84b2415a80c665f3416a/output/AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/beb33de4e467ed7c608b689d4b27dff5a52a3087/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/a750a2cc6d464ffd3067fb0b8281839ef25d1a79/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/luxin/.android/build-cache/fdd9385bf3fc1dac1d371e3a3f7ed37a79c57468/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/luxin/.android/build-cache/92fa5b77d23f84dffa88e96687f859dfbc29355a/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/luxin/.android/build-cache/a8e0223bbef32f527f196f5a5c5c47d6d60c9a6f/output/AndroidManifest.xml:29:5-20
@@ -123,11 +123,11 @@ MERGED from [com.github.zzz40500:ThemeDemo:0.1] /Users/luxin/.android/build-cach
 MERGED from [fr.avianey.com.viewpagerindicator:library:2.4.1.1] /Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/AndroidManifest.xml:8:5-43
 MERGED from [com.jaeger.statusbarutil:library:1.4.0] /Users/luxin/.android/build-cache/f72d5465b38005c6f31a84b2415a80c665f3416a/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/beb33de4e467ed7c608b689d4b27dff5a52a3087/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/a750a2cc6d464ffd3067fb0b8281839ef25d1a79/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/luxin/.android/build-cache/fdd9385bf3fc1dac1d371e3a3f7ed37a79c57468/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/luxin/.android/build-cache/92fa5b77d23f84dffa88e96687f859dfbc29355a/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/luxin/.android/build-cache/a8e0223bbef32f527f196f5a5c5c47d6d60c9a6f/output/AndroidManifest.xml:21:5-23:60
@@ -144,11 +144,11 @@ MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/luxin/.and
 		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/beb33de4e467ed7c608b689d4b27dff5a52a3087/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/luxin/.android/build-cache/a750a2cc6d464ffd3067fb0b8281839ef25d1a79/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/luxin/.android/build-cache/efd7b5ae7332f1b7b5100db313a3c2a16b949e08/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/luxin/.android/build-cache/fdd9385bf3fc1dac1d371e3a3f7ed37a79c57468/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/luxin/.android/build-cache/92fa5b77d23f84dffa88e96687f859dfbc29355a/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/luxin/.android/build-cache/a8e0223bbef32f527f196f5a5c5c47d6d60c9a6f/output/AndroidManifest.xml:25:5-27:41

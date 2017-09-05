@@ -11,7 +11,14 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 48,
+                        "endOffset": 141
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 142
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 146,
+                        "endColumn": 42,
+                        "endOffset": 184
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 211
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 189,
+                        "endColumn": 68,
+                        "endOffset": 253
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 326,
+                        "startColumn": 4,
+                        "startOffset": 16049,
+                        "endColumn": 49,
+                        "endOffset": 16094
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 307
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 331,
+                        "startColumn": 4,
+                        "startOffset": 16215,
+                        "endColumn": 45,
+                        "endOffset": 16256
+                    }
                 }
             },
             {
@@ -71,7 +106,14 @@
                     "endOffset": 354
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 329,
+                        "startColumn": 4,
+                        "startOffset": 16117,
+                        "endColumn": 46,
+                        "endOffset": 16159
+                    }
                 }
             },
             {
@@ -83,7 +125,14 @@
                     "endOffset": 405
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 330,
+                        "startColumn": 4,
+                        "startOffset": 16164,
+                        "endColumn": 50,
+                        "endOffset": 16210
+                    }
                 }
             },
             {
@@ -114,7 +163,14 @@
                     "endOffset": 513
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 41,
+                        "endOffset": 92
+                    }
                 }
             },
             {
@@ -126,7 +182,14 @@
                     "endOffset": 551
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 258,
+                        "endColumn": 37,
+                        "endOffset": 291
+                    }
                 }
             },
             {
@@ -138,7 +201,14 @@
                     "endOffset": 617
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 364,
+                        "endColumn": 65,
+                        "endOffset": 425
+                    }
                 }
             },
             {
@@ -150,7 +220,14 @@
                     "endOffset": 675
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 237,
+                        "startColumn": 4,
+                        "startOffset": 11572,
+                        "endColumn": 57,
+                        "endOffset": 11625
+                    }
                 }
             },
             {
@@ -162,7 +239,14 @@
                     "endOffset": 733
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 238,
+                        "startColumn": 4,
+                        "startOffset": 11630,
+                        "endColumn": 57,
+                        "endOffset": 11683
+                    }
                 }
             },
             {
@@ -174,7 +258,14 @@
                     "endOffset": 791
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 11688,
+                        "endColumn": 57,
+                        "endOffset": 11741
+                    }
                 }
             },
             {
@@ -186,7 +277,14 @@
                     "endOffset": 849
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 240,
+                        "startColumn": 4,
+                        "startOffset": 11746,
+                        "endColumn": 57,
+                        "endOffset": 11799
+                    }
                 }
             },
             {
@@ -198,7 +296,14 @@
                     "endOffset": 907
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 241,
+                        "startColumn": 4,
+                        "startOffset": 11804,
+                        "endColumn": 57,
+                        "endOffset": 11857
+                    }
                 }
             },
             {
@@ -210,7 +315,14 @@
                     "endOffset": 964
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 236,
+                        "startColumn": 4,
+                        "startOffset": 11515,
+                        "endColumn": 56,
+                        "endOffset": 11567
+                    }
                 }
             },
             {
@@ -222,7 +334,14 @@
                     "endOffset": 1022
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 242,
+                        "startColumn": 4,
+                        "startOffset": 11862,
+                        "endColumn": 57,
+                        "endOffset": 11915
+                    }
                 }
             },
             {
@@ -234,7 +353,14 @@
                     "endOffset": 1080
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 243,
+                        "startColumn": 4,
+                        "startOffset": 11920,
+                        "endColumn": 57,
+                        "endOffset": 11973
+                    }
                 }
             },
             {
@@ -246,7 +372,14 @@
                     "endOffset": 1138
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 244,
+                        "startColumn": 4,
+                        "startOffset": 11978,
+                        "endColumn": 57,
+                        "endOffset": 12031
+                    }
                 }
             },
             {
@@ -258,7 +391,14 @@
                     "endOffset": 1196
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 245,
+                        "startColumn": 4,
+                        "startOffset": 12036,
+                        "endColumn": 57,
+                        "endOffset": 12089
+                    }
                 }
             },
             {
@@ -270,7 +410,14 @@
                     "endOffset": 1255
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 246,
+                        "startColumn": 4,
+                        "startOffset": 12094,
+                        "endColumn": 58,
+                        "endOffset": 12148
+                    }
                 }
             },
             {
@@ -282,7 +429,14 @@
                     "endOffset": 1314
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 247,
+                        "startColumn": 4,
+                        "startOffset": 12153,
+                        "endColumn": 58,
+                        "endOffset": 12207
+                    }
                 }
             },
             {
@@ -294,7 +448,14 @@
                     "endOffset": 1373
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 248,
+                        "startColumn": 4,
+                        "startOffset": 12212,
+                        "endColumn": 58,
+                        "endOffset": 12266
+                    }
                 }
             },
             {
@@ -306,7 +467,14 @@
                     "endOffset": 1432
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 249,
+                        "startColumn": 4,
+                        "startOffset": 12271,
+                        "endColumn": 58,
+                        "endOffset": 12325
+                    }
                 }
             },
             {
@@ -318,7 +486,14 @@
                     "endOffset": 1486
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 310,
+                        "startColumn": 4,
+                        "startOffset": 15296,
+                        "endColumn": 53,
+                        "endOffset": 15345
+                    }
                 }
             },
             {
@@ -330,7 +505,14 @@
                     "endOffset": 1543
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 101,
+                        "startColumn": 4,
+                        "startOffset": 4762,
+                        "endColumn": 56,
+                        "endOffset": 4814
+                    }
                 }
             },
             {
@@ -342,7 +524,14 @@
                     "endOffset": 1600
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 4819,
+                        "endColumn": 56,
+                        "endOffset": 4871
+                    }
                 }
             },
             {
@@ -354,7 +543,14 @@
                     "endOffset": 1657
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 4876,
+                        "endColumn": 56,
+                        "endOffset": 4928
+                    }
                 }
             },
             {
@@ -366,7 +562,14 @@
                     "endOffset": 1714
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 4933,
+                        "endColumn": 56,
+                        "endOffset": 4985
+                    }
                 }
             },
             {
@@ -378,7 +581,14 @@
                     "endOffset": 1771
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 4990,
+                        "endColumn": 56,
+                        "endOffset": 5042
+                    }
                 }
             },
             {
@@ -390,7 +600,14 @@
                     "endOffset": 1827
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 4706,
+                        "endColumn": 55,
+                        "endOffset": 4757
+                    }
                 }
             },
             {
@@ -402,7 +619,14 @@
                     "endOffset": 1884
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 5047,
+                        "endColumn": 56,
+                        "endOffset": 5099
+                    }
                 }
             },
             {
@@ -414,7 +638,14 @@
                     "endOffset": 1941
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 5104,
+                        "endColumn": 56,
+                        "endOffset": 5156
+                    }
                 }
             },
             {
@@ -426,7 +657,14 @@
                     "endOffset": 1998
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 108,
+                        "startColumn": 4,
+                        "startOffset": 5161,
+                        "endColumn": 56,
+                        "endOffset": 5213
+                    }
                 }
             },
             {
@@ -438,7 +676,14 @@
                     "endOffset": 2055
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 5218,
+                        "endColumn": 56,
+                        "endOffset": 5270
+                    }
                 }
             },
             {
@@ -450,7 +695,14 @@
                     "endOffset": 2113
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 110,
+                        "startColumn": 4,
+                        "startOffset": 5275,
+                        "endColumn": 57,
+                        "endOffset": 5328
+                    }
                 }
             },
             {
@@ -462,7 +714,14 @@
                     "endOffset": 2171
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 5333,
+                        "endColumn": 57,
+                        "endOffset": 5386
+                    }
                 }
             },
             {
@@ -474,7 +733,14 @@
                     "endOffset": 2229
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 112,
+                        "startColumn": 4,
+                        "startOffset": 5391,
+                        "endColumn": 57,
+                        "endOffset": 5444
+                    }
                 }
             },
             {
@@ -486,7 +752,14 @@
                     "endOffset": 2287
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 113,
+                        "startColumn": 4,
+                        "startOffset": 5449,
+                        "endColumn": 57,
+                        "endOffset": 5502
+                    }
                 }
             },
             {
@@ -498,7 +771,14 @@
                     "endOffset": 2349
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 316,
+                        "startColumn": 4,
+                        "startOffset": 15490,
+                        "endColumn": 61,
+                        "endOffset": 15547
+                    }
                 }
             },
             {
@@ -510,7 +790,14 @@
                     "endOffset": 2411
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 317,
+                        "startColumn": 4,
+                        "startOffset": 15552,
+                        "endColumn": 61,
+                        "endOffset": 15609
+                    }
                 }
             },
             {
@@ -522,7 +809,14 @@
                     "endOffset": 2473
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 318,
+                        "startColumn": 4,
+                        "startOffset": 15614,
+                        "endColumn": 61,
+                        "endOffset": 15671
+                    }
                 }
             },
             {
@@ -534,7 +828,14 @@
                     "endOffset": 2535
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 319,
+                        "startColumn": 4,
+                        "startOffset": 15676,
+                        "endColumn": 61,
+                        "endOffset": 15733
+                    }
                 }
             },
             {
@@ -546,7 +847,14 @@
                     "endOffset": 2597
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 320,
+                        "startColumn": 4,
+                        "startOffset": 15738,
+                        "endColumn": 61,
+                        "endOffset": 15795
+                    }
                 }
             },
             {
@@ -558,7 +866,14 @@
                     "endOffset": 2658
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 315,
+                        "startColumn": 4,
+                        "startOffset": 15429,
+                        "endColumn": 60,
+                        "endOffset": 15485
+                    }
                 }
             },
             {
@@ -570,7 +885,14 @@
                     "endOffset": 2720
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 321,
+                        "startColumn": 4,
+                        "startOffset": 15800,
+                        "endColumn": 61,
+                        "endOffset": 15857
+                    }
                 }
             },
             {
@@ -582,7 +904,14 @@
                     "endOffset": 2782
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 322,
+                        "startColumn": 4,
+                        "startOffset": 15862,
+                        "endColumn": 61,
+                        "endOffset": 15919
+                    }
                 }
             },
             {
@@ -594,7 +923,14 @@
                     "endOffset": 2844
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 323,
+                        "startColumn": 4,
+                        "startOffset": 15924,
+                        "endColumn": 61,
+                        "endOffset": 15981
+                    }
                 }
             },
             {
@@ -606,7 +942,14 @@
                     "endOffset": 2906
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 324,
+                        "startColumn": 4,
+                        "startOffset": 15986,
+                        "endColumn": 61,
+                        "endOffset": 16043
+                    }
                 }
             },
             {
@@ -618,7 +961,14 @@
                     "endOffset": 2964
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 288,
+                        "startColumn": 4,
+                        "startOffset": 14185,
+                        "endColumn": 57,
+                        "endOffset": 14238
+                    }
                 }
             },
             {
@@ -630,7 +980,14 @@
                     "endOffset": 3022
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 289,
+                        "startColumn": 4,
+                        "startOffset": 14243,
+                        "endColumn": 57,
+                        "endOffset": 14296
+                    }
                 }
             },
             {
@@ -642,7 +999,14 @@
                     "endOffset": 3080
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 290,
+                        "startColumn": 4,
+                        "startOffset": 14301,
+                        "endColumn": 57,
+                        "endOffset": 14354
+                    }
                 }
             },
             {
@@ -654,7 +1018,14 @@
                     "endOffset": 3138
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 291,
+                        "startColumn": 4,
+                        "startOffset": 14359,
+                        "endColumn": 57,
+                        "endOffset": 14412
+                    }
                 }
             },
             {
@@ -666,7 +1037,14 @@
                     "endOffset": 3196
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 292,
+                        "startColumn": 4,
+                        "startOffset": 14417,
+                        "endColumn": 57,
+                        "endOffset": 14470
+                    }
                 }
             },
             {
@@ -678,7 +1056,14 @@
                     "endOffset": 3253
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 287,
+                        "startColumn": 4,
+                        "startOffset": 14128,
+                        "endColumn": 56,
+                        "endOffset": 14180
+                    }
                 }
             },
             {
@@ -690,7 +1075,14 @@
                     "endOffset": 3311
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 293,
+                        "startColumn": 4,
+                        "startOffset": 14475,
+                        "endColumn": 57,
+                        "endOffset": 14528
+                    }
                 }
             },
             {
@@ -702,7 +1094,14 @@
                     "endOffset": 3369
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 294,
+                        "startColumn": 4,
+                        "startOffset": 14533,
+                        "endColumn": 57,
+                        "endOffset": 14586
+                    }
                 }
             },
             {
@@ -714,7 +1113,14 @@
                     "endOffset": 3427
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 295,
+                        "startColumn": 4,
+                        "startOffset": 14591,
+                        "endColumn": 57,
+                        "endOffset": 14644
+                    }
                 }
             },
             {
@@ -726,7 +1132,14 @@
                     "endOffset": 3485
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 296,
+                        "startColumn": 4,
+                        "startOffset": 14649,
+                        "endColumn": 57,
+                        "endOffset": 14702
+                    }
                 }
             },
             {
@@ -738,7 +1151,14 @@
                     "endOffset": 3542
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 135,
+                        "startColumn": 4,
+                        "startOffset": 6494,
+                        "endColumn": 56,
+                        "endOffset": 6546
+                    }
                 }
             },
             {
@@ -750,7 +1170,14 @@
                     "endOffset": 3599
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 136,
+                        "startColumn": 4,
+                        "startOffset": 6551,
+                        "endColumn": 56,
+                        "endOffset": 6603
+                    }
                 }
             },
             {
@@ -762,7 +1189,14 @@
                     "endOffset": 3656
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 137,
+                        "startColumn": 4,
+                        "startOffset": 6608,
+                        "endColumn": 56,
+                        "endOffset": 6660
+                    }
                 }
             },
             {
@@ -774,7 +1208,14 @@
                     "endOffset": 3713
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 6665,
+                        "endColumn": 56,
+                        "endOffset": 6717
+                    }
                 }
             },
             {
@@ -786,7 +1227,14 @@
                     "endOffset": 3770
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 139,
+                        "startColumn": 4,
+                        "startOffset": 6722,
+                        "endColumn": 56,
+                        "endOffset": 6774
+                    }
                 }
             },
             {
@@ -798,7 +1246,14 @@
                     "endOffset": 3826
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 134,
+                        "startColumn": 4,
+                        "startOffset": 6438,
+                        "endColumn": 55,
+                        "endOffset": 6489
+                    }
                 }
             },
             {
@@ -810,7 +1265,14 @@
                     "endOffset": 3883
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 140,
+                        "startColumn": 4,
+                        "startOffset": 6779,
+                        "endColumn": 56,
+                        "endOffset": 6831
+                    }
                 }
             },
             {
@@ -822,7 +1284,14 @@
                     "endOffset": 3940
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 141,
+                        "startColumn": 4,
+                        "startOffset": 6836,
+                        "endColumn": 56,
+                        "endOffset": 6888
+                    }
                 }
             },
             {
@@ -834,7 +1303,14 @@
                     "endOffset": 3997
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 142,
+                        "startColumn": 4,
+                        "startOffset": 6893,
+                        "endColumn": 56,
+                        "endOffset": 6945
+                    }
                 }
             },
             {
@@ -846,7 +1322,14 @@
                     "endOffset": 4054
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 6950,
+                        "endColumn": 56,
+                        "endOffset": 7002
+                    }
                 }
             },
             {
@@ -858,7 +1341,14 @@
                     "endOffset": 4112
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 144,
+                        "startColumn": 4,
+                        "startOffset": 7007,
+                        "endColumn": 57,
+                        "endOffset": 7060
+                    }
                 }
             },
             {
@@ -870,7 +1360,14 @@
                     "endOffset": 4170
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 145,
+                        "startColumn": 4,
+                        "startOffset": 7065,
+                        "endColumn": 57,
+                        "endOffset": 7118
+                    }
                 }
             },
             {
@@ -882,7 +1379,14 @@
                     "endOffset": 4228
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 146,
+                        "startColumn": 4,
+                        "startOffset": 7123,
+                        "endColumn": 57,
+                        "endOffset": 7176
+                    }
                 }
             },
             {
@@ -894,7 +1398,14 @@
                     "endOffset": 4286
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 147,
+                        "startColumn": 4,
+                        "startOffset": 7181,
+                        "endColumn": 57,
+                        "endOffset": 7234
+                    }
                 }
             },
             {
@@ -906,7 +1417,14 @@
                     "endOffset": 4350
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 271,
+                        "startColumn": 4,
+                        "startOffset": 13271,
+                        "endColumn": 63,
+                        "endOffset": 13330
+                    }
                 }
             },
             {
@@ -918,7 +1436,14 @@
                     "endOffset": 4414
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 272,
+                        "startColumn": 4,
+                        "startOffset": 13335,
+                        "endColumn": 63,
+                        "endOffset": 13394
+                    }
                 }
             },
             {
@@ -930,7 +1455,14 @@
                     "endOffset": 4478
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 273,
+                        "startColumn": 4,
+                        "startOffset": 13399,
+                        "endColumn": 63,
+                        "endOffset": 13458
+                    }
                 }
             },
             {
@@ -942,7 +1474,14 @@
                     "endOffset": 4542
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 274,
+                        "startColumn": 4,
+                        "startOffset": 13463,
+                        "endColumn": 63,
+                        "endOffset": 13522
+                    }
                 }
             },
             {
@@ -954,7 +1493,14 @@
                     "endOffset": 4606
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 13527,
+                        "endColumn": 63,
+                        "endOffset": 13586
+                    }
                 }
             },
             {
@@ -966,7 +1512,14 @@
                     "endOffset": 4669
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 270,
+                        "startColumn": 4,
+                        "startOffset": 13208,
+                        "endColumn": 62,
+                        "endOffset": 13266
+                    }
                 }
             },
             {
@@ -978,7 +1531,14 @@
                     "endOffset": 4733
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 13591,
+                        "endColumn": 63,
+                        "endOffset": 13650
+                    }
                 }
             },
             {
@@ -990,7 +1550,14 @@
                     "endOffset": 4797
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 277,
+                        "startColumn": 4,
+                        "startOffset": 13655,
+                        "endColumn": 63,
+                        "endOffset": 13714
+                    }
                 }
             },
             {
@@ -1002,7 +1569,14 @@
                     "endOffset": 4861
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 278,
+                        "startColumn": 4,
+                        "startOffset": 13719,
+                        "endColumn": 63,
+                        "endOffset": 13778
+                    }
                 }
             },
             {
@@ -1014,7 +1588,14 @@
                     "endOffset": 4925
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 13783,
+                        "endColumn": 63,
+                        "endOffset": 13842
+                    }
                 }
             },
             {
@@ -1026,7 +1607,14 @@
                     "endOffset": 4990
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 280,
+                        "startColumn": 4,
+                        "startOffset": 13847,
+                        "endColumn": 64,
+                        "endOffset": 13907
+                    }
                 }
             },
             {
@@ -1038,7 +1626,14 @@
                     "endOffset": 5055
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 281,
+                        "startColumn": 4,
+                        "startOffset": 13912,
+                        "endColumn": 64,
+                        "endOffset": 13972
+                    }
                 }
             },
             {
@@ -1050,7 +1645,14 @@
                     "endOffset": 5120
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 282,
+                        "startColumn": 4,
+                        "startOffset": 13977,
+                        "endColumn": 64,
+                        "endOffset": 14037
+                    }
                 }
             },
             {
@@ -1062,7 +1664,14 @@
                     "endOffset": 5185
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 283,
+                        "startColumn": 4,
+                        "startOffset": 14042,
+                        "endColumn": 64,
+                        "endOffset": 14102
+                    }
                 }
             },
             {
@@ -1074,7 +1683,14 @@
                     "endOffset": 5249
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 2999,
+                        "endColumn": 63,
+                        "endOffset": 3058
+                    }
                 }
             },
             {
@@ -1086,7 +1702,14 @@
                     "endOffset": 5313
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 3063,
+                        "endColumn": 63,
+                        "endOffset": 3122
+                    }
                 }
             },
             {
@@ -1098,7 +1721,14 @@
                     "endOffset": 5377
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 3127,
+                        "endColumn": 63,
+                        "endOffset": 3186
+                    }
                 }
             },
             {
@@ -1110,7 +1740,14 @@
                     "endOffset": 5441
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 3191,
+                        "endColumn": 63,
+                        "endOffset": 3250
+                    }
                 }
             },
             {
@@ -1122,7 +1759,14 @@
                     "endOffset": 5505
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 3255,
+                        "endColumn": 63,
+                        "endOffset": 3314
+                    }
                 }
             },
             {
@@ -1134,7 +1778,14 @@
                     "endOffset": 5568
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2936,
+                        "endColumn": 62,
+                        "endOffset": 2994
+                    }
                 }
             },
             {
@@ -1146,7 +1797,14 @@
                     "endOffset": 5632
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 72,
+                        "startColumn": 4,
+                        "startOffset": 3319,
+                        "endColumn": 63,
+                        "endOffset": 3378
+                    }
                 }
             },
             {
@@ -1158,7 +1816,14 @@
                     "endOffset": 5696
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 4,
+                        "startOffset": 3383,
+                        "endColumn": 63,
+                        "endOffset": 3442
+                    }
                 }
             },
             {
@@ -1170,7 +1835,14 @@
                     "endOffset": 5760
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 4,
+                        "startOffset": 3447,
+                        "endColumn": 63,
+                        "endOffset": 3506
+                    }
                 }
             },
             {
@@ -1182,7 +1854,14 @@
                     "endOffset": 5824
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 75,
+                        "startColumn": 4,
+                        "startOffset": 3511,
+                        "endColumn": 63,
+                        "endOffset": 3570
+                    }
                 }
             },
             {
@@ -1194,7 +1873,14 @@
                     "endOffset": 5889
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 76,
+                        "startColumn": 4,
+                        "startOffset": 3575,
+                        "endColumn": 64,
+                        "endOffset": 3635
+                    }
                 }
             },
             {
@@ -1206,7 +1892,14 @@
                     "endOffset": 5954
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 4,
+                        "startOffset": 3640,
+                        "endColumn": 64,
+                        "endOffset": 3700
+                    }
                 }
             },
             {
@@ -1218,7 +1911,14 @@
                     "endOffset": 6019
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 3705,
+                        "endColumn": 64,
+                        "endOffset": 3765
+                    }
                 }
             },
             {
@@ -1230,7 +1930,14 @@
                     "endOffset": 6084
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 3770,
+                        "endColumn": 64,
+                        "endOffset": 3830
+                    }
                 }
             },
             {
@@ -1242,7 +1949,14 @@
                     "endOffset": 6142
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 169,
+                        "startColumn": 4,
+                        "startOffset": 8138,
+                        "endColumn": 57,
+                        "endOffset": 8191
+                    }
                 }
             },
             {
@@ -1254,7 +1968,14 @@
                     "endOffset": 6200
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 170,
+                        "startColumn": 4,
+                        "startOffset": 8196,
+                        "endColumn": 57,
+                        "endOffset": 8249
+                    }
                 }
             },
             {
@@ -1266,7 +1987,14 @@
                     "endOffset": 6258
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 171,
+                        "startColumn": 4,
+                        "startOffset": 8254,
+                        "endColumn": 57,
+                        "endOffset": 8307
+                    }
                 }
             },
             {
@@ -1278,7 +2006,14 @@
                     "endOffset": 6316
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 172,
+                        "startColumn": 4,
+                        "startOffset": 8312,
+                        "endColumn": 57,
+                        "endOffset": 8365
+                    }
                 }
             },
             {
@@ -1290,7 +2025,14 @@
                     "endOffset": 6374
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 173,
+                        "startColumn": 4,
+                        "startOffset": 8370,
+                        "endColumn": 57,
+                        "endOffset": 8423
+                    }
                 }
             },
             {
@@ -1302,7 +2044,14 @@
                     "endOffset": 6431
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 168,
+                        "startColumn": 4,
+                        "startOffset": 8081,
+                        "endColumn": 56,
+                        "endOffset": 8133
+                    }
                 }
             },
             {
@@ -1314,7 +2063,14 @@
                     "endOffset": 6489
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 174,
+                        "startColumn": 4,
+                        "startOffset": 8428,
+                        "endColumn": 57,
+                        "endOffset": 8481
+                    }
                 }
             },
             {
@@ -1326,7 +2082,14 @@
                     "endOffset": 6547
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 175,
+                        "startColumn": 4,
+                        "startOffset": 8486,
+                        "endColumn": 57,
+                        "endOffset": 8539
+                    }
                 }
             },
             {
@@ -1338,7 +2101,14 @@
                     "endOffset": 6605
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 176,
+                        "startColumn": 4,
+                        "startOffset": 8544,
+                        "endColumn": 57,
+                        "endOffset": 8597
+                    }
                 }
             },
             {
@@ -1350,7 +2120,14 @@
                     "endOffset": 6663
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 177,
+                        "startColumn": 4,
+                        "startOffset": 8602,
+                        "endColumn": 57,
+                        "endOffset": 8655
+                    }
                 }
             },
             {
@@ -1362,7 +2139,14 @@
                     "endOffset": 6722
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 178,
+                        "startColumn": 4,
+                        "startOffset": 8660,
+                        "endColumn": 58,
+                        "endOffset": 8714
+                    }
                 }
             },
             {
@@ -1374,7 +2158,14 @@
                     "endOffset": 6781
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 179,
+                        "startColumn": 4,
+                        "startOffset": 8719,
+                        "endColumn": 58,
+                        "endOffset": 8773
+                    }
                 }
             },
             {
@@ -1386,7 +2177,14 @@
                     "endOffset": 6840
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 180,
+                        "startColumn": 4,
+                        "startOffset": 8778,
+                        "endColumn": 58,
+                        "endOffset": 8832
+                    }
                 }
             },
             {
@@ -1398,7 +2196,14 @@
                     "endOffset": 6899
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 181,
+                        "startColumn": 4,
+                        "startOffset": 8837,
+                        "endColumn": 58,
+                        "endOffset": 8891
+                    }
                 }
             },
             {
@@ -1410,7 +2215,14 @@
                     "endOffset": 6956
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 301,
+                        "startColumn": 4,
+                        "startOffset": 14783,
+                        "endColumn": 56,
+                        "endOffset": 14835
+                    }
                 }
             },
             {
@@ -1422,7 +2234,14 @@
                     "endOffset": 7013
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 302,
+                        "startColumn": 4,
+                        "startOffset": 14840,
+                        "endColumn": 56,
+                        "endOffset": 14892
+                    }
                 }
             },
             {
@@ -1434,7 +2253,14 @@
                     "endOffset": 7070
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 303,
+                        "startColumn": 4,
+                        "startOffset": 14897,
+                        "endColumn": 56,
+                        "endOffset": 14949
+                    }
                 }
             },
             {
@@ -1446,7 +2272,14 @@
                     "endOffset": 7127
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 304,
+                        "startColumn": 4,
+                        "startOffset": 14954,
+                        "endColumn": 56,
+                        "endOffset": 15006
+                    }
                 }
             },
             {
@@ -1458,7 +2291,14 @@
                     "endOffset": 7184
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 305,
+                        "startColumn": 4,
+                        "startOffset": 15011,
+                        "endColumn": 56,
+                        "endOffset": 15063
+                    }
                 }
             },
             {
@@ -1470,7 +2310,14 @@
                     "endOffset": 7240
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 300,
+                        "startColumn": 4,
+                        "startOffset": 14727,
+                        "endColumn": 55,
+                        "endOffset": 14778
+                    }
                 }
             },
             {
@@ -1482,7 +2329,14 @@
                     "endOffset": 7297
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 306,
+                        "startColumn": 4,
+                        "startOffset": 15068,
+                        "endColumn": 56,
+                        "endOffset": 15120
+                    }
                 }
             },
             {
@@ -1494,7 +2348,14 @@
                     "endOffset": 7354
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 307,
+                        "startColumn": 4,
+                        "startOffset": 15125,
+                        "endColumn": 56,
+                        "endOffset": 15177
+                    }
                 }
             },
             {
@@ -1506,7 +2367,14 @@
                     "endOffset": 7411
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 308,
+                        "startColumn": 4,
+                        "startOffset": 15182,
+                        "endColumn": 56,
+                        "endOffset": 15234
+                    }
                 }
             },
             {
@@ -1518,7 +2386,14 @@
                     "endOffset": 7468
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 309,
+                        "startColumn": 4,
+                        "startOffset": 15239,
+                        "endColumn": 56,
+                        "endOffset": 15291
+                    }
                 }
             },
             {
@@ -1530,7 +2405,14 @@
                     "endOffset": 7527
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 84,
+                        "startColumn": 4,
+                        "startOffset": 3915,
+                        "endColumn": 58,
+                        "endOffset": 3969
+                    }
                 }
             },
             {
@@ -1542,7 +2424,14 @@
                     "endOffset": 7586
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 3974,
+                        "endColumn": 58,
+                        "endOffset": 4028
+                    }
                 }
             },
             {
@@ -1554,7 +2443,14 @@
                     "endOffset": 7645
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 4033,
+                        "endColumn": 58,
+                        "endOffset": 4087
+                    }
                 }
             },
             {
@@ -1566,7 +2462,14 @@
                     "endOffset": 7704
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 4092,
+                        "endColumn": 58,
+                        "endOffset": 4146
+                    }
                 }
             },
             {
@@ -1578,7 +2481,14 @@
                     "endOffset": 7763
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 88,
+                        "startColumn": 4,
+                        "startOffset": 4151,
+                        "endColumn": 58,
+                        "endOffset": 4205
+                    }
                 }
             },
             {
@@ -1590,7 +2500,14 @@
                     "endOffset": 7821
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 3857,
+                        "endColumn": 57,
+                        "endOffset": 3910
+                    }
                 }
             },
             {
@@ -1602,7 +2519,14 @@
                     "endOffset": 7880
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 89,
+                        "startColumn": 4,
+                        "startOffset": 4210,
+                        "endColumn": 58,
+                        "endOffset": 4264
+                    }
                 }
             },
             {
@@ -1614,7 +2538,14 @@
                     "endOffset": 7939
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 90,
+                        "startColumn": 4,
+                        "startOffset": 4269,
+                        "endColumn": 58,
+                        "endOffset": 4323
+                    }
                 }
             },
             {
@@ -1626,7 +2557,14 @@
                     "endOffset": 7998
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 91,
+                        "startColumn": 4,
+                        "startOffset": 4328,
+                        "endColumn": 58,
+                        "endOffset": 4382
+                    }
                 }
             },
             {
@@ -1638,7 +2576,14 @@
                     "endOffset": 8057
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 92,
+                        "startColumn": 4,
+                        "startOffset": 4387,
+                        "endColumn": 58,
+                        "endOffset": 4441
+                    }
                 }
             },
             {
@@ -1650,7 +2595,14 @@
                     "endOffset": 8117
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 4446,
+                        "endColumn": 59,
+                        "endOffset": 4501
+                    }
                 }
             },
             {
@@ -1662,7 +2614,14 @@
                     "endOffset": 8177
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 94,
+                        "startColumn": 4,
+                        "startOffset": 4506,
+                        "endColumn": 59,
+                        "endOffset": 4561
+                    }
                 }
             },
             {
@@ -1674,7 +2633,14 @@
                     "endOffset": 8237
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 95,
+                        "startColumn": 4,
+                        "startOffset": 4566,
+                        "endColumn": 59,
+                        "endOffset": 4621
+                    }
                 }
             },
             {
@@ -1686,7 +2652,14 @@
                     "endOffset": 8297
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 96,
+                        "startColumn": 4,
+                        "startOffset": 4626,
+                        "endColumn": 59,
+                        "endOffset": 4681
+                    }
                 }
             },
             {
@@ -1698,7 +2671,14 @@
                     "endOffset": 8360
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 118,
+                        "startColumn": 4,
+                        "startOffset": 5595,
+                        "endColumn": 62,
+                        "endOffset": 5653
+                    }
                 }
             },
             {
@@ -1710,7 +2690,14 @@
                     "endOffset": 8423
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 5658,
+                        "endColumn": 62,
+                        "endOffset": 5716
+                    }
                 }
             },
             {
@@ -1722,7 +2709,14 @@
                     "endOffset": 8486
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 5721,
+                        "endColumn": 62,
+                        "endOffset": 5779
+                    }
                 }
             },
             {
@@ -1734,7 +2728,14 @@
                     "endOffset": 8549
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 121,
+                        "startColumn": 4,
+                        "startOffset": 5784,
+                        "endColumn": 62,
+                        "endOffset": 5842
+                    }
                 }
             },
             {
@@ -1746,7 +2747,14 @@
                     "endOffset": 8612
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 122,
+                        "startColumn": 4,
+                        "startOffset": 5847,
+                        "endColumn": 62,
+                        "endOffset": 5905
+                    }
                 }
             },
             {
@@ -1758,7 +2766,14 @@
                     "endOffset": 8674
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 5533,
+                        "endColumn": 61,
+                        "endOffset": 5590
+                    }
                 }
             },
             {
@@ -1770,7 +2785,14 @@
                     "endOffset": 8737
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 123,
+                        "startColumn": 4,
+                        "startOffset": 5910,
+                        "endColumn": 62,
+                        "endOffset": 5968
+                    }
                 }
             },
             {
@@ -1782,7 +2804,14 @@
                     "endOffset": 8800
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 124,
+                        "startColumn": 4,
+                        "startOffset": 5973,
+                        "endColumn": 62,
+                        "endOffset": 6031
+                    }
                 }
             },
             {
@@ -1794,7 +2823,14 @@
                     "endOffset": 8863
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 6036,
+                        "endColumn": 62,
+                        "endOffset": 6094
+                    }
                 }
             },
             {
@@ -1806,7 +2842,14 @@
                     "endOffset": 8926
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 126,
+                        "startColumn": 4,
+                        "startOffset": 6099,
+                        "endColumn": 62,
+                        "endOffset": 6157
+                    }
                 }
             },
             {
@@ -1818,7 +2861,14 @@
                     "endOffset": 8990
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 127,
+                        "startColumn": 4,
+                        "startOffset": 6162,
+                        "endColumn": 63,
+                        "endOffset": 6221
+                    }
                 }
             },
             {
@@ -1830,7 +2880,14 @@
                     "endOffset": 9054
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 128,
+                        "startColumn": 4,
+                        "startOffset": 6226,
+                        "endColumn": 63,
+                        "endOffset": 6285
+                    }
                 }
             },
             {
@@ -1842,7 +2899,14 @@
                     "endOffset": 9118
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 129,
+                        "startColumn": 4,
+                        "startOffset": 6290,
+                        "endColumn": 63,
+                        "endOffset": 6349
+                    }
                 }
             },
             {
@@ -1854,7 +2918,14 @@
                     "endOffset": 9182
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 6354,
+                        "endColumn": 63,
+                        "endOffset": 6413
+                    }
                 }
             },
             {
@@ -1866,7 +2937,14 @@
                     "endOffset": 9246
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 186,
+                        "startColumn": 4,
+                        "startOffset": 8986,
+                        "endColumn": 63,
+                        "endOffset": 9045
+                    }
                 }
             },
             {
@@ -1878,7 +2956,14 @@
                     "endOffset": 9310
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 187,
+                        "startColumn": 4,
+                        "startOffset": 9050,
+                        "endColumn": 63,
+                        "endOffset": 9109
+                    }
                 }
             },
             {
@@ -1890,7 +2975,14 @@
                     "endOffset": 9374
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 188,
+                        "startColumn": 4,
+                        "startOffset": 9114,
+                        "endColumn": 63,
+                        "endOffset": 9173
+                    }
                 }
             },
             {
@@ -1902,7 +2994,14 @@
                     "endOffset": 9438
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 189,
+                        "startColumn": 4,
+                        "startOffset": 9178,
+                        "endColumn": 63,
+                        "endOffset": 9237
+                    }
                 }
             },
             {
@@ -1914,7 +3013,14 @@
                     "endOffset": 9502
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 190,
+                        "startColumn": 4,
+                        "startOffset": 9242,
+                        "endColumn": 63,
+                        "endOffset": 9301
+                    }
                 }
             },
             {
@@ -1926,7 +3032,14 @@
                     "endOffset": 9565
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 185,
+                        "startColumn": 4,
+                        "startOffset": 8923,
+                        "endColumn": 62,
+                        "endOffset": 8981
+                    }
                 }
             },
             {
@@ -1938,7 +3051,14 @@
                     "endOffset": 9629
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 191,
+                        "startColumn": 4,
+                        "startOffset": 9306,
+                        "endColumn": 63,
+                        "endOffset": 9365
+                    }
                 }
             },
             {
@@ -1950,7 +3070,14 @@
                     "endOffset": 9693
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 192,
+                        "startColumn": 4,
+                        "startOffset": 9370,
+                        "endColumn": 63,
+                        "endOffset": 9429
+                    }
                 }
             },
             {
@@ -1962,7 +3089,14 @@
                     "endOffset": 9757
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 193,
+                        "startColumn": 4,
+                        "startOffset": 9434,
+                        "endColumn": 63,
+                        "endOffset": 9493
+                    }
                 }
             },
             {
@@ -1974,7 +3108,14 @@
                     "endOffset": 9821
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 194,
+                        "startColumn": 4,
+                        "startOffset": 9498,
+                        "endColumn": 63,
+                        "endOffset": 9557
+                    }
                 }
             },
             {
@@ -1986,7 +3127,14 @@
                     "endOffset": 9886
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 195,
+                        "startColumn": 4,
+                        "startOffset": 9562,
+                        "endColumn": 64,
+                        "endOffset": 9622
+                    }
                 }
             },
             {
@@ -1998,7 +3146,14 @@
                     "endOffset": 9951
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 196,
+                        "startColumn": 4,
+                        "startOffset": 9627,
+                        "endColumn": 64,
+                        "endOffset": 9687
+                    }
                 }
             },
             {
@@ -2010,7 +3165,14 @@
                     "endOffset": 10016
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 197,
+                        "startColumn": 4,
+                        "startOffset": 9692,
+                        "endColumn": 64,
+                        "endOffset": 9752
+                    }
                 }
             },
             {
@@ -2022,7 +3184,14 @@
                     "endOffset": 10081
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 198,
+                        "startColumn": 4,
+                        "startOffset": 9757,
+                        "endColumn": 64,
+                        "endOffset": 9817
+                    }
                 }
             },
             {
@@ -2034,7 +3203,14 @@
                     "endOffset": 10138
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 203,
+                        "startColumn": 4,
+                        "startOffset": 9898,
+                        "endColumn": 56,
+                        "endOffset": 9950
+                    }
                 }
             },
             {
@@ -2046,7 +3222,14 @@
                     "endOffset": 10195
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 204,
+                        "startColumn": 4,
+                        "startOffset": 9955,
+                        "endColumn": 56,
+                        "endOffset": 10007
+                    }
                 }
             },
             {
@@ -2058,7 +3241,14 @@
                     "endOffset": 10252
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 205,
+                        "startColumn": 4,
+                        "startOffset": 10012,
+                        "endColumn": 56,
+                        "endOffset": 10064
+                    }
                 }
             },
             {
@@ -2070,7 +3260,14 @@
                     "endOffset": 10309
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 206,
+                        "startColumn": 4,
+                        "startOffset": 10069,
+                        "endColumn": 56,
+                        "endOffset": 10121
+                    }
                 }
             },
             {
@@ -2082,7 +3279,14 @@
                     "endOffset": 10366
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 207,
+                        "startColumn": 4,
+                        "startOffset": 10126,
+                        "endColumn": 56,
+                        "endOffset": 10178
+                    }
                 }
             },
             {
@@ -2094,7 +3298,14 @@
                     "endOffset": 10422
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 202,
+                        "startColumn": 4,
+                        "startOffset": 9842,
+                        "endColumn": 55,
+                        "endOffset": 9893
+                    }
                 }
             },
             {
@@ -2106,7 +3317,14 @@
                     "endOffset": 10479
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 208,
+                        "startColumn": 4,
+                        "startOffset": 10183,
+                        "endColumn": 56,
+                        "endOffset": 10235
+                    }
                 }
             },
             {
@@ -2118,7 +3336,14 @@
                     "endOffset": 10536
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 209,
+                        "startColumn": 4,
+                        "startOffset": 10240,
+                        "endColumn": 56,
+                        "endOffset": 10292
+                    }
                 }
             },
             {
@@ -2130,7 +3355,14 @@
                     "endOffset": 10593
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 210,
+                        "startColumn": 4,
+                        "startOffset": 10297,
+                        "endColumn": 56,
+                        "endOffset": 10349
+                    }
                 }
             },
             {
@@ -2142,7 +3374,14 @@
                     "endOffset": 10650
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 211,
+                        "startColumn": 4,
+                        "startOffset": 10354,
+                        "endColumn": 56,
+                        "endOffset": 10406
+                    }
                 }
             },
             {
@@ -2154,7 +3393,14 @@
                     "endOffset": 10708
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 212,
+                        "startColumn": 4,
+                        "startOffset": 10411,
+                        "endColumn": 57,
+                        "endOffset": 10464
+                    }
                 }
             },
             {
@@ -2166,7 +3412,14 @@
                     "endOffset": 10766
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 213,
+                        "startColumn": 4,
+                        "startOffset": 10469,
+                        "endColumn": 57,
+                        "endOffset": 10522
+                    }
                 }
             },
             {
@@ -2178,7 +3431,14 @@
                     "endOffset": 10824
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 214,
+                        "startColumn": 4,
+                        "startOffset": 10527,
+                        "endColumn": 57,
+                        "endOffset": 10580
+                    }
                 }
             },
             {
@@ -2190,7 +3450,14 @@
                     "endOffset": 10882
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 215,
+                        "startColumn": 4,
+                        "startOffset": 10585,
+                        "endColumn": 57,
+                        "endOffset": 10638
+                    }
                 }
             },
             {
@@ -2202,7 +3469,14 @@
                     "endOffset": 10941
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 254,
+                        "startColumn": 4,
+                        "startOffset": 12410,
+                        "endColumn": 58,
+                        "endOffset": 12464
+                    }
                 }
             },
             {
@@ -2214,7 +3488,14 @@
                     "endOffset": 11000
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 255,
+                        "startColumn": 4,
+                        "startOffset": 12469,
+                        "endColumn": 58,
+                        "endOffset": 12523
+                    }
                 }
             },
             {
@@ -2226,7 +3507,14 @@
                     "endOffset": 11059
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 256,
+                        "startColumn": 4,
+                        "startOffset": 12528,
+                        "endColumn": 58,
+                        "endOffset": 12582
+                    }
                 }
             },
             {
@@ -2238,7 +3526,14 @@
                     "endOffset": 11118
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 257,
+                        "startColumn": 4,
+                        "startOffset": 12587,
+                        "endColumn": 58,
+                        "endOffset": 12641
+                    }
                 }
             },
             {
@@ -2250,7 +3545,14 @@
                     "endOffset": 11177
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 258,
+                        "startColumn": 4,
+                        "startOffset": 12646,
+                        "endColumn": 58,
+                        "endOffset": 12700
+                    }
                 }
             },
             {
@@ -2262,7 +3564,14 @@
                     "endOffset": 11235
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 253,
+                        "startColumn": 4,
+                        "startOffset": 12352,
+                        "endColumn": 57,
+                        "endOffset": 12405
+                    }
                 }
             },
             {
@@ -2274,7 +3583,14 @@
                     "endOffset": 11294
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 259,
+                        "startColumn": 4,
+                        "startOffset": 12705,
+                        "endColumn": 58,
+                        "endOffset": 12759
+                    }
                 }
             },
             {
@@ -2286,7 +3602,14 @@
                     "endOffset": 11353
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 260,
+                        "startColumn": 4,
+                        "startOffset": 12764,
+                        "endColumn": 58,
+                        "endOffset": 12818
+                    }
                 }
             },
             {
@@ -2298,7 +3621,14 @@
                     "endOffset": 11412
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 261,
+                        "startColumn": 4,
+                        "startOffset": 12823,
+                        "endColumn": 58,
+                        "endOffset": 12877
+                    }
                 }
             },
             {
@@ -2310,7 +3640,14 @@
                     "endOffset": 11471
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 262,
+                        "startColumn": 4,
+                        "startOffset": 12882,
+                        "endColumn": 58,
+                        "endOffset": 12936
+                    }
                 }
             },
             {
@@ -2322,7 +3659,14 @@
                     "endOffset": 11531
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 263,
+                        "startColumn": 4,
+                        "startOffset": 12941,
+                        "endColumn": 59,
+                        "endOffset": 12996
+                    }
                 }
             },
             {
@@ -2334,7 +3678,14 @@
                     "endOffset": 11591
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 264,
+                        "startColumn": 4,
+                        "startOffset": 13001,
+                        "endColumn": 59,
+                        "endOffset": 13056
+                    }
                 }
             },
             {
@@ -2346,7 +3697,14 @@
                     "endOffset": 11651
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 265,
+                        "startColumn": 4,
+                        "startOffset": 13061,
+                        "endColumn": 59,
+                        "endOffset": 13116
+                    }
                 }
             },
             {
@@ -2358,7 +3716,14 @@
                     "endOffset": 11711
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 266,
+                        "startColumn": 4,
+                        "startOffset": 13121,
+                        "endColumn": 59,
+                        "endOffset": 13176
+                    }
                 }
             },
             {
@@ -2370,7 +3735,14 @@
                     "endOffset": 11768
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 1313,
+                        "endColumn": 56,
+                        "endOffset": 1365
+                    }
                 }
             },
             {
@@ -2382,7 +3754,14 @@
                     "endOffset": 11825
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1370,
+                        "endColumn": 56,
+                        "endOffset": 1422
+                    }
                 }
             },
             {
@@ -2394,7 +3773,14 @@
                     "endOffset": 11882
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1427,
+                        "endColumn": 56,
+                        "endOffset": 1479
+                    }
                 }
             },
             {
@@ -2406,7 +3792,14 @@
                     "endOffset": 11939
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1484,
+                        "endColumn": 56,
+                        "endOffset": 1536
+                    }
                 }
             },
             {
@@ -2418,7 +3811,14 @@
                     "endOffset": 11996
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1541,
+                        "endColumn": 56,
+                        "endOffset": 1593
+                    }
                 }
             },
             {
@@ -2430,7 +3830,14 @@
                     "endOffset": 12052
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1257,
+                        "endColumn": 55,
+                        "endOffset": 1308
+                    }
                 }
             },
             {
@@ -2442,7 +3849,14 @@
                     "endOffset": 12109
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1598,
+                        "endColumn": 56,
+                        "endOffset": 1650
+                    }
                 }
             },
             {
@@ -2454,7 +3868,14 @@
                     "endOffset": 12166
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1655,
+                        "endColumn": 56,
+                        "endOffset": 1707
+                    }
                 }
             },
             {
@@ -2466,7 +3887,14 @@
                     "endOffset": 12223
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 1712,
+                        "endColumn": 56,
+                        "endOffset": 1764
+                    }
                 }
             },
             {
@@ -2478,7 +3906,14 @@
                     "endOffset": 12280
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 1769,
+                        "endColumn": 56,
+                        "endOffset": 1821
+                    }
                 }
             },
             {
@@ -2490,7 +3925,14 @@
                     "endOffset": 12338
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 1826,
+                        "endColumn": 57,
+                        "endOffset": 1879
+                    }
                 }
             },
             {
@@ -2502,7 +3944,14 @@
                     "endOffset": 12396
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 1884,
+                        "endColumn": 57,
+                        "endOffset": 1937
+                    }
                 }
             },
             {
@@ -2514,7 +3963,14 @@
                     "endOffset": 12454
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 1942,
+                        "endColumn": 57,
+                        "endOffset": 1995
+                    }
                 }
             },
             {
@@ -2526,7 +3982,14 @@
                     "endOffset": 12512
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 2000,
+                        "endColumn": 57,
+                        "endOffset": 2053
+                    }
                 }
             },
             {
@@ -2538,7 +4001,14 @@
                     "endOffset": 12571
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 2138,
+                        "endColumn": 58,
+                        "endOffset": 2192
+                    }
                 }
             },
             {
@@ -2550,7 +4020,14 @@
                     "endOffset": 12630
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 2197,
+                        "endColumn": 58,
+                        "endOffset": 2251
+                    }
                 }
             },
             {
@@ -2562,7 +4039,14 @@
                     "endOffset": 12689
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 2256,
+                        "endColumn": 58,
+                        "endOffset": 2310
+                    }
                 }
             },
             {
@@ -2574,7 +4058,14 @@
                     "endOffset": 12748
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 4,
+                        "startOffset": 2315,
+                        "endColumn": 58,
+                        "endOffset": 2369
+                    }
                 }
             },
             {
@@ -2586,7 +4077,14 @@
                     "endOffset": 12807
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2374,
+                        "endColumn": 58,
+                        "endOffset": 2428
+                    }
                 }
             },
             {
@@ -2598,7 +4096,14 @@
                     "endOffset": 12865
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 2080,
+                        "endColumn": 57,
+                        "endOffset": 2133
+                    }
                 }
             },
             {
@@ -2610,7 +4115,14 @@
                     "endOffset": 12924
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 2433,
+                        "endColumn": 58,
+                        "endOffset": 2487
+                    }
                 }
             },
             {
@@ -2622,7 +4134,14 @@
                     "endOffset": 12983
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 2492,
+                        "endColumn": 58,
+                        "endOffset": 2546
+                    }
                 }
             },
             {
@@ -2634,7 +4153,14 @@
                     "endOffset": 13042
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 2551,
+                        "endColumn": 58,
+                        "endOffset": 2605
+                    }
                 }
             },
             {
@@ -2646,7 +4172,14 @@
                     "endOffset": 13101
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 2610,
+                        "endColumn": 58,
+                        "endOffset": 2664
+                    }
                 }
             },
             {
@@ -2658,7 +4191,14 @@
                     "endOffset": 13161
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 4,
+                        "startOffset": 2669,
+                        "endColumn": 59,
+                        "endOffset": 2724
+                    }
                 }
             },
             {
@@ -2670,7 +4210,14 @@
                     "endOffset": 13221
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 2729,
+                        "endColumn": 59,
+                        "endOffset": 2784
+                    }
                 }
             },
             {
@@ -2682,7 +4229,14 @@
                     "endOffset": 13281
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 4,
+                        "startOffset": 2789,
+                        "endColumn": 59,
+                        "endOffset": 2844
+                    }
                 }
             },
             {
@@ -2694,7 +4248,14 @@
                     "endOffset": 13341
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 2849,
+                        "endColumn": 59,
+                        "endOffset": 2904
+                    }
                 }
             },
             {
@@ -2706,7 +4267,14 @@
                     "endOffset": 13397
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 505,
+                        "endColumn": 55,
+                        "endOffset": 556
+                    }
                 }
             },
             {
@@ -2718,7 +4286,14 @@
                     "endOffset": 13453
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 561,
+                        "endColumn": 55,
+                        "endOffset": 612
+                    }
                 }
             },
             {
@@ -2730,7 +4305,14 @@
                     "endOffset": 13509
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 617,
+                        "endColumn": 55,
+                        "endOffset": 668
+                    }
                 }
             },
             {
@@ -2742,7 +4324,14 @@
                     "endOffset": 13565
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 673,
+                        "endColumn": 55,
+                        "endOffset": 724
+                    }
                 }
             },
             {
@@ -2754,7 +4343,14 @@
                     "endOffset": 13621
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 729,
+                        "endColumn": 55,
+                        "endOffset": 780
+                    }
                 }
             },
             {
@@ -2766,7 +4362,14 @@
                     "endOffset": 13676
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 450,
+                        "endColumn": 54,
+                        "endOffset": 500
+                    }
                 }
             },
             {
@@ -2778,7 +4381,14 @@
                     "endOffset": 13732
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 785,
+                        "endColumn": 55,
+                        "endOffset": 836
+                    }
                 }
             },
             {
@@ -2790,7 +4400,14 @@
                     "endOffset": 13788
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 841,
+                        "endColumn": 55,
+                        "endOffset": 892
+                    }
                 }
             },
             {
@@ -2802,7 +4419,14 @@
                     "endOffset": 13844
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 897,
+                        "endColumn": 55,
+                        "endOffset": 948
+                    }
                 }
             },
             {
@@ -2814,7 +4438,14 @@
                     "endOffset": 13900
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 953,
+                        "endColumn": 55,
+                        "endOffset": 1004
+                    }
                 }
             },
             {
@@ -2826,7 +4457,14 @@
                     "endOffset": 13957
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1009,
+                        "endColumn": 56,
+                        "endOffset": 1061
+                    }
                 }
             },
             {
@@ -2838,7 +4476,14 @@
                     "endOffset": 14014
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1066,
+                        "endColumn": 56,
+                        "endOffset": 1118
+                    }
                 }
             },
             {
@@ -2850,7 +4495,14 @@
                     "endOffset": 14071
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1123,
+                        "endColumn": 56,
+                        "endOffset": 1175
+                    }
                 }
             },
             {
@@ -2862,7 +4514,14 @@
                     "endOffset": 14128
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1180,
+                        "endColumn": 56,
+                        "endOffset": 1232
+                    }
                 }
             },
             {
@@ -2874,7 +4533,14 @@
                     "endOffset": 14185
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 152,
+                        "startColumn": 4,
+                        "startOffset": 7315,
+                        "endColumn": 56,
+                        "endOffset": 7367
+                    }
                 }
             },
             {
@@ -2886,7 +4552,14 @@
                     "endOffset": 14242
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 153,
+                        "startColumn": 4,
+                        "startOffset": 7372,
+                        "endColumn": 56,
+                        "endOffset": 7424
+                    }
                 }
             },
             {
@@ -2898,7 +4571,14 @@
                     "endOffset": 14299
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 154,
+                        "startColumn": 4,
+                        "startOffset": 7429,
+                        "endColumn": 56,
+                        "endOffset": 7481
+                    }
                 }
             },
             {
@@ -2910,7 +4590,14 @@
                     "endOffset": 14356
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 155,
+                        "startColumn": 4,
+                        "startOffset": 7486,
+                        "endColumn": 56,
+                        "endOffset": 7538
+                    }
                 }
             },
             {
@@ -2922,7 +4609,14 @@
                     "endOffset": 14413
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 156,
+                        "startColumn": 4,
+                        "startOffset": 7543,
+                        "endColumn": 56,
+                        "endOffset": 7595
+                    }
                 }
             },
             {
@@ -2934,7 +4628,14 @@
                     "endOffset": 14469
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 151,
+                        "startColumn": 4,
+                        "startOffset": 7259,
+                        "endColumn": 55,
+                        "endOffset": 7310
+                    }
                 }
             },
             {
@@ -2946,7 +4647,14 @@
                     "endOffset": 14526
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 157,
+                        "startColumn": 4,
+                        "startOffset": 7600,
+                        "endColumn": 56,
+                        "endOffset": 7652
+                    }
                 }
             },
             {
@@ -2958,7 +4666,14 @@
                     "endOffset": 14583
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 158,
+                        "startColumn": 4,
+                        "startOffset": 7657,
+                        "endColumn": 56,
+                        "endOffset": 7709
+                    }
                 }
             },
             {
@@ -2970,7 +4685,14 @@
                     "endOffset": 14640
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 159,
+                        "startColumn": 4,
+                        "startOffset": 7714,
+                        "endColumn": 56,
+                        "endOffset": 7766
+                    }
                 }
             },
             {
@@ -2982,7 +4704,14 @@
                     "endOffset": 14697
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 160,
+                        "startColumn": 4,
+                        "startOffset": 7771,
+                        "endColumn": 56,
+                        "endOffset": 7823
+                    }
                 }
             },
             {
@@ -2994,7 +4723,14 @@
                     "endOffset": 14755
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 161,
+                        "startColumn": 4,
+                        "startOffset": 7828,
+                        "endColumn": 57,
+                        "endOffset": 7881
+                    }
                 }
             },
             {
@@ -3006,7 +4742,14 @@
                     "endOffset": 14813
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 162,
+                        "startColumn": 4,
+                        "startOffset": 7886,
+                        "endColumn": 57,
+                        "endOffset": 7939
+                    }
                 }
             },
             {
@@ -3018,7 +4761,14 @@
                     "endOffset": 14871
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 7944,
+                        "endColumn": 57,
+                        "endOffset": 7997
+                    }
                 }
             },
             {
@@ -3030,7 +4780,14 @@
                     "endOffset": 14929
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 164,
+                        "startColumn": 4,
+                        "startOffset": 8002,
+                        "endColumn": 57,
+                        "endOffset": 8055
+                    }
                 }
             },
             {
@@ -3042,7 +4799,14 @@
                     "endOffset": 14983
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 311,
+                        "startColumn": 4,
+                        "startOffset": 15350,
+                        "endColumn": 53,
+                        "endOffset": 15399
+                    }
                 }
             },
             {
@@ -3054,7 +4818,14 @@
                     "endOffset": 15042
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 220,
+                        "startColumn": 4,
+                        "startOffset": 10723,
+                        "endColumn": 58,
+                        "endOffset": 10777
+                    }
                 }
             },
             {
@@ -3066,7 +4837,14 @@
                     "endOffset": 15101
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 221,
+                        "startColumn": 4,
+                        "startOffset": 10782,
+                        "endColumn": 58,
+                        "endOffset": 10836
+                    }
                 }
             },
             {
@@ -3078,7 +4856,14 @@
                     "endOffset": 15160
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 222,
+                        "startColumn": 4,
+                        "startOffset": 10841,
+                        "endColumn": 58,
+                        "endOffset": 10895
+                    }
                 }
             },
             {
@@ -3090,7 +4875,14 @@
                     "endOffset": 15219
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 223,
+                        "startColumn": 4,
+                        "startOffset": 10900,
+                        "endColumn": 58,
+                        "endOffset": 10954
+                    }
                 }
             },
             {
@@ -3102,7 +4894,14 @@
                     "endOffset": 15278
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 224,
+                        "startColumn": 4,
+                        "startOffset": 10959,
+                        "endColumn": 58,
+                        "endOffset": 11013
+                    }
                 }
             },
             {
@@ -3114,7 +4913,14 @@
                     "endOffset": 15336
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 219,
+                        "startColumn": 4,
+                        "startOffset": 10665,
+                        "endColumn": 57,
+                        "endOffset": 10718
+                    }
                 }
             },
             {
@@ -3126,7 +4932,14 @@
                     "endOffset": 15395
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 225,
+                        "startColumn": 4,
+                        "startOffset": 11018,
+                        "endColumn": 58,
+                        "endOffset": 11072
+                    }
                 }
             },
             {
@@ -3138,7 +4951,14 @@
                     "endOffset": 15454
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 226,
+                        "startColumn": 4,
+                        "startOffset": 11077,
+                        "endColumn": 58,
+                        "endOffset": 11131
+                    }
                 }
             },
             {
@@ -3150,7 +4970,14 @@
                     "endOffset": 15513
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 227,
+                        "startColumn": 4,
+                        "startOffset": 11136,
+                        "endColumn": 58,
+                        "endOffset": 11190
+                    }
                 }
             },
             {
@@ -3162,7 +4989,14 @@
                     "endOffset": 15572
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 228,
+                        "startColumn": 4,
+                        "startOffset": 11195,
+                        "endColumn": 58,
+                        "endOffset": 11249
+                    }
                 }
             },
             {
@@ -3174,7 +5008,14 @@
                     "endOffset": 15632
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 229,
+                        "startColumn": 4,
+                        "startOffset": 11254,
+                        "endColumn": 59,
+                        "endOffset": 11309
+                    }
                 }
             },
             {
@@ -3186,7 +5027,14 @@
                     "endOffset": 15692
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 230,
+                        "startColumn": 4,
+                        "startOffset": 11314,
+                        "endColumn": 59,
+                        "endOffset": 11369
+                    }
                 }
             },
             {
@@ -3198,7 +5046,14 @@
                     "endOffset": 15752
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 231,
+                        "startColumn": 4,
+                        "startOffset": 11374,
+                        "endColumn": 59,
+                        "endOffset": 11429
+                    }
                 }
             },
             {
@@ -3210,7 +5065,14 @@
                     "endOffset": 15812
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 232,
+                        "startColumn": 4,
+                        "startOffset": 11434,
+                        "endColumn": 59,
+                        "endOffset": 11489
+                    }
                 }
             },
             {
@@ -3222,7 +5084,14 @@
                     "endOffset": 15863
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 335,
+                        "startColumn": 4,
+                        "startOffset": 16370,
+                        "endColumn": 50,
+                        "endOffset": 16416
+                    }
                 }
             },
             {
@@ -3234,7 +5103,14 @@
                     "endOffset": 15915
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 333,
+                        "startColumn": 4,
+                        "startOffset": 16262,
+                        "endColumn": 51,
+                        "endOffset": 16309
+                    }
                 }
             },
             {
@@ -3246,7 +5122,14 @@
                     "endOffset": 15971
                 },
                 "from": {
-                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml"
+                    "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values-night/colors.xml",
+                    "position": {
+                        "startLine": 334,
+                        "startColumn": 4,
+                        "startOffset": 16314,
+                        "endColumn": 55,
+                        "endOffset": 16365
+                    }
                 }
             },
             {
@@ -3258,7 +5141,14 @@
                     "endOffset": 16041
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 69,
+                        "endOffset": 120
+                    }
                 }
             },
             {
@@ -3270,7 +5160,14 @@
                     "endOffset": 16125
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 125,
+                        "endColumn": 83,
+                        "endOffset": 204
+                    }
                 }
             },
             {
@@ -3282,7 +5179,14 @@
                     "endOffset": 16209
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 209,
+                        "endColumn": 83,
+                        "endOffset": 288
+                    }
                 }
             },
             {
@@ -3294,7 +5198,14 @@
                     "endOffset": 16305
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 293,
+                        "endColumn": 95,
+                        "endOffset": 384
+                    }
                 }
             },
             {
@@ -3306,7 +5217,14 @@
                     "endOffset": 16407
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 389,
+                        "endColumn": 101,
+                        "endOffset": 486
+                    }
                 }
             },
             {
@@ -3318,7 +5236,14 @@
                     "endOffset": 16509
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 491,
+                        "endColumn": 101,
+                        "endOffset": 588
+                    }
                 }
             },
             {
@@ -3330,7 +5255,14 @@
                     "endOffset": 16603
                 },
                 "from": {
-                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml"
+                    "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values-night-v8/values-night-v8.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 593,
+                        "endColumn": 93,
+                        "endOffset": 682
+                    }
                 }
             }
         ]

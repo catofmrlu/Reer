@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -21,6 +22,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
@@ -75,6 +77,18 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
             Log.i("过程打印", "queryAllFeeds查询完成");
+
+            FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_add);
+
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i("ontouch", "onClick");
+                    Intent intent = new Intent(getActivity(), InputRssLinkActivity.class);
+                    startActivity(intent);
+                    getActivity().overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+                }
+            });
 
             mRssUnreadList = new ArrayList<>();
 
