@@ -3,12 +3,75 @@
 
     <item
         is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/eefd2b56a861a608fad1257ff8facb899cb52189/output/jars/libs/jcore-android_v1.1.1.jar"
+        jar="/Users/luxin/.android/build-cache/31cc732a0e9d00d7af7152a4e129f179aa07e4d3/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0149c38b9688b28e80fab18616d4e80c1906d573">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/jcore-android_v1.1.1_b1f84d231cfc9b171545c93824ff6b9059ab2aff/classes.dex" />
+        sha1="ebc28f9700af5eef2c0791faf05a4d13646a5591">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6465b3647c85eb7dd840da2e22be23ca235d9313/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ae773ec9921980f78bddeff0c3a00b8e68a30434/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/31cc732a0e9d00d7af7152a4e129f179aa07e4d3/output/jars/libs/janalytics-android_v1.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="df1900dbba537a96fe034dfd9e7467c37c0039be">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/janalytics-android_v1.1.1_17507c686ffe5b7c5a03442e3729399bc566a92f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/jars/libs/jpush-android_v3.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7da1fe9424ad39b3e138685e798569b7e404e8df">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/jpush-android_v3.0.3_7295f8a20056dfb4089b19c9f5a5c8862df794b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_13f51de95d7a368930e9eec750832b1b9c88a716/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/e222c20a1790f8e349b756df37bd67959e0cb132/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7307428a730fbc49ea2db2030a73aee2818f050a">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e248d06f80145fa2e2bca87f7735aa6e34a95dc6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/beb33de4e467ed7c608b689d4b27dff5a52a3087/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa77d8ef01c19b2fa0fb32c077c15d4f637128d3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,57 +120,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/323a409d7b11326c3eb16561851f280ae8781878/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ae773ec9921980f78bddeff0c3a00b8e68a30434/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/eefd2b56a861a608fad1257ff8facb899cb52189/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7880825917f7ad26d7fdfaa421cd1e1827d13c10">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_18f1494c5a3d7ea1a39f7e022463adfb3a22c32d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/jars/libs/jpush-android_v3.0.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7da1fe9424ad39b3e138685e798569b7e404e8df">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/jpush-android_v3.0.3_7295f8a20056dfb4089b19c9f5a5c8862df794b2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_13f51de95d7a368930e9eec750832b1b9c88a716/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/luxin/.android/build-cache/b484d2fd3794c60a56b4fff8c513b09634648dab/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_964bb31a9e7e277130b584bdf1c10f073b314200/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.android/build-cache/e222c20a1790f8e349b756df37bd67959e0cb132/output/jars/libs/jcore-android_v1.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bd9236d57409592b26609d13554b052dacf1c380">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/jcore-android_v1.1.2_90b8317c8aa0783a76922d311797980ad0549827/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -142,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="e7d0829012a34c5f00069119f93c6bce2fc8f6bf">
+        sha1="881242434ce9791e5fc52f3ab65173c565adb48a">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
     </item>
     <item
@@ -162,15 +189,6 @@
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5e8de18b774ed1ccf56f66281bba742284e1bbdb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luxin/.android/build-cache/beb33de4e467ed7c608b689d4b27dff5a52a3087/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa77d8ef01c19b2fa0fb32c077c15d4f637128d3/classes.dex" />
     </item>
 
 </items>

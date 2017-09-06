@@ -52,32 +52,32 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/ic_radio_button_unchecked_black_24dp.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/exclamatory_mark.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/exclamatory_mark.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/exclamatory_mark.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/exclamatory_mark.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/notification_tile_bg.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/abc_seekbar_track_material.xml"
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/add.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/add.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable/abc_seekbar_track_material.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/icon.png",

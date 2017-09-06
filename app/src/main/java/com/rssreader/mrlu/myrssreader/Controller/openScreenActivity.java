@@ -11,6 +11,8 @@ import android.util.Log;
 import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.R;
 
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
+
 public class openScreenActivity extends AppCompatActivity {
 
     @Override
@@ -20,10 +22,12 @@ public class openScreenActivity extends AppCompatActivity {
         StatusBarUtil.setColor(this, getResources().getColor(R.color.md_white_color_code), 0);
         setContentView(R.layout.activity_open_screen);
 
+//        初始化极光统计对象
+        JAnalyticsInterface.init(getApplicationContext());
+        JAnalyticsInterface.setDebugMode(true);
+
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
-
-//        if (sharedPreferences != null) {
 
         boolean isEnterAppearPages = sharedPreferences.getBoolean("isEnterAppearPages", true);
         //从sp文件中取出isHasFeed,判断是否显示初始页
