@@ -16069,9 +16069,30 @@
                     "startLine": 2139,
                     "startColumn": 4,
                     "startOffset": 154445,
-                    "endLine": 2141,
+                    "endLine": 2148,
                     "endColumn": 12,
-                    "endOffset": 154605
+                    "endOffset": 155008
+                },
+                "from": {
+                    "file": "/Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 11,
+                        "endColumn": 12,
+                        "endOffset": 618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2149,
+                    "startColumn": 4,
+                    "startOffset": 155013,
+                    "endLine": 2151,
+                    "endColumn": 12,
+                    "endOffset": 155173
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
@@ -16087,12 +16108,12 @@
             },
             {
                 "to": {
-                    "startLine": 2142,
+                    "startLine": 2152,
                     "startColumn": 4,
-                    "startOffset": 154610,
-                    "endLine": 2183,
+                    "startOffset": 155178,
+                    "endLine": 2193,
                     "endColumn": 12,
-                    "endOffset": 157791
+                    "endOffset": 158359
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16108,12 +16129,12 @@
             },
             {
                 "to": {
-                    "startLine": 2184,
+                    "startLine": 2194,
                     "startColumn": 4,
-                    "startOffset": 157796,
-                    "endLine": 2226,
+                    "startOffset": 158364,
+                    "endLine": 2236,
                     "endColumn": 12,
-                    "endOffset": 161120
+                    "endOffset": 161688
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16129,11 +16150,11 @@
             },
             {
                 "to": {
-                    "startLine": 2227,
+                    "startLine": 2237,
                     "startColumn": 4,
-                    "startOffset": 161125,
+                    "startOffset": 161693,
                     "endColumn": 61,
-                    "endOffset": 161182
+                    "endOffset": 161750
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16148,12 +16169,12 @@
             },
             {
                 "to": {
-                    "startLine": 2228,
+                    "startLine": 2238,
                     "startColumn": 4,
-                    "startOffset": 161187,
-                    "endLine": 2237,
+                    "startOffset": 161755,
+                    "endLine": 2247,
                     "endColumn": 12,
-                    "endOffset": 161812
+                    "endOffset": 162380
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16169,12 +16190,12 @@
             },
             {
                 "to": {
-                    "startLine": 2238,
+                    "startLine": 2248,
                     "startColumn": 4,
-                    "startOffset": 161817,
-                    "endLine": 2246,
+                    "startOffset": 162385,
+                    "endLine": 2256,
                     "endColumn": 12,
-                    "endOffset": 162426
+                    "endOffset": 162994
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16190,11 +16211,11 @@
             },
             {
                 "to": {
-                    "startLine": 2247,
+                    "startLine": 2257,
                     "startColumn": 4,
-                    "startOffset": 162431,
+                    "startOffset": 162999,
                     "endColumn": 85,
-                    "endOffset": 162512
+                    "endOffset": 163080
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16209,12 +16230,12 @@
             },
             {
                 "to": {
-                    "startLine": 2248,
+                    "startLine": 2258,
                     "startColumn": 4,
-                    "startOffset": 162517,
-                    "endLine": 2249,
+                    "startOffset": 163085,
+                    "endLine": 2259,
                     "endColumn": 12,
-                    "endOffset": 162625
+                    "endOffset": 163193
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16230,12 +16251,12 @@
             },
             {
                 "to": {
-                    "startLine": 2250,
+                    "startLine": 2260,
                     "startColumn": 4,
-                    "startOffset": 162630,
-                    "endLine": 2253,
+                    "startOffset": 163198,
+                    "endLine": 2263,
                     "endColumn": 12,
-                    "endOffset": 162854
+                    "endOffset": 163422
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16251,12 +16272,12 @@
             },
             {
                 "to": {
-                    "startLine": 2254,
+                    "startLine": 2264,
                     "startColumn": 4,
-                    "startOffset": 162859,
-                    "endLine": 2256,
+                    "startOffset": 163427,
+                    "endLine": 2266,
                     "endColumn": 12,
-                    "endOffset": 163014
+                    "endOffset": 163582
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16272,12 +16293,12 @@
             },
             {
                 "to": {
-                    "startLine": 2257,
+                    "startLine": 2267,
                     "startColumn": 4,
-                    "startOffset": 163019,
-                    "endLine": 2259,
+                    "startOffset": 163587,
+                    "endLine": 2269,
                     "endColumn": 12,
-                    "endOffset": 163166
+                    "endOffset": 163734
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16293,12 +16314,12 @@
             },
             {
                 "to": {
-                    "startLine": 2260,
+                    "startLine": 2270,
                     "startColumn": 4,
-                    "startOffset": 163171,
-                    "endLine": 2262,
+                    "startOffset": 163739,
+                    "endLine": 2272,
                     "endColumn": 12,
-                    "endOffset": 163337
+                    "endOffset": 163905
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16314,12 +16335,12 @@
             },
             {
                 "to": {
-                    "startLine": 2263,
+                    "startLine": 2273,
                     "startColumn": 4,
-                    "startOffset": 163342,
-                    "endLine": 2265,
+                    "startOffset": 163910,
+                    "endLine": 2275,
                     "endColumn": 12,
-                    "endOffset": 163504
+                    "endOffset": 164072
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16335,12 +16356,12 @@
             },
             {
                 "to": {
-                    "startLine": 2266,
+                    "startLine": 2276,
                     "startColumn": 4,
-                    "startOffset": 163509,
-                    "endLine": 2269,
+                    "startOffset": 164077,
+                    "endLine": 2279,
                     "endColumn": 12,
-                    "endOffset": 163747
+                    "endOffset": 164315
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16356,12 +16377,12 @@
             },
             {
                 "to": {
-                    "startLine": 2270,
+                    "startLine": 2280,
                     "startColumn": 4,
-                    "startOffset": 163752,
-                    "endLine": 2272,
+                    "startOffset": 164320,
+                    "endLine": 2282,
                     "endColumn": 12,
-                    "endOffset": 163917
+                    "endOffset": 164485
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16377,12 +16398,12 @@
             },
             {
                 "to": {
-                    "startLine": 2273,
+                    "startLine": 2283,
                     "startColumn": 4,
-                    "startOffset": 163922,
-                    "endLine": 2275,
+                    "startOffset": 164490,
+                    "endLine": 2285,
                     "endColumn": 12,
-                    "endOffset": 164090
+                    "endOffset": 164658
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16398,12 +16419,12 @@
             },
             {
                 "to": {
-                    "startLine": 2276,
+                    "startLine": 2286,
                     "startColumn": 4,
-                    "startOffset": 164095,
-                    "endLine": 2278,
+                    "startOffset": 164663,
+                    "endLine": 2288,
                     "endColumn": 12,
-                    "endOffset": 164261
+                    "endOffset": 164829
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16419,12 +16440,12 @@
             },
             {
                 "to": {
-                    "startLine": 2279,
+                    "startLine": 2289,
                     "startColumn": 4,
-                    "startOffset": 164266,
-                    "endLine": 2282,
+                    "startOffset": 164834,
+                    "endLine": 2292,
                     "endColumn": 12,
-                    "endOffset": 164535
+                    "endOffset": 165103
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16440,12 +16461,12 @@
             },
             {
                 "to": {
-                    "startLine": 2283,
+                    "startLine": 2293,
                     "startColumn": 4,
-                    "startOffset": 164540,
-                    "endLine": 2285,
+                    "startOffset": 165108,
+                    "endLine": 2295,
                     "endColumn": 12,
-                    "endOffset": 164734
+                    "endOffset": 165302
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16461,12 +16482,12 @@
             },
             {
                 "to": {
-                    "startLine": 2286,
+                    "startLine": 2296,
                     "startColumn": 4,
-                    "startOffset": 164739,
-                    "endLine": 2289,
+                    "startOffset": 165307,
+                    "endLine": 2299,
                     "endColumn": 12,
-                    "endOffset": 164939
+                    "endOffset": 165507
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16482,12 +16503,12 @@
             },
             {
                 "to": {
-                    "startLine": 2290,
+                    "startLine": 2300,
                     "startColumn": 4,
-                    "startOffset": 164944,
-                    "endLine": 2293,
+                    "startOffset": 165512,
+                    "endLine": 2303,
                     "endColumn": 12,
-                    "endOffset": 165269
+                    "endOffset": 165837
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16503,11 +16524,11 @@
             },
             {
                 "to": {
-                    "startLine": 2294,
+                    "startLine": 2304,
                     "startColumn": 4,
-                    "startOffset": 165274,
+                    "startOffset": 165842,
                     "endColumn": 83,
-                    "endOffset": 165353
+                    "endOffset": 165921
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16522,11 +16543,11 @@
             },
             {
                 "to": {
-                    "startLine": 2295,
+                    "startLine": 2305,
                     "startColumn": 4,
-                    "startOffset": 165358,
+                    "startOffset": 165926,
                     "endColumn": 95,
-                    "endOffset": 165449
+                    "endOffset": 166017
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16541,11 +16562,11 @@
             },
             {
                 "to": {
-                    "startLine": 2296,
+                    "startLine": 2306,
                     "startColumn": 4,
-                    "startOffset": 165454,
+                    "startOffset": 166022,
                     "endColumn": 95,
-                    "endOffset": 165545
+                    "endOffset": 166113
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16560,11 +16581,11 @@
             },
             {
                 "to": {
-                    "startLine": 2297,
+                    "startLine": 2307,
                     "startColumn": 4,
-                    "startOffset": 165550,
+                    "startOffset": 166118,
                     "endColumn": 97,
-                    "endOffset": 165643
+                    "endOffset": 166211
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16579,11 +16600,11 @@
             },
             {
                 "to": {
-                    "startLine": 2298,
+                    "startLine": 2308,
                     "startColumn": 4,
-                    "startOffset": 165648,
+                    "startOffset": 166216,
                     "endColumn": 99,
-                    "endOffset": 165743
+                    "endOffset": 166311
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16598,11 +16619,11 @@
             },
             {
                 "to": {
-                    "startLine": 2299,
+                    "startLine": 2309,
                     "startColumn": 4,
-                    "startOffset": 165748,
+                    "startOffset": 166316,
                     "endColumn": 101,
-                    "endOffset": 165845
+                    "endOffset": 166413
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16617,11 +16638,11 @@
             },
             {
                 "to": {
-                    "startLine": 2300,
+                    "startLine": 2310,
                     "startColumn": 4,
-                    "startOffset": 165850,
+                    "startOffset": 166418,
                     "endColumn": 101,
-                    "endOffset": 165947
+                    "endOffset": 166515
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16636,11 +16657,11 @@
             },
             {
                 "to": {
-                    "startLine": 2301,
+                    "startLine": 2311,
                     "startColumn": 4,
-                    "startOffset": 165952,
+                    "startOffset": 166520,
                     "endColumn": 101,
-                    "endOffset": 166049
+                    "endOffset": 166617
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16655,11 +16676,11 @@
             },
             {
                 "to": {
-                    "startLine": 2302,
+                    "startLine": 2312,
                     "startColumn": 4,
-                    "startOffset": 166054,
+                    "startOffset": 166622,
                     "endColumn": 101,
-                    "endOffset": 166151
+                    "endOffset": 166719
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16674,11 +16695,11 @@
             },
             {
                 "to": {
-                    "startLine": 2303,
+                    "startLine": 2313,
                     "startColumn": 4,
-                    "startOffset": 166156,
+                    "startOffset": 166724,
                     "endColumn": 101,
-                    "endOffset": 166253
+                    "endOffset": 166821
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16693,11 +16714,11 @@
             },
             {
                 "to": {
-                    "startLine": 2304,
+                    "startLine": 2314,
                     "startColumn": 4,
-                    "startOffset": 166258,
+                    "startOffset": 166826,
                     "endColumn": 99,
-                    "endOffset": 166353
+                    "endOffset": 166921
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16712,11 +16733,11 @@
             },
             {
                 "to": {
-                    "startLine": 2305,
+                    "startLine": 2315,
                     "startColumn": 4,
-                    "startOffset": 166358,
+                    "startOffset": 166926,
                     "endColumn": 95,
-                    "endOffset": 166449
+                    "endOffset": 167017
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16731,11 +16752,11 @@
             },
             {
                 "to": {
-                    "startLine": 2306,
+                    "startLine": 2316,
                     "startColumn": 4,
-                    "startOffset": 166454,
+                    "startOffset": 167022,
                     "endColumn": 111,
-                    "endOffset": 166561
+                    "endOffset": 167129
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16750,11 +16771,11 @@
             },
             {
                 "to": {
-                    "startLine": 2307,
+                    "startLine": 2317,
                     "startColumn": 4,
-                    "startOffset": 166566,
+                    "startOffset": 167134,
                     "endColumn": 128,
-                    "endOffset": 166690
+                    "endOffset": 167258
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16769,11 +16790,11 @@
             },
             {
                 "to": {
-                    "startLine": 2308,
+                    "startLine": 2318,
                     "startColumn": 4,
-                    "startOffset": 166695,
+                    "startOffset": 167263,
                     "endColumn": 122,
-                    "endOffset": 166813
+                    "endOffset": 167381
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16788,11 +16809,11 @@
             },
             {
                 "to": {
-                    "startLine": 2309,
+                    "startLine": 2319,
                     "startColumn": 4,
-                    "startOffset": 166818,
+                    "startOffset": 167386,
                     "endColumn": 130,
-                    "endOffset": 166944
+                    "endOffset": 167512
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16807,11 +16828,11 @@
             },
             {
                 "to": {
-                    "startLine": 2310,
+                    "startLine": 2320,
                     "startColumn": 4,
-                    "startOffset": 166949,
+                    "startOffset": 167517,
                     "endColumn": 130,
-                    "endOffset": 167075
+                    "endOffset": 167643
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16826,11 +16847,11 @@
             },
             {
                 "to": {
-                    "startLine": 2311,
+                    "startLine": 2321,
                     "startColumn": 4,
-                    "startOffset": 167080,
+                    "startOffset": 167648,
                     "endColumn": 97,
-                    "endOffset": 167173
+                    "endOffset": 167741
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16845,11 +16866,11 @@
             },
             {
                 "to": {
-                    "startLine": 2312,
+                    "startLine": 2322,
                     "startColumn": 4,
-                    "startOffset": 167178,
+                    "startOffset": 167746,
                     "endColumn": 113,
-                    "endOffset": 167287
+                    "endOffset": 167855
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16864,11 +16885,11 @@
             },
             {
                 "to": {
-                    "startLine": 2313,
+                    "startLine": 2323,
                     "startColumn": 4,
-                    "startOffset": 167292,
+                    "startOffset": 167860,
                     "endColumn": 93,
-                    "endOffset": 167381
+                    "endOffset": 167949
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16883,12 +16904,12 @@
             },
             {
                 "to": {
-                    "startLine": 2314,
+                    "startLine": 2324,
                     "startColumn": 4,
-                    "startOffset": 167386,
-                    "endLine": 2317,
+                    "startOffset": 167954,
+                    "endLine": 2327,
                     "endColumn": 12,
-                    "endOffset": 167580
+                    "endOffset": 168148
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16904,12 +16925,12 @@
             },
             {
                 "to": {
-                    "startLine": 2318,
+                    "startLine": 2328,
                     "startColumn": 4,
-                    "startOffset": 167585,
-                    "endLine": 2321,
+                    "startOffset": 168153,
+                    "endLine": 2331,
                     "endColumn": 12,
-                    "endOffset": 167784
+                    "endOffset": 168352
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16925,11 +16946,11 @@
             },
             {
                 "to": {
-                    "startLine": 2322,
+                    "startLine": 2332,
                     "startColumn": 4,
-                    "startOffset": 167789,
+                    "startOffset": 168357,
                     "endColumn": 68,
-                    "endOffset": 167853
+                    "endOffset": 168421
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16944,11 +16965,11 @@
             },
             {
                 "to": {
-                    "startLine": 2323,
+                    "startLine": 2333,
                     "startColumn": 4,
-                    "startOffset": 167858,
+                    "startOffset": 168426,
                     "endColumn": 115,
-                    "endOffset": 167969
+                    "endOffset": 168537
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16963,11 +16984,11 @@
             },
             {
                 "to": {
-                    "startLine": 2324,
+                    "startLine": 2334,
                     "startColumn": 4,
-                    "startOffset": 167974,
+                    "startOffset": 168542,
                     "endColumn": 127,
-                    "endOffset": 168097
+                    "endOffset": 168665
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -16982,11 +17003,11 @@
             },
             {
                 "to": {
-                    "startLine": 2325,
+                    "startLine": 2335,
                     "startColumn": 4,
-                    "startOffset": 168102,
+                    "startOffset": 168670,
                     "endColumn": 63,
-                    "endOffset": 168161
+                    "endOffset": 168729
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17001,12 +17022,12 @@
             },
             {
                 "to": {
-                    "startLine": 2326,
+                    "startLine": 2336,
                     "startColumn": 4,
-                    "startOffset": 168166,
-                    "endLine": 2329,
+                    "startOffset": 168734,
+                    "endLine": 2339,
                     "endColumn": 12,
-                    "endOffset": 168365
+                    "endOffset": 168933
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17022,11 +17043,11 @@
             },
             {
                 "to": {
-                    "startLine": 2330,
+                    "startLine": 2340,
                     "startColumn": 4,
-                    "startOffset": 168370,
+                    "startOffset": 168938,
                     "endColumn": 68,
-                    "endOffset": 168434
+                    "endOffset": 169002
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17041,12 +17062,12 @@
             },
             {
                 "to": {
-                    "startLine": 2331,
+                    "startLine": 2341,
                     "startColumn": 4,
-                    "startOffset": 168439,
-                    "endLine": 2334,
+                    "startOffset": 169007,
+                    "endLine": 2344,
                     "endColumn": 12,
-                    "endOffset": 168637
+                    "endOffset": 169205
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17062,11 +17083,11 @@
             },
             {
                 "to": {
-                    "startLine": 2335,
+                    "startLine": 2345,
                     "startColumn": 4,
-                    "startOffset": 168642,
+                    "startOffset": 169210,
                     "endColumn": 69,
-                    "endOffset": 168707
+                    "endOffset": 169275
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17081,12 +17102,12 @@
             },
             {
                 "to": {
-                    "startLine": 2336,
+                    "startLine": 2346,
                     "startColumn": 4,
-                    "startOffset": 168712,
-                    "endLine": 2337,
+                    "startOffset": 169280,
+                    "endLine": 2347,
                     "endColumn": 12,
-                    "endOffset": 168847
+                    "endOffset": 169415
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17102,12 +17123,12 @@
             },
             {
                 "to": {
-                    "startLine": 2338,
+                    "startLine": 2348,
                     "startColumn": 4,
-                    "startOffset": 168852,
-                    "endLine": 2339,
+                    "startOffset": 169420,
+                    "endLine": 2349,
                     "endColumn": 12,
-                    "endOffset": 168981
+                    "endOffset": 169549
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17123,11 +17144,11 @@
             },
             {
                 "to": {
-                    "startLine": 2340,
+                    "startLine": 2350,
                     "startColumn": 4,
-                    "startOffset": 168986,
+                    "startOffset": 169554,
                     "endColumn": 95,
-                    "endOffset": 169077
+                    "endOffset": 169645
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17142,11 +17163,11 @@
             },
             {
                 "to": {
-                    "startLine": 2341,
+                    "startLine": 2351,
                     "startColumn": 4,
-                    "startOffset": 169082,
+                    "startOffset": 169650,
                     "endColumn": 111,
-                    "endOffset": 169189
+                    "endOffset": 169757
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17161,11 +17182,11 @@
             },
             {
                 "to": {
-                    "startLine": 2342,
+                    "startLine": 2352,
                     "startColumn": 4,
-                    "startOffset": 169194,
+                    "startOffset": 169762,
                     "endColumn": 99,
-                    "endOffset": 169289
+                    "endOffset": 169857
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17180,11 +17201,11 @@
             },
             {
                 "to": {
-                    "startLine": 2343,
+                    "startLine": 2353,
                     "startColumn": 4,
-                    "startOffset": 169294,
+                    "startOffset": 169862,
                     "endColumn": 115,
-                    "endOffset": 169405
+                    "endOffset": 169973
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17199,11 +17220,11 @@
             },
             {
                 "to": {
-                    "startLine": 2344,
+                    "startLine": 2354,
                     "startColumn": 4,
-                    "startOffset": 169410,
+                    "startOffset": 169978,
                     "endColumn": 95,
-                    "endOffset": 169501
+                    "endOffset": 170069
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17218,11 +17239,11 @@
             },
             {
                 "to": {
-                    "startLine": 2345,
+                    "startLine": 2355,
                     "startColumn": 4,
-                    "startOffset": 169506,
+                    "startOffset": 170074,
                     "endColumn": 111,
-                    "endOffset": 169613
+                    "endOffset": 170181
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17237,12 +17258,12 @@
             },
             {
                 "to": {
-                    "startLine": 2346,
+                    "startLine": 2356,
                     "startColumn": 4,
-                    "startOffset": 169618,
-                    "endLine": 2347,
+                    "startOffset": 170186,
+                    "endLine": 2357,
                     "endColumn": 12,
-                    "endOffset": 169753
+                    "endOffset": 170321
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17258,11 +17279,11 @@
             },
             {
                 "to": {
-                    "startLine": 2348,
+                    "startLine": 2358,
                     "startColumn": 4,
-                    "startOffset": 169758,
+                    "startOffset": 170326,
                     "endColumn": 135,
-                    "endOffset": 169889
+                    "endOffset": 170457
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17277,12 +17298,12 @@
             },
             {
                 "to": {
-                    "startLine": 2349,
+                    "startLine": 2359,
                     "startColumn": 4,
-                    "startOffset": 169894,
-                    "endLine": 2350,
+                    "startOffset": 170462,
+                    "endLine": 2360,
                     "endColumn": 12,
-                    "endOffset": 170053
+                    "endOffset": 170621
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17298,11 +17319,11 @@
             },
             {
                 "to": {
-                    "startLine": 2351,
+                    "startLine": 2361,
                     "startColumn": 4,
-                    "startOffset": 170058,
+                    "startOffset": 170626,
                     "endColumn": 129,
-                    "endOffset": 170183
+                    "endOffset": 170751
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17317,12 +17338,12 @@
             },
             {
                 "to": {
-                    "startLine": 2352,
+                    "startLine": 2362,
                     "startColumn": 4,
-                    "startOffset": 170188,
-                    "endLine": 2353,
+                    "startOffset": 170756,
+                    "endLine": 2363,
                     "endColumn": 12,
-                    "endOffset": 170341
+                    "endOffset": 170909
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17338,12 +17359,12 @@
             },
             {
                 "to": {
-                    "startLine": 2354,
+                    "startLine": 2364,
                     "startColumn": 4,
-                    "startOffset": 170346,
-                    "endLine": 2355,
+                    "startOffset": 170914,
+                    "endLine": 2365,
                     "endColumn": 12,
-                    "endOffset": 170491
+                    "endOffset": 171059
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17359,11 +17380,11 @@
             },
             {
                 "to": {
-                    "startLine": 2356,
+                    "startLine": 2366,
                     "startColumn": 4,
-                    "startOffset": 170496,
+                    "startOffset": 171064,
                     "endColumn": 140,
-                    "endOffset": 170632
+                    "endOffset": 171200
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17378,12 +17399,12 @@
             },
             {
                 "to": {
-                    "startLine": 2357,
+                    "startLine": 2367,
                     "startColumn": 4,
-                    "startOffset": 170637,
-                    "endLine": 2358,
+                    "startOffset": 171205,
+                    "endLine": 2368,
                     "endColumn": 12,
-                    "endOffset": 170776
+                    "endOffset": 171344
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17399,11 +17420,11 @@
             },
             {
                 "to": {
-                    "startLine": 2359,
+                    "startLine": 2369,
                     "startColumn": 4,
-                    "startOffset": 170781,
+                    "startOffset": 171349,
                     "endColumn": 134,
-                    "endOffset": 170911
+                    "endOffset": 171479
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17418,11 +17439,11 @@
             },
             {
                 "to": {
-                    "startLine": 2360,
+                    "startLine": 2370,
                     "startColumn": 4,
-                    "startOffset": 170916,
+                    "startOffset": 171484,
                     "endColumn": 111,
-                    "endOffset": 171023
+                    "endOffset": 171591
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17437,11 +17458,11 @@
             },
             {
                 "to": {
-                    "startLine": 2361,
+                    "startLine": 2371,
                     "startColumn": 4,
-                    "startOffset": 171028,
+                    "startOffset": 171596,
                     "endColumn": 149,
-                    "endOffset": 171173
+                    "endOffset": 171741
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17456,11 +17477,11 @@
             },
             {
                 "to": {
-                    "startLine": 2362,
+                    "startLine": 2372,
                     "startColumn": 4,
-                    "startOffset": 171178,
+                    "startOffset": 171746,
                     "endColumn": 127,
-                    "endOffset": 171301
+                    "endOffset": 171869
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17475,11 +17496,11 @@
             },
             {
                 "to": {
-                    "startLine": 2363,
+                    "startLine": 2373,
                     "startColumn": 4,
-                    "startOffset": 171306,
+                    "startOffset": 171874,
                     "endColumn": 127,
-                    "endOffset": 171429
+                    "endOffset": 171997
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17494,12 +17515,12 @@
             },
             {
                 "to": {
-                    "startLine": 2364,
+                    "startLine": 2374,
                     "startColumn": 4,
-                    "startOffset": 171434,
-                    "endLine": 2365,
+                    "startOffset": 172002,
+                    "endLine": 2375,
                     "endColumn": 12,
-                    "endOffset": 171565
+                    "endOffset": 172133
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17515,11 +17536,11 @@
             },
             {
                 "to": {
-                    "startLine": 2366,
+                    "startLine": 2376,
                     "startColumn": 4,
-                    "startOffset": 171570,
+                    "startOffset": 172138,
                     "endColumn": 131,
-                    "endOffset": 171697
+                    "endOffset": 172265
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17534,11 +17555,11 @@
             },
             {
                 "to": {
-                    "startLine": 2367,
+                    "startLine": 2377,
                     "startColumn": 4,
-                    "startOffset": 171702,
+                    "startOffset": 172270,
                     "endColumn": 129,
-                    "endOffset": 171827
+                    "endOffset": 172395
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17553,11 +17574,11 @@
             },
             {
                 "to": {
-                    "startLine": 2368,
+                    "startLine": 2378,
                     "startColumn": 4,
-                    "startOffset": 171832,
+                    "startOffset": 172400,
                     "endColumn": 129,
-                    "endOffset": 171957
+                    "endOffset": 172525
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17572,11 +17593,11 @@
             },
             {
                 "to": {
-                    "startLine": 2369,
+                    "startLine": 2379,
                     "startColumn": 4,
-                    "startOffset": 171962,
+                    "startOffset": 172530,
                     "endColumn": 111,
-                    "endOffset": 172069
+                    "endOffset": 172637
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17591,11 +17612,11 @@
             },
             {
                 "to": {
-                    "startLine": 2370,
+                    "startLine": 2380,
                     "startColumn": 4,
-                    "startOffset": 172074,
+                    "startOffset": 172642,
                     "endColumn": 139,
-                    "endOffset": 172209
+                    "endOffset": 172777
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17610,12 +17631,12 @@
             },
             {
                 "to": {
-                    "startLine": 2371,
+                    "startLine": 2381,
                     "startColumn": 4,
-                    "startOffset": 172214,
-                    "endLine": 2373,
+                    "startOffset": 172782,
+                    "endLine": 2383,
                     "endColumn": 12,
-                    "endOffset": 172410
+                    "endOffset": 172978
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17631,11 +17652,11 @@
             },
             {
                 "to": {
-                    "startLine": 2374,
+                    "startLine": 2384,
                     "startColumn": 4,
-                    "startOffset": 172415,
+                    "startOffset": 172983,
                     "endColumn": 91,
-                    "endOffset": 172502
+                    "endOffset": 173070
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17650,12 +17671,12 @@
             },
             {
                 "to": {
-                    "startLine": 2375,
+                    "startLine": 2385,
                     "startColumn": 4,
-                    "startOffset": 172507,
-                    "endLine": 2377,
+                    "startOffset": 173075,
+                    "endLine": 2387,
                     "endColumn": 12,
-                    "endOffset": 172681
+                    "endOffset": 173249
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17671,12 +17692,12 @@
             },
             {
                 "to": {
-                    "startLine": 2378,
+                    "startLine": 2388,
                     "startColumn": 4,
-                    "startOffset": 172686,
-                    "endLine": 2380,
+                    "startOffset": 173254,
+                    "endLine": 2390,
                     "endColumn": 12,
-                    "endOffset": 172849
+                    "endOffset": 173417
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17692,12 +17713,12 @@
             },
             {
                 "to": {
-                    "startLine": 2381,
+                    "startLine": 2391,
                     "startColumn": 4,
-                    "startOffset": 172854,
-                    "endLine": 2383,
+                    "startOffset": 173422,
+                    "endLine": 2393,
                     "endColumn": 12,
-                    "endOffset": 173024
+                    "endOffset": 173592
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17713,12 +17734,12 @@
             },
             {
                 "to": {
-                    "startLine": 2384,
+                    "startLine": 2394,
                     "startColumn": 4,
-                    "startOffset": 173029,
-                    "endLine": 2387,
+                    "startOffset": 173597,
+                    "endLine": 2397,
                     "endColumn": 12,
-                    "endOffset": 173277
+                    "endOffset": 173845
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17734,12 +17755,12 @@
             },
             {
                 "to": {
-                    "startLine": 2388,
+                    "startLine": 2398,
                     "startColumn": 4,
-                    "startOffset": 173282,
-                    "endLine": 2392,
+                    "startOffset": 173850,
+                    "endLine": 2402,
                     "endColumn": 12,
-                    "endOffset": 173568
+                    "endOffset": 174136
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -17755,11 +17776,11 @@
             },
             {
                 "to": {
-                    "startLine": 2393,
+                    "startLine": 2403,
                     "startColumn": 4,
-                    "startOffset": 173573,
+                    "startOffset": 174141,
                     "endColumn": 67,
-                    "endOffset": 173636
+                    "endOffset": 174204
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17774,11 +17795,11 @@
             },
             {
                 "to": {
-                    "startLine": 2394,
+                    "startLine": 2404,
                     "startColumn": 4,
-                    "startOffset": 173641,
+                    "startOffset": 174209,
                     "endColumn": 72,
-                    "endOffset": 173709
+                    "endOffset": 174277
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17793,11 +17814,11 @@
             },
             {
                 "to": {
-                    "startLine": 2395,
+                    "startLine": 2405,
                     "startColumn": 4,
-                    "startOffset": 173714,
+                    "startOffset": 174282,
                     "endColumn": 73,
-                    "endOffset": 173783
+                    "endOffset": 174351
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17812,11 +17833,11 @@
             },
             {
                 "to": {
-                    "startLine": 2396,
+                    "startLine": 2406,
                     "startColumn": 4,
-                    "startOffset": 173788,
+                    "startOffset": 174356,
                     "endColumn": 72,
-                    "endOffset": 173856
+                    "endOffset": 174424
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17831,11 +17852,11 @@
             },
             {
                 "to": {
-                    "startLine": 2397,
+                    "startLine": 2407,
                     "startColumn": 4,
-                    "startOffset": 173861,
+                    "startOffset": 174429,
                     "endColumn": 73,
-                    "endOffset": 173930
+                    "endOffset": 174498
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17850,12 +17871,12 @@
             },
             {
                 "to": {
-                    "startLine": 2398,
+                    "startLine": 2408,
                     "startColumn": 4,
-                    "startOffset": 173935,
-                    "endLine": 2401,
+                    "startOffset": 174503,
+                    "endLine": 2411,
                     "endColumn": 12,
-                    "endOffset": 174130
+                    "endOffset": 174698
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/values/vpi__styles.xml",
@@ -17871,12 +17892,12 @@
             },
             {
                 "to": {
-                    "startLine": 2402,
+                    "startLine": 2412,
                     "startColumn": 4,
-                    "startOffset": 174135,
-                    "endLine": 2403,
+                    "startOffset": 174703,
+                    "endLine": 2413,
                     "endColumn": 12,
-                    "endOffset": 174276
+                    "endOffset": 174844
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17892,12 +17913,12 @@
             },
             {
                 "to": {
-                    "startLine": 2404,
+                    "startLine": 2414,
                     "startColumn": 4,
-                    "startOffset": 174281,
-                    "endLine": 2405,
+                    "startOffset": 174849,
+                    "endLine": 2415,
                     "endColumn": 12,
-                    "endOffset": 174420
+                    "endOffset": 174988
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17913,12 +17934,12 @@
             },
             {
                 "to": {
-                    "startLine": 2406,
+                    "startLine": 2416,
                     "startColumn": 4,
-                    "startOffset": 174425,
-                    "endLine": 2407,
+                    "startOffset": 174993,
+                    "endLine": 2417,
                     "endColumn": 12,
-                    "endOffset": 174558
+                    "endOffset": 175126
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17934,11 +17955,11 @@
             },
             {
                 "to": {
-                    "startLine": 2408,
+                    "startLine": 2418,
                     "startColumn": 4,
-                    "startOffset": 174563,
+                    "startOffset": 175131,
                     "endColumn": 65,
-                    "endOffset": 174624
+                    "endOffset": 175192
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17953,11 +17974,11 @@
             },
             {
                 "to": {
-                    "startLine": 2409,
+                    "startLine": 2419,
                     "startColumn": 4,
-                    "startOffset": 174629,
+                    "startOffset": 175197,
                     "endColumn": 89,
-                    "endOffset": 174714
+                    "endOffset": 175282
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17972,11 +17993,11 @@
             },
             {
                 "to": {
-                    "startLine": 2410,
+                    "startLine": 2420,
                     "startColumn": 4,
-                    "startOffset": 174719,
+                    "startOffset": 175287,
                     "endColumn": 75,
-                    "endOffset": 174790
+                    "endOffset": 175358
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -17991,11 +18012,11 @@
             },
             {
                 "to": {
-                    "startLine": 2411,
+                    "startLine": 2421,
                     "startColumn": 4,
-                    "startOffset": 174795,
+                    "startOffset": 175363,
                     "endColumn": 103,
-                    "endOffset": 174894
+                    "endOffset": 175462
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18010,11 +18031,11 @@
             },
             {
                 "to": {
-                    "startLine": 2412,
+                    "startLine": 2422,
                     "startColumn": 4,
-                    "startOffset": 174899,
+                    "startOffset": 175467,
                     "endColumn": 89,
-                    "endOffset": 174984
+                    "endOffset": 175552
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18029,11 +18050,11 @@
             },
             {
                 "to": {
-                    "startLine": 2413,
+                    "startLine": 2423,
                     "startColumn": 4,
-                    "startOffset": 174989,
+                    "startOffset": 175557,
                     "endColumn": 101,
-                    "endOffset": 175086
+                    "endOffset": 175654
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18048,11 +18069,11 @@
             },
             {
                 "to": {
-                    "startLine": 2414,
+                    "startLine": 2424,
                     "startColumn": 4,
-                    "startOffset": 175091,
+                    "startOffset": 175659,
                     "endColumn": 107,
-                    "endOffset": 175194
+                    "endOffset": 175762
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18067,11 +18088,11 @@
             },
             {
                 "to": {
-                    "startLine": 2415,
+                    "startLine": 2425,
                     "startColumn": 4,
-                    "startOffset": 175199,
+                    "startOffset": 175767,
                     "endColumn": 107,
-                    "endOffset": 175302
+                    "endOffset": 175870
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18086,11 +18107,11 @@
             },
             {
                 "to": {
-                    "startLine": 2416,
+                    "startLine": 2426,
                     "startColumn": 4,
-                    "startOffset": 175307,
+                    "startOffset": 175875,
                     "endColumn": 99,
-                    "endOffset": 175402
+                    "endOffset": 175970
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18105,11 +18126,11 @@
             },
             {
                 "to": {
-                    "startLine": 2417,
+                    "startLine": 2427,
                     "startColumn": 4,
-                    "startOffset": 175407,
+                    "startOffset": 175975,
                     "endColumn": 79,
-                    "endOffset": 175482
+                    "endOffset": 176050
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18124,11 +18145,11 @@
             },
             {
                 "to": {
-                    "startLine": 2418,
+                    "startLine": 2428,
                     "startColumn": 4,
-                    "startOffset": 175487,
+                    "startOffset": 176055,
                     "endColumn": 91,
-                    "endOffset": 175574
+                    "endOffset": 176142
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18143,11 +18164,11 @@
             },
             {
                 "to": {
-                    "startLine": 2419,
+                    "startLine": 2429,
                     "startColumn": 4,
-                    "startOffset": 175579,
+                    "startOffset": 176147,
                     "endColumn": 97,
-                    "endOffset": 175672
+                    "endOffset": 176240
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18162,12 +18183,12 @@
             },
             {
                 "to": {
-                    "startLine": 2420,
+                    "startLine": 2430,
                     "startColumn": 4,
-                    "startOffset": 175677,
-                    "endLine": 2421,
+                    "startOffset": 176245,
+                    "endLine": 2431,
                     "endColumn": 12,
-                    "endOffset": 175782
+                    "endOffset": 176350
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18183,11 +18204,11 @@
             },
             {
                 "to": {
-                    "startLine": 2422,
+                    "startLine": 2432,
                     "startColumn": 4,
-                    "startOffset": 175787,
+                    "startOffset": 176355,
                     "endColumn": 77,
-                    "endOffset": 175860
+                    "endOffset": 176428
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18202,11 +18223,11 @@
             },
             {
                 "to": {
-                    "startLine": 2423,
+                    "startLine": 2433,
                     "startColumn": 4,
-                    "startOffset": 175865,
+                    "startOffset": 176433,
                     "endColumn": 105,
-                    "endOffset": 175966
+                    "endOffset": 176534
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18221,11 +18242,11 @@
             },
             {
                 "to": {
-                    "startLine": 2424,
+                    "startLine": 2434,
                     "startColumn": 4,
-                    "startOffset": 175971,
+                    "startOffset": 176539,
                     "endColumn": 91,
-                    "endOffset": 176058
+                    "endOffset": 176626
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18240,11 +18261,11 @@
             },
             {
                 "to": {
-                    "startLine": 2425,
+                    "startLine": 2435,
                     "startColumn": 4,
-                    "startOffset": 176063,
+                    "startOffset": 176631,
                     "endColumn": 103,
-                    "endOffset": 176162
+                    "endOffset": 176730
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18259,11 +18280,11 @@
             },
             {
                 "to": {
-                    "startLine": 2426,
+                    "startLine": 2436,
                     "startColumn": 4,
-                    "startOffset": 176167,
+                    "startOffset": 176735,
                     "endColumn": 109,
-                    "endOffset": 176272
+                    "endOffset": 176840
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18278,12 +18299,12 @@
             },
             {
                 "to": {
-                    "startLine": 2427,
+                    "startLine": 2437,
                     "startColumn": 4,
-                    "startOffset": 176277,
-                    "endLine": 2428,
+                    "startOffset": 176845,
+                    "endLine": 2438,
                     "endColumn": 12,
-                    "endOffset": 176394
+                    "endOffset": 176962
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18299,12 +18320,12 @@
             },
             {
                 "to": {
-                    "startLine": 2429,
+                    "startLine": 2439,
                     "startColumn": 4,
-                    "startOffset": 176399,
-                    "endLine": 2432,
+                    "startOffset": 176967,
+                    "endLine": 2442,
                     "endColumn": 12,
-                    "endOffset": 176557
+                    "endOffset": 177125
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18320,12 +18341,12 @@
             },
             {
                 "to": {
-                    "startLine": 2433,
+                    "startLine": 2443,
                     "startColumn": 4,
-                    "startOffset": 176562,
-                    "endLine": 2436,
+                    "startOffset": 177130,
+                    "endLine": 2446,
                     "endColumn": 12,
-                    "endOffset": 176714
+                    "endOffset": 177282
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18341,12 +18362,12 @@
             },
             {
                 "to": {
-                    "startLine": 2437,
+                    "startLine": 2447,
                     "startColumn": 4,
-                    "startOffset": 176719,
-                    "endLine": 2439,
+                    "startOffset": 177287,
+                    "endLine": 2449,
                     "endColumn": 12,
-                    "endOffset": 176868
+                    "endOffset": 177436
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18362,12 +18383,12 @@
             },
             {
                 "to": {
-                    "startLine": 2440,
+                    "startLine": 2450,
                     "startColumn": 4,
-                    "startOffset": 176873,
-                    "endLine": 2444,
+                    "startOffset": 177441,
+                    "endLine": 2454,
                     "endColumn": 12,
-                    "endOffset": 177226
+                    "endOffset": 177794
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18383,12 +18404,12 @@
             },
             {
                 "to": {
-                    "startLine": 2445,
+                    "startLine": 2455,
                     "startColumn": 4,
-                    "startOffset": 177231,
-                    "endLine": 2447,
+                    "startOffset": 177799,
+                    "endLine": 2457,
                     "endColumn": 12,
-                    "endOffset": 177393
+                    "endOffset": 177961
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18404,12 +18425,12 @@
             },
             {
                 "to": {
-                    "startLine": 2448,
+                    "startLine": 2458,
                     "startColumn": 4,
-                    "startOffset": 177398,
-                    "endLine": 2452,
+                    "startOffset": 177966,
+                    "endLine": 2462,
                     "endColumn": 12,
-                    "endOffset": 177763
+                    "endOffset": 178331
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18425,12 +18446,12 @@
             },
             {
                 "to": {
-                    "startLine": 2453,
+                    "startLine": 2463,
                     "startColumn": 4,
-                    "startOffset": 177768,
-                    "endLine": 2456,
+                    "startOffset": 178336,
+                    "endLine": 2466,
                     "endColumn": 12,
-                    "endOffset": 177923
+                    "endOffset": 178491
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18446,12 +18467,12 @@
             },
             {
                 "to": {
-                    "startLine": 2457,
+                    "startLine": 2467,
                     "startColumn": 4,
-                    "startOffset": 177928,
-                    "endLine": 2460,
+                    "startOffset": 178496,
+                    "endLine": 2470,
                     "endColumn": 12,
-                    "endOffset": 178077
+                    "endOffset": 178645
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -18467,12 +18488,12 @@
             },
             {
                 "to": {
-                    "startLine": 2461,
+                    "startLine": 2471,
                     "startColumn": 4,
-                    "startOffset": 178082,
-                    "endLine": 2464,
+                    "startOffset": 178650,
+                    "endLine": 2474,
                     "endColumn": 12,
-                    "endOffset": 178330
+                    "endOffset": 178898
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/values/vpi__styles.xml",
@@ -18488,11 +18509,11 @@
             },
             {
                 "to": {
-                    "startLine": 2465,
+                    "startLine": 2475,
                     "startColumn": 4,
-                    "startOffset": 178335,
+                    "startOffset": 178903,
                     "endColumn": 79,
-                    "endOffset": 178410
+                    "endOffset": 178978
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18507,11 +18528,11 @@
             },
             {
                 "to": {
-                    "startLine": 2466,
+                    "startLine": 2476,
                     "startColumn": 4,
-                    "startOffset": 178415,
+                    "startOffset": 178983,
                     "endColumn": 99,
-                    "endOffset": 178510
+                    "endOffset": 179078
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18526,11 +18547,11 @@
             },
             {
                 "to": {
-                    "startLine": 2467,
+                    "startLine": 2477,
                     "startColumn": 4,
-                    "startOffset": 178515,
+                    "startOffset": 179083,
                     "endColumn": 89,
-                    "endOffset": 178600
+                    "endOffset": 179168
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18545,11 +18566,11 @@
             },
             {
                 "to": {
-                    "startLine": 2468,
+                    "startLine": 2478,
                     "startColumn": 4,
-                    "startOffset": 178605,
+                    "startOffset": 179173,
                     "endColumn": 109,
-                    "endOffset": 178710
+                    "endOffset": 179278
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18564,11 +18585,11 @@
             },
             {
                 "to": {
-                    "startLine": 2469,
+                    "startLine": 2479,
                     "startColumn": 4,
-                    "startOffset": 178715,
+                    "startOffset": 179283,
                     "endColumn": 93,
-                    "endOffset": 178804
+                    "endOffset": 179372
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18583,11 +18604,11 @@
             },
             {
                 "to": {
-                    "startLine": 2470,
+                    "startLine": 2480,
                     "startColumn": 4,
-                    "startOffset": 178809,
+                    "startOffset": 179377,
                     "endColumn": 105,
-                    "endOffset": 178910
+                    "endOffset": 179478
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18602,11 +18623,11 @@
             },
             {
                 "to": {
-                    "startLine": 2471,
+                    "startLine": 2481,
                     "startColumn": 4,
-                    "startOffset": 178915,
+                    "startOffset": 179483,
                     "endColumn": 91,
-                    "endOffset": 179002
+                    "endOffset": 179570
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18621,12 +18642,12 @@
             },
             {
                 "to": {
-                    "startLine": 2472,
+                    "startLine": 2482,
                     "startColumn": 4,
-                    "startOffset": 179007,
-                    "endLine": 2475,
+                    "startOffset": 179575,
+                    "endLine": 2485,
                     "endColumn": 12,
-                    "endOffset": 179261
+                    "endOffset": 179829
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
@@ -18642,12 +18663,12 @@
             },
             {
                 "to": {
-                    "startLine": 2476,
+                    "startLine": 2486,
                     "startColumn": 4,
-                    "startOffset": 179266,
-                    "endLine": 2477,
+                    "startOffset": 179834,
+                    "endLine": 2487,
                     "endColumn": 12,
-                    "endOffset": 179300
+                    "endOffset": 179868
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/values/vpi__styles.xml",
@@ -18663,12 +18684,12 @@
             },
             {
                 "to": {
-                    "startLine": 2478,
+                    "startLine": 2488,
                     "startColumn": 4,
-                    "startOffset": 179305,
-                    "endLine": 2479,
+                    "startOffset": 179873,
+                    "endLine": 2489,
                     "endColumn": 12,
-                    "endOffset": 179400
+                    "endOffset": 179968
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18684,12 +18705,12 @@
             },
             {
                 "to": {
-                    "startLine": 2480,
+                    "startLine": 2490,
                     "startColumn": 4,
-                    "startOffset": 179405,
-                    "endLine": 2481,
+                    "startOffset": 179973,
+                    "endLine": 2491,
                     "endColumn": 12,
-                    "endOffset": 179512
+                    "endOffset": 180080
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18705,12 +18726,12 @@
             },
             {
                 "to": {
-                    "startLine": 2482,
+                    "startLine": 2492,
                     "startColumn": 4,
-                    "startOffset": 179517,
-                    "endLine": 2483,
+                    "startOffset": 180085,
+                    "endLine": 2493,
                     "endColumn": 12,
-                    "endOffset": 179626
+                    "endOffset": 180194
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18726,12 +18747,12 @@
             },
             {
                 "to": {
-                    "startLine": 2484,
+                    "startLine": 2494,
                     "startColumn": 4,
-                    "startOffset": 179631,
-                    "endLine": 2485,
+                    "startOffset": 180199,
+                    "endLine": 2495,
                     "endColumn": 12,
-                    "endOffset": 179742
+                    "endOffset": 180310
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18747,12 +18768,12 @@
             },
             {
                 "to": {
-                    "startLine": 2486,
+                    "startLine": 2496,
                     "startColumn": 4,
-                    "startOffset": 179747,
-                    "endLine": 2487,
+                    "startOffset": 180315,
+                    "endLine": 2497,
                     "endColumn": 12,
-                    "endOffset": 179858
+                    "endOffset": 180426
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18768,11 +18789,11 @@
             },
             {
                 "to": {
-                    "startLine": 2488,
+                    "startLine": 2498,
                     "startColumn": 4,
-                    "startOffset": 179863,
+                    "startOffset": 180431,
                     "endColumn": 93,
-                    "endOffset": 179952
+                    "endOffset": 180520
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18787,11 +18808,11 @@
             },
             {
                 "to": {
-                    "startLine": 2489,
+                    "startLine": 2499,
                     "startColumn": 4,
-                    "startOffset": 179957,
+                    "startOffset": 180525,
                     "endColumn": 113,
-                    "endOffset": 180066
+                    "endOffset": 180634
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18806,11 +18827,11 @@
             },
             {
                 "to": {
-                    "startLine": 2490,
+                    "startLine": 2500,
                     "startColumn": 4,
-                    "startOffset": 180071,
+                    "startOffset": 180639,
                     "endColumn": 111,
-                    "endOffset": 180178
+                    "endOffset": 180746
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18825,12 +18846,12 @@
             },
             {
                 "to": {
-                    "startLine": 2491,
+                    "startLine": 2501,
                     "startColumn": 4,
-                    "startOffset": 180183,
-                    "endLine": 2492,
+                    "startOffset": 180751,
+                    "endLine": 2502,
                     "endColumn": 12,
-                    "endOffset": 180280
+                    "endOffset": 180848
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18846,12 +18867,12 @@
             },
             {
                 "to": {
-                    "startLine": 2493,
+                    "startLine": 2503,
                     "startColumn": 4,
-                    "startOffset": 180285,
-                    "endLine": 2494,
+                    "startOffset": 180853,
+                    "endLine": 2504,
                     "endColumn": 12,
-                    "endOffset": 180400
+                    "endOffset": 180968
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18867,12 +18888,12 @@
             },
             {
                 "to": {
-                    "startLine": 2495,
+                    "startLine": 2505,
                     "startColumn": 4,
-                    "startOffset": 180405,
-                    "endLine": 2496,
+                    "startOffset": 180973,
+                    "endLine": 2506,
                     "endColumn": 12,
-                    "endOffset": 180522
+                    "endOffset": 181090
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18888,11 +18909,11 @@
             },
             {
                 "to": {
-                    "startLine": 2497,
+                    "startLine": 2507,
                     "startColumn": 4,
-                    "startOffset": 180527,
+                    "startOffset": 181095,
                     "endColumn": 81,
-                    "endOffset": 180604
+                    "endOffset": 181172
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18907,11 +18928,11 @@
             },
             {
                 "to": {
-                    "startLine": 2498,
+                    "startLine": 2508,
                     "startColumn": 4,
-                    "startOffset": 180609,
+                    "startOffset": 181177,
                     "endColumn": 103,
-                    "endOffset": 180708
+                    "endOffset": 181276
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18926,11 +18947,11 @@
             },
             {
                 "to": {
-                    "startLine": 2499,
+                    "startLine": 2509,
                     "startColumn": 4,
-                    "startOffset": 180713,
+                    "startOffset": 181281,
                     "endColumn": 119,
-                    "endOffset": 180828
+                    "endOffset": 181396
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18945,11 +18966,11 @@
             },
             {
                 "to": {
-                    "startLine": 2500,
+                    "startLine": 2510,
                     "startColumn": 4,
-                    "startOffset": 180833,
+                    "startOffset": 181401,
                     "endColumn": 125,
-                    "endOffset": 180954
+                    "endOffset": 181522
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18964,11 +18985,11 @@
             },
             {
                 "to": {
-                    "startLine": 2501,
+                    "startLine": 2511,
                     "startColumn": 4,
-                    "startOffset": 180959,
+                    "startOffset": 181527,
                     "endColumn": 97,
-                    "endOffset": 181052
+                    "endOffset": 181620
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -18983,11 +19004,11 @@
             },
             {
                 "to": {
-                    "startLine": 2502,
+                    "startLine": 2512,
                     "startColumn": 4,
-                    "startOffset": 181057,
+                    "startOffset": 181625,
                     "endColumn": 93,
-                    "endOffset": 181146
+                    "endOffset": 181714
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19002,11 +19023,11 @@
             },
             {
                 "to": {
-                    "startLine": 2503,
+                    "startLine": 2513,
                     "startColumn": 4,
-                    "startOffset": 181151,
+                    "startOffset": 181719,
                     "endColumn": 87,
-                    "endOffset": 181234
+                    "endOffset": 181802
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19021,11 +19042,11 @@
             },
             {
                 "to": {
-                    "startLine": 2504,
+                    "startLine": 2514,
                     "startColumn": 4,
-                    "startOffset": 181239,
+                    "startOffset": 181807,
                     "endColumn": 111,
-                    "endOffset": 181346
+                    "endOffset": 181914
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19040,11 +19061,11 @@
             },
             {
                 "to": {
-                    "startLine": 2505,
+                    "startLine": 2515,
                     "startColumn": 4,
-                    "startOffset": 181351,
+                    "startOffset": 181919,
                     "endColumn": 115,
-                    "endOffset": 181462
+                    "endOffset": 182030
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19059,11 +19080,11 @@
             },
             {
                 "to": {
-                    "startLine": 2506,
+                    "startLine": 2516,
                     "startColumn": 4,
-                    "startOffset": 181467,
+                    "startOffset": 182035,
                     "endColumn": 121,
-                    "endOffset": 181584
+                    "endOffset": 182152
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19078,11 +19099,11 @@
             },
             {
                 "to": {
-                    "startLine": 2507,
+                    "startLine": 2517,
                     "startColumn": 4,
-                    "startOffset": 181589,
+                    "startOffset": 182157,
                     "endColumn": 111,
-                    "endOffset": 181696
+                    "endOffset": 182264
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19097,12 +19118,12 @@
             },
             {
                 "to": {
-                    "startLine": 2508,
+                    "startLine": 2518,
                     "startColumn": 4,
-                    "startOffset": 181701,
-                    "endLine": 2510,
+                    "startOffset": 182269,
+                    "endLine": 2520,
                     "endColumn": 12,
-                    "endOffset": 181871
+                    "endOffset": 182439
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19118,11 +19139,11 @@
             },
             {
                 "to": {
-                    "startLine": 2511,
+                    "startLine": 2521,
                     "startColumn": 4,
-                    "startOffset": 181876,
+                    "startOffset": 182444,
                     "endColumn": 115,
-                    "endOffset": 181987
+                    "endOffset": 182555
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19137,11 +19158,11 @@
             },
             {
                 "to": {
-                    "startLine": 2512,
+                    "startLine": 2522,
                     "startColumn": 4,
-                    "startOffset": 181992,
+                    "startOffset": 182560,
                     "endColumn": 85,
-                    "endOffset": 182073
+                    "endOffset": 182641
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19156,11 +19177,11 @@
             },
             {
                 "to": {
-                    "startLine": 2513,
+                    "startLine": 2523,
                     "startColumn": 4,
-                    "startOffset": 182078,
+                    "startOffset": 182646,
                     "endColumn": 91,
-                    "endOffset": 182165
+                    "endOffset": 182733
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19175,12 +19196,12 @@
             },
             {
                 "to": {
-                    "startLine": 2514,
+                    "startLine": 2524,
                     "startColumn": 4,
-                    "startOffset": 182170,
-                    "endLine": 2515,
+                    "startOffset": 182738,
+                    "endLine": 2525,
                     "endColumn": 12,
-                    "endOffset": 182277
+                    "endOffset": 182845
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19196,12 +19217,12 @@
             },
             {
                 "to": {
-                    "startLine": 2516,
+                    "startLine": 2526,
                     "startColumn": 4,
-                    "startOffset": 182282,
-                    "endLine": 2517,
+                    "startOffset": 182850,
+                    "endLine": 2527,
                     "endColumn": 12,
-                    "endOffset": 182401
+                    "endOffset": 182969
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19217,11 +19238,11 @@
             },
             {
                 "to": {
-                    "startLine": 2518,
+                    "startLine": 2528,
                     "startColumn": 4,
-                    "startOffset": 182406,
+                    "startOffset": 182974,
                     "endColumn": 66,
-                    "endOffset": 182468
+                    "endOffset": 183036
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19236,12 +19257,12 @@
             },
             {
                 "to": {
-                    "startLine": 2519,
+                    "startLine": 2529,
                     "startColumn": 4,
-                    "startOffset": 182473,
-                    "endLine": 2520,
+                    "startOffset": 183041,
+                    "endLine": 2530,
                     "endColumn": 12,
-                    "endOffset": 182594
+                    "endOffset": 183162
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19257,11 +19278,11 @@
             },
             {
                 "to": {
-                    "startLine": 2521,
+                    "startLine": 2531,
                     "startColumn": 4,
-                    "startOffset": 182599,
+                    "startOffset": 183167,
                     "endColumn": 67,
-                    "endOffset": 182662
+                    "endOffset": 183230
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19276,12 +19297,12 @@
             },
             {
                 "to": {
-                    "startLine": 2522,
+                    "startLine": 2532,
                     "startColumn": 4,
-                    "startOffset": 182667,
-                    "endLine": 2523,
+                    "startOffset": 183235,
+                    "endLine": 2533,
                     "endColumn": 12,
-                    "endOffset": 182790
+                    "endOffset": 183358
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19297,12 +19318,12 @@
             },
             {
                 "to": {
-                    "startLine": 2524,
+                    "startLine": 2534,
                     "startColumn": 4,
-                    "startOffset": 182795,
-                    "endLine": 2525,
+                    "startOffset": 183363,
+                    "endLine": 2535,
                     "endColumn": 12,
-                    "endOffset": 182934
+                    "endOffset": 183502
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19318,12 +19339,12 @@
             },
             {
                 "to": {
-                    "startLine": 2526,
+                    "startLine": 2536,
                     "startColumn": 4,
-                    "startOffset": 182939,
-                    "endLine": 2527,
+                    "startOffset": 183507,
+                    "endLine": 2537,
                     "endColumn": 12,
-                    "endOffset": 183062
+                    "endOffset": 183630
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19339,11 +19360,11 @@
             },
             {
                 "to": {
-                    "startLine": 2528,
+                    "startLine": 2538,
                     "startColumn": 4,
-                    "startOffset": 183067,
+                    "startOffset": 183635,
                     "endColumn": 68,
-                    "endOffset": 183131
+                    "endOffset": 183699
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19358,11 +19379,11 @@
             },
             {
                 "to": {
-                    "startLine": 2529,
+                    "startLine": 2539,
                     "startColumn": 4,
-                    "startOffset": 183136,
+                    "startOffset": 183704,
                     "endColumn": 94,
-                    "endOffset": 183226
+                    "endOffset": 183794
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19377,11 +19398,11 @@
             },
             {
                 "to": {
-                    "startLine": 2530,
+                    "startLine": 2540,
                     "startColumn": 4,
-                    "startOffset": 183231,
+                    "startOffset": 183799,
                     "endColumn": 114,
-                    "endOffset": 183341
+                    "endOffset": 183909
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19396,11 +19417,11 @@
             },
             {
                 "to": {
-                    "startLine": 2531,
+                    "startLine": 2541,
                     "startColumn": 4,
-                    "startOffset": 183346,
+                    "startOffset": 183914,
                     "endColumn": 112,
-                    "endOffset": 183454
+                    "endOffset": 184022
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19415,11 +19436,11 @@
             },
             {
                 "to": {
-                    "startLine": 2532,
+                    "startLine": 2542,
                     "startColumn": 4,
-                    "startOffset": 183459,
+                    "startOffset": 184027,
                     "endColumn": 98,
-                    "endOffset": 183553
+                    "endOffset": 184121
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19434,11 +19455,11 @@
             },
             {
                 "to": {
-                    "startLine": 2533,
+                    "startLine": 2543,
                     "startColumn": 4,
-                    "startOffset": 183558,
+                    "startOffset": 184126,
                     "endColumn": 108,
-                    "endOffset": 183662
+                    "endOffset": 184230
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19453,11 +19474,11 @@
             },
             {
                 "to": {
-                    "startLine": 2534,
+                    "startLine": 2544,
                     "startColumn": 4,
-                    "startOffset": 183667,
+                    "startOffset": 184235,
                     "endColumn": 110,
-                    "endOffset": 183773
+                    "endOffset": 184341
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19472,11 +19493,11 @@
             },
             {
                 "to": {
-                    "startLine": 2535,
+                    "startLine": 2545,
                     "startColumn": 4,
-                    "startOffset": 183778,
+                    "startOffset": 184346,
                     "endColumn": 110,
-                    "endOffset": 183884
+                    "endOffset": 184452
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19491,11 +19512,11 @@
             },
             {
                 "to": {
-                    "startLine": 2536,
+                    "startLine": 2546,
                     "startColumn": 4,
-                    "startOffset": 183889,
+                    "startOffset": 184457,
                     "endColumn": 100,
-                    "endOffset": 183985
+                    "endOffset": 184553
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19510,11 +19531,11 @@
             },
             {
                 "to": {
-                    "startLine": 2537,
+                    "startLine": 2547,
                     "startColumn": 4,
-                    "startOffset": 183990,
+                    "startOffset": 184558,
                     "endColumn": 104,
-                    "endOffset": 184090
+                    "endOffset": 184658
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19529,11 +19550,11 @@
             },
             {
                 "to": {
-                    "startLine": 2538,
+                    "startLine": 2548,
                     "startColumn": 4,
-                    "startOffset": 184095,
+                    "startOffset": 184663,
                     "endColumn": 99,
-                    "endOffset": 184190
+                    "endOffset": 184758
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19548,12 +19569,12 @@
             },
             {
                 "to": {
-                    "startLine": 2539,
+                    "startLine": 2549,
                     "startColumn": 4,
-                    "startOffset": 184195,
-                    "endLine": 2540,
+                    "startOffset": 184763,
+                    "endLine": 2550,
                     "endColumn": 12,
-                    "endOffset": 184320
+                    "endOffset": 184888
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19569,11 +19590,11 @@
             },
             {
                 "to": {
-                    "startLine": 2541,
+                    "startLine": 2551,
                     "startColumn": 4,
-                    "startOffset": 184325,
+                    "startOffset": 184893,
                     "endColumn": 90,
-                    "endOffset": 184411
+                    "endOffset": 184979
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19588,11 +19609,11 @@
             },
             {
                 "to": {
-                    "startLine": 2542,
+                    "startLine": 2552,
                     "startColumn": 4,
-                    "startOffset": 184416,
+                    "startOffset": 184984,
                     "endColumn": 122,
-                    "endOffset": 184534
+                    "endOffset": 185102
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19607,11 +19628,11 @@
             },
             {
                 "to": {
-                    "startLine": 2543,
+                    "startLine": 2553,
                     "startColumn": 4,
-                    "startOffset": 184539,
+                    "startOffset": 185107,
                     "endColumn": 93,
-                    "endOffset": 184628
+                    "endOffset": 185196
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19626,12 +19647,12 @@
             },
             {
                 "to": {
-                    "startLine": 2544,
+                    "startLine": 2554,
                     "startColumn": 4,
-                    "startOffset": 184633,
-                    "endLine": 2545,
+                    "startOffset": 185201,
+                    "endLine": 2555,
                     "endColumn": 12,
-                    "endOffset": 184740
+                    "endOffset": 185308
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19647,11 +19668,11 @@
             },
             {
                 "to": {
-                    "startLine": 2546,
+                    "startLine": 2556,
                     "startColumn": 4,
-                    "startOffset": 184745,
+                    "startOffset": 185313,
                     "endColumn": 85,
-                    "endOffset": 184826
+                    "endOffset": 185394
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19666,11 +19687,11 @@
             },
             {
                 "to": {
-                    "startLine": 2547,
+                    "startLine": 2557,
                     "startColumn": 4,
-                    "startOffset": 184831,
+                    "startOffset": 185399,
                     "endColumn": 103,
-                    "endOffset": 184930
+                    "endOffset": 185498
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19685,11 +19706,11 @@
             },
             {
                 "to": {
-                    "startLine": 2548,
+                    "startLine": 2558,
                     "startColumn": 4,
-                    "startOffset": 184935,
+                    "startOffset": 185503,
                     "endColumn": 95,
-                    "endOffset": 185026
+                    "endOffset": 185594
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19704,11 +19725,11 @@
             },
             {
                 "to": {
-                    "startLine": 2549,
+                    "startLine": 2559,
                     "startColumn": 4,
-                    "startOffset": 185031,
+                    "startOffset": 185599,
                     "endColumn": 74,
-                    "endOffset": 185101
+                    "endOffset": 185669
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19723,11 +19744,11 @@
             },
             {
                 "to": {
-                    "startLine": 2550,
+                    "startLine": 2560,
                     "startColumn": 4,
-                    "startOffset": 185106,
+                    "startOffset": 185674,
                     "endColumn": 69,
-                    "endOffset": 185171
+                    "endOffset": 185739
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19742,11 +19763,11 @@
             },
             {
                 "to": {
-                    "startLine": 2551,
+                    "startLine": 2561,
                     "startColumn": 4,
-                    "startOffset": 185176,
+                    "startOffset": 185744,
                     "endColumn": 87,
-                    "endOffset": 185259
+                    "endOffset": 185827
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19761,12 +19782,12 @@
             },
             {
                 "to": {
-                    "startLine": 2552,
+                    "startLine": 2562,
                     "startColumn": 4,
-                    "startOffset": 185264,
-                    "endLine": 2553,
+                    "startOffset": 185832,
+                    "endLine": 2563,
                     "endColumn": 12,
-                    "endOffset": 185377
+                    "endOffset": 185945
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19782,12 +19803,12 @@
             },
             {
                 "to": {
-                    "startLine": 2554,
+                    "startLine": 2564,
                     "startColumn": 4,
-                    "startOffset": 185382,
-                    "endLine": 2555,
+                    "startOffset": 185950,
+                    "endLine": 2565,
                     "endColumn": 12,
-                    "endOffset": 185481
+                    "endOffset": 186049
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19803,12 +19824,12 @@
             },
             {
                 "to": {
-                    "startLine": 2556,
+                    "startLine": 2566,
                     "startColumn": 4,
-                    "startOffset": 185486,
-                    "endLine": 2557,
+                    "startOffset": 186054,
+                    "endLine": 2567,
                     "endColumn": 12,
-                    "endOffset": 185585
+                    "endOffset": 186153
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19824,12 +19845,12 @@
             },
             {
                 "to": {
-                    "startLine": 2558,
+                    "startLine": 2568,
                     "startColumn": 4,
-                    "startOffset": 185590,
-                    "endLine": 2559,
+                    "startOffset": 186158,
+                    "endLine": 2569,
                     "endColumn": 12,
-                    "endOffset": 185711
+                    "endOffset": 186279
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19845,11 +19866,11 @@
             },
             {
                 "to": {
-                    "startLine": 2560,
+                    "startLine": 2570,
                     "startColumn": 4,
-                    "startOffset": 185716,
+                    "startOffset": 186284,
                     "endColumn": 87,
-                    "endOffset": 185799
+                    "endOffset": 186367
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19864,11 +19885,11 @@
             },
             {
                 "to": {
-                    "startLine": 2561,
+                    "startLine": 2571,
                     "startColumn": 4,
-                    "startOffset": 185804,
+                    "startOffset": 186372,
                     "endColumn": 107,
-                    "endOffset": 185907
+                    "endOffset": 186475
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19883,11 +19904,11 @@
             },
             {
                 "to": {
-                    "startLine": 2562,
+                    "startLine": 2572,
                     "startColumn": 4,
-                    "startOffset": 185912,
+                    "startOffset": 186480,
                     "endColumn": 99,
-                    "endOffset": 186007
+                    "endOffset": 186575
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19902,11 +19923,11 @@
             },
             {
                 "to": {
-                    "startLine": 2563,
+                    "startLine": 2573,
                     "startColumn": 4,
-                    "startOffset": 186012,
+                    "startOffset": 186580,
                     "endColumn": 89,
-                    "endOffset": 186097
+                    "endOffset": 186665
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19921,11 +19942,11 @@
             },
             {
                 "to": {
-                    "startLine": 2564,
+                    "startLine": 2574,
                     "startColumn": 4,
-                    "startOffset": 186102,
+                    "startOffset": 186670,
                     "endColumn": 109,
-                    "endOffset": 186207
+                    "endOffset": 186775
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19940,11 +19961,11 @@
             },
             {
                 "to": {
-                    "startLine": 2565,
+                    "startLine": 2575,
                     "startColumn": 4,
-                    "startOffset": 186212,
+                    "startOffset": 186780,
                     "endColumn": 83,
-                    "endOffset": 186291
+                    "endOffset": 186859
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19959,11 +19980,11 @@
             },
             {
                 "to": {
-                    "startLine": 2566,
+                    "startLine": 2576,
                     "startColumn": 4,
-                    "startOffset": 186296,
+                    "startOffset": 186864,
                     "endColumn": 101,
-                    "endOffset": 186393
+                    "endOffset": 186961
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19978,11 +19999,11 @@
             },
             {
                 "to": {
-                    "startLine": 2567,
+                    "startLine": 2577,
                     "startColumn": 4,
-                    "startOffset": 186398,
+                    "startOffset": 186966,
                     "endColumn": 83,
-                    "endOffset": 186477
+                    "endOffset": 187045
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -19997,11 +20018,11 @@
             },
             {
                 "to": {
-                    "startLine": 2568,
+                    "startLine": 2578,
                     "startColumn": 4,
-                    "startOffset": 186482,
+                    "startOffset": 187050,
                     "endColumn": 53,
-                    "endOffset": 186531
+                    "endOffset": 187099
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20016,11 +20037,11 @@
             },
             {
                 "to": {
-                    "startLine": 2569,
+                    "startLine": 2579,
                     "startColumn": 4,
-                    "startOffset": 186536,
+                    "startOffset": 187104,
                     "endColumn": 63,
-                    "endOffset": 186595
+                    "endOffset": 187163
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20035,11 +20056,11 @@
             },
             {
                 "to": {
-                    "startLine": 2570,
+                    "startLine": 2580,
                     "startColumn": 4,
-                    "startOffset": 186600,
+                    "startOffset": 187168,
                     "endColumn": 105,
-                    "endOffset": 186701
+                    "endOffset": 187269
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20054,11 +20075,11 @@
             },
             {
                 "to": {
-                    "startLine": 2571,
+                    "startLine": 2581,
                     "startColumn": 4,
-                    "startOffset": 186706,
+                    "startOffset": 187274,
                     "endColumn": 109,
-                    "endOffset": 186811
+                    "endOffset": 187379
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20073,11 +20094,11 @@
             },
             {
                 "to": {
-                    "startLine": 2572,
+                    "startLine": 2582,
                     "startColumn": 4,
-                    "startOffset": 186816,
+                    "startOffset": 187384,
                     "endColumn": 83,
-                    "endOffset": 186895
+                    "endOffset": 187463
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20092,11 +20113,11 @@
             },
             {
                 "to": {
-                    "startLine": 2573,
+                    "startLine": 2583,
                     "startColumn": 4,
-                    "startOffset": 186900,
+                    "startOffset": 187468,
                     "endColumn": 119,
-                    "endOffset": 187015
+                    "endOffset": 187583
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/values/values.xml",
@@ -20111,12 +20132,12 @@
             },
             {
                 "to": {
-                    "startLine": 2574,
+                    "startLine": 2584,
                     "startColumn": 4,
-                    "startOffset": 187020,
-                    "endLine": 2575,
+                    "startOffset": 187588,
+                    "endLine": 2585,
                     "endColumn": 12,
-                    "endOffset": 187115
+                    "endOffset": 187683
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20132,12 +20153,12 @@
             },
             {
                 "to": {
-                    "startLine": 2576,
+                    "startLine": 2586,
                     "startColumn": 4,
-                    "startOffset": 187120,
-                    "endLine": 2579,
+                    "startOffset": 187688,
+                    "endLine": 2589,
                     "endColumn": 12,
-                    "endOffset": 187356
+                    "endOffset": 187924
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20153,12 +20174,12 @@
             },
             {
                 "to": {
-                    "startLine": 2580,
+                    "startLine": 2590,
                     "startColumn": 4,
-                    "startOffset": 187361,
-                    "endLine": 2586,
+                    "startOffset": 187929,
+                    "endLine": 2596,
                     "endColumn": 12,
-                    "endOffset": 187791
+                    "endOffset": 188359
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20174,12 +20195,12 @@
             },
             {
                 "to": {
-                    "startLine": 2587,
+                    "startLine": 2597,
                     "startColumn": 4,
-                    "startOffset": 187796,
-                    "endLine": 2590,
+                    "startOffset": 188364,
+                    "endLine": 2600,
                     "endColumn": 12,
-                    "endOffset": 187998
+                    "endOffset": 188566
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20195,12 +20216,12 @@
             },
             {
                 "to": {
-                    "startLine": 2591,
+                    "startLine": 2601,
                     "startColumn": 4,
-                    "startOffset": 188003,
-                    "endLine": 2593,
+                    "startOffset": 188571,
+                    "endLine": 2603,
                     "endColumn": 12,
-                    "endOffset": 188157
+                    "endOffset": 188725
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20216,12 +20237,12 @@
             },
             {
                 "to": {
-                    "startLine": 2594,
+                    "startLine": 2604,
                     "startColumn": 4,
-                    "startOffset": 188162,
-                    "endLine": 2602,
+                    "startOffset": 188730,
+                    "endLine": 2612,
                     "endColumn": 12,
-                    "endOffset": 188722
+                    "endOffset": 189290
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20237,12 +20258,12 @@
             },
             {
                 "to": {
-                    "startLine": 2603,
+                    "startLine": 2613,
                     "startColumn": 4,
-                    "startOffset": 188727,
-                    "endLine": 2608,
+                    "startOffset": 189295,
+                    "endLine": 2618,
                     "endColumn": 12,
-                    "endOffset": 189083
+                    "endOffset": 189651
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20258,12 +20279,12 @@
             },
             {
                 "to": {
-                    "startLine": 2609,
+                    "startLine": 2619,
                     "startColumn": 4,
-                    "startOffset": 189088,
-                    "endLine": 2611,
+                    "startOffset": 189656,
+                    "endLine": 2621,
                     "endColumn": 12,
-                    "endOffset": 189212
+                    "endOffset": 189780
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20279,12 +20300,12 @@
             },
             {
                 "to": {
-                    "startLine": 2612,
+                    "startLine": 2622,
                     "startColumn": 4,
-                    "startOffset": 189217,
-                    "endLine": 2620,
+                    "startOffset": 189785,
+                    "endLine": 2630,
                     "endColumn": 12,
-                    "endOffset": 189879
+                    "endOffset": 190447
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20300,12 +20321,12 @@
             },
             {
                 "to": {
-                    "startLine": 2621,
+                    "startLine": 2631,
                     "startColumn": 4,
-                    "startOffset": 189884,
-                    "endLine": 2624,
+                    "startOffset": 190452,
+                    "endLine": 2634,
                     "endColumn": 12,
-                    "endOffset": 190059
+                    "endOffset": 190627
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20321,12 +20342,12 @@
             },
             {
                 "to": {
-                    "startLine": 2625,
+                    "startLine": 2635,
                     "startColumn": 4,
-                    "startOffset": 190064,
-                    "endLine": 2633,
+                    "startOffset": 190632,
+                    "endLine": 2643,
                     "endColumn": 12,
-                    "endOffset": 190768
+                    "endOffset": 191336
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/values/values.xml",
@@ -20342,12 +20363,12 @@
             },
             {
                 "to": {
-                    "startLine": 2634,
+                    "startLine": 2644,
                     "startColumn": 4,
-                    "startOffset": 190773,
-                    "endLine": 2637,
+                    "startOffset": 191341,
+                    "endLine": 2647,
                     "endColumn": 12,
-                    "endOffset": 190958
+                    "endOffset": 191526
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/values/vpi__styles.xml",
@@ -20363,12 +20384,12 @@
             },
             {
                 "to": {
-                    "startLine": 2638,
+                    "startLine": 2648,
                     "startColumn": 4,
-                    "startOffset": 190963,
-                    "endLine": 2648,
+                    "startOffset": 191531,
+                    "endLine": 2658,
                     "endColumn": 12,
-                    "endOffset": 191560
+                    "endOffset": 192128
                 },
                 "from": {
                     "file": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/values/vpi__styles.xml",
@@ -20384,12 +20405,12 @@
             },
             {
                 "to": {
-                    "startLine": 2649,
+                    "startLine": 2659,
                     "startColumn": 4,
-                    "startOffset": 191565,
-                    "endLine": 2654,
+                    "startOffset": 192133,
+                    "endLine": 2664,
                     "endColumn": 12,
-                    "endOffset": 191881
+                    "endOffset": 192449
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
@@ -20405,12 +20426,12 @@
             },
             {
                 "to": {
-                    "startLine": 2655,
+                    "startLine": 2665,
                     "startColumn": 4,
-                    "startOffset": 191886,
-                    "endLine": 2661,
+                    "startOffset": 192454,
+                    "endLine": 2671,
                     "endColumn": 12,
-                    "endOffset": 192171
+                    "endOffset": 192739
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",
@@ -20426,12 +20447,12 @@
             },
             {
                 "to": {
-                    "startLine": 2662,
+                    "startLine": 2672,
                     "startColumn": 4,
-                    "startOffset": 192176,
-                    "endLine": 2667,
+                    "startOffset": 192744,
+                    "endLine": 2677,
                     "endColumn": 12,
-                    "endOffset": 192471
+                    "endOffset": 193039
                 },
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/styles.xml",

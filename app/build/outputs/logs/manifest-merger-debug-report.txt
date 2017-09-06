@@ -15,10 +15,12 @@ ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-
 		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:5:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:21:5-81
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:5:22-78
 uses-permission#android.permission.INTERNET
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:18:5-67
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.READ_LOGS
@@ -42,6 +44,8 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/luxin/.a
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/luxin/.android/build-cache/b484d2fd3794c60a56b4fff8c513b09634648dab/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/luxin/.android/build-cache/b14ac3e63ccf2d7afe79a6fcd5dc93ce3291f87c/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/luxin/.android/build-cache/424fb6432272116b476d80756f3e1f70d0a64c83/output/AndroidManifest.xml:29:5-20
+MERGED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:37:5-128:19
+MERGED from [cn.jiguang.sdk:jcore:1.1.1] /Users/luxin/.android/build-cache/eefd2b56a861a608fad1257ff8facb899cb52189/output/AndroidManifest.xml:11:5-12:19
 	android:screenOrientation
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:14:9-45
 	android:label
@@ -134,6 +138,8 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/luxin/.a
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/luxin/.android/build-cache/b484d2fd3794c60a56b4fff8c513b09634648dab/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/luxin/.android/build-cache/b14ac3e63ccf2d7afe79a6fcd5dc93ce3291f87c/output/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/luxin/.android/build-cache/424fb6432272116b476d80756f3e1f70d0a64c83/output/AndroidManifest.xml:21:5-23:58
+MERGED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.1.1] /Users/luxin/.android/build-cache/eefd2b56a861a608fad1257ff8facb899cb52189/output/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
@@ -159,3 +165,216 @@ MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/luxin/.and
 		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:27:9-38
 	android:name
 		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/AndroidManifest.xml:26:9-47
+permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:12:9-65
+uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:19:22-65
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:20:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:22:5-80
+IMPLIED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-51:12 reason: cn.jpush.client.android requested WRITE_EXTERNAL_STORAGE
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:22:22-77
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:23:5-73
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:23:22-70
+uses-permission#android.permission.VIBRATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:24:5-66
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:24:22-63
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:25:5-84
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:25:22-81
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:26:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:27:5-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:27:22-73
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:30:5-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:30:22-75
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:31:22-78
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:32:5-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:32:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:33:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:33:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:34:5-89
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:34:22-86
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:35:22-76
+activity#cn.jpush.android.ui.PopWinActivity
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:40:9-43:52
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:42:13-37
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:41:13-62
+activity#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:46:9-57:20
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:49:13-37
+	android:configChanges
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:48:13-63
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:50:13-60
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:47:13-60
+intent-filter#${JPUSH_PKGNAME}+android.intent.category.DEFAULT+cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:51:13-56:29
+action#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:52:17-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:52:25-72
+category#android.intent.category.DEFAULT
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:54:17-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:54:27-73
+category#${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:55:17-61
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:55:27-58
+service#cn.jpush.android.service.DownloadService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:59:9-62:40
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:61:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:62:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:60:13-68
+service#cn.jpush.android.service.PushService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:66:9-77:19
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:68:13-35
+	android:process
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:70:13-40
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:69:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:67:13-64
+intent-filter#cn.jpush.android.intent.PUSH_TIME+cn.jpush.android.intent.PushService+cn.jpush.android.intent.REGISTER+cn.jpush.android.intent.REPORT
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:71:13-76:29
+action#cn.jpush.android.intent.REGISTER
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:72:17-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:72:25-72
+action#cn.jpush.android.intent.REPORT
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:73:17-73
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:73:25-70
+action#cn.jpush.android.intent.PushService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:74:17-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:74:25-75
+action#cn.jpush.android.intent.PUSH_TIME
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:75:17-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:75:25-73
+service#cn.jpush.android.service.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:81:9-90:19
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:83:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:84:13-36
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:82:13-66
+intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:85:13-89:29
+action#cn.jpush.android.intent.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:86:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:86:25-77
+receiver#cn.jpush.android.service.PushReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:93:9-113:20
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:95:13-35
+	android:process
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:97:13-40
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:96:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:94:13-65
+intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:98:13-101:29
+	android:priority
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:98:28-51
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:99:17-94
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:99:25-91
+intent-filter#android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:102:13-105:29
+action#android.intent.action.USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:103:17-77
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:103:25-74
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:104:17-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:104:25-76
+intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:107:13-112:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:108:17-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:108:25-75
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:109:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:109:25-77
+data
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:111:17-50
+	android:scheme
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:111:23-47
+receiver#cn.jpush.android.service.AlarmReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:116:9-118:40
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:118:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:117:13-66
+meta-data#JPUSH_CHANNEL
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:121:9-123:48
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:123:13-45
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:122:13-41
+meta-data#JPUSH_APPKEY
+ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:124:9-126:47
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:126:13-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:125:13-40

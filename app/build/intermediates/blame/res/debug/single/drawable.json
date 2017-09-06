@@ -44,6 +44,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/style_tv_tag.xml"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/jpush_notification_icon.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/jpush_notification_icon.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable/ic_radio_button_unchecked_black_24dp.xml",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable/ic_radio_button_unchecked_black_24dp.xml"
     },
