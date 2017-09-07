@@ -23,8 +23,8 @@ public class openScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_open_screen);
 
 //        初始化极光统计对象
-        JAnalyticsInterface.init(getApplicationContext());
         JAnalyticsInterface.setDebugMode(true);
+        JAnalyticsInterface.init(getApplicationContext());
 
         //从sp文件中取出isHasFeed,判断是否显示初始页
         SharedPreferences sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);

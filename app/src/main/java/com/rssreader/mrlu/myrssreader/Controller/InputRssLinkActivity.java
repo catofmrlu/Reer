@@ -15,6 +15,7 @@ import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.ButterKnife;
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 
@@ -127,6 +128,19 @@ public class InputRssLinkActivity extends AppCompatActivity {
         editText.setFocusableInTouchMode(true);
         editText.requestFocus();
         activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
     }
 }
 

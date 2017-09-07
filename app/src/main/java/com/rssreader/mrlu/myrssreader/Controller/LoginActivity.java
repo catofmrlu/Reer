@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.R;
 
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -57,6 +59,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
     }
 
 }

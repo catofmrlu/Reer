@@ -80,6 +80,19 @@
             <!-- </intent-filter> -->
         </activity>
 
+        <service
+            android:name="com.rssreader.mrlu.myrssreader.Test.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.rssreader.mrlu.myrssreader.Test.MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"

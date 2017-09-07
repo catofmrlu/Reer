@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
+import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 import static com.rssreader.mrlu.myrssreader.R.color.md_teal_a700_color_code;
@@ -274,6 +275,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 endTime = System.currentTimeMillis();// 当前时间对应的毫秒数
                 if (endTime - startTime < 1500) {
                     finish();
+
                 }else {
                     Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT).show();
                     startTime = System.currentTimeMillis();// 当前时间对应的毫秒数
@@ -285,7 +287,17 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
+    }
 }
 
 

@@ -14,7 +14,6 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppBaseTheme">
-
         <activity android:name=".Controller.LoginActivity" />
         <activity android:name=".Controller.ListActivity" />
         <activity android:name=".Controller.ShowDescriptionActivity">
@@ -27,8 +26,9 @@
         <activity android:name=".Controller.SettingsActivity" />
         <activity android:name=".Controller.InputRssLinkActivity" />
         <activity android:name=".Controller.FeedlyRssQuery" />
-        <activity android:name=".Controller.mainView"
-            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".Controller.mainView"
+            android:launchMode="singleInstance" />
         <activity android:name=".Controller.RssFeedListActivity" />
         <activity android:name=".Controller.openScreenActivity">
             <intent-filter>
@@ -38,14 +38,30 @@
             </intent-filter>
         </activity>
         <activity android:name=".Controller.AboutActivity" />
-        <activity android:name=".Controller.AppearPageActivity" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".Controller.AppearPageActivity">
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
 
+        <service
+            android:name=".Test.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".Test.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
