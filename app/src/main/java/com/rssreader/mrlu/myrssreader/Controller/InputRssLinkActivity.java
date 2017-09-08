@@ -10,8 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.jaeger.library.StatusBarUtil;
+import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RssHanderByPull;
+import com.rssreader.mrlu.myrssreader.Model.XmlParse.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.ButterKnife;
@@ -42,14 +43,11 @@ public class InputRssLinkActivity extends AppCompatActivity {
     private void getFeed(final String urlString) {
         try {
 
-            //1、调用volley请求xml并通过SAX解析后返后每个添加源的RssFeed对象
-            //RssVolleyRequest rssVolleyRequest = new RssVolleyRequest(InputRssLinkActivity.this);
-            //RSSFeed feed = rssVolleyRequest.getRssRequest(urlString);
-
-
             //2、使用pull方法解析xml部分
+            RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
+            String rssXml = rssRequestByOkHttp.getRssReturnString(urlString);
             RssHanderByPull rssHanderByPull = new RssHanderByPull();
-            RSSFeed feed = rssHanderByPull.parseRss(urlString);
+            RSSFeed feed = rssHanderByPull.parseRss(rssXml);
 
             //判断feed是否为空
             if (feed == null) {

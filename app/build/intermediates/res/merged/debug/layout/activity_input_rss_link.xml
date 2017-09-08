@@ -25,6 +25,8 @@
 
         <EditText
             android:padding="5dp"
+            android:lines="1"
+            android:layout_gravity="center"
             android:background="@drawable/rec"
             android:selectAllOnFocus="true"
             android:textSize="15sp"

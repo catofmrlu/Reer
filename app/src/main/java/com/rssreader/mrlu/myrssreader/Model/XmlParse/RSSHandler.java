@@ -1,6 +1,9 @@
-package com.rssreader.mrlu.myrssreader.Model.Rss;
+package com.rssreader.mrlu.myrssreader.Model.XmlParse;
 
 import android.util.Log;
+
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

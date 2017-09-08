@@ -48,20 +48,19 @@
             <!-- </intent-filter> -->
         </activity>
 
-        <service
-            android:name=".Test.MyService"
-            android:enabled="true"
-            android:exported="true" />
+        <!--<service-->
+            <!--android:name=".Test.MyService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true" />-->
 
-        <receiver
-            android:name=".Test.MyReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-
-            </intent-filter>
-        </receiver>
+        <!--<receiver-->
+            <!--android:name=".Test.MyReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash;<action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>&ndash;&gt;-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
     </application>
 
 </manifest>

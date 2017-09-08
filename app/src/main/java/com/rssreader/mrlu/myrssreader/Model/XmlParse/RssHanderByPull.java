@@ -1,16 +1,15 @@
-package com.rssreader.mrlu.myrssreader.Model.Rss;
+package com.rssreader.mrlu.myrssreader.Model.XmlParse;
 
 import android.util.Log;
+
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 /**
@@ -25,45 +24,50 @@ public class RssHanderByPull {
 
     public RSSFeed parseRss(String rssUrl) {
 
-        HttpURLConnection conn = null;
+        Log.i("parseRss:rssUrl", "rssUrl:" + rssUrl);
+
+//        HttpURLConnection conn = null;
 
         try {
-            URL url = new URL(rssUrl);
-            conn = (HttpURLConnection) url.openConnection();
 
-            conn.setDoInput(true);
-            conn.connect();
-
-            InputStream is = conn.getInputStream();
-            Log.i("is流获取", "success!!");
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            StringBuilder sb = new StringBuilder();
-
-            String line = null;
-
-            try {
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line + "\n");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            Log.i("is转化为string", sb.toString());
+//            URL url = new URL(rssUrl);
+//            conn = (HttpURLConnection) url.openConnection();
+//
+//            conn.setDoInput(true);
+//            conn.connect();
+//
+//            InputStream is = conn.getInputStream();
+//            Log.i("is流获取", "success!!");
+//
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+//            StringBuilder sb = new StringBuilder();
+//
+//            String line = null;
+//
+//            try {
+//                while ((line = reader.readLine()) != null) {
+//                    sb.append(line + "\n");
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            } finally {
+//                try {
+//                    is.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//            Log.i("is转化为string", sb.toString());
 
 //            PullParser(is);
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(rssUrl.getBytes("UTF-8"));
+            PullParser(inputStream);
 
         } catch (Exception e) {
-            Log.e("转化url-error", e.getMessage());
+//            Log.e("转化url-error", e.getMessage());
         } finally {
-            conn.disconnect();
-            conn = null;
+//            conn.disconnect();
+//            conn = null;
         }
 
         return mFeed;

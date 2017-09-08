@@ -28,7 +28,7 @@ import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSHandler;
+import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 
