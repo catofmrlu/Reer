@@ -38,10 +38,8 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (intent != null){
 
-//            Bundle bundle = intent.getExtras();
-//            feed = (RSSFeed) bundle.getSerializable("feed");
-
-            feed = (RSSFeed) intent.getSerializableExtra("feed");
+            Bundle bundle = intent.getBundleExtra("feed");
+            feed = (RSSFeed) bundle.getSerializable("feed");
 
         }else {
             Log.e("intent错误", "intent为空");

@@ -1,14 +1,15 @@
 package com.rssreader.mrlu.myrssreader.Model.XmlParse;
 
 import android.util.Log;
+import android.util.Xml;
 
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 
 import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
+import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
@@ -22,13 +23,11 @@ public class RssHanderByPull {
     private RSSItem mItem;
     private List<RSSItem> mRssList;
 
-    public RSSFeed parseRss(String rssUrl) {
+    private static int i = 0;
 
-        Log.i("parseRss:rssUrl", "rssUrl:" + rssUrl);
+    public RSSFeed parseRss(InputStream is) {
 
 //        HttpURLConnection conn = null;
-
-        try {
 
 //            URL url = new URL(rssUrl);
 //            conn = (HttpURLConnection) url.openConnection();
@@ -60,25 +59,16 @@ public class RssHanderByPull {
 //            Log.i("is转化为string", sb.toString());
 
 //            PullParser(is);
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(rssUrl.getBytes("UTF-8"));
-            PullParser(inputStream);
-
-        } catch (Exception e) {
-//            Log.e("转化url-error", e.getMessage());
-        } finally {
-//            conn.disconnect();
-//            conn = null;
-        }
+//            ByteArrayInputStream inputStream = new ByteArrayInputStream(rssUrl.getBytes("UTF-8"));
+            PullParser(is);
 
         return mFeed;
     }
 
     public void PullParser(InputStream is) {
-
         try {
             // 使用工厂类XmlPullParserFactory
-            XmlPullParserFactory pullFactory = XmlPullParserFactory.newInstance();
-            XmlPullParser parser = pullFactory.newPullParser();
+            XmlPullParser parser = Xml.newPullParser();
 
             Log.i("xml解析", "即将开始！！");
 
@@ -87,21 +77,19 @@ public class RssHanderByPull {
             // 只要不是文档结束事件，就一直循环
             while (eventType != XmlPullParser.END_DOCUMENT) {
 
-//                Log.i("xml解析", "进入开始节点！！");
-
                 switch (eventType) {
                     case XmlPullParser.START_DOCUMENT:
                         mFeed = new RSSFeed();
-                        Log.i("xml解析", "进入START_DOCUMENT！！");
+
+                        Log.i("START_DOCUMENT", "new RSSFeed()");
 
                         break;
                     case XmlPullParser.START_TAG:
 
-                        String itemStartName = parser.getName();
+                        Log.i("START_TAG", parser.getName());
 
-                        Log.i("xml解析", itemStartName + "！！");
+                        switch (parser.getName()) {
 
-                        switch (itemStartName) {
                             case "title":
                                 Log.i("xml解析", "title！！");
 
@@ -135,11 +123,13 @@ public class RssHanderByPull {
                                 mItem.setAuthor(parser.nextText());
                                 break;
                         }
+
                         break;
                     case XmlPullParser.END_TAG:
 
-                        String itemEndItem = parser.getName();
-                        if (itemEndItem.equals("item")) {
+                        Log.i("END_TAG", parser.getName());
+
+                        if (parser.getName().equals("item")) {
                             mFeed.addItem(mItem);
                             mItem = null;
                         }
@@ -147,9 +137,11 @@ public class RssHanderByPull {
                 }
             }
 
+        } catch (XmlPullParserException e) {
 
-        } catch (Exception e) {
-            Log.e("PullParser方法部分", e.getMessage());
+            Log.e("XmlPullParserException", e.getLocalizedMessage() + e.toString());
+        } catch (IOException e) {
+            Log.e("IOException", e.getLocalizedMessage() + e.toString());
         }
     }
 }

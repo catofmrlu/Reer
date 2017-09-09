@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.util.ArrayMap;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -24,8 +25,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
+import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 import com.rssreader.mrlu.myrssreader.R;
 
 import org.xml.sax.InputSource;
@@ -35,7 +36,6 @@ import org.xml.sax.XMLReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -73,13 +73,14 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         Log.i("过程打印", "创建mSqLiteHandle完成");
         Cursor cursor = mSqLiteHandle.queryAllFeeds();
 
+
+
         if (cursor != null) {
             Log.i("过程打印", "存在Feed");
 
             view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
             Log.i("过程打印", "queryAllFeeds查询完成");
-
 
 //            SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
 
@@ -99,30 +100,31 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 //
             mRssUnreadList = new ArrayList<>();
 
-            HashMap<String, String> hashMap = new HashMap<String, String>();
-            hashMap.put("rssName", "全部未读");
-            hashMap.put("rssCount", rssItemCount);
-            mRssUnreadList.add(hashMap);
+            ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
+            arrayMap.put("rssName", "全部未读");
+            arrayMap.put("rssCount", rssItemCount);
+            mRssUnreadList.add(arrayMap);
 
             showListView();
             Log.i("过程标记", "list显示完成");
 
             while (cursor.moveToNext()) {
-                String name = cursor.getString(cursor.getColumnIndex("RssName"));
-                String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                String link = cursor.getString(cursor.getColumnIndex("feedLink"));
                 Log.i("查询数据库", name + "\n" + link);
-                try {
+//                try {
 //                    getFeed(link);
 
-                } catch (Exception e) {
-                    Log.e("getFeed", e.getMessage());
-                    view = inflater.inflate(R.layout.unload_unread, container, false);
-
-                }
+//                } catch (Exception e) {
+//                    Log.e("getFeed", e.getMessage());
+//                    view = inflater.inflate(R.layout.unload_unread, container, false);
+//
+//                }
             }
             cursor.close();
             mSqLiteHandle.dbClose();
             mSqLiteHandle = null;
+            Log.i("unReadFragment11", "onCreateView:mSqLiteHandle已关闭");
 
         } else {
             Log.i("过程打印", "不存在Feed");

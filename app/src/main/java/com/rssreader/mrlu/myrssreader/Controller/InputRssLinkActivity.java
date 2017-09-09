@@ -1,6 +1,7 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -12,7 +13,6 @@ import android.widget.ImageView;
 import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.XmlParse.RssHanderByPull;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.ButterKnife;
@@ -41,24 +41,23 @@ public class InputRssLinkActivity extends AppCompatActivity {
     //region getfeed部分
     //获取feed
     private void getFeed(final String urlString) {
-        try {
 
-            //2、使用pull方法解析xml部分
-            RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
-            String rssXml = rssRequestByOkHttp.getRssReturnString(urlString);
-            RssHanderByPull rssHanderByPull = new RssHanderByPull();
-            RSSFeed feed = rssHanderByPull.parseRss(rssXml);
+        //使用pull方法解析xml部分
+        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
+        RSSFeed feed = rssRequestByOkHttp.getRssFeed(urlString);
 
-            //判断feed是否为空
-            if (feed == null) {
-                Log.e("feed", "feed为空");
-            } else {
-                Log.i("恭喜！", "feed通过");
+        if (feed != null){
 
-                //统计添加源的项目数
-                System.out.println("---------/n" + feed.Count() + "/n------");
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("feed", feed);
 
-                try {
+            Intent rssIntent = new Intent(this, ListActivity.class);
+
+            rssIntent.putExtra("feed", bundle);
+            startActivity(rssIntent);
+        }
+
+//                try {
 
 //                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
 //                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
@@ -66,14 +65,12 @@ public class InputRssLinkActivity extends AppCompatActivity {
 //                    sqLiteHandle.dbClose();
 //
 //                    sqLiteHandle = null;
-                } catch (Exception e) {
-                    Log.e("sqllite插入问题", e.getMessage());
+//                } catch (Exception e) {
+//                    Log.e("sqllite插入问题", e.getMessage());
+//
+//                }
 
-                }
-            }
-        } catch (Exception e) {
-            Log.e(" 读取feed", e.toString());
-        }
+
     }
 
     private void initView() {
@@ -132,13 +129,13 @@ public class InputRssLinkActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageStart(this, this.getClass().getCanonicalName());
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageEnd(this, this.getClass().getCanonicalName());
     }
 }
 
