@@ -47,13 +47,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppBaseTheme" >
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.LoginActivity" />
-        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.ListActivity" />
-        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.ShowDescriptionActivity" >
+        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.ListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.ShowDescriptionActivity" >
         </activity>
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.SettingsActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity" />
@@ -63,11 +64,13 @@
             android:launchMode="singleInstance" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.RssFeedListActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.openScreenActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.AboutActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.AppearPageActivity" >

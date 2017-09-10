@@ -15,13 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppBaseTheme">
         <activity android:name=".Controller.LoginActivity" />
-        <activity android:name=".Controller.ListActivity" />
-        <activity android:name=".Controller.ShowDescriptionActivity">
+        <activity android:name=".Controller.ListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Controller.ShowDescriptionActivity">
         </activity>
         <activity android:name=".Controller.SettingsActivity" />
         <activity android:name=".Controller.InputRssLinkActivity" />
@@ -31,11 +32,11 @@
             android:launchMode="singleInstance" />
         <activity android:name=".Controller.RssFeedListActivity" />
         <activity android:name=".Controller.openScreenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".Controller.AboutActivity" />
         <activity android:name=".Controller.AppearPageActivity">

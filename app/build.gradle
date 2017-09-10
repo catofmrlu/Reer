@@ -10,8 +10,6 @@ android {
         abortOnError false
     }
 
-
-
     signingConfigs {
         config {
             keyAlias 'Reer'
@@ -82,6 +80,7 @@ dependencies {
     compile 'cn.jiguang.sdk:jcore:1.1.2' // 此处以JCore 1.1.2 版本为例。
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okio:okio:1.7.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
 
     testCompile 'junit:junit:4.12'
 }

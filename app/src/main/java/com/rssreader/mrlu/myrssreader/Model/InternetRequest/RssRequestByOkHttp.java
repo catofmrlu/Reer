@@ -1,10 +1,11 @@
 package com.rssreader.mrlu.myrssreader.Model.InternetRequest;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 
 import org.xml.sax.SAXException;
@@ -33,13 +34,23 @@ public class RssRequestByOkHttp {
 
     OkHttpClient okHttpClient;
 
-    RSSFeed feed;
+    RSSFeed rssFeed;
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            rssFeed = (RSSFeed) msg.obj;
+
+        }
+    };
 
     public RssRequestByOkHttp(Context context) {
         this.mContext = context;
     }
 
-    public RSSFeed getRssFeed(final String rssLink) {
+    public void getRssFeed(final String rssLink) {
 
 
         try {
@@ -60,14 +71,9 @@ public class RssRequestByOkHttp {
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
 
-
                     InputStream isRss = response.body().byteStream();
-//                    String rssXml = response.body().string();
-//                    Log.i("网络返回", "onResponse: " + rssXml);
-//
-//                    RssHanderByPull rssHanderByPull = new RssHanderByPull();
-//                    RSSFeed feed = rssHanderByPull.parseRss(isRss);
 
+                    RSSFeed feed = null;
 
                     try {
                         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
@@ -100,18 +106,22 @@ public class RssRequestByOkHttp {
                             Log.i("item", hashMap.get("title"));
                         }
 
+                        Message message = new Message();
+                        message.obj = feed;
+                        handler.sendMessage(message);
 
-                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
-
-                        if (!sqLiteHandle.urlQuery(rssLink)) {
-                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
-
-                            Log.i("sqlite已存储", feed.getName());
-                        }
-
-                        sqLiteHandle.dbClose();
-
-                        sqLiteHandle = null;
+//
+//                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
+//
+//                        if (!sqLiteHandle.urlQuery(rssLink)) {
+//                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
+//
+//                            Log.i("sqlite已存储", feed.getName());
+//                        }
+//
+//                        sqLiteHandle.dbClose();
+//
+//                        sqLiteHandle = null;
 
                     }
                 }
@@ -121,7 +131,9 @@ public class RssRequestByOkHttp {
             Log.e("okhttp3请求", e.toString());
         }
 
-        return feed;
+    }
 
+    public RSSFeed getFeed(){
+        return rssFeed;
     }
 }

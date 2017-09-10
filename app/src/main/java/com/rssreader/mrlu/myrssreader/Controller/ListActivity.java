@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.android.volley.RequestQueue;
+import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 import com.rssreader.mrlu.myrssreader.R;
@@ -32,19 +34,15 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_list);
 
         mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
-//
-//        Intent intent = getIntent();
-//
-//        if (intent != null){
-//
-//            Bundle bundle = intent.getBundleExtra("feed");
-//            mFeed = (RSSFeed) bundle.getSerializable("feed");
-//
-//        }else {
-//            Log.e("intent错误", "intent为空");
-//        }
-//
-//        showListView();
+
+        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
+        rssRequestByOkHttp.getRssFeed("https://movie.douban.com/feed/review/movie");
+        mFeed = rssRequestByOkHttp.getFeed();
+
+        if (mFeed != null) {
+            showListView();
+        }else
+            Log.e("feed", "feed为空");
     }
 
     //列表显示获取的RSS
@@ -71,9 +69,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         //传递rssItem的内容
         Bundle bundle = new Bundle();
         bundle.putString("title", mFeed.getItem(position).getTitle());
-        bundle.putString("description", mFeed.getItem(position).getTitle());
-        bundle.putString("link", mFeed.getItem(position).getTitle());
-        bundle.putString("pubdate", mFeed.getItem(position).getTitle());
+        bundle.putString("description", mFeed.getItem(position).getDescription());
+        bundle.putString("link", mFeed.getItem(position).getLink());
+        bundle.putString("pubdate", mFeed.getItem(position).getPubdate());
 
         itemIntent.putExtra("android.intent.extra.rssItem", bundle);
 

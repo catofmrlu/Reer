@@ -46,7 +46,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
     //0为day，1为night
     public static int Swith_Mode = 0;
-    public ImageView nightSwith;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
         setContentView(R.layout.main);
 
         mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
-        nightSwith = (ImageView) findViewById(R.id.iv_night_swith);
+        ImageView nightSwitch = (ImageView) findViewById(R.id.iv_night_swith);
         ImageView ivUpdate = (ImageView) findViewById(R.id.iv_update);
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_feedList);
 
@@ -77,7 +76,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
             }
         });
 
-        nightSwith.setOnClickListener(new View.OnClickListener() {
+        nightSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -103,7 +102,6 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 }
             }
         });
-
 
 
         //处理toolbar的menu的点击事件
@@ -275,7 +273,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
                 if (endTime - startTime < 1500) {
                     finish();
 
-                }else {
+                } else {
                     Toast.makeText(mainView.this, "再按一次退出Reer", Toast.LENGTH_SHORT).show();
                     startTime = System.currentTimeMillis();// 当前时间对应的毫秒数
                     sum = 1;
@@ -289,13 +287,13 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     @Override
     protected void onResume() {
         super.onResume();
-        JAnalyticsInterface.onPageStart(this,this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageStart(this, this.getClass().getCanonicalName());
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        JAnalyticsInterface.onPageEnd(this,this.getClass().getCanonicalName());
+        JAnalyticsInterface.onPageEnd(this, this.getClass().getCanonicalName());
     }
 }
 

@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0144b095b5aa6ba993cdd3c60f5ca50bfb9c0c4e">
+        sha1="d740e9199380caac075ecccb75f4234409e6e823">
         <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
     </item>
 

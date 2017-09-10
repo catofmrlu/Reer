@@ -76,7 +76,8 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
         //使用pull方法解析xml部分
         RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
-        RSSFeed feed = rssRequestByOkHttp.getRssFeed(urlString);
+        rssRequestByOkHttp.getRssFeed(urlString);
+        RSSFeed feed = rssRequestByOkHttp.getFeed();
 
         return feed;
 
