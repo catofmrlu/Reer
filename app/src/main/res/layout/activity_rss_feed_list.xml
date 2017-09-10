@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ListView
+    <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/lv_rssList"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

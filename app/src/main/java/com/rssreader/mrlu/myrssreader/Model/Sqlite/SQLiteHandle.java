@@ -10,20 +10,22 @@ import android.util.Log;
  */
 
 public class SQLiteHandle {
+    private Context mContext;
 
     private SQLiteDatabase db;
 
     public SQLiteHandle(Context context) {
+        mContext = context;
         db = RssSqliteHelper.getInstance(context);
         Log.i("sqlite", "db打开");
     }
 
-    public void insertFeed(String rssName, String rssDescription, String rssLink) {
+    public void insertFeed(String rssName, String rssDescription, String rssLink, int itemsCount) {
         Log.i("sqlite", "开始");
 
         String sql_insert = "insert into AllFeeds"
-                + "(RssName, RssDescription, RssLink) values" + "('" + rssName + "','" + rssDescription
-                + "','" + rssLink + "'" + ")";
+                + "(RssName, RssDescription, RssLink, ItemsCount) values" + "('" + rssName + "','" + rssDescription
+                + "','" + rssLink + "','" + itemsCount + "'" + ")";
 
         //打印SQL执行语句验证是否正确
         Log.i("sql语句验证", sql_insert);
@@ -45,6 +47,7 @@ public class SQLiteHandle {
                 String name = cursor.getString(cursor.getColumnIndex("RssName"));
                 String description = cursor.getString(cursor.getColumnIndex("RssDescription"));
                 String link = cursor.getString(cursor.getColumnIndex("RssLink"));
+                int count = cursor.getInt(cursor.getColumnIndex("ItemsCount"));
 
                 //打印查询的数据
                 System.out.println(name + "---" + description + "---" + link);
@@ -68,6 +71,18 @@ public class SQLiteHandle {
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
 
         return cursor;
+
+    }
+
+    public int queryAllFeedsCount() {
+        Log.i("sqlite", "开始");
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        return cursor.getCount();
 
     }
 

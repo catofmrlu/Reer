@@ -3,6 +3,8 @@ package com.rssreader.mrlu.myrssreader.Controller;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +16,8 @@ import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.R;
+
+import java.util.HashMap;
 
 import butterknife.ButterKnife;
 import cn.jiguang.analytics.android.api.JAnalyticsInterface;
@@ -28,6 +32,34 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
     public int rssItemCount = 0;
 
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+
+            RSSFeed feed = (RSSFeed) msg.obj;
+
+            if (feed != null) {
+
+                Log.i("handleMessage", "feed传递成功");
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("feed", feed);
+
+                Intent rssIntent = new Intent(InputRssLinkActivity.this, ListActivity.class);
+
+                rssIntent.putExtra("feed", bundle);
+                startActivity(rssIntent);
+            } else
+                Log.e("handleMessage", "feed为空");
+            Intent rssIntent = new Intent(InputRssLinkActivity.this, ListActivity.class);
+            startActivity(rssIntent);
+
+
+        }
+
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,22 +72,14 @@ public class InputRssLinkActivity extends AppCompatActivity {
     //解析xml部分
     //region getfeed部分
     //获取feed
-    private void getFeed(final String urlString) {
+    private RSSFeed getFeed(final String urlString) {
 
         //使用pull方法解析xml部分
         RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
         RSSFeed feed = rssRequestByOkHttp.getRssFeed(urlString);
 
-        if (feed != null){
+        return feed;
 
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("feed", feed);
-
-            Intent rssIntent = new Intent(this, ListActivity.class);
-
-            rssIntent.putExtra("feed", bundle);
-            startActivity(rssIntent);
-        }
 
 //                try {
 
@@ -95,6 +119,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Log.i("过程打印", "search已点击");
 
                 final String link = mEtRssLink.getText().toString();
@@ -105,13 +130,41 @@ public class InputRssLinkActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        getFeed(link);
+
+                        Message message = new Message();
+                        message.obj = getFeed(link);
+
+                        RSSFeed feed = (RSSFeed) message.obj;
+
+
+                        //判断feed是否为空
+                        if (feed == null) {
+                            Log.e("feed", "feed为空");
+                        } else {
+                            Log.i("恭喜！", "feed通过");
+                            for (Object map :
+                                    feed.getAllItemsForListView()) {
+
+                                HashMap<String, String> hashMap = (HashMap<String, String>) map;
+
+                                Log.i("item", hashMap.get("title"));
+
+                            }
+                        }
+
+
+                        Log.i("Message", "Message已生成");
+
+                        handler.sendMessage(message);
+
                     }
                 }).start();
+
 
                 //跳转到主界面
 //                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
 //                startActivity(intent);
+
             }
         });
 

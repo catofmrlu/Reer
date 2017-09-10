@@ -55,12 +55,11 @@ public class RSSFeed implements Serializable {
         return itemlist.get(location);
     }
 
-
     public List getAllItemsForListView() {
-        List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
+        List<Map<String, String>> data = new ArrayList<Map<String, String>>();
         int size = itemlist.size();
         for (int i = 0; i < size; i++) {
-            HashMap<String, Object> item = new HashMap<String, Object>();
+            HashMap<String, String> item = new HashMap<String, String>();
             item.put(RSSItem.TITLE, itemlist.get(i).getTitle());
             item.put(RSSItem.PUBDATE, itemlist.get(i).getPubdate());
             data.add(item);

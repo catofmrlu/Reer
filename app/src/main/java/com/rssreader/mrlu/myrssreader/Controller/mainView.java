@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -26,7 +25,6 @@ import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
 import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
@@ -47,7 +45,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     String rssUrl;
 
     //0为day，1为night
-    public static int Swith_Mode = 1;
+    public static int Swith_Mode = 0;
     public ImageView nightSwith;
 
     @Override
@@ -62,21 +60,22 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         setContentView(R.layout.main);
 
-        //ButterKnife绑定
-        ButterKnife.bind(this);
-
-        Window window = getWindow();
-
         mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
         nightSwith = (ImageView) findViewById(R.id.iv_night_swith);
-
-
-//        ImageView imgAdd = (ImageView) findViewById(R.id.iv_add);
         ImageView ivUpdate = (ImageView) findViewById(R.id.iv_update);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_feedList);
 
+
+        //设置自定义的view为ActionBar
         setSupportActionBar(toolbar);
+
+        //主页刷新按钮的点击事件
+        ivUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         nightSwith.setOnClickListener(new View.OnClickListener() {
             @Override

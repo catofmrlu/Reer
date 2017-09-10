@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -23,8 +22,8 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private SwipeRefreshLayout mSrl;
 
-    private SimpleAdapter adapter;
-    RSSFeed feed;
+    private SimpleAdapter mAdapter;
+    private RSSFeed mFeed;
 
 
     @Override
@@ -33,26 +32,26 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_list);
 
         mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
-
-        Intent intent = getIntent();
-
-        if (intent != null){
-
-            Bundle bundle = intent.getBundleExtra("feed");
-            feed = (RSSFeed) bundle.getSerializable("feed");
-
-        }else {
-            Log.e("intent错误", "intent为空");
-        }
-
-        showListView();
+//
+//        Intent intent = getIntent();
+//
+//        if (intent != null){
+//
+//            Bundle bundle = intent.getBundleExtra("feed");
+//            mFeed = (RSSFeed) bundle.getSerializable("feed");
+//
+//        }else {
+//            Log.e("intent错误", "intent为空");
+//        }
+//
+//        showListView();
     }
 
     //列表显示获取的RSS
     private void showListView() {
         ListView itemlist = (ListView) findViewById(R.id.lv_rssList);
 
-        adapter = new SimpleAdapter(this, feed.getAllItemsForListView(),
+        mAdapter = new SimpleAdapter(this, mFeed.getAllItemsForListView(),
                 android.R.layout.simple_list_item_2, new String[]{
                 RSSItem.TITLE, RSSItem.PUBDATE
         },
@@ -60,7 +59,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                         android.R.id.text1, android.R.id.text2
                 });
 
-        itemlist.setAdapter(adapter);
+        itemlist.setAdapter(mAdapter);
         itemlist.setOnItemClickListener(this);
         itemlist.setSelection(0);
     }
@@ -71,10 +70,10 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
         //传递rssItem的内容
         Bundle bundle = new Bundle();
-        bundle.putString("title", feed.getItem(position).getTitle());
-        bundle.putString("description", feed.getItem(position).getTitle());
-        bundle.putString("link", feed.getItem(position).getTitle());
-        bundle.putString("pubdate", feed.getItem(position).getTitle());
+        bundle.putString("title", mFeed.getItem(position).getTitle());
+        bundle.putString("description", mFeed.getItem(position).getTitle());
+        bundle.putString("link", mFeed.getItem(position).getTitle());
+        bundle.putString("pubdate", mFeed.getItem(position).getTitle());
 
         itemIntent.putExtra("android.intent.extra.rssItem", bundle);
 

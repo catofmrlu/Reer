@@ -56,4 +56,14 @@
         <item name="android:statusBarColor">@color/appBaseColor</item>
 
     </style>
+
+    <style name="rsslist_item_style">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

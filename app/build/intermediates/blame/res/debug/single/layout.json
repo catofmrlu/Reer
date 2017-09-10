@@ -100,6 +100,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/unload_unread.xml"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/recommend_rss.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/recommend_rss.xml"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },

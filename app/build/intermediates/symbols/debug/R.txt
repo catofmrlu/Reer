@@ -1485,14 +1485,15 @@ int layout notification_template_media 0x7f03004a
 int layout notification_template_media_custom 0x7f03004b
 int layout notification_template_part_chronometer 0x7f03004c
 int layout notification_template_part_time 0x7f03004d
-int layout rssfeed_item 0x7f03004e
-int layout rsslist_item 0x7f03004f
-int layout select_dialog_item_material 0x7f030050
-int layout select_dialog_multichoice_material 0x7f030051
-int layout select_dialog_singlechoice_material 0x7f030052
-int layout support_simple_spinner_dropdown_item 0x7f030053
-int layout top 0x7f030054
-int layout unload_unread 0x7f030055
+int layout recommend_rss 0x7f03004e
+int layout rssfeed_item 0x7f03004f
+int layout rsslist_item 0x7f030050
+int layout select_dialog_item_material 0x7f030051
+int layout select_dialog_multichoice_material 0x7f030052
+int layout select_dialog_singlechoice_material 0x7f030053
+int layout support_simple_spinner_dropdown_item 0x7f030054
+int layout top 0x7f030055
+int layout unload_unread 0x7f030056
 int menu rsslist_menu 0x7f0d0000
 int string abc_action_bar_home_description 0x7f060000
 int string abc_action_bar_home_description_format 0x7f060001
@@ -1947,7 +1948,8 @@ int style Widget_IconPageIndicator 0x7f080184
 int style Widget_TabPageIndicator 0x7f080185
 int style md_button 0x7f080186
 int style recommend_style 0x7f080187
-int style setting_switch_text 0x7f080188
+int style rsslist_item_style 0x7f080188
+int style setting_switch_text 0x7f080189
 int[] styleable ActionBar { 0x7f01000a, 0x7f01003e, 0x7f010040, 0x7f010041, 0x7f010042, 0x7f010043, 0x7f010044, 0x7f010045, 0x7f010046, 0x7f010047, 0x7f010048, 0x7f010049, 0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e, 0x7f01004f, 0x7f010050, 0x7f010051, 0x7f010052, 0x7f010053, 0x7f010054, 0x7f010055, 0x7f010056, 0x7f010057, 0x7f010058, 0x7f010059, 0x7f01009c }
 int styleable ActionBar_background 10
 int styleable ActionBar_backgroundSplit 12

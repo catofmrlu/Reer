@@ -776,8 +776,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <colgroup align="left" />
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>show</code></td><td>0</td><td></td></tr>
-<tr><td><code>inshow</code></td><td>1</td><td> Not displayed, but taken into account during layout (space is left for it). </td></tr>
-<tr><td><code>hide</code></td><td>2</td><td> Completely hidden, as if the view had not been added. </td></tr>
+<tr><td><code>inshow</code></td><td>1</td><td></td></tr>
+<tr><td><code>hide</code></td><td>2</td><td></td></tr>
 </table>
          */
         public static final int curVisibility=0x7f010006;
@@ -4399,14 +4399,15 @@ containing a value of this type.
         public static final int notification_template_media_custom=0x7f03004b;
         public static final int notification_template_part_chronometer=0x7f03004c;
         public static final int notification_template_part_time=0x7f03004d;
-        public static final int rssfeed_item=0x7f03004e;
-        public static final int rsslist_item=0x7f03004f;
-        public static final int select_dialog_item_material=0x7f030050;
-        public static final int select_dialog_multichoice_material=0x7f030051;
-        public static final int select_dialog_singlechoice_material=0x7f030052;
-        public static final int support_simple_spinner_dropdown_item=0x7f030053;
-        public static final int top=0x7f030054;
-        public static final int unload_unread=0x7f030055;
+        public static final int recommend_rss=0x7f03004e;
+        public static final int rssfeed_item=0x7f03004f;
+        public static final int rsslist_item=0x7f030050;
+        public static final int select_dialog_item_material=0x7f030051;
+        public static final int select_dialog_multichoice_material=0x7f030052;
+        public static final int select_dialog_singlechoice_material=0x7f030053;
+        public static final int support_simple_spinner_dropdown_item=0x7f030054;
+        public static final int top=0x7f030055;
+        public static final int unload_unread=0x7f030056;
     }
     public static final class menu {
         public static final int rsslist_menu=0x7f0d0000;
@@ -4872,7 +4873,8 @@ containing a value of this type.
 <item name="android:layout_columnWeight">1</item>
          */
         public static final int recommend_style=0x7f080187;
-        public static final int setting_switch_text=0x7f080188;
+        public static final int rsslist_item_style=0x7f080188;
+        public static final int setting_switch_text=0x7f080189;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

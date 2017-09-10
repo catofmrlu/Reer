@@ -4,12 +4,14 @@ import android.content.Context;
 import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -37,7 +39,7 @@ public class RssRequestByOkHttp {
         this.mContext = context;
     }
 
-    public RSSFeed getRssFeed(String rssLink) {
+    public RSSFeed getRssFeed(final String rssLink) {
 
 
         try {
@@ -90,18 +92,27 @@ public class RssRequestByOkHttp {
 
                         //统计添加源的项目数
                         System.out.println("---------/n该feed的rssitem数据" + feed.Count() + "/n------");
-//                try {
+//
+                        for (Object map :
+                                feed.getAllItemsForListView()) {
 
-//                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-//                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
-//
-//                    sqLiteHandle.dbClose();
-//
-//                    sqLiteHandle = null;
-//                } catch (Exception e) {
-//                    Log.e("sqllite插入问题", e.getMessage());
-//
-//                }
+                            HashMap<String, String> hashMap = (HashMap<String, String>) map;
+                            Log.i("item", hashMap.get("title"));
+                        }
+
+
+                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
+
+                        if (!sqLiteHandle.urlQuery(rssLink)) {
+                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
+
+                            Log.i("sqlite已存储", feed.getName());
+                        }
+
+                        sqLiteHandle.dbClose();
+
+                        sqLiteHandle = null;
+
                     }
                 }
             });

@@ -11,6 +11,8 @@ import android.util.Log;
  */
 public class RssSqliteHelper extends SQLiteOpenHelper {
 
+    private Context mContext;
+
     private static RssSqliteHelper rssSqliteHelper;
 
     public RssSqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -19,17 +21,18 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
 
 
     public static SQLiteDatabase getInstance(Context context) {
+
+
         if (rssSqliteHelper == null) {
 
-            synchronized (RssSqliteHelper.class){
-                if (rssSqliteHelper == null){
-                    rssSqliteHelper = new RssSqliteHelper(context, "Rss", null, 1);
+            synchronized (RssSqliteHelper.class) {
+                if (rssSqliteHelper == null) {
+                    rssSqliteHelper = new RssSqliteHelper(context, "Rss", null, 2);
                 }
             }
         }
         return rssSqliteHelper.getWritableDatabase();
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -56,7 +59,8 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
         db.execSQL("create table AllFeeds" + "(" + "_id integer primary key,"
                 + "RssName varchar,"
                 + "RssDescription varchar,"
-                + "RssLink varchar)");
+                + "RssLink varchar,"
+                + "ItemsCount integer)");
         Log.i("创建数据表", "创建全部feed表成功！");
 
 

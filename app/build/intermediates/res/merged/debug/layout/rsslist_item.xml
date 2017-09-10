@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
     <TextView
-        android:layout_marginLeft="20dp"
-        android:textSize="15dp"
+
         android:id="@+id/tv_rssName"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content" />
+        style="@style/rsslist_item_style"
+        android:layout_width="200dp" />
 
     <TextView
-
-        android:layout_marginLeft="160dp"
-        android:textSize="15dp"
+        android:layout_marginLeft="100dp"
         android:id="@+id/tv_rssCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        style="@style/rsslist_item_style"
+        android:lines="1" />
 
 
 </LinearLayout>
