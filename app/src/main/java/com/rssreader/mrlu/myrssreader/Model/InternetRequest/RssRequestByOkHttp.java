@@ -41,7 +41,14 @@ public class RssRequestByOkHttp {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
 
-            rssFeed = (RSSFeed) msg.obj;
+            if ((RSSFeed) msg.obj != null){
+                rssFeed = (RSSFeed) msg.obj;
+
+            }else
+                Log.e("handleMessage", "RSSFeed为空");
+
+
+                    ;
 
         }
     };
