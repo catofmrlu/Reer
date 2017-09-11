@@ -1,8 +1,9 @@
 package com.rssreader.mrlu.myrssreader.Model.Rss;
 
+import android.support.v4.util.ArrayMap;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
@@ -29,7 +30,7 @@ public class RSSFeed implements Serializable {
         this.pubDate = pubDate;
     }
 
-    private String pubDate= null;
+    private String pubDate = null;
 
     private int itemcount = 0;
     private List<RSSItem> itemlist;
@@ -59,7 +60,7 @@ public class RSSFeed implements Serializable {
         List<Map<String, String>> data = new ArrayList<Map<String, String>>();
         int size = itemlist.size();
         for (int i = 0; i < size; i++) {
-            HashMap<String, String> item = new HashMap<String, String>();
+            ArrayMap<String, String> item = new ArrayMap<String, String>();
             item.put(RSSItem.TITLE, itemlist.get(i).getTitle());
             item.put(RSSItem.PUBDATE, itemlist.get(i).getPubdate());
             data.add(item);

@@ -1,11 +1,10 @@
 package com.rssreader.mrlu.myrssreader.Model.InternetRequest;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 
 import org.xml.sax.SAXException;
@@ -34,34 +33,13 @@ public class RssRequestByOkHttp {
 
     OkHttpClient okHttpClient;
 
-    RSSFeed rssFeed;
-
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-
-            if ((RSSFeed) msg.obj != null){
-                rssFeed = (RSSFeed) msg.obj;
-
-            }else
-                Log.e("handleMessage", "RSSFeed为空");
-
-
-                    ;
-
-        }
-    };
-
     public RssRequestByOkHttp(Context context) {
         this.mContext = context;
     }
 
     public void getRssFeed(final String rssLink) {
 
-
         try {
-
 
             okHttpClient = new OkHttpClient();
             Request.Builder builder = new Request.Builder().url(rssLink);
@@ -105,7 +83,7 @@ public class RssRequestByOkHttp {
 
                         //统计添加源的项目数
                         System.out.println("---------/n该feed的rssitem数据" + feed.Count() + "/n------");
-//
+
                         for (Object map :
                                 feed.getAllItemsForListView()) {
 
@@ -113,22 +91,11 @@ public class RssRequestByOkHttp {
                             Log.i("item", hashMap.get("title"));
                         }
 
-                        Message message = new Message();
-                        message.obj = feed;
-                        handler.sendMessage(message);
+                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
+                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), feed.getFeedLink(), feed.Count());
 
-//
-//                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
-//
-//                        if (!sqLiteHandle.urlQuery(rssLink)) {
-//                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
-//
-//                            Log.i("sqlite已存储", feed.getName());
-//                        }
-//
-//                        sqLiteHandle.dbClose();
-//
-//                        sqLiteHandle = null;
+                        sqLiteHandle.dbClose();
+                        sqLiteHandle = null;
 
                     }
                 }
@@ -140,7 +107,4 @@ public class RssRequestByOkHttp {
 
     }
 
-    public RSSFeed getFeed(){
-        return rssFeed;
-    }
 }

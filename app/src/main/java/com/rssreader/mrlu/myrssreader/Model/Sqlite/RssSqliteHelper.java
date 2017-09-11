@@ -22,7 +22,7 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
 
     public static SQLiteDatabase getInstance(Context context) {
 
-
+        //单例模式之懒汉模式
         if (rssSqliteHelper == null) {
 
             synchronized (RssSqliteHelper.class) {

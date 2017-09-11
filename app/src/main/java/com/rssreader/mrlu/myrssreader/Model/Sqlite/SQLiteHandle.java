@@ -23,6 +23,8 @@ public class SQLiteHandle {
     public void insertFeed(String rssName, String rssDescription, String rssLink, int itemsCount) {
         Log.i("sqlite", "开始");
 
+        db.beginTransaction();
+
         String sql_insert = "insert into AllFeeds"
                 + "(RssName, RssDescription, RssLink, ItemsCount) values" + "('" + rssName + "','" + rssDescription
                 + "','" + rssLink + "','" + itemsCount + "'" + ")";
@@ -32,9 +34,13 @@ public class SQLiteHandle {
 
         db.execSQL(sql_insert);
 
+        db.endTransaction();
+
+
     }
 
-    public void queryAllFeeds(String sqlTable) {
+
+    public void logAllFeeds() {
 //        db = mSqlHelper.getWritableDatabase();
         Log.i("sqlite", "开始");
 
@@ -56,11 +62,11 @@ public class SQLiteHandle {
         } else {
             Log.e("查询allFeeds", "没有数据！！");
         }
+        db.endTransaction();
 
         cursor.close();
 
     }
-
 
     public Cursor queryAllFeeds() {
         Log.i("sqlite", "开始");
@@ -69,6 +75,8 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        db.endTransaction();
 
         return cursor;
 
@@ -81,6 +89,8 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+
+        db.endTransaction();
 
         return cursor.getCount();
 
@@ -101,7 +111,8 @@ public class SQLiteHandle {
         else
             isHasFeed = false;
 
-//        db.close();
+        db.endTransaction();
+
 
         return isHasFeed;
     }
@@ -128,12 +139,13 @@ public class SQLiteHandle {
                 isUrl = false;
             }
         }
+        db.endTransaction();
+
 
         return isUrl;
     }
 
     public void dbClose() {
-        db.endTransaction();
         db.close();
         Log.i("sqlite", "关闭");
     }

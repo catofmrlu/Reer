@@ -13,11 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.jaeger.library.StatusBarUtil;
-import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.R;
-
-import java.util.HashMap;
 
 import butterknife.ButterKnife;
 import cn.jiguang.analytics.android.api.JAnalyticsInterface;
@@ -72,15 +69,11 @@ public class InputRssLinkActivity extends AppCompatActivity {
     //解析xml部分
     //region getfeed部分
     //获取feed
-    private RSSFeed getFeed(final String urlString) {
-
-        //使用pull方法解析xml部分
-        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
-        rssRequestByOkHttp.getRssFeed(urlString);
-        RSSFeed feed = rssRequestByOkHttp.getFeed();
-
-        return feed;
-
+//    private RSSFeed getFeed(final String urlString) {
+//
+//        //使用pull方法解析xml部分
+//        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
+//        rssRequestByOkHttp.getRssFeed(urlString);
 
 //                try {
 
@@ -96,7 +89,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
 //                }
 
 
-    }
+//    }
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
@@ -132,31 +125,24 @@ public class InputRssLinkActivity extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        Message message = new Message();
-                        message.obj = getFeed(link);
-
-                        RSSFeed feed = (RSSFeed) message.obj;
-
-
                         //判断feed是否为空
-                        if (feed == null) {
-                            Log.e("feed", "feed为空");
-                        } else {
-                            Log.i("恭喜！", "feed通过");
-                            for (Object map :
-                                    feed.getAllItemsForListView()) {
-
-                                HashMap<String, String> hashMap = (HashMap<String, String>) map;
-
-                                Log.i("item", hashMap.get("title"));
-
-                            }
-                        }
+//                        if (feed == null) {
+//                            Log.e("feed", "feed为空");
+//                        } else {
+//                            Log.i("恭喜！", "feed通过");
+//                            for (Object map :
+//                                    feed.getAllItemsForListView()) {
+//
+//                                HashMap<String, String> hashMap = (HashMap<String, String>) map;
+//
+//                                Log.i("item", hashMap.get("title"));
+//
+//                            }
+//                        }
 
 
                         Log.i("Message", "Message已生成");
 
-                        handler.sendMessage(message);
 
                     }
                 }).start();
