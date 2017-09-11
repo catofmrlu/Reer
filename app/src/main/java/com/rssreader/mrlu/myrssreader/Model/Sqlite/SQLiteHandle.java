@@ -35,8 +35,23 @@ public class SQLiteHandle {
         db.execSQL(sql_insert);
 
         db.endTransaction();
+    }
 
+    public void insertUnreadItem(String rssName, String itemName,String itemPubdate, String itemDescription) {
+        Log.i("sqlite", "开始");
 
+        db.beginTransaction();
+
+        String sql_insert = "insert into AllFeeds"
+                + "(RssName, ItemTitle, ItemPubdate, ItemDescription) values" + "('" + rssName + "','" + itemName
+                + "','" + itemPubdate + "','" + itemDescription + "'" + ")";
+
+        //打印SQL执行语句验证是否正确
+        Log.i("sql语句验证", sql_insert);
+
+        db.execSQL(sql_insert);
+
+        db.endTransaction();
     }
 
 
@@ -62,10 +77,10 @@ public class SQLiteHandle {
         } else {
             Log.e("查询allFeeds", "没有数据！！");
         }
+
         db.endTransaction();
 
         cursor.close();
-
     }
 
     public Cursor queryAllFeeds() {
@@ -79,7 +94,19 @@ public class SQLiteHandle {
         db.endTransaction();
 
         return cursor;
+    }
 
+    public Cursor queryAllUnreadItems() {
+        Log.i("sqlite", "开始");
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("unReadItems", null, null, null, null, null, null);
+
+        db.endTransaction();
+
+        return cursor;
     }
 
     public int queryAllFeedsCount() {
@@ -93,7 +120,6 @@ public class SQLiteHandle {
         db.endTransaction();
 
         return cursor.getCount();
-
     }
 
     public boolean queryHasFeed() {
@@ -113,7 +139,6 @@ public class SQLiteHandle {
 
         db.endTransaction();
 
-
         return isHasFeed;
     }
 
@@ -121,7 +146,6 @@ public class SQLiteHandle {
         Log.i("sqlite", "开始");
 
         boolean isUrl = false;
-
 
         //开启事务
         db.beginTransaction();
@@ -140,7 +164,6 @@ public class SQLiteHandle {
             }
         }
         db.endTransaction();
-
 
         return isUrl;
     }

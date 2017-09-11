@@ -1,6 +1,7 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.util.ArrayMap;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -12,27 +13,12 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.android.volley.RequestQueue;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSItem;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
-import com.rssreader.mrlu.myrssreader.Model.XmlParse.RSSHandler;
 import com.rssreader.mrlu.myrssreader.R;
 
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -48,93 +34,41 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
 
         mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
 
-        String rssLink = "https://movie.douban.com/feed/review/movie";
+        SQLiteHandle sqLiteHandle = new SQLiteHandle(this);
+        Cursor cursor = sqLiteHandle.queryAllUnreadItems();
 
+        if (cursor != null) {
 
-        OkHttpClient okHttpClient = new OkHttpClient();
-        Request.Builder builder = new Request.Builder().url(rssLink);
-        builder.method("GET", null);
-        Request request = builder.build();
-        Call call = okHttpClient.newCall(request);
+            setContentView(R.layout.activity_list);
 
-        call.enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
+            List<Map<String, String>> mapList = new ArrayList<Map<String, String>>();
 
-                Log.d("rssLink请求", "请求返回失败");
+            while (cursor.moveToNext()) {
+                Map<String, String> map = new ArrayMap<String, String>();
+
+                map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
+                map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
+                mapList.add(map);
             }
 
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                InputStream isRss = response.body().byteStream();
-
-                try {
-
-                    SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
-                    SAXParser parser = saxParserFactory.newSAXParser();
-
-                    RSSHandler rssHandler = new RSSHandler();
-                    parser.parse(isRss, rssHandler);
-
-                    RSSFeed feed = rssHandler.getFeed();
-
-
-                    //判断feed是否为空
-                    if (feed == null) {
-                        Log.e("feed", "feed为空");
-                    } else {
-                        Log.i("恭喜！", "feed通过");
-
-                        //统计添加源的项目数
-                        System.out.println("---------/n该feed的rssitem数据" + feed.Count() + "/n------");
-
-                        for (Object map :
-                                feed.getAllItemsForListView()) {
-
-                            ArrayMap<String, String> arrayMap = (ArrayMap<String, String>) map;
-                            Log.i("item", arrayMap.get("title"));
-                        }
-
-                        //sqlite插入部分
-                        SQLiteHandle sqLiteHandle = new SQLiteHandle(getApplicationContext());
-                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), feed.getFeedLink(), feed.Count());
-                        Log.i("sqlite插入", feed.getName() + ":插入成功！！");
-
-                        sqLiteHandle.dbClose();
-                        sqLiteHandle = null;
-
-                    }
-                } catch (ParserConfigurationException e) {
-                    e.printStackTrace();
-                } catch (SAXException e) {
-                    e.printStackTrace();
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
-
-//
-
-
-            }
-
-        });
-
+            showListView(mapList);
+        } else {
+            Log.i("ListActivity", "cursor为空");
+            setContentView(R.layout.black_unread);
+        }
 
     }
 
-//列表显示获取的RSS
-
-    private void showListView(RSSFeed mFeed) {
+    //列表显示获取的RSS
+    private void showListView(List<Map<String, String>> list) {
         ListView itemlist = (ListView) findViewById(R.id.lv_rssList);
 
-        mAdapter = new SimpleAdapter(this, mFeed.getAllItemsForListView(),
+        mAdapter = new SimpleAdapter(this, list,
                 android.R.layout.simple_list_item_2, new String[]{
-                RSSItem.TITLE, RSSItem.PUBDATE
+                "title", "pubdate"
         },
                 new int[]{
                         android.R.id.text1, android.R.id.text2
@@ -158,8 +92,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 //
 //        itemIntent.putExtra("android.intent.extra.rssItem", bundle);
 
-        startActivityForResult(itemIntent, 0);
+        startActivity(itemIntent);
 
     }
+
 
 }

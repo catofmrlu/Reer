@@ -61,8 +61,9 @@ public class RSSFeed implements Serializable {
         int size = itemlist.size();
         for (int i = 0; i < size; i++) {
             ArrayMap<String, String> item = new ArrayMap<String, String>();
-            item.put(RSSItem.TITLE, itemlist.get(i).getTitle());
-            item.put(RSSItem.PUBDATE, itemlist.get(i).getPubdate());
+            item.put("title", itemlist.get(i).getTitle());
+            item.put("pubdate", itemlist.get(i).getPubdate());
+            item.put("description", itemlist.get(i).getDescription());
             data.add(item);
 
         }

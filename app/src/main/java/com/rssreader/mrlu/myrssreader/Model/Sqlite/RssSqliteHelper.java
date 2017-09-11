@@ -38,8 +38,10 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table unReadItems" + "(" + "_id integer primary key,"
                 + "ItemTitle varchar,"
+                + "RssName varchar,"
                 + "ItemPubdate varchar,"
-                + "ItemLink varchar)");
+                + "ItemLink varchar,"
+                + "ItemDescription varchar)");
         Log.i("创建数据表", "创建未读items表成功！");
 
 
@@ -50,9 +52,11 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
         Log.i("创建数据表", "创建已读items表成功！");
 
         db.execSQL("create table StarItems" + "(" + "_id integer primary key,"
-                + "RssTitle varchar,"
-                + "RssDescription varchar,"
-                + "RssLink varchar)");
+                + "ItemTitle varchar,"
+                + "RssName varchar,"
+                + "ItemPubdate varchar,"
+                + "ItemLink varchar,"
+                + "ItemDescription varchar)");
         Log.i("创建数据表", "创建标记items表成功！");
 
 

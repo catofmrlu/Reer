@@ -8,6 +8,7 @@ public class RSSItem {
 
     public static final String TITLE = "title";
     public static final String PUBDATE = "pubdate";
+    public static final String Description = "description";
     private String title = null;
     private String description = null;
     private String link = null;
