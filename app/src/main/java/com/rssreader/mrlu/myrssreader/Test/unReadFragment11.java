@@ -78,7 +78,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
                 mRssUnreadList.add(arrayMap);
             }
 
-
         } else {
             Log.i("过程打印", "不存在Feed");
             view = inflater.inflate(R.layout.black_unread, container, false);
@@ -107,7 +106,6 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         });
 
         showListView();
-
     }
 
     private int dp2px(int dp) {
@@ -120,9 +118,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         Log.i("过程标记", "进入showListView()");
 
         try {
-
             itemlist = (ListView) view.findViewById(R.id.lv_rssList);
-
 
             adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
                     R.layout.rsslist_item, new String[]{
@@ -136,7 +132,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             itemlist.setOnItemClickListener(this);
             itemlist.setSelection(0);
         } catch (Exception e) {
-            Log.i("list显示", e.getMessage());
+            Log.i("list显示问题", e.getMessage());
         }
     }
 
@@ -153,7 +149,5 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         } catch (Exception e) {
             Log.i("error", e.getMessage());
         }
-
     }
-
 }

@@ -1,7 +1,6 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -35,22 +34,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
             RSSFeed feed = (RSSFeed) msg.obj;
 
-            if (feed != null) {
-
-                Log.i("handleMessage", "feed传递成功");
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("feed", feed);
-
-                Intent rssIntent = new Intent(InputRssLinkActivity.this, ListActivity.class);
-
-                rssIntent.putExtra("feed", bundle);
-                startActivity(rssIntent);
-            } else
-                Log.e("handleMessage", "feed为空");
-            Intent rssIntent = new Intent(InputRssLinkActivity.this, ListActivity.class);
-            startActivity(rssIntent);
-
 
         }
 
@@ -65,31 +48,6 @@ public class InputRssLinkActivity extends AppCompatActivity {
         initView();
 
     }
-
-    //解析xml部分
-    //region getfeed部分
-    //获取feed
-//    private RSSFeed getFeed(final String urlString) {
-//
-//        //使用pull方法解析xml部分
-//        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(this);
-//        rssRequestByOkHttp.getRssFeed(urlString);
-
-//                try {
-
-//                    SQLiteHandle sqLiteHandle = new SQLiteHandle(InputRssLinkActivity.this);
-//                    sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), urlString);
-//
-//                    sqLiteHandle.dbClose();
-//
-//                    sqLiteHandle = null;
-//                } catch (Exception e) {
-//                    Log.e("sqllite插入问题", e.getMessage());
-//
-//                }
-
-
-//    }
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
