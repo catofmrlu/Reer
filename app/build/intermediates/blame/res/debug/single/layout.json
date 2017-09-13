@@ -96,12 +96,12 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/unload_unread.xml",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/unload_unread.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/recommend_rss.xml",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/recommend_rss.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/unload_unread.xml",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/layout/unload_unread.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",

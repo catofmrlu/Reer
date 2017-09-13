@@ -4,20 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srl_list"
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_rssList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible">
-
-
-        <com.baoyz.swipemenulistview.SwipeMenuListView
-            android:id="@+id/lv_rssList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-    </android.support.v4.widget.SwipeRefreshLayout>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
 

@@ -1,18 +1,23 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
+import com.rssreader.mrlu.myrssreader.Model.InternetRequest.RssRequestByOkHttp;
 import com.rssreader.mrlu.myrssreader.R;
 
 import butterknife.ButterKnife;
@@ -20,11 +25,11 @@ import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 
-
 public class InputRssLinkActivity extends AppCompatActivity {
 
     private EditText mEtRssLink;
     private ImageView mIvRssSearch;
+    ProgressDialog progressDialog;
 
     public int rssItemCount = 0;
 
@@ -32,9 +37,27 @@ public class InputRssLinkActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
 
-            RSSFeed feed = (RSSFeed) msg.obj;
+            progressDialog.dismiss();
 
+            new AlertDialog.Builder(InputRssLinkActivity.this)
+                    .setTitle("添加rss源")
 
+                    .setMessage("是否添加「豆瓣影评」？")
+                    .setPositiveButton("是的", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            Toast.makeText(InputRssLinkActivity.this, "「豆瓣影评」已添加", Toast.LENGTH_LONG).show();
+                        }
+                    })
+                    .setNeutralButton("稍后", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    }).show();
+
+            mEtRssLink.setText("");
         }
 
     };
@@ -78,37 +101,27 @@ public class InputRssLinkActivity extends AppCompatActivity {
 
                 Log.i("rssLink打印", link);
 
-                //利用跳转时间，异步请求feed数据，并插入到数据库
+                //等待对话框loading...
+                progressDialog = new ProgressDialog(InputRssLinkActivity.this);
+                progressDialog.setIndeterminate(false);//循环滚动
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setMessage("loading...");
+                progressDialog.setCancelable(false);//false不能取消显示，true可以取消显示
+                progressDialog.show();
+
+                //异步请求feed数据，并插入到数据库
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
 
-                        //判断feed是否为空
-//                        if (feed == null) {
-//                            Log.e("feed", "feed为空");
-//                        } else {
-//                            Log.i("恭喜！", "feed通过");
-//                            for (Object map :
-//                                    feed.getAllItemsForListView()) {
-//
-//                                HashMap<String, String> hashMap = (HashMap<String, String>) map;
-//
-//                                Log.i("item", hashMap.get("title"));
-//
-//                            }
-//                        }
+                        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
+                        rssRequestByOkHttp.getRssFeed(link);
 
+                        SystemClock.sleep(1500);
 
-                        Log.i("Message", "Message已生成");
-
-
+                        handler.sendEmptyMessage(0);
                     }
                 }).start();
-
-
-                //跳转到主界面
-//                Intent intent = new Intent(InputRssLinkActivity.this, mainView.class);
-//                startActivity(intent);
 
             }
         });

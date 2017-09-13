@@ -33,27 +33,31 @@ public class SQLiteHandle {
         Log.i("sql语句验证", sql_insert);
 
         db.execSQL(sql_insert);
+        db.setTransactionSuccessful();
 
         db.endTransaction();
     }
 
-    public void insertUnreadItem(String rssName, String itemName,String itemPubdate, String itemDescription) {
+    public void insertUnreadItem(String rssName, String itemName, String itemPubdate) {
         Log.i("sqlite", "开始");
 
         db.beginTransaction();
 
-        String sql_insert = "insert into AllFeeds"
-                + "(RssName, ItemTitle, ItemPubdate, ItemDescription) values" + "('" + rssName + "','" + itemName
-                + "','" + itemPubdate + "','" + itemDescription + "'" + ")";
+        String sql_insert = "insert into unReadItems"
+                + "(RssName, ItemTitle, ItemPubdate) values" + "('" + rssName + "','" + itemName
+                + "','" + itemPubdate + "')";
 
         //打印SQL执行语句验证是否正确
         Log.i("sql语句验证", sql_insert);
 
         db.execSQL(sql_insert);
 
+        Log.i("sql语句", "完成！");
+
+        db.setTransactionSuccessful();
+
         db.endTransaction();
     }
-
 
     public void logAllFeeds() {
 //        db = mSqlHelper.getWritableDatabase();
@@ -77,6 +81,7 @@ public class SQLiteHandle {
         } else {
             Log.e("查询allFeeds", "没有数据！！");
         }
+        db.setTransactionSuccessful();
 
         db.endTransaction();
 
@@ -90,6 +95,7 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+        db.setTransactionSuccessful();
 
         db.endTransaction();
 
@@ -104,6 +110,9 @@ public class SQLiteHandle {
 
         Cursor cursor = db.query("unReadItems", null, null, null, null, null, null);
 
+        Log.i("unReadItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
+
+        db.setTransactionSuccessful();
         db.endTransaction();
 
         return cursor;
@@ -116,6 +125,7 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         Cursor cursor = db.query("AllFeeds", null, null, null, null, null, null);
+        db.setTransactionSuccessful();
 
         db.endTransaction();
 
@@ -136,6 +146,9 @@ public class SQLiteHandle {
             isHasFeed = true;
         else
             isHasFeed = false;
+
+
+        db.setTransactionSuccessful();
 
         db.endTransaction();
 
@@ -163,6 +176,9 @@ public class SQLiteHandle {
                 isUrl = false;
             }
         }
+
+        db.setTransactionSuccessful();
+
         db.endTransaction();
 
         return isUrl;
@@ -172,6 +188,5 @@ public class SQLiteHandle {
         db.close();
         Log.i("sqlite", "关闭");
     }
-
 
 }

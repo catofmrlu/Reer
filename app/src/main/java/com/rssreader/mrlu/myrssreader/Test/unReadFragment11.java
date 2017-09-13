@@ -3,10 +3,14 @@ package com.rssreader.mrlu.myrssreader.Test;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.ArrayMap;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -46,47 +50,23 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
 
     View view;
     ListView itemlist;
+    SwipeRefreshLayout srlFeedList;
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            srlFeedList.setRefreshing(false);
+        }
+    };
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
 
-        mSqLiteHandle = new SQLiteHandle(getActivity());
-        Cursor cursor = mSqLiteHandle.queryAllFeeds();
-
-        if (cursor != null) {
-            Log.i("过程打印", "存在Feed");
-
-            view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
-
-            mRssUnreadList = new ArrayList<Map<String, String>>();
-//
-            ArrayMap<String, String> map = new ArrayMap<String, String>();
-            map.put("rssName", "全部未读");
-            map.put("rssCount", rssItemCount);
-            mRssUnreadList.add(map);
-
-            Log.i("count数", String.valueOf(cursor.getCount()));
-
-            while (cursor.moveToNext()) {
-                String name = cursor.getString(cursor.getColumnIndex("RssName"));
-                int count = cursor.getInt(cursor.getColumnIndex("ItemsCount"));
-
-                ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
-                arrayMap.put("rssName", name);
-                arrayMap.put("rssCount", String.valueOf(count));
-                mRssUnreadList.add(arrayMap);
-            }
-
-        } else {
-            Log.i("过程打印", "不存在Feed");
-            view = inflater.inflate(R.layout.black_unread, container, false);
-        }
-
-        cursor.close();
-        mSqLiteHandle.dbClose();
-        mSqLiteHandle = null;
-        Log.i("unReadFragment11", "onCreateView:mSqLiteHandle已关闭");
+        loadSQLiteData();
 
         init();
 
@@ -105,6 +85,30 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             }
         });
 
+        srlFeedList = (SwipeRefreshLayout) view.findViewById(R.id.srl_rssList);
+        srlFeedList.setColorSchemeResources(R.color.appBaseColor);
+        srlFeedList.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlFeedList.setRefreshing(true);
+                Log.i("loading...", "new thread1");
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Log.i("loading...", "new thread2");
+                        loadSQLiteData();
+                        adapter.notifyDataSetChanged();
+
+                        SystemClock.sleep(1000);
+
+                        handler.sendEmptyMessage(0);
+                    }
+                }).start();
+            }
+        });
+
         showListView();
     }
 
@@ -118,7 +122,7 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
         Log.i("过程标记", "进入showListView()");
 
         try {
-            itemlist = (ListView) view.findViewById(R.id.lv_rssList);
+            itemlist = (ListView) view.findViewById(R.id.rv_feed);
 
             adapter = new SimpleAdapter(getActivity(), mRssUnreadList,
                     R.layout.rsslist_item, new String[]{
@@ -150,4 +154,50 @@ public class unReadFragment11 extends Fragment implements AdapterView.OnItemClic
             Log.i("error", e.getMessage());
         }
     }
+
+    public void loadSQLiteData() {
+        {
+
+            mRssUnreadList = new ArrayList<Map<String, String>>();
+
+            mSqLiteHandle = new SQLiteHandle(getActivity());
+
+            mSqLiteHandle.logAllFeeds();
+
+            Cursor cursor = mSqLiteHandle.queryAllFeeds();
+
+            if (cursor != null) {
+                Log.i("过程打印", "存在Feed");
+
+                ArrayMap<String, String> map = new ArrayMap<String, String>();
+                map.put("rssName", "全部未读");
+                map.put("rssCount", rssItemCount);
+                mRssUnreadList.add(map);
+
+                Log.i("count数", String.valueOf(cursor.getCount()));
+
+                while (cursor.moveToNext()) {
+                    String name = cursor.getString(cursor.getColumnIndex("RssName"));
+                    int count = cursor.getInt(cursor.getColumnIndex("ItemsCount"));
+
+                    ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
+                    arrayMap.put("rssName", name);
+                    arrayMap.put("rssCount", String.valueOf(count));
+                    mRssUnreadList.add(arrayMap);
+                }
+
+            } else {
+                Log.i("过程打印", "不存在Feed");
+            }
+
+            cursor.close();
+            mSqLiteHandle.dbClose();
+            mSqLiteHandle = null;
+            Log.i("unReadFragment11", "onCreateView:mSqLiteHandle已关闭");
+
+        }
+
+
+    }
+
 }

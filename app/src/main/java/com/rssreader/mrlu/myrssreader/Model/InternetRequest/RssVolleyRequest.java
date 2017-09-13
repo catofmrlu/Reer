@@ -69,8 +69,6 @@ public class RssVolleyRequest {
 //                                    reader.parse(isc);
 //                                    feed = rssHander.getFeed();
 
-
-
                             } catch (Exception e) {
                                 e.printStackTrace();
 

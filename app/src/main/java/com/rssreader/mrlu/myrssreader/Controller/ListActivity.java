@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.util.ArrayMap;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.android.volley.RequestQueue;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 
@@ -24,49 +22,44 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public String tag = "RSSReader";
 
-    private RequestQueue mRequestQueue;
-
-    private SwipeRefreshLayout mSrl;
-
-    private SimpleAdapter mAdapter;
-
+    List<Map<String, String>> mapList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mSrl = (SwipeRefreshLayout) findViewById(R.id.srl_list);
+        setContentView(R.layout.activity_list);
 
         SQLiteHandle sqLiteHandle = new SQLiteHandle(this);
         Cursor cursor = sqLiteHandle.queryAllUnreadItems();
 
         if (cursor != null) {
+            Log.i("cursor", "存在");
 
-            setContentView(R.layout.activity_list);
-
-            List<Map<String, String>> mapList = new ArrayList<Map<String, String>>();
+            mapList = new ArrayList<Map<String, String>>();
 
             while (cursor.moveToNext()) {
                 Map<String, String> map = new ArrayMap<String, String>();
 
                 map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
                 map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
+
+                Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
                 mapList.add(map);
             }
 
             showListView(mapList);
         } else {
             Log.i("ListActivity", "cursor为空");
-            setContentView(R.layout.black_unread);
         }
 
     }
 
     //列表显示获取的RSS
     private void showListView(List<Map<String, String>> list) {
-        ListView itemlist = (ListView) findViewById(R.id.lv_rssList);
+        SwipeMenuListView itemlist = (SwipeMenuListView) findViewById(R.id.lv_rssList);
 
-        mAdapter = new SimpleAdapter(this, list,
+        SimpleAdapter mAdapter = new SimpleAdapter(this, list,
                 android.R.layout.simple_list_item_2, new String[]{
                 "title", "pubdate"
         },

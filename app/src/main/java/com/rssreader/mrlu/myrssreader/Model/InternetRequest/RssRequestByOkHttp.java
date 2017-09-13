@@ -1,6 +1,7 @@
 package com.rssreader.mrlu.myrssreader.Model.InternetRequest;
 
 import android.content.Context;
+import android.support.v4.util.ArrayMap;
 import android.util.Log;
 
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
@@ -11,7 +12,6 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -84,16 +84,23 @@ public class RssRequestByOkHttp {
                         //统计添加源的项目数
                         System.out.println("---------/n该feed的rssitem数据" + feed.Count() + "/n------");
 
+
+                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
+                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
+
+
                         for (Object map :
                                 feed.getAllItemsForListView()) {
 
-                            HashMap<String, String> hashMap = (HashMap<String, String>) map;
-                            Log.i("item", hashMap.get("title"));
+                            ArrayMap<String, String> arrayMap = (ArrayMap<String, String>) map;
+
+                            String title = arrayMap.get("title");
+                            String pubdate = arrayMap.get("pubdate");
+
+                            sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate);
+
+                            Log.i("item插入", "item:" + title + ":" + pubdate);
                         }
-
-                        SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
-                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), feed.getFeedLink(), feed.Count());
-
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;
 

@@ -4,7 +4,7 @@
     <item
         is-multidex="true"
         jar="/Users/luxin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
@@ -21,8 +21,17 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luxin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.7.0/1dc44f4cec20a64cebb68b90b4218f82ac7948b1/okio-1.7.0.jar"
+        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3fdd1fce4594fea4ff689a9b95792d8fbf7fc25d">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luxin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.7.0/1dc44f4cec20a64cebb68b90b4218f82ac7948b1/okio-1.7.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="1dc44f4cec20a64cebb68b90b4218f82ac7948b1">
@@ -30,12 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luxin/工程/github/Reer/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="/Users/luxin/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="066fc2e3c90dbf9552c0e7e22b07bec7b2851437">
-        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cce53050cb614189615ab371b7efae128c0070ec/classes.dex" />
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_e49a6374b189bacbb6f7bc4916cb4cba5687053c/classes.dex" />
     </item>
 
 </items>

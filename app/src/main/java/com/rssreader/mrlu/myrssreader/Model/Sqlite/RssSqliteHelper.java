@@ -44,7 +44,6 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "ItemDescription varchar)");
         Log.i("创建数据表", "创建未读items表成功！");
 
-
         db.execSQL("create table ReadItems" + "(" + "_id integer primary key,"
                 + "RssTitle varchar,"
                 + "RssDescription varchar,"

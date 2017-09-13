@@ -180,12 +180,12 @@
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/design_ic_visibility.png",
-        "source": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/drawable-xxhdpi-v4/design_ic_visibility.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/design_ic_visibility.png",
+        "source": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/drawable-xxhdpi-v4/design_ic_visibility.png"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
