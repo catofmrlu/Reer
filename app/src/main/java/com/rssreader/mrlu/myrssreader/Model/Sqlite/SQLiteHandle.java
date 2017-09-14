@@ -26,7 +26,8 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         String sql_insert = "insert into AllFeeds"
-                + "(RssName, RssDescription, RssLink, ItemsCount) values" + "('" + rssName + "','" + rssDescription
+                + "(RssName, RssDescription, RssLink, ItemsCount) values"
+                + "('" + rssName + "','" + rssDescription
                 + "','" + rssLink + "','" + itemsCount + "'" + ")";
 
         //打印SQL执行语句验证是否正确
@@ -38,14 +39,16 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
-    public void insertUnreadItem(String rssName, String itemName, String itemPubdate) {
+    public void insertUnreadItem(String rssName, String itemName, String itemPubdate, String ItemDescription) {
         Log.i("sqlite", "开始");
 
         db.beginTransaction();
 
         String sql_insert = "insert into unReadItems"
-                + "(RssName, ItemTitle, ItemPubdate) values" + "('" + rssName + "','" + itemName
-                + "','" + itemPubdate + "')";
+                + "(RssName, ItemTitle, ItemPubdate, ItemDescription) values"
+                + "('" + rssName + "','" + itemName
+                + "','" + itemPubdate
+                + "','" + ItemDescription + "')";
 
         //打印SQL执行语句验证是否正确
         Log.i("sql语句验证", sql_insert);

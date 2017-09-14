@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.jaeger.library.StatusBarUtil;
 import com.rssreader.mrlu.myrssreader.Controller.fragment.starredFragment;
 import com.rssreader.mrlu.myrssreader.R;
-import com.rssreader.mrlu.myrssreader.Test.unReadFragment11;
+import com.rssreader.mrlu.myrssreader.Controller.fragment.unReadFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,7 +137,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
     private void initData() {
         mFragments = new ArrayList<>();
         //将两个Fragment加入集合中
-        mFragments.add(new unReadFragment11());
+        mFragments.add(new unReadFragment());
         mFragments.add(new starredFragment());
 
         //初始化适配器

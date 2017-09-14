@@ -133,6 +133,7 @@ public class RSSHandler extends DefaultHandler {
                 case RSS_DESCRIPTION:
 
                     if (mIsItemTitle) {
+                        Log.i("Description:theString", theString);
                         rssItem.setDescription(theString);
                         currentState = 0;
                     } else {

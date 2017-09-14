@@ -96,8 +96,9 @@ public class RssRequestByOkHttp {
 
                             String title = arrayMap.get("title");
                             String pubdate = arrayMap.get("pubdate");
+                            String description = arrayMap.get("description");
 
-                            sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate);
+                            sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate, description);
 
                             Log.i("item插入", "item:" + title + ":" + pubdate);
                         }
