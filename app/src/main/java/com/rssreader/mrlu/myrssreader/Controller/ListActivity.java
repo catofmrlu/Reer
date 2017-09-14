@@ -32,11 +32,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_list);
 
+        String feedName = getIntent().getStringExtra("");
+
         SQLiteHandle sqLiteHandle = new SQLiteHandle(this);
-        Cursor cursor = sqLiteHandle.queryAllUnreadItems();
+        Cursor cursor = sqLiteHandle.queryFeedUnreadItems(feedName);
 
         if (cursor != null) {
             Log.i("cursor", "存在");
@@ -49,7 +50,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
                 map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
                 map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
-
+                map.put("itemLink", cursor.getString(cursor.getColumnIndex("ItemLink")));
 
                 Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
                 mapList.add(map);
@@ -78,6 +79,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         itemlist.setOnItemClickListener(this);
         itemlist.setSelection(0);
 
+        //注册项目的侧滑选项
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
@@ -88,29 +90,28 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
                         0xCE)));
                 // set item width
-                openItem.setWidth(dp2px(90));
+                openItem.setWidth(dp2px(70));
                 // set item title
-                openItem.setTitle("Open");
+                openItem.setTitle("Delete");
                 // set item title fontsize
                 openItem.setTitleSize(18);
                 // set item title font color
                 openItem.setTitleColor(Color.WHITE);
+                openItem.setBackground(R.color.md_red_500_color_code);
                 // add to menu
                 menu.addMenuItem(openItem);
                 // create "delete" item
                 SwipeMenuItem deleteItem = new SwipeMenuItem(
                         getApplicationContext());
                 // set item background
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-                        0x3F, 0x25)));
+                deleteItem.setBackground(R.color.green);
                 // set item width
-                deleteItem.setWidth(dp2px(90));
+                deleteItem.setWidth(dp2px(70));
                 // set a icon
                 deleteItem.setIcon(R.drawable.long_press_starred);
                 // add to menu
                 menu.addMenuItem(deleteItem);
             }
-
 
         };
 // set creator
@@ -148,13 +149,13 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         bundle.putString("title", mapList.get(position).get("title"));
         bundle.putString("description", mapList.get(position).get("description"));
         bundle.putString("pubdate", mapList.get(position).get("pubdate"));
+        bundle.putString("itemLink", mapList.get(position).get("itemLink"));
 
         itemIntent.putExtras(bundle);
 
         startActivity(itemIntent);
 
     }
-
 
     private int dp2px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,

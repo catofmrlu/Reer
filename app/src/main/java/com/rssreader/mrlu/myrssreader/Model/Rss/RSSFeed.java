@@ -64,6 +64,7 @@ public class RSSFeed implements Serializable {
             item.put("title", itemlist.get(i).getTitle());
             item.put("pubdate", itemlist.get(i).getPubdate());
             item.put("description", itemlist.get(i).getDescription());
+            item.put("link", itemlist.get(i).getLink());
             data.add(item);
 
         }

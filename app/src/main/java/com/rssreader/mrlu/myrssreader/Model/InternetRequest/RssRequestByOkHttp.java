@@ -82,8 +82,10 @@ public class RssRequestByOkHttp {
                         Log.i("恭喜！", "feed通过");
 
                         //统计添加源的项目数
-                        System.out.println("---------/n该feed的rssitem数据" + feed.Count() + "/n------");
-
+                        System.out.println("---------/n该feed的rssitem数据-----"
+                                + feed.Count()
+                                + "/n--------------------/n"
+                                + feed.getFeedLink());
 
                         SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
                         sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
@@ -97,10 +99,14 @@ public class RssRequestByOkHttp {
                             String title = arrayMap.get("title");
                             String pubdate = arrayMap.get("pubdate");
                             String description = arrayMap.get("description");
+                            String itemLink = arrayMap.get("link");
 
                             sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate, description);
 
-                            Log.i("item插入", "item:" + title + ":" + pubdate);
+                            Log.i("item插入", "item:" + title + ":"
+                                    + pubdate + ":" + itemLink
+                                    + "   ----"
+                                    + "description:" + description);
                         }
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;

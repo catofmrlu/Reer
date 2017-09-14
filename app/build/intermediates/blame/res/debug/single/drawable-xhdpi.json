@@ -24,6 +24,10 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/long_press_unstarred.png"
     },
     {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi/share.png",
+        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-xhdpi/share.png"
+    },
+    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-xhdpi/vpi__tab_unselected_pressed_holo.9.png",
         "source": "/Users/luxin/.android/build-cache/c877ad1f14ec2b5b19ac8aa81434c188f6697c61/output/res/drawable-xhdpi/vpi__tab_unselected_pressed_holo.9.png"
     },

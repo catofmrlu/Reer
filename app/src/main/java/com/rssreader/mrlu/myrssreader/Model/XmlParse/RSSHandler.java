@@ -41,8 +41,6 @@ public class RSSHandler extends DefaultHandler {
     @Override
     public void startDocument() throws SAXException {
         try {
-
-
             rssFeed = new RSSFeed();
             rssItem = new RSSItem();
         } catch (Exception e) {
@@ -53,7 +51,6 @@ public class RSSHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         try {
-
 
             if (localName.equals("channel")) {
                 currentState = 0;
@@ -89,7 +86,6 @@ public class RSSHandler extends DefaultHandler {
         } catch (Exception e) {
             Log.e("sax解析", e.toString());
         }
-
     }
 
     @Override
@@ -104,12 +100,7 @@ public class RSSHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
         String theString = new String(ch, start, length);
 
-//        if (theString.indexOf(" &#8211; ") != -1) {
-//            theString.replace(" &#8211; ", "");
-//        }
         try {
-
-
             switch (currentState) {
                 case RSS_TITLE:
 
@@ -123,12 +114,15 @@ public class RSSHandler extends DefaultHandler {
                     }
                     return;
 
-
                 case RSS_LINK:
-                    rssItem.setLink(theString);
-                    currentState = 0;
+                    if (mIsItemTitle) {
+                        rssItem.setLink(theString);
+                        currentState = 0;
+                    } else {
+                        rssFeed.setFeedLink(theString);
+                        currentState = 0;
+                    }
                     return;
-
 
                 case RSS_DESCRIPTION:
 
@@ -140,15 +134,12 @@ public class RSSHandler extends DefaultHandler {
                         rssFeed.setFeedDescription(theString);
                         currentState = 0;
                     }
-
                     return;
-
 
                 case RSS_CATEGORY:
                     rssItem.setCategory(theString);
                     currentState = 0;
                     return;
-
 
                 case RSS_PUBDATE:
                     rssItem.setPubdate(theString);

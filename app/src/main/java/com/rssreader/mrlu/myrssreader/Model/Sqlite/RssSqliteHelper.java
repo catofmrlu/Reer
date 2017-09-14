@@ -63,6 +63,7 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "RssName varchar,"
                 + "RssDescription varchar,"
                 + "RssLink varchar,"
+                + "IsAppear integer,"
                 + "ItemsCount integer)");
         Log.i("创建数据表", "创建全部feed表成功！");
 
