@@ -49,16 +49,37 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
-    public void insertUnreadItem(String rssName, String itemName, String itemPubdate, String ItemDescription) {
+    public void insertUnreadItem(String rssName, String itemName, String itemPubdate, String itemLink, String ItemDescription) {
         Log.i("sqlite", "开始");
 
         db.beginTransaction();
 
         String sql_insert = "insert into unReadItems"
-                + "(RssName, ItemTitle, ItemPubdate, ItemDescription) values"
+                + "(RssName, ItemTitle, ItemPubdate, ItemLink, ItemDescription) values"
                 + "('" + rssName + "','" + itemName
                 + "','" + itemPubdate
+                + "','" + itemLink
                 + "','" + ItemDescription + "')";
+
+        //打印SQL执行语句验证是否正确
+        Log.i("sql语句验证", sql_insert);
+
+        db.execSQL(sql_insert);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
+    public void insertStaredItem(String rssName, String itemName, String itemPubdate, String itemLink) {
+        Log.i("sqlite", "开始");
+
+        db.beginTransaction();
+
+        String sql_insert = "insert into StarItems"
+                + "(RssName, ItemTitle, ItemPubdate, ItemLink) values"
+                + "('" + rssName + "','" + itemName
+                + "','" + itemPubdate
+                + "','" + itemLink + "')";
 
         //打印SQL执行语句验证是否正确
         Log.i("sql语句验证", sql_insert);
@@ -267,6 +288,30 @@ public class SQLiteHandle {
         db.beginTransaction();
 
         Cursor cursor = db.query(sqliteTable, null, null, null, null, null, null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+
+        Log.i("unReadItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
+
+        if (cursor.getCount() == 0 || cursor == null)
+            isHasItem = false;
+        else
+            isHasItem = true;
+
+        return isHasItem;
+    }
+
+    public boolean isHasFeed(String feedName) {
+        Log.i("sqlite", "开始");
+
+        boolean isHasItem;
+        String selection = "RssName = '" + feedName + "'";
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("AllFeeds", null, selection, null, null, null, null);
 
         db.setTransactionSuccessful();
         db.endTransaction();

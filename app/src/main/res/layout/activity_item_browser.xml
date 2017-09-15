@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.rssreader.mrlu.myrssreader.Controller.ItemBrowserActivity">
+
+    <LinearLayout
+        android:paddingLeft="15dp"
+        android:id="@+id/ll_description_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appBaseColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tv_webitemname"
+            android:lines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/iv_star"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/long_press_unstarred" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/share" />
+
+
+    </LinearLayout>
 
     <WebView
         android:id="@+id/wv_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
     </WebView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

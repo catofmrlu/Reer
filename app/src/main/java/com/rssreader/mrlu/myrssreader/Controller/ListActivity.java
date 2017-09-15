@@ -1,6 +1,8 @@
 package com.rssreader.mrlu.myrssreader.Controller;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -55,8 +57,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
                 map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
                 map.put("itemLink", cursor.getString(cursor.getColumnIndex("ItemLink")));
+                map.put("rssName", cursor.getString(cursor.getColumnIndex("RssName")));
 
-                Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
+                Log.i("appear-item", map.get("title") + ":" + map.get("pubdate") + ":" + map.get("itemLink"));
                 mapList.add(map);
             }
 
@@ -111,7 +114,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 // set item width
                 staredItem.setWidth(dp2px(70));
                 // set a icon
-                staredItem.setIcon(R.drawable.long_press_starred);
+                staredItem.setIcon(R.drawable.long_press_unstarred);
                 // add to menu
                 menu.addMenuItem(staredItem);
             }
@@ -122,14 +125,39 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
         itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
-            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+            public boolean onMenuItemClick(final int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        // open
+                        // delete
+
                         break;
                     case 1:
                         // stared
+                        menu.getMenuItem(index).setIcon(R.drawable.long_press_starred);
                         Toast.makeText(ListActivity.this, "已添加到标记", Toast.LENGTH_SHORT).show();
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Log.i("new Thread:stared", mapList.get(position).get("title"));
+
+                                //保存sp数据
+                                SharedPreferences sharedPreferences =
+                                        getSharedPreferences("sp", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
+                                editor.putBoolean(mapList.get(position).get("title"), true);
+                                editor.commit();//提交修改
+
+                                //插入已标记数据表
+                                SQLiteHandle sqLiteHandle = new SQLiteHandle(ListActivity.this);
+                                sqLiteHandle.insertStaredItem(mapList.get(position).get("rssName"),
+                                        mapList.get(position).get("title"),
+                                        mapList.get(position).get("pubdate"),
+                                        mapList.get(position).get("itemLink"));
+
+                                sqLiteHandle.dbClose();
+                                sqLiteHandle = null;
+                            }
+                        }).start();
                         break;
                 }
                 // false : close the menu; true : not close the menu
@@ -143,7 +171,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-
                 return false;
             }
         });
@@ -151,7 +178,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //处理列表的单击事件
     public void onItemClick(AdapterView parent, View v, int position, long id) {
-        Intent itemIntent = new Intent(this, ShowDescriptionActivity.class);
+        Intent itemIntent = new Intent(this, ItemBrowserActivity.class);
 
         //传递点击的项的数据
         Bundle bundle = new Bundle();
@@ -159,16 +186,18 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         Log.i("过程打印", mapList.get(position).get("title"));
         Log.i("过程打印", mapList.get(position).get("description"));
         Log.i("过程打印", mapList.get(position).get("pubdate"));
+        Log.i("过程打印", mapList.get(position).get("itemLink"));
+        Log.i("过程打印", mapList.get(position).get("rssName"));
+
 
         bundle.putString("title", mapList.get(position).get("title"));
         bundle.putString("description", mapList.get(position).get("description"));
         bundle.putString("pubdate", mapList.get(position).get("pubdate"));
         bundle.putString("itemLink", mapList.get(position).get("itemLink"));
+        bundle.putString("rssName", mapList.get(position).get("rssName"));
 
         itemIntent.putExtras(bundle);
-
         startActivity(itemIntent);
-
     }
 
     private int dp2px(int dp) {

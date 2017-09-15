@@ -80,11 +80,11 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
         SwipeMenuListView itemlist = (SwipeMenuListView) view.findViewById(R.id.smlv_rssList);
 
         SimpleAdapter mAdapter = new SimpleAdapter(getActivity(), list,
-                android.R.layout.simple_list_item_2, new String[]{
+                R.layout.item_list_item, new String[]{
                 "title", "pubdate"
         },
                 new int[]{
-                        android.R.id.text1, android.R.id.text2
+                        R.id.tv_itemname, R.id.tv_itempubdate
                 });
 
         itemlist.setAdapter(mAdapter);

@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
+import com.rssreader.mrlu.myrssreader.Controller.CustomView.NoScrollViewPager;
 import com.rssreader.mrlu.myrssreader.Controller.fragment.starredFragment;
 import com.rssreader.mrlu.myrssreader.R;
 import com.rssreader.mrlu.myrssreader.Controller.fragment.unReadFragment;
@@ -59,7 +60,7 @@ public class mainView extends MAppCompatActivity implements View.OnClickListener
 
         setContentView(R.layout.main);
 
-        mNoScrollViewPager = (ViewPager) findViewById(R.id.id_noviewpager);
+        mNoScrollViewPager = (NoScrollViewPager) findViewById(R.id.id_noviewpager);
         ImageView nightSwitch = (ImageView) findViewById(R.id.iv_night_swith);
         ImageView ivUpdate = (ImageView) findViewById(R.id.iv_update);
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb_feedList);

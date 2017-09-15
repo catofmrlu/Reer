@@ -58,7 +58,6 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "ItemDescription varchar)");
         Log.i("创建数据表", "创建标记items表成功！");
 
-
         db.execSQL("create table AllFeeds" + "(" + "_id integer primary key,"
                 + "RssName varchar,"
                 + "RssDescription varchar,"

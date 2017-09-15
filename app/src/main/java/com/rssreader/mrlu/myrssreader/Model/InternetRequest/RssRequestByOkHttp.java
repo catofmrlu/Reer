@@ -88,29 +88,33 @@ public class RssRequestByOkHttp {
                                 + feed.getFeedLink());
 
                         SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
-                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count(), false);
 
+                        if (!sqLiteHandle.isHasFeed(feed.getName())) {
 
-                        for (Object map :
-                                feed.getAllItemsForListView()) {
+                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count(), false);
 
-                            ArrayMap<String, String> arrayMap = (ArrayMap<String, String>) map;
+                            for (Object map :
+                                    feed.getAllItemsForListView()) {
 
-                            String title = arrayMap.get("title");
-                            String pubdate = arrayMap.get("pubdate");
-                            String description = arrayMap.get("description");
-                            String itemLink = arrayMap.get("link");
+                                ArrayMap<String, String> arrayMap = (ArrayMap<String, String>) map;
 
-                            sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate, description);
+                                String title = arrayMap.get("title");
+                                String pubdate = arrayMap.get("pubdate");
+                                String description = arrayMap.get("description");
+                                String itemLink = arrayMap.get("link");
 
-                            Log.i("item插入", "item:" + title + ":"
-                                    + pubdate + ":" + itemLink
-                                    + "   ----"
-                                    + "description:" + description);
+                                sqLiteHandle.insertUnreadItem(feed.getName(), title, pubdate, itemLink, description);
+
+                                Log.i("item插入", "item:" + title + ":"
+                                        + pubdate + ":" + itemLink
+                                        + "   ----"
+                                        + "description:" + description);
+                            }
+                        } else {
+                            Log.e("添加feed", "该feed已添加");
                         }
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;
-
                     }
                 }
             });

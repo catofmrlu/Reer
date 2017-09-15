@@ -9,7 +9,7 @@
         android:id="@+id/tv_feedname"
         android:textSize="18sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="45dp" />
 
     <com.baoyz.swipemenulistview.SwipeMenuListView
         android:id="@+id/smlv_rssList"
