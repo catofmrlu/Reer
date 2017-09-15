@@ -39,14 +39,20 @@ public class RssRequestByOkHttp {
 
     public void getRssFeed(final String rssLink) {
 
+        String link = null;
+
+        if (rssLink.indexOf("http") <= 0)
+            link = "http://" + rssLink;
+        Log.i("link", link);
         try {
 
             okHttpClient = new OkHttpClient();
-            Request.Builder builder = new Request.Builder().url(rssLink);
+            Request.Builder builder = new Request.Builder().url(link);
             builder.method("GET", null);
             Request request = builder.build();
             Call call = okHttpClient.newCall(request);
 
+            final String finalLink = link;
             call.enqueue(new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
@@ -91,7 +97,7 @@ public class RssRequestByOkHttp {
 
                         if (!sqLiteHandle.isHasFeed(feed.getName())) {
 
-                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count(), false);
+                            sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), feed.getFeedLink(), feed.Count(), false);
 
                             for (Object map :
                                     feed.getAllItemsForListView()) {
