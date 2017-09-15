@@ -11,7 +11,6 @@
 
     <color name="main_back">@color/md_white_color_code</color>
 
-
     <!-- red -->
     <color name="md_red_50_color_code">#fde0dc</color>
     <color name="md_red_100_color_code">#f9bdbb</color>

@@ -60,6 +60,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    // 此处以JPush 3.0.3 版本为例。
+    // 此处以JCore 1.1.1 版本为例。
+    // 此处以JAnalytics 1.1.1 版本为例。
+    // 此处以JCore 1.1.2 版本为例。
+
     compile 'com.miomin:shswiperefreshlayout:1.2.0'
     compile 'org.xutils:xutils:3.3.40'
     compile 'com.mcxiaoke.volley:library:1.0.19'
@@ -72,13 +77,11 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.0.0-alpha1'
-    compile 'cn.jiguang.sdk:jpush:3.0.3'  // 此处以JPush 3.0.3 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.1.1'  // 此处以JCore 1.1.1 版本为例。
-    compile 'cn.jiguang.sdk:janalytics:1.1.1' // 此处以JAnalytics 1.1.1 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.1.2' // 此处以JCore 1.1.2 版本为例。
+    compile 'cn.jiguang.sdk:jpush:3.0.3'
+    compile 'cn.jiguang.sdk:jcore:1.1.2'
+    compile 'cn.jiguang.sdk:janalytics:1.1.1'
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okio:okio:1.7.0'
     compile 'org.greenrobot:eventbus:3.0.0'
-
     testCompile 'junit:junit:4.12'
 }

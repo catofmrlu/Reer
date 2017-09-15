@@ -88,7 +88,7 @@ public class RssRequestByOkHttp {
                                 + feed.getFeedLink());
 
                         SQLiteHandle sqLiteHandle = new SQLiteHandle(mContext);
-                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count());
+                        sqLiteHandle.insertFeed(feed.getName(), feed.getFeedDescription(), rssLink, feed.Count(), false);
 
 
                         for (Object map :

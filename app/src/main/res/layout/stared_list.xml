@@ -3,18 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:gravity="center"
-        android:background="@color/appBaseColor"
-        android:id="@+id/tv_feedname"
-        android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
     <com.baoyz.swipemenulistview.SwipeMenuListView
         android:id="@+id/smlv_rssList"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
 </LinearLayout>
-

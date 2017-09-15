@@ -84,6 +84,7 @@ public class ShowDescriptionActivity extends AppCompatActivity {
         final ImageView ivStar = (ImageView) findViewById(R.id.iv_star);
         final LinearLayout llDescriptionTop = (LinearLayout) findViewById(R.id.ll_description_top);
         ImageView ivShare = (ImageView) findViewById(R.id.iv_share);
+        ImageView ivItemWeb = (ImageView) findViewById(R.id.iv_browser);
 
         slContent.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -140,6 +141,17 @@ public class ShowDescriptionActivity extends AppCompatActivity {
                 startActivity(shareIntent);
             }
         });
+
+        //跳转到item网页
+        ivItemWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShowDescriptionActivity.this, ItemBrowserActivity.class);
+                intent.putExtra("itemLink", itemLink);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

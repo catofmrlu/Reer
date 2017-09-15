@@ -53,7 +53,6 @@
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.FeedlyRssQuery" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.mainView" />
-        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.RssFeedListActivity" />
         <activity android:name="com.rssreader.mrlu.myrssreader.Controller.openScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,6 +77,7 @@
         <!-- &lt;!&ndash;<action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>&ndash;&gt; -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
+        <activity android:name="com.rssreader.mrlu.myrssreader.Controller.ItemBrowserActivity" />
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"

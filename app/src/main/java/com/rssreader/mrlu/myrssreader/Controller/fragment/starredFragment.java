@@ -42,14 +42,14 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view;
 
-        //判断是否有标记项，来处理加载不同的view
-        view = inflater.inflate(R.layout.activity_list, container, false);
-
         SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
         Cursor cursor = sqLiteHandle.queryAllstaredItems();
 
-        if (cursor != null) {
+        if (cursor != null || cursor.getCount() != 0 || cursor.getCount() != -1) {
             Log.i("cursor", "存在");
+
+            //判断是否有标记项，来处理加载不同的view
+            view = inflater.inflate(R.layout.stared_list, container, false);
 
             mapList = new ArrayList<Map<String, String>>();
 
@@ -68,6 +68,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
             showListView(mapList, view);
         } else {
             Log.i("ListActivity", "cursor为空");
+            view = inflater.inflate(R.layout.black_starred, container, false);
         }
 
         return view;
@@ -76,7 +77,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
     //列表显示获取的RSS
     private void showListView(List<Map<String, String>> list, View view) {
-        SwipeMenuListView itemlist = (SwipeMenuListView) view.findViewById(R.id.lv_rssList);
+        SwipeMenuListView itemlist = (SwipeMenuListView) view.findViewById(R.id.smlv_rssList);
 
         SimpleAdapter mAdapter = new SimpleAdapter(getActivity(), list,
                 android.R.layout.simple_list_item_2, new String[]{
@@ -95,37 +96,37 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
             @Override
             public void create(SwipeMenu menu) {
                 // create "open" item
-                SwipeMenuItem openItem = new SwipeMenuItem(
-                        getActivity());
-                // set item background
-                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                        0xCE)));
-                // set item width
-                openItem.setWidth(dp2px(90));
-                // set item title
-                openItem.setTitle("Delete");
-                // set item title fontsize
-                openItem.setTitleSize(18);
-                // set item title font color
-                openItem.setTitleColor(Color.WHITE);
-                // add to menu
-                menu.addMenuItem(openItem);
-                // create "delete" item
                 SwipeMenuItem deleteItem = new SwipeMenuItem(
                         getActivity());
                 // set item background
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-                        0x3F, 0x25)));
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+                        0xCE)));
                 // set item width
-                deleteItem.setWidth(dp2px(90));
-                // set a icon
-                deleteItem.setIcon(R.drawable.long_press_starred);
+                deleteItem.setWidth(dp2px(70));
+                // set item title
+                deleteItem.setTitle("Delete");
+                // set item title fontsize
+                deleteItem.setTitleSize(18);
+                // set item title font color
+                deleteItem.setTitleColor(Color.WHITE);
+                deleteItem.setBackground(R.color.md_red_500_color_code);
                 // add to menu
                 menu.addMenuItem(deleteItem);
+                // create "delete" item
+                SwipeMenuItem staredItem = new SwipeMenuItem(
+                        getActivity());
+                // set item background
+                staredItem.setBackground(R.color.green);
+                // set item width
+                staredItem.setWidth(dp2px(70));
+                // set a icon
+                staredItem.setIcon(R.drawable.long_press_starred);
+                // add to menu
+                menu.addMenuItem(staredItem);
             }
 
         };
-// set creator
+        // set creator
         itemlist.setMenuCreator(creator);
 
         itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
@@ -140,6 +141,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                         Toast.makeText(getActivity(), "已添加到标记", Toast.LENGTH_SHORT).show();
                         break;
                 }
+
                 // false : close the menu; true : not close the menu
                 return false;
             }

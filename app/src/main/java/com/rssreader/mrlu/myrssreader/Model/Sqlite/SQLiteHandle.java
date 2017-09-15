@@ -38,7 +38,7 @@ public class SQLiteHandle {
         String sql_insert = "insert into AllFeeds"
                 + "(RssName, RssDescription, RssLink, ItemsCount, IsAppear) values"
                 + "('" + rssName + "','" + rssDescription
-                + "','" + rssLink + "','" + itemsCount + ",'" + IsAppear + "')";
+                + "','" + rssLink + "','" + itemsCount + "','" + IsAppear + "')";
 
         //打印SQL执行语句验证是否正确
         Log.i("sql语句验证", sql_insert);
@@ -118,7 +118,7 @@ public class SQLiteHandle {
         //开启事务
         db.beginTransaction();
 
-        Cursor cursor = db.query("AllFeeds", null, "where IsAppear = '0'", null, null, null, null);
+        Cursor cursor = db.query("AllFeeds", null, "IsAppear = '0'", null, null, null, null);
 
         db.setTransactionSuccessful();
         db.endTransaction();
@@ -148,7 +148,7 @@ public class SQLiteHandle {
         //开启事务
         db.beginTransaction();
 
-        String selection = "where RssName = " + "'" + feedName + "'";
+        String selection = "RssName = " + "'" + feedName + "'";
         Log.i("selection语句", selection);
 
         Cursor cursor = db.query("unReadItems", null, selection, null, null, null, null);
@@ -245,17 +245,40 @@ public class SQLiteHandle {
         Log.i("sqlite", "关闭");
     }
 
-    public void updateUnAppearFeeds(){
+    public void updateUnAppearFeeds() {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("IsAppear", 1);
 
         db.beginTransaction();
 
-        db.update("AllFeeds", contentValues, "where IsAppear = '0'", null);
+        db.update("AllFeeds", contentValues, "IsAppear = '0'", null);
 
         db.setTransactionSuccessful();
         db.endTransaction();
+    }
+
+    public boolean isHasItem(String sqliteTable) {
+        Log.i("sqlite", "开始");
+
+        boolean isHasItem;
+
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query(sqliteTable, null, null, null, null, null, null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+
+        Log.i("unReadItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
+
+        if (cursor.getCount() == 0 || cursor == null)
+            isHasItem = false;
+        else
+            isHasItem = true;
+
+        return isHasItem;
     }
 
 }

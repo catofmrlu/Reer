@@ -12648,11 +12648,11 @@
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 42,
+                        "startLine": 41,
                         "startColumn": 4,
-                        "startOffset": 1464,
+                        "startOffset": 1463,
                         "endColumn": 56,
-                        "endOffset": 1516
+                        "endOffset": 1515
                     }
                 }
             },
@@ -12990,11 +12990,11 @@
                 "from": {
                     "file": "/Users/luxin/工程/github/Reer/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 43,
+                        "startLine": 42,
                         "startColumn": 4,
-                        "startOffset": 1521,
+                        "startOffset": 1520,
                         "endColumn": 45,
-                        "endOffset": 1562
+                        "endOffset": 1561
                     }
                 }
             },

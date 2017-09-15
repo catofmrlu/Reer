@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_itemname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+
+        android:paddingEnd="2dp"
+        android:paddingStart="5dp"
+        android:paddingTop="2dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_itempubdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:paddingEnd="2dp"
+        android:paddingStart="5dp"
+        android:textColor="@color/md_grey_400_color_code"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -38,7 +38,6 @@
     <!--description页面-->
 
 
-
     <!--inputRssLink页面-->
     <string name="et_rsslink_hint">请输入要添加的Rss链接</string>
     <string name="tv_recommend">为你推荐</string>
