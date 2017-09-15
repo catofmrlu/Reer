@@ -9,9 +9,11 @@ import android.support.v4.util.ArrayMap;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baoyz.swipemenulistview.SwipeMenu;
@@ -33,8 +35,10 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        TextView tvFeedName = (TextView) findViewById(R.id.tv_feedname);
 
-        String feedName = getIntent().getStringExtra("");
+        String feedName = getIntent().getStringExtra("rssName");
+        tvFeedName.setText(feedName);
 
         SQLiteHandle sqLiteHandle = new SQLiteHandle(this);
         Cursor cursor = sqLiteHandle.queryFeedUnreadItems(feedName);
@@ -84,37 +88,37 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void create(SwipeMenu menu) {
                 // create "open" item
-                SwipeMenuItem openItem = new SwipeMenuItem(
-                        getApplicationContext());
-                // set item background
-                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                        0xCE)));
-                // set item width
-                openItem.setWidth(dp2px(70));
-                // set item title
-                openItem.setTitle("Delete");
-                // set item title fontsize
-                openItem.setTitleSize(18);
-                // set item title font color
-                openItem.setTitleColor(Color.WHITE);
-                openItem.setBackground(R.color.md_red_500_color_code);
-                // add to menu
-                menu.addMenuItem(openItem);
-                // create "delete" item
                 SwipeMenuItem deleteItem = new SwipeMenuItem(
                         getApplicationContext());
                 // set item background
-                deleteItem.setBackground(R.color.green);
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+                        0xCE)));
                 // set item width
                 deleteItem.setWidth(dp2px(70));
-                // set a icon
-                deleteItem.setIcon(R.drawable.long_press_starred);
+                // set item title
+                deleteItem.setTitle("Delete");
+                // set item title fontsize
+                deleteItem.setTitleSize(18);
+                // set item title font color
+                deleteItem.setTitleColor(Color.WHITE);
+                deleteItem.setBackground(R.color.md_red_500_color_code);
                 // add to menu
                 menu.addMenuItem(deleteItem);
+                // create "delete" item
+                SwipeMenuItem staredItem = new SwipeMenuItem(
+                        getApplicationContext());
+                // set item background
+                staredItem.setBackground(R.color.green);
+                // set item width
+                staredItem.setWidth(dp2px(70));
+                // set a icon
+                staredItem.setIcon(R.drawable.long_press_starred);
+                // add to menu
+                menu.addMenuItem(staredItem);
             }
 
         };
-// set creator
+        // set creator
         itemlist.setMenuCreator(creator);
 
         itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
@@ -130,6 +134,17 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                         break;
                 }
                 // false : close the menu; true : not close the menu
+                return false;
+            }
+        });
+
+        SwipeMenuListView swipeMenuListView = (SwipeMenuListView) findViewById(R.id.smlv_rssList);
+
+        swipeMenuListView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+
                 return false;
             }
         });
