@@ -39,15 +39,18 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
 
             progressDialog.dismiss();
 
+            final String name = (String) msg.obj;
+
             new AlertDialog.Builder(InputRssLinkActivity.this)
                     .setTitle("添加rss源")
 
-                    .setMessage("是否添加「 豆瓣最受欢迎的影评 」？")
+                    .setMessage("是否添加「 " + name + " 」？")
                     .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            Toast.makeText(InputRssLinkActivity.this, "「豆瓣影评」已添加", Toast.LENGTH_LONG).show();
+                            Toast.makeText(InputRssLinkActivity.this, "「" + name + "」已添加",
+                                    Toast.LENGTH_LONG).show();
                         }
                     })
                     .setNeutralButton("稍后", new DialogInterface.OnClickListener() {
@@ -86,6 +89,7 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         ImageView iv36ke = (ImageView) findViewById(R.id.iv_36ke);
         ImageView ivDajia = (ImageView) findViewById(R.id.iv_dajia);
         ImageView ivZuoan = (ImageView) findViewById(R.id.iv_zuoandushu);
+        ImageView ivWephone = (ImageView) findViewById(R.id.iv_wephone);
 
 
         StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
@@ -144,8 +148,8 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         ivIfar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("打印rssLink", "www.ithome.com/rss");
-                getFeed("www.ithome.com/rss");
+                Log.i("打印rssLink", "http://ifanr.com/feed");
+                getFeed("http://ifanr.com/feed");
             }
         });
 
@@ -170,6 +174,14 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             public void onClick(View v) {
                 Log.i("打印rssLink", "http://www.zreading.cn/feed");
                 getFeed("http://www.zreading.cn/feed");
+            }
+        });
+
+        ivWephone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "www.feng.com/rss");
+                getFeed("www.feng.com/rss");
             }
         });
 
@@ -202,11 +214,13 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             public void run() {
 
                 RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
-                rssRequestByOkHttp.getRssFeed(link);
+                String name = rssRequestByOkHttp.getRssFeed(link);
 
                 SystemClock.sleep(1500);
 
-                handler.sendEmptyMessage(0);
+                Message message = new Message();
+                message.obj = name;
+                handler.sendMessage(message);
             }
         }).start();
     }
@@ -236,50 +250,9 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
         switch (v.getId()) {
-            case R.id.iv_ithome:
-                Log.i("打印rssLink", "www.ithome.com/rss");
-                getFeed("www.ithome.com/rss");
-                break;
-            case R.id.iv_zhihu:
-                Log.i("打印rssLink", "www.zhihu.com/rss");
-                getFeed("www.zhihu.com/rss");
-                break;
             case R.id.iv_ifar:
                 Log.i("打印rssLink", "www.ithome.com/rss");
                 getFeed("www.ithome.com/rss");
-                break;
-            case R.id.iv_doubanmovie:
-                Log.i("打印rssLink", "https://movie.douban.com/feed/review/movie");
-                getFeed("https://movie.douban.com/feed/review/movie");
-                break;
-            case R.id.iv_wephone:
-                Log.i("打印rssLink", "www.feng.com/rss");
-                getFeed("www.feng.com/rss");
-                break;
-            case R.id.iv_36ke:
-                Log.i("打印rssLink", "www.36kr.com/feed");
-                getFeed("www.36kr.com/feed");
-                break;
-            case R.id.iv_dajia:
-                Log.i("打印rssLink", "http://hanhanone.sinaapp.com/feed/dajia");
-                getFeed("http://hanhanone.sinaapp.com/feed/dajia");
-                break;
-            case R.id.iv_huxiu:
-                Log.i("打印rssLink", "https://www.huxiu.com/rss/0");
-                getFeed("https://www.huxiu.com/rss/0");
-                break;
-            case R.id.iv_jianshu:
-                Log.i("打印rssLink", "http://jianshu.milkythinking.com/feeds/recommendations/notes");
-                getFeed("http://jianshu.milkythinking.com/feeds/recommendations/notes");
-
-                break;
-            case R.id.iv_songshu:
-                Log.i("打印rssLink", "http://songshuhui.net/feed");
-                getFeed("http://songshuhui.net/feed");
-                break;
-            case R.id.iv_zuoandushu:
-                Log.i("打印rssLink", "http://www.zreading.cn/feed");
-                getFeed("http://www.zreading.cn/feed");
                 break;
         }
     }

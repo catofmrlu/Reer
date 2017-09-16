@@ -186,18 +186,23 @@ public class SQLiteHandle {
     public Cursor queryFeedUnreadItems(String feedName) {
         Log.i("sqlite", "开始");
 
+        Cursor cursor;
+
         //开启事务
         db.beginTransaction();
 
-        String selection = "RssName = " + "'" + feedName + "'";
-        Log.i("selection语句", selection);
+        if (feedName.equals("全部未读")) {
+            cursor = db.query("unReadItems", null, null, null, null, null, null);
+        } else {
+            String selection = "RssName = " + "'" + feedName + "'";
+            Log.i("selection语句", selection);
 
-        Cursor cursor = db.query("unReadItems", null, selection, null, null, null, null);
-
-        Log.i("unReadItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
-
+            cursor = db.query("unReadItems", null, selection, null, null, null, null);
+        }
         db.setTransactionSuccessful();
         db.endTransaction();
+
+        Log.i("unReadItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
 
         return cursor;
     }

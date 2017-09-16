@@ -37,10 +37,11 @@ public class RssRequestByOkHttp {
         this.mContext = context;
     }
 
-    public void getRssFeed(final String rssLink) {
+    public String getRssFeed(final String rssLink) {
 
 //        String link = null;
         String rsslink = rssLink;
+        final String rssFeed;
 
         if (!rssLink.contains("http"))
             rsslink = "http://" + rssLink;
@@ -86,6 +87,7 @@ public class RssRequestByOkHttp {
                         Log.e("feed", "feed为空");
                     } else {
                         Log.i("恭喜！", "feed通过");
+                        rssFeed = feed.getName();
 
                         //统计添加源的项目数
                         System.out.println("---------/n该feed的rssitem数据-----"
@@ -133,12 +135,15 @@ public class RssRequestByOkHttp {
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;
                     }
+
                 }
             });
 
         } catch (Exception e) {
             Log.e("okhttp3请求", e.toString());
         }
+
+        return rssFeed;
 
     }
 
