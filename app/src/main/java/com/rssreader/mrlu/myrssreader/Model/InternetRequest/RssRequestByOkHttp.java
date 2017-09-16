@@ -117,6 +117,18 @@ public class RssRequestByOkHttp {
                             }
                         } else {
                             Log.e("添加feed", "该feed已添加");
+//
+//                            new AlertDialog.Builder(mContext)
+//                                    .setTitle(" 重复添加")
+//
+//                                    .setMessage("该rss源已经添加进Reer")
+//                                    .setPositiveButton("了解", new DialogInterface.OnClickListener() {
+//                                        @Override
+//                                        public void onClick(DialogInterface dialog, int which) {
+//
+//                                            Toast.makeText(mContext, "「豆瓣影评」已添加", Toast.LENGTH_LONG).show();
+//                                        }
+//                                    }).show();
                         }
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;

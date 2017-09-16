@@ -25,7 +25,7 @@ import cn.jiguang.analytics.android.api.JAnalyticsInterface;
 
 import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 
-public class InputRssLinkActivity extends AppCompatActivity {
+public class InputRssLinkActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText mEtRssLink;
     private ImageView mIvRssSearch;
@@ -42,7 +42,7 @@ public class InputRssLinkActivity extends AppCompatActivity {
             new AlertDialog.Builder(InputRssLinkActivity.this)
                     .setTitle("添加rss源")
 
-                    .setMessage("是否添加「豆瓣影评」？")
+                    .setMessage("是否添加「 豆瓣最受欢迎的影评 」？")
                     .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -76,6 +76,17 @@ public class InputRssLinkActivity extends AppCompatActivity {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
         mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
         ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
+        ImageView ivIthome = (ImageView) findViewById(R.id.iv_ithome);
+        ImageView ivIfar = (ImageView) findViewById(R.id.iv_ifar);
+        ImageView ivSongshu = (ImageView) findViewById(R.id.iv_songshu);
+        ImageView ivZhihu = (ImageView) findViewById(R.id.iv_zhihu);
+        ImageView ivHuxiu = (ImageView) findViewById(R.id.iv_huxiu);
+        ImageView ivJianshu = (ImageView) findViewById(R.id.iv_jianshu);
+        ImageView ivDouban = (ImageView) findViewById(R.id.iv_doubanmovie);
+        ImageView iv36ke = (ImageView) findViewById(R.id.iv_36ke);
+        ImageView ivDajia = (ImageView) findViewById(R.id.iv_dajia);
+        ImageView ivZuoan = (ImageView) findViewById(R.id.iv_zuoandushu);
+
 
         StatusBarUtil.setColor(this, getResources().getColor(appBaseColor), 0);
 
@@ -90,42 +101,114 @@ public class InputRssLinkActivity extends AppCompatActivity {
             }
         });
 
+        ivIthome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "www.ithome.com/rss");
+                getFeed("www.ithome.com/rss");
+            }
+        });
+
+        iv36ke.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "www.36kr.com/feed");
+                getFeed("www.36kr.com/feed");
+            }
+        });
+
+        ivDajia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "http://hanhanone.sinaapp.com/feed/dajia");
+                getFeed("http://hanhanone.sinaapp.com/feed/dajia");
+            }
+        });
+
+        ivDouban.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "https://movie.douban.com/feed/review/movie");
+                getFeed("https://movie.douban.com/feed/review/movie");
+            }
+        });
+
+        ivHuxiu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "https://www.huxiu.com/rss/0");
+                getFeed("https://www.huxiu.com/rss/0");
+            }
+        });
+
+        ivIfar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "www.ithome.com/rss");
+                getFeed("www.ithome.com/rss");
+            }
+        });
+
+        ivJianshu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "http://jianshu.milkythinking.com/feeds/recommendations/notes");
+                getFeed("http://jianshu.milkythinking.com/feeds/recommendations/notes");
+            }
+        });
+
+        ivSongshu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "http://songshuhui.net/feed");
+                getFeed("http://songshuhui.net/feed");
+            }
+        });
+
+        ivZuoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("打印rssLink", "http://www.zreading.cn/feed");
+                getFeed("http://www.zreading.cn/feed");
+            }
+        });
+
         //搜索按钮
         mIvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Log.i("过程打印", "search已点击");
 
                 final String link = mEtRssLink.getText().toString();
 
                 Log.i("rssLink打印", link);
-
-                //等待对话框loading...
-                progressDialog = new ProgressDialog(InputRssLinkActivity.this);
-                progressDialog.setIndeterminate(false);//循环滚动
-                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                progressDialog.setMessage("loading...");
-                progressDialog.setCancelable(false);//false不能取消显示，true可以取消显示
-                progressDialog.show();
-
-                //异步请求feed数据，并插入到数据库
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
-                        rssRequestByOkHttp.getRssFeed(link);
-
-                        SystemClock.sleep(1500);
-
-                        handler.sendEmptyMessage(0);
-                    }
-                }).start();
-
+                getFeed(link);
             }
         });
+    }
 
+    private void getFeed(final String link) {
+        //等待对话框loading...
+        progressDialog = new ProgressDialog(InputRssLinkActivity.this);
+        progressDialog.setIndeterminate(false);//循环滚动
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("loading...");
+        progressDialog.setCancelable(false);//false不能取消显示，true可以取消显示
+        progressDialog.show();
+
+        //异步请求feed数据，并插入到数据库
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
+                rssRequestByOkHttp.getRssFeed(link);
+
+                SystemClock.sleep(1500);
+
+                handler.sendEmptyMessage(0);
+            }
+        }).start();
     }
 
     //键盘自动弹出
@@ -147,6 +230,58 @@ public class InputRssLinkActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         JAnalyticsInterface.onPageEnd(this, this.getClass().getCanonicalName());
+    }
+
+    @Override
+    public void onClick(View v) {
+        RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
+        switch (v.getId()) {
+            case R.id.iv_ithome:
+                Log.i("打印rssLink", "www.ithome.com/rss");
+                getFeed("www.ithome.com/rss");
+                break;
+            case R.id.iv_zhihu:
+                Log.i("打印rssLink", "www.zhihu.com/rss");
+                getFeed("www.zhihu.com/rss");
+                break;
+            case R.id.iv_ifar:
+                Log.i("打印rssLink", "www.ithome.com/rss");
+                getFeed("www.ithome.com/rss");
+                break;
+            case R.id.iv_doubanmovie:
+                Log.i("打印rssLink", "https://movie.douban.com/feed/review/movie");
+                getFeed("https://movie.douban.com/feed/review/movie");
+                break;
+            case R.id.iv_wephone:
+                Log.i("打印rssLink", "www.feng.com/rss");
+                getFeed("www.feng.com/rss");
+                break;
+            case R.id.iv_36ke:
+                Log.i("打印rssLink", "www.36kr.com/feed");
+                getFeed("www.36kr.com/feed");
+                break;
+            case R.id.iv_dajia:
+                Log.i("打印rssLink", "http://hanhanone.sinaapp.com/feed/dajia");
+                getFeed("http://hanhanone.sinaapp.com/feed/dajia");
+                break;
+            case R.id.iv_huxiu:
+                Log.i("打印rssLink", "https://www.huxiu.com/rss/0");
+                getFeed("https://www.huxiu.com/rss/0");
+                break;
+            case R.id.iv_jianshu:
+                Log.i("打印rssLink", "http://jianshu.milkythinking.com/feeds/recommendations/notes");
+                getFeed("http://jianshu.milkythinking.com/feeds/recommendations/notes");
+
+                break;
+            case R.id.iv_songshu:
+                Log.i("打印rssLink", "http://songshuhui.net/feed");
+                getFeed("http://songshuhui.net/feed");
+                break;
+            case R.id.iv_zuoandushu:
+                Log.i("打印rssLink", "http://www.zreading.cn/feed");
+                getFeed("http://www.zreading.cn/feed");
+                break;
+        }
     }
 }
 

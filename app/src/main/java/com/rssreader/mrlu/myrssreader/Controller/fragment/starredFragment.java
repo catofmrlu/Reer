@@ -51,8 +51,15 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
 
-            adapter.notifyDataSetChanged();
-            srlStared.setRefreshing(false);
+            switch ((String) msg.obj) {
+                case "refresh":
+                    adapter.notifyDataSetChanged();
+                    srlStared.setRefreshing(false);
+                    break;
+                case "delete":
+                    adapter.notifyDataSetChanged();
+                    break;
+            }
         }
     };
 
@@ -63,6 +70,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
         SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
         Cursor cursor = sqLiteHandle.queryAllstaredItems();
+        Log.i("staredItems", Integer.toString(cursor.getCount()));
 
         if (cursor != null || cursor.getCount() != 0 || cursor.getCount() != -1) {
             Log.i("cursor", "存在");
@@ -166,11 +174,14 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
                                 sqLiteHandle.dbClose();
                                 sqLiteHandle = null;
+
+                                mapList.remove(position);
+
+                                Message message = new Message();
+                                message.obj = "delete";
+                                handler.sendMessage(message);
                             }
                         }).start();
-
-                        mapList.remove(position);
-                        adapter.notifyDataSetChanged();
                         break;
                     case 1:
                         // stared
@@ -198,7 +209,9 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                         loadSQLiteData();
 
                         SystemClock.sleep(1000);
-                        handler.sendEmptyMessage(0);
+                        Message message = new Message();
+                        message.obj = "refresh";
+                        handler.sendMessage(message);
                     }
                 }).start();
             }

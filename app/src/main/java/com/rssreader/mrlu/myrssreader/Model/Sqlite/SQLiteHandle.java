@@ -26,7 +26,6 @@ public class SQLiteHandle {
         Log.i("sqlite", "开始");
 
         int IsAppear;
-
         //boolean转化为int类型
         if (isAppear)
             IsAppear = 1;
