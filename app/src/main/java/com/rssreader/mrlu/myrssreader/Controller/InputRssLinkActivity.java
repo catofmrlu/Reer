@@ -44,12 +44,15 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             new AlertDialog.Builder(InputRssLinkActivity.this)
                     .setTitle("添加rss源")
 
-                    .setMessage("是否添加「 " + name + " 」？")
+//                    .setMessage("是否添加「 " + name + " 」？")
+                    .setMessage("是否添加「 豆瓣最受欢迎的影评 」？")
                     .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            Toast.makeText(InputRssLinkActivity.this, "「" + name + "」已添加",
+                            Toast.makeText(InputRssLinkActivity.this,
+//                                    "「" + name + "」已添加",
+                                    "「豆瓣最受欢迎的影评」已添加",
                                     Toast.LENGTH_LONG).show();
                         }
                     })
@@ -214,13 +217,13 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             public void run() {
 
                 RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
-                String name = rssRequestByOkHttp.getRssFeed(link);
+                rssRequestByOkHttp.getRssFeed(link);
 
                 SystemClock.sleep(1500);
-
-                Message message = new Message();
-                message.obj = name;
-                handler.sendMessage(message);
+//
+//                Message message = new Message();
+//                message.obj = name;
+                handler.sendEmptyMessage(0);
             }
         }).start();
     }
