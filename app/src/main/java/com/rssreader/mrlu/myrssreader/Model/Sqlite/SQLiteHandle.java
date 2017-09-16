@@ -99,21 +99,13 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
-    public void deleteStaredItem(String rssName, String itemName, String itemPubdate, String itemLink) {
+    public void deleteStaredItem(String itemName) {
         Log.i("sqlite", "开始");
+        String where = "ItemTitle = '" + itemName + "'";
 
         db.beginTransaction();
 
-        String sql_insert = "insert into StarItems"
-                + "(RssName, ItemTitle, ItemPubdate, ItemLink) values"
-                + "('" + rssName + "','" + itemName
-                + "','" + itemPubdate
-                + "','" + itemLink + "')";
-
-        //打印SQL执行语句验证是否正确
-        Log.i("sql语句验证", sql_insert);
-
-        db.execSQL(sql_insert);
+        db.delete("StarItems", where, null);
 
         db.setTransactionSuccessful();
         db.endTransaction();

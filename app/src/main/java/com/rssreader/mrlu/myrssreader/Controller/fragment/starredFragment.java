@@ -43,7 +43,6 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
     private SimpleAdapter adapter;
     private List<Map<String, String>> mRssUnreadList;
-    private SQLiteHandle mSqLiteHandle;
     public String rssItemCount = "0";
     private SwipeRefreshLayout srlStared;
 
@@ -154,11 +153,24 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
         itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
-            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+            public boolean onMenuItemClick(final int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
                         // delete
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
+                                sqLiteHandle.deleteStaredItem(mapList.get(position).get("title"));
+                                Log.i("删除标记条目", mapList.get(position).get("title"));
 
+                                sqLiteHandle.dbClose();
+                                sqLiteHandle = null;
+                            }
+                        }).start();
+
+                        mapList.remove(position);
+                        adapter.notifyDataSetChanged();
                         break;
                     case 1:
                         // stared
@@ -220,7 +232,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
     public void loadSQLiteData() {
         {
-            mSqLiteHandle = new SQLiteHandle(getActivity());
+            SQLiteHandle mSqLiteHandle = new SQLiteHandle(getActivity());
             Cursor cursor = mSqLiteHandle.queryUnappearstaredItems();
 
             if (cursor != null) {
