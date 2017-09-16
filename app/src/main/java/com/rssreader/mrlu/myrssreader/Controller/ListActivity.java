@@ -152,7 +152,8 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                                 sqLiteHandle.insertStaredItem(mapList.get(position).get("rssName"),
                                         mapList.get(position).get("title"),
                                         mapList.get(position).get("pubdate"),
-                                        mapList.get(position).get("itemLink"));
+                                        mapList.get(position).get("itemLink"),
+                                        false);
 
                                 sqLiteHandle.dbClose();
                                 sqLiteHandle = null;

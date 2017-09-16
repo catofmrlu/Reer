@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -58,9 +59,10 @@ public class ItemBrowserActivity extends AppCompatActivity {
         final WebView wbItem = (WebView) findViewById(R.id.wv_item);
         Log.i("加载WebView", itemLink);
         wbItem.loadUrl(itemLink);
-//
-//        WebSettings settings = wbItem.getSettings();
-//        settings.setJavaScriptEnabled(true);
+
+        WebSettings settings = wbItem.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setSupportZoom(true);
 
         wbItem.setWebViewClient(new WebViewClient() {
 
@@ -94,7 +96,7 @@ public class ItemBrowserActivity extends AppCompatActivity {
 
                         //插入已标记数据表
                         SQLiteHandle sqLiteHandle = new SQLiteHandle(ItemBrowserActivity.this);
-                        sqLiteHandle.insertStaredItem(rssName, title, pubdate, itemLink);
+                        sqLiteHandle.insertStaredItem(rssName, title, pubdate, itemLink, false);
 
                         sqLiteHandle.dbClose();
                         sqLiteHandle = null;

@@ -4186,11 +4186,11 @@ containing a value of this type.
         public static final int item_touch_helper_previous_elevation=0x7f0c0005;
         public static final int iv_back=0x7f0c008c;
         public static final int iv_browser=0x7f0c00a2;
-        public static final int iv_night_swith=0x7f0c00df;
+        public static final int iv_night_swith=0x7f0c00e0;
         public static final int iv_rss_search=0x7f0c008e;
         public static final int iv_share=0x7f0c0093;
         public static final int iv_star=0x7f0c0092;
-        public static final int iv_update=0x7f0c00e0;
+        public static final int iv_update=0x7f0c00e1;
         public static final int largeLabel=0x7f0c00ad;
         public static final int lay_bottom=0x7f0c00c4;
         public static final int left=0x7f0c003a;
@@ -4200,10 +4200,10 @@ containing a value of this type.
         public static final int list_item=0x7f0c0059;
         public static final int ll_description_top=0x7f0c0090;
         public static final int ll_search=0x7f0c008b;
-        public static final int masked=0x7f0c00e1;
+        public static final int masked=0x7f0c00e2;
         public static final int media_actions=0x7f0c00cb;
-        public static final int menu_about=0x7f0c00e3;
-        public static final int menu_settings=0x7f0c00e2;
+        public static final int menu_about=0x7f0c00e4;
+        public static final int menu_settings=0x7f0c00e3;
         public static final int middle=0x7f0c0046;
         public static final int mini=0x7f0c0044;
         public static final int multiply=0x7f0c002d;
@@ -4265,6 +4265,7 @@ containing a value of this type.
         public static final int src_in=0x7f0c0030;
         public static final int src_over=0x7f0c0031;
         public static final int srl_rssList=0x7f0c009d;
+        public static final int srl_stared=0x7f0c00de;
         public static final int start=0x7f0c003c;
         public static final int status_bar_latest_event_content=0x7f0c00ca;
         public static final int statusbarutil_fake_status_bar_view=0x7f0c0009;
@@ -4272,7 +4273,7 @@ containing a value of this type.
         public static final int submenuarrow=0x7f0c006f;
         public static final int submit_area=0x7f0c0080;
         public static final int tabMode=0x7f0c0020;
-        public static final int tb_feedList=0x7f0c00de;
+        public static final int tb_feedList=0x7f0c00df;
         public static final int tb_night=0x7f0c00a1;
         public static final int tb_nightMode=0x7f0c00a0;
         public static final int text=0x7f0c00da;

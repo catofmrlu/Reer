@@ -70,7 +70,36 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
-    public void insertStaredItem(String rssName, String itemName, String itemPubdate, String itemLink) {
+    public void insertStaredItem(String rssName, String itemName, String itemPubdate, String itemLink, boolean isAppear) {
+        Log.i("sqlite", "开始");
+
+        int IsAppear;
+
+        //boolean转化为int类型
+        if (isAppear)
+            IsAppear = 1;
+        else
+            IsAppear = 0;
+
+        db.beginTransaction();
+
+        String sql_insert = "insert into StarItems"
+                + "(RssName, ItemTitle, ItemPubdate, ItemLink, IsAppear) values"
+                + "('" + rssName + "','" + itemName
+                + "','" + itemPubdate
+                + "','" + itemLink + "','"
+                + IsAppear + "')";
+
+        //打印SQL执行语句验证是否正确
+        Log.i("sql语句验证", sql_insert);
+
+        db.execSQL(sql_insert);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
+    public void deleteStaredItem(String rssName, String itemName, String itemPubdate, String itemLink) {
         Log.i("sqlite", "开始");
 
         db.beginTransaction();
@@ -198,6 +227,23 @@ public class SQLiteHandle {
         return cursor;
     }
 
+    public Cursor queryUnappearstaredItems() {
+        Log.i("sqlite", "开始");
+
+        String selection = "IsAppear = '0'";
+        //开启事务
+        db.beginTransaction();
+
+        Cursor cursor = db.query("StarItems", null, selection, null, null, null, null);
+
+        Log.i("UnappearstaredItems数量", "共计有：「" + String.valueOf(cursor.getCount()) + "」项");
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+
+        return cursor;
+    }
+
     public int queryAllFeedsCount() {
         Log.i("sqlite", "开始");
 
@@ -279,6 +325,19 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
+    public void updateUnAppearStaredItems() {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("IsAppear", 1);
+
+        db.beginTransaction();
+
+        db.update("StarItems", contentValues, "IsAppear = '0'", null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
     public boolean isHasItem(String sqliteTable) {
         Log.i("sqlite", "开始");
 
@@ -324,6 +383,16 @@ public class SQLiteHandle {
             isHasItem = true;
 
         return isHasItem;
+    }
+
+    public void sqliteExect(String sqliteExect) {
+
+        db.beginTransaction();
+
+        db.execSQL(sqliteExect);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
     }
 
 }

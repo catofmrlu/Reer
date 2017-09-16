@@ -3,9 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.baoyz.swipemenulistview.SwipeMenuListView
-        android:id="@+id/smlv_rssList"
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_stared"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/smlv_rssList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

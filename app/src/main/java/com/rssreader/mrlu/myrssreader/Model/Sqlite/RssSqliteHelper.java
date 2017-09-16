@@ -41,6 +41,7 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "RssName varchar,"
                 + "ItemPubdate varchar,"
                 + "ItemLink varchar,"
+                + "IsAppear integer,"
                 + "ItemDescription varchar)");
         Log.i("创建数据表", "创建未读items表成功！");
 
@@ -55,6 +56,7 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "RssName varchar,"
                 + "ItemPubdate varchar,"
                 + "ItemLink varchar,"
+                + "IsAppear integer,"
                 + "ItemDescription varchar)");
         Log.i("创建数据表", "创建标记items表成功！");
 
@@ -65,7 +67,6 @@ public class RssSqliteHelper extends SQLiteOpenHelper {
                 + "IsAppear integer,"
                 + "ItemsCount integer)");
         Log.i("创建数据表", "创建全部feed表成功！");
-
 
         Log.i("创建数据表", "--------------------------------------------\n创建全部表成功！");
 

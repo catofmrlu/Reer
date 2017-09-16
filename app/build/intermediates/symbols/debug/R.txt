@@ -1276,11 +1276,11 @@ int id invisible 0x7f0c004c
 int id item_touch_helper_previous_elevation 0x7f0c0005
 int id iv_back 0x7f0c008c
 int id iv_browser 0x7f0c00a2
-int id iv_night_swith 0x7f0c00df
+int id iv_night_swith 0x7f0c00e0
 int id iv_rss_search 0x7f0c008e
 int id iv_share 0x7f0c0093
 int id iv_star 0x7f0c0092
-int id iv_update 0x7f0c00e0
+int id iv_update 0x7f0c00e1
 int id largeLabel 0x7f0c00ad
 int id lay_bottom 0x7f0c00c4
 int id left 0x7f0c003a
@@ -1290,10 +1290,10 @@ int id listMode 0x7f0c001e
 int id list_item 0x7f0c0059
 int id ll_description_top 0x7f0c0090
 int id ll_search 0x7f0c008b
-int id masked 0x7f0c00e1
+int id masked 0x7f0c00e2
 int id media_actions 0x7f0c00cb
-int id menu_about 0x7f0c00e3
-int id menu_settings 0x7f0c00e2
+int id menu_about 0x7f0c00e4
+int id menu_settings 0x7f0c00e3
 int id middle 0x7f0c0046
 int id mini 0x7f0c0044
 int id multiply 0x7f0c002d
@@ -1355,6 +1355,7 @@ int id src_atop 0x7f0c002f
 int id src_in 0x7f0c0030
 int id src_over 0x7f0c0031
 int id srl_rssList 0x7f0c009d
+int id srl_stared 0x7f0c00de
 int id start 0x7f0c003c
 int id status_bar_latest_event_content 0x7f0c00ca
 int id statusbarutil_fake_status_bar_view 0x7f0c0009
@@ -1362,7 +1363,7 @@ int id statusbarutil_translucent_view 0x7f0c000a
 int id submenuarrow 0x7f0c006f
 int id submit_area 0x7f0c0080
 int id tabMode 0x7f0c0020
-int id tb_feedList 0x7f0c00de
+int id tb_feedList 0x7f0c00df
 int id tb_night 0x7f0c00a1
 int id tb_nightMode 0x7f0c00a0
 int id text 0x7f0c00da

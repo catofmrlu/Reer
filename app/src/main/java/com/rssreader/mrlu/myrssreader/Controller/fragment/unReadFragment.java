@@ -21,11 +21,8 @@ import android.widget.SimpleAdapter;
 
 import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
-import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
-
-import org.xml.sax.InputSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +34,6 @@ import java.util.Map;
 
 public class unReadFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    public String tag = "RSSReader";
-    private RSSFeed feed = null;
-    InputSource isc;
     private SimpleAdapter adapter;
     private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;

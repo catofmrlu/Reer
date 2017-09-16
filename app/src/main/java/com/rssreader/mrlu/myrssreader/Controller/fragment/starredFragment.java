@@ -5,9 +5,13 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.ArrayMap;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -21,7 +25,7 @@ import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
-import com.rssreader.mrlu.myrssreader.Controller.ShowDescriptionActivity;
+import com.rssreader.mrlu.myrssreader.Controller.ItemBrowserActivity;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
 import com.rssreader.mrlu.myrssreader.R;
 
@@ -36,6 +40,22 @@ import java.util.Map;
 public class starredFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     List<Map<String, String>> mapList;
+
+    private SimpleAdapter adapter;
+    private List<Map<String, String>> mRssUnreadList;
+    private SQLiteHandle mSqLiteHandle;
+    public String rssItemCount = "0";
+    private SwipeRefreshLayout srlStared;
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            adapter.notifyDataSetChanged();
+            srlStared.setRefreshing(false);
+        }
+    };
 
     @Nullable
     @Override
@@ -58,8 +78,8 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
                 map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
                 map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
-                map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
-
+                map.put("link", cursor.getString(cursor.getColumnIndex("ItemLink")));
+//                map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
 
                 Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
                 mapList.add(map);
@@ -78,8 +98,11 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
     //列表显示获取的RSS
     private void showListView(List<Map<String, String>> list, View view) {
         SwipeMenuListView itemlist = (SwipeMenuListView) view.findViewById(R.id.smlv_rssList);
+        srlStared = (SwipeRefreshLayout) view.findViewById(R.id.srl_stared);
+        srlStared.setColorSchemeResources(R.color.appBaseColor);
 
-        SimpleAdapter mAdapter = new SimpleAdapter(getActivity(), list,
+
+        adapter = new SimpleAdapter(getActivity(), list,
                 R.layout.item_list_item, new String[]{
                 "title", "pubdate"
         },
@@ -87,7 +110,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                         R.id.tv_itemname, R.id.tv_itempubdate
                 });
 
-        itemlist.setAdapter(mAdapter);
+        itemlist.setAdapter(adapter);
         itemlist.setOnItemClickListener(this);
         itemlist.setSelection(0);
 
@@ -134,7 +157,8 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        // open
+                        // delete
+
                         break;
                     case 1:
                         // stared
@@ -146,6 +170,27 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                 return false;
             }
         });
+
+
+        srlStared.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlStared.setRefreshing(true);
+                Log.i("loading...", "new thread1");
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Log.i("loading...", "new thread2");
+                        loadSQLiteData();
+
+                        SystemClock.sleep(1000);
+                        handler.sendEmptyMessage(0);
+                    }
+                }).start();
+            }
+        });
     }
 
     private int dp2px(int dp) {
@@ -155,21 +200,51 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent itemIntent = new Intent(getActivity(), ShowDescriptionActivity.class);
+        Intent itemIntent = new Intent(getActivity(), ItemBrowserActivity.class);
 
         //传递点击的项的数据
         Bundle bundle = new Bundle();
 
         Log.i("过程打印", mapList.get(position).get("title"));
-        Log.i("过程打印", mapList.get(position).get("description"));
         Log.i("过程打印", mapList.get(position).get("pubdate"));
+        Log.i("过程打印", mapList.get(position).get("link"));
 
         bundle.putString("title", mapList.get(position).get("title"));
-        bundle.putString("description", mapList.get(position).get("description"));
         bundle.putString("pubdate", mapList.get(position).get("pubdate"));
+        bundle.putString("itemLink", mapList.get(position).get("link"));
 
         itemIntent.putExtras(bundle);
 
         startActivity(itemIntent);
+    }
+
+    public void loadSQLiteData() {
+        {
+            mSqLiteHandle = new SQLiteHandle(getActivity());
+            Cursor cursor = mSqLiteHandle.queryUnappearstaredItems();
+
+            if (cursor != null) {
+
+                if (cursor != null || cursor.getCount() != 0 || cursor.getCount() != -1) {
+                    Log.i("cursor", "存在");
+
+                    while (cursor.moveToNext()) {
+                        Map<String, String> map = new ArrayMap<String, String>();
+
+                        map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
+                        map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
+                        map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
+
+                        Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
+                        mapList.add(map);
+                    }
+                }
+                cursor.close();
+
+                mSqLiteHandle.updateUnAppearStaredItems();
+            }
+            mSqLiteHandle.dbClose();
+            mSqLiteHandle = null;
+        }
     }
 }

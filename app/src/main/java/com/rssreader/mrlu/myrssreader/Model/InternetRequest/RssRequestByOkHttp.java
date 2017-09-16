@@ -39,16 +39,17 @@ public class RssRequestByOkHttp {
 
     public void getRssFeed(final String rssLink) {
 
-        String link = null;
+//        String link = null;
+        String rsslink = rssLink;
 
-        if (rssLink.indexOf("http") <= 0)
-            link = "http://" + rssLink;
-        Log.i("link", link);
+        if (!rssLink.contains("http"))
+            rsslink = "http://" + rssLink;
+        Log.i("link", rsslink);
         try {
 
             //使用OkHttp3作为网络请求框架
             okHttpClient = new OkHttpClient();
-            Request.Builder builder = new Request.Builder().url(link);
+            Request.Builder builder = new Request.Builder().url(rsslink);
             builder.method("GET", null);
             Request request = builder.build();
             Call call = okHttpClient.newCall(request);
