@@ -55,7 +55,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
             super.handleMessage(msg);
 
             adapter.notifyDataSetChanged();
-
             srlFeedList.setRefreshing(false);
         }
     };
@@ -102,7 +101,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                         loadSQLiteData();
 
                         SystemClock.sleep(600);
-
                         handler.sendEmptyMessage(0);
                     }
                 }).start();
@@ -176,7 +174,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
             itemIntent.putExtra("rssName", mRssUnreadList.get(position).get("rssName"));
             startActivity(itemIntent);
-
         } catch (Exception e) {
             Log.i("onItemClick:error", e.getMessage());
         }
@@ -189,8 +186,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
             if (cursor != null) {
                 Log.i("过程打印", "存在Feed");
-                ArrayMap<String, String> map = new ArrayMap<String, String>();
-
                 Log.i("count数", String.valueOf(cursor.getCount()));
 
                 while (cursor.moveToNext()) {
