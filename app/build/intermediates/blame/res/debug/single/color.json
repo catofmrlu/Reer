@@ -4,12 +4,12 @@
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/color/design_error.xml"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
         "source": "/Users/luxin/.android/build-cache/b665c1f46326dbe4c8887a11f51082053872c1ba/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/luxin/.android/build-cache/7c9eed5000f413dd0feab03437dee75869b9dad7/output/res/color/design_error.xml"
     },
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",

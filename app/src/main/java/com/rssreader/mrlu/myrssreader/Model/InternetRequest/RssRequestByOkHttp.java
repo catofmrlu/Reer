@@ -46,13 +46,12 @@ public class RssRequestByOkHttp {
         Log.i("link", link);
         try {
 
+            //使用OkHttp3作为网络请求框架
             okHttpClient = new OkHttpClient();
             Request.Builder builder = new Request.Builder().url(link);
             builder.method("GET", null);
             Request request = builder.build();
             Call call = okHttpClient.newCall(request);
-
-            final String finalLink = link;
             call.enqueue(new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
@@ -103,7 +102,6 @@ public class RssRequestByOkHttp {
                                     feed.getAllItemsForListView()) {
 
                                 ArrayMap<String, String> arrayMap = (ArrayMap<String, String>) map;
-
                                 String title = arrayMap.get("title");
                                 String pubdate = arrayMap.get("pubdate");
                                 String description = arrayMap.get("description");

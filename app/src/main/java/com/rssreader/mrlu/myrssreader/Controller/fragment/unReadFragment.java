@@ -19,7 +19,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.android.volley.RequestQueue;
 import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
 import com.rssreader.mrlu.myrssreader.Model.Rss.RSSFeed;
@@ -41,7 +40,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     public String tag = "RSSReader";
     private RSSFeed feed = null;
     InputSource isc;
-    private RequestQueue mRequestQueue;
     private SimpleAdapter adapter;
     private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;
@@ -191,11 +189,7 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
             if (cursor != null) {
                 Log.i("过程打印", "存在Feed");
-
                 ArrayMap<String, String> map = new ArrayMap<String, String>();
-                map.put("rssName", "全部未读");
-                map.put("rssCount", rssItemCount);
-                mRssUnreadList.add(map);
 
                 Log.i("count数", String.valueOf(cursor.getCount()));
 

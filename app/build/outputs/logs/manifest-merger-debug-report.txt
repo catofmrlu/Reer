@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-50:12
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:5-
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:7:22-65
 application
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:5-48:19
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:9:5-47:19
 MERGED from [com.miomin:shswiperefreshlayout:1.2.0] /Users/luxin/.android/build-cache/3b54c46ef21962c841e39ccf55720b81d5519eb0/output/AndroidManifest.xml:11:5-15:19
 MERGED from [org.xutils:xutils:3.3.40] /Users/luxin/.android/build-cache/40c88c08e1092fe37b3a4eb78cb74a0128c29374/output/AndroidManifest.xml:12:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luxin/.android/build-cache/1bc6e3285a7ba30511c80d643616283680e119fb/output/AndroidManifest.xml:9:5-20
@@ -83,40 +83,36 @@ activity#com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity
 ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:21:9-69
 	android:name
 		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:21:19-66
-activity#com.rssreader.mrlu.myrssreader.Controller.FeedlyRssQuery
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:22:9-63
-	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:22:19-60
 activity#com.rssreader.mrlu.myrssreader.Controller.mainView
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:23:9-57
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:22:9-57
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:23:19-54
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:22:19-54
 activity#com.rssreader.mrlu.myrssreader.Controller.openScreenActivity
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:24:9-29:20
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:23:9-28:20
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:24:19-64
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:23:19-64
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:25:13-28:29
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:26:27-74
 activity#com.rssreader.mrlu.myrssreader.Controller.AboutActivity
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:9-62
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:29:9-62
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:19-59
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:29:19-59
 activity#com.rssreader.mrlu.myrssreader.Controller.AppearPageActivity
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:31:9-67
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:9-67
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:31:19-64
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:30:19-64
 activity#com.rssreader.mrlu.myrssreader.Controller.ItemBrowserActivity
-ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:9-68
+ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:46:9-68
 	android:name
-		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:47:19-65
+		ADDED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:46:19-65
 uses-sdk
 INJECTED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.miomin:shswiperefreshlayout:1.2.0] /Users/luxin/.android/build-cache/3b54c46ef21962c841e39ccf55720b81d5519eb0/output/AndroidManifest.xml:7:5-9:41
@@ -194,7 +190,7 @@ MERGED from [cn.jiguang.sdk:janalytics:1.1.1] /Users/luxin/.android/build-cache/
 		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:20:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:22:5-80
-IMPLIED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-50:12 reason: cn.jpush.client.android requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/luxin/工程/github/Reer/app/src/main/AndroidManifest.xml:2:1-49:12 reason: cn.jpush.client.android requested WRITE_EXTERNAL_STORAGE
 MERGED from [cn.jiguang.sdk:janalytics:1.1.1] /Users/luxin/.android/build-cache/31cc732a0e9d00d7af7152a4e129f179aa07e4d3/output/AndroidManifest.xml:16:5-80
 	android:name
 		ADDED from [cn.jiguang.sdk:jpush:3.0.3] /Users/luxin/.android/build-cache/03118320cf50fa1f8d5db700390465f179a5e6bf/output/AndroidManifest.xml:22:22-77
