@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
@@ -28,7 +29,7 @@ import static com.rssreader.mrlu.myrssreader.R.color.appBaseColor;
 public class InputRssLinkActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText mEtRssLink;
-    private ImageView mIvRssSearch;
+    private TextView mTvRssSearch;
     ProgressDialog progressDialog;
 
     public int rssItemCount = 0;
@@ -75,12 +76,11 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_input_rss_link);
         ButterKnife.bind(this);
         initView();
-
     }
 
     private void initView() {
         mEtRssLink = (EditText) findViewById(R.id.et_rssLink);
-        mIvRssSearch = (ImageView) findViewById(R.id.iv_rss_search);
+        mTvRssSearch = (TextView) findViewById(R.id.tv_rss_search);
         ImageView ivBack = (ImageView) findViewById(R.id.iv_back);
         ImageView ivIthome = (ImageView) findViewById(R.id.iv_ithome);
         ImageView ivIfar = (ImageView) findViewById(R.id.iv_ifar);
@@ -189,7 +189,7 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         });
 
         //搜索按钮
-        mIvRssSearch.setOnClickListener(new View.OnClickListener() {
+        mTvRssSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("过程打印", "search已点击");

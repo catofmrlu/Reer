@@ -5,6 +5,19 @@
     android:orientation="vertical">
 
     <TextView
+        android:paddingTop="1dp"
+        android:id="@+id/tv_rssname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:paddingEnd="2dp"
+        android:paddingStart="5dp"
+        android:textColor="@color/md_grey_400_color_code"
+        android:textSize="14sp" />
+
+    <TextView
         android:id="@+id/tv_itemname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

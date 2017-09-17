@@ -1,5 +1,6 @@
 package com.rssreader.mrlu.myrssreader.Controller.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.ArrayMap;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.rssreader.mrlu.myrssreader.Controller.InputRssLinkActivity;
 import com.rssreader.mrlu.myrssreader.Controller.ListActivity;
@@ -58,7 +61,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_rss_feed_list, container, false);
-
         init();
 
         return view;
@@ -158,6 +160,53 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
         } catch (Exception e) {
             Log.i("list显示问题", e.getMessage());
         }
+
+        itemlist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                if (position == 0)
+                    Toast.makeText(getActivity(), "该条目不可删除！", Toast.LENGTH_SHORT).show();
+                else {
+                    final String rssName = mRssUnreadList.get(position).get("rssName");
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("删除rss订阅源")
+                            .setMessage("是否删除「 " + rssName + " 」？")
+                            .setPositiveButton("是的", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            mSqLiteHandle = new SQLiteHandle(getActivity());
+                                            mSqLiteHandle.deleteFeed(mRssUnreadList.get(position).get("rssName"));
+                                            mSqLiteHandle.deleteFeedUnreadItem(mRssUnreadList.get(position).get("rssName"));
+
+                                            mRssUnreadList.remove(position);
+
+                                            mSqLiteHandle.dbClose();
+                                            mSqLiteHandle = null;
+
+                                            Message message = new Message();
+                                            message.obj = "delete";
+
+                                            handler.sendMessage(message);
+                                        }
+                                    }).start();
+                                }
+                            })
+                            .setNeutralButton("误触", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            }).show();
+
+                }
+                return true;
+            }
+        });
     }
 
     //处理列表的单击事件
@@ -202,10 +251,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
             mSqLiteHandle.dbClose();
             mSqLiteHandle = null;
             Log.i("unReadFragment", "onCreateView:mSqLiteHandle已关闭");
-
         }
-
-
     }
-
 }

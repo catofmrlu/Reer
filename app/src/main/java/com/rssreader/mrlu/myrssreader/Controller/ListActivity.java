@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.util.ArrayMap;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -32,6 +34,21 @@ import java.util.Map;
 public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     List<Map<String, String>> mapList;
+    SimpleAdapter mAdapter;
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            switch ((String) msg.obj) {
+
+                case "delete":
+                    mAdapter.notifyDataSetChanged();
+                    break;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,12 +90,12 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     private void showListView(List<Map<String, String>> list) {
         SwipeMenuListView itemlist = (SwipeMenuListView) findViewById(R.id.smlv_rssList);
 
-        SimpleAdapter mAdapter = new SimpleAdapter(this, list,
+        mAdapter = new SimpleAdapter(this, list,
                 R.layout.item_list_item, new String[]{
-                "title", "pubdate"
+                "rssName", "title", "pubdate"
         },
                 new int[]{
-                        R.id.tv_itemname, R.id.tv_itempubdate
+                        R.id.tv_rssname, R.id.tv_itemname, R.id.tv_itempubdate
                 });
 
         itemlist.setAdapter(mAdapter);
@@ -129,7 +146,23 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 switch (index) {
                     case 0:
                         // delete
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                SQLiteHandle sqLiteHandle = new SQLiteHandle(ListActivity.this);
+                                sqLiteHandle.deleteUnreadItem(mapList.get(position).get("title"));
+                                Log.i("删除标记条目", mapList.get(position).get("title"));
 
+                                sqLiteHandle.dbClose();
+                                sqLiteHandle = null;
+
+                                mapList.remove(position);
+
+                                Message message = new Message();
+                                message.obj = "delete";
+                                handler.sendMessage(message);
+                            }
+                        }).start();
                         break;
                     case 1:
                         // stared

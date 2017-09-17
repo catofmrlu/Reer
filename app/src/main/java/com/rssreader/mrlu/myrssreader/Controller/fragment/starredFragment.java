@@ -1,9 +1,8 @@
 package com.rssreader.mrlu.myrssreader.Controller.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.ArrayMap;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -19,11 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
-import com.baoyz.swipemenulistview.SwipeMenu;
-import com.baoyz.swipemenulistview.SwipeMenuCreator;
-import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.rssreader.mrlu.myrssreader.Controller.ItemBrowserActivity;
 import com.rssreader.mrlu.myrssreader.Model.Sqlite.SQLiteHandle;
@@ -86,6 +82,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                 map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
                 map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
                 map.put("link", cursor.getString(cursor.getColumnIndex("ItemLink")));
+                map.put("rssname", cursor.getString(cursor.getColumnIndex("RssName")));
 //                map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
 
                 Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
@@ -111,10 +108,10 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
 
         adapter = new SimpleAdapter(getActivity(), list,
                 R.layout.item_list_item, new String[]{
-                "title", "pubdate"
+                "rssname", "title", "pubdate"
         },
                 new int[]{
-                        R.id.tv_itemname, R.id.tv_itempubdate
+                        R.id.tv_rssname, R.id.tv_itemname, R.id.tv_itempubdate
                 });
 
         itemlist.setAdapter(adapter);
@@ -122,78 +119,100 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
         itemlist.setSelection(0);
 
         //注册项目的侧滑选项
-        SwipeMenuCreator creator = new SwipeMenuCreator() {
-            @Override
-            public void create(SwipeMenu menu) {
-                // create "open" item
-                SwipeMenuItem deleteItem = new SwipeMenuItem(
-                        getActivity());
-                // set item background
-                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                        0xCE)));
-                // set item width
-                deleteItem.setWidth(dp2px(70));
-                // set item title
-                deleteItem.setTitle("Delete");
-                // set item title fontsize
-                deleteItem.setTitleSize(18);
-                // set item title font color
-                deleteItem.setTitleColor(Color.WHITE);
-                deleteItem.setBackground(R.color.md_red_500_color_code);
-                // add to menu
-                menu.addMenuItem(deleteItem);
-                // create "delete" item
-                SwipeMenuItem staredItem = new SwipeMenuItem(
-                        getActivity());
-                // set item background
-                staredItem.setBackground(R.color.green);
-                // set item width
-                staredItem.setWidth(dp2px(70));
-                // set a icon
-                staredItem.setIcon(R.drawable.long_press_starred);
-                // add to menu
-                menu.addMenuItem(staredItem);
-            }
+//        SwipeMenuCreator creator = new SwipeMenuCreator() {
+//            @Override
+//            public void create(SwipeMenu menu) {
+//                // create "open" item
+//                SwipeMenuItem deleteItem = new SwipeMenuItem(
+//                        getActivity());
+//                // set item background
+//                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
+//                        0xCE)));
+//                // set item width
+//                deleteItem.setWidth(dp2px(70));
+//                // set item title
+//                deleteItem.setTitle("Delete");
+//                // set item title fontsize
+//                deleteItem.setTitleSize(18);
+//                // set item title font color
+//                deleteItem.setTitleColor(Color.WHITE);
+//                deleteItem.setBackground(R.color.md_red_500_color_code);
+//                // add to menu
+//                menu.addMenuItem(deleteItem);
+//            }
+//
+//        };
+//        // set creator
+//        itemlist.setMenuCreator(creator);
+//
+//        itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(final int position, SwipeMenu menu, int index) {
+//
+//                new Thread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
+//                        sqLiteHandle.deleteStaredItem(mapList.get(position).get("title"));
+//                        Log.i("删除标记条目", mapList.get(position).get("title"));
+//
+//                        sqLiteHandle.dbClose();
+//                        sqLiteHandle = null;
+//
+//                        mapList.remove(position);
+//
+//                        Message message = new Message();
+//                        message.obj = "delete";
+//                        handler.sendMessage(message);
+//                    }
+//                }).start();
+//
+//                // false : close the menu; true : not close the menu
+//                return false;
+//            }
+//        });
 
-        };
-        // set creator
-        itemlist.setMenuCreator(creator);
-
-        itemlist.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+        itemlist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onMenuItemClick(final int position, SwipeMenu menu, int index) {
-                switch (index) {
-                    case 0:
-                        // delete
-                        new Thread(new Runnable() {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                final String title = mRssUnreadList.get(position).get("title");
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("删除rss订阅源")
+                        .setMessage("是否删除「 " + title + " 」？")
+                        .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                             @Override
-                            public void run() {
-                                SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
-                                sqLiteHandle.deleteStaredItem(mapList.get(position).get("title"));
-                                Log.i("删除标记条目", mapList.get(position).get("title"));
+                            public void onClick(DialogInterface dialog, int which) {
 
-                                sqLiteHandle.dbClose();
-                                sqLiteHandle = null;
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        SQLiteHandle sqLiteHandle = new SQLiteHandle(getActivity());
+                                        sqLiteHandle.deleteStaredItem(mapList.get(position).get("title"));
+                                        Log.i("删除标记条目", mapList.get(position).get("title"));
 
-                                mapList.remove(position);
+                                        sqLiteHandle.dbClose();
+                                        sqLiteHandle = null;
 
-                                Message message = new Message();
-                                message.obj = "delete";
-                                handler.sendMessage(message);
+                                        mapList.remove(position);
+
+                                        Message message = new Message();
+                                        message.obj = "delete";
+                                        handler.sendMessage(message);
+                                    }
+                                }).start();
                             }
-                        }).start();
-                        break;
-                    case 1:
-                        // stared
-                        Toast.makeText(getActivity(), "已添加到标记", Toast.LENGTH_SHORT).show();
-                        break;
-                }
+                        })
+                        .setNeutralButton("误触", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-                // false : close the menu; true : not close the menu
-                return false;
+                            }
+                        }).show();
+
+
+                return true;
             }
         });
-
 
         srlStared.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -230,10 +249,6 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
         //传递点击的项的数据
         Bundle bundle = new Bundle();
 
-        Log.i("过程打印", mapList.get(position).get("title"));
-        Log.i("过程打印", mapList.get(position).get("pubdate"));
-        Log.i("过程打印", mapList.get(position).get("link"));
-
         bundle.putString("title", mapList.get(position).get("title"));
         bundle.putString("pubdate", mapList.get(position).get("pubdate"));
         bundle.putString("itemLink", mapList.get(position).get("link"));
@@ -259,6 +274,7 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
                         map.put("title", cursor.getString(cursor.getColumnIndex("ItemTitle")));
                         map.put("pubdate", cursor.getString(cursor.getColumnIndex("ItemPubdate")));
                         map.put("description", cursor.getString(cursor.getColumnIndex("ItemDescription")));
+                        map.put("rssname", cursor.getString(cursor.getColumnIndex("RssName")));
 
                         Log.i("appear-item", map.get("title") + ":" + map.get("pubdate"));
                         mapList.add(map);

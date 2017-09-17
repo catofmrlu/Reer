@@ -110,6 +110,42 @@ public class SQLiteHandle {
         db.endTransaction();
     }
 
+    public void deleteUnreadItem(String itemName) {
+        Log.i("sqlite", "开始");
+        String where = "ItemTitle = '" + itemName + "'";
+
+        db.beginTransaction();
+
+        db.delete("unReadItems", where, null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
+    public void deleteFeedUnreadItem(String feedName) {
+        Log.i("sqlite", "开始");
+        String where = "RssName = '" + feedName + "'";
+
+        db.beginTransaction();
+
+        db.delete("unReadItems", where, null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
+    public void deleteFeed(String feedName) {
+        Log.i("sqlite", "开始");
+        String where = "RssName = '" + feedName + "'";
+
+        db.beginTransaction();
+
+        db.delete("AllFeeds", where, null);
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+    }
+
     public void logAllFeeds() {
 //        db = mSqlHelper.getWritableDatabase();
         Log.i("sqlite", "开始");
