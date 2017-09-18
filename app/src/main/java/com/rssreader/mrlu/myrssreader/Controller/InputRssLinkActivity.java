@@ -45,15 +45,15 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             new AlertDialog.Builder(InputRssLinkActivity.this)
                     .setTitle("添加rss源")
 
-//                    .setMessage("是否添加「 " + name + " 」？")
-                    .setMessage("是否添加「 豆瓣最受欢迎的影评 」？")
+                    .setMessage("是否添加「 " + name + " 」？")
+//                    .setMessage("是否添加「 豆瓣最受欢迎的影评 」？")
                     .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
                             Toast.makeText(InputRssLinkActivity.this,
-//                                    "「" + name + "」已添加",
-                                    "「豆瓣最受欢迎的影评」已添加",
+                                    "「" + name + "」已添加",
+//                                    "「豆瓣最受欢迎的影评」已添加",
                                     Toast.LENGTH_LONG).show();
                         }
                     })
@@ -108,6 +108,7 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
+//
         ivIthome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,6 +188,7 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
                 getFeed("www.feng.com/rss");
             }
         });
+//
 
         //搜索按钮
         mTvRssSearch.setOnClickListener(new View.OnClickListener() {
@@ -219,11 +221,13 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
                 RssRequestByOkHttp rssRequestByOkHttp = new RssRequestByOkHttp(InputRssLinkActivity.this);
                 rssRequestByOkHttp.getRssFeed(link);
 
-                SystemClock.sleep(1500);
-//
-//                Message message = new Message();
-//                message.obj = name;
-                handler.sendEmptyMessage(0);
+                SystemClock.sleep(800);
+
+                String name = rssRequestByOkHttp.getRssName();
+
+                Message message = new Message();
+                message.obj = name;
+                handler.sendMessage(message);
             }
         }).start();
     }
@@ -235,7 +239,6 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         editText.requestFocus();
         activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
-
 
     @Override
     protected void onResume() {

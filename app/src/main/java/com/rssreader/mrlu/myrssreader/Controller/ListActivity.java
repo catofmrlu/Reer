@@ -16,6 +16,7 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,8 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
 
     List<Map<String, String>> mapList;
     SimpleAdapter mAdapter;
+    TextView mTvFeedName;
+
 
     Handler handler = new Handler() {
         @Override
@@ -56,8 +59,11 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_list);
         TextView tvFeedName = (TextView) findViewById(R.id.tv_feedname);
 
+        LinearLayout llList = (LinearLayout) findViewById(R.id.ll_list);
+
         String feedName = getIntent().getStringExtra("rssName");
         tvFeedName.setText(feedName);
+
 
         SQLiteHandle sqLiteHandle = new SQLiteHandle(this);
         Cursor cursor = sqLiteHandle.queryFeedUnreadItems(feedName);
@@ -84,6 +90,7 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         } else {
             Log.i("ListActivity", "cursor为空");
         }
+
     }
 
     //列表显示获取的RSS
@@ -102,7 +109,37 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         itemlist.setOnItemClickListener(this);
         itemlist.setSelection(0);
 
+        //处理列表的滑动操作，以实现滑动去全屏
+//        itemlist.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                float startY = 0;
+//                float endY = 0;
+//                switch (event.getAction()) {
+//                    case MotionEvent.ACTION_DOWN:
+//                        startY = event.getY();
+//                        Log.i("已按下", Float.toString(startY));
+//                        break;
+//                    case MotionEvent.ACTION_MOVE:
+//                        endY = event.getY();
+//                        Log.i("已移动", Float.toString(endY));
+//
+//                        break;
+//                }
+//
+//                //根据endY-startY的值来判断乡下或向上滑，进而进行处理
+//                if (startY - endY > 50) {
+//                    mTvFeedName.setVisibility(com.mingle.widget.View.GONE);
+//                } else if (endY - startY > 50) {
+//                    mTvFeedName.setVisibility(View.VISIBLE);
+//                }
+//
+//                return false;
+//            }
+//        });
+
         //注册项目的侧滑选项
+
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
@@ -238,6 +275,4 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                 getResources().getDisplayMetrics());
     }
-
-
 }

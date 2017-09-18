@@ -33,6 +33,12 @@ public class RssRequestByOkHttp {
 
     OkHttpClient okHttpClient;
 
+    public String getRssName() {
+        return RSS_NAME;
+    }
+
+    public static String RSS_NAME;
+
     public RssRequestByOkHttp(Context context) {
         this.mContext = context;
     }
@@ -75,6 +81,9 @@ public class RssRequestByOkHttp {
 
                         feed = rssHandler.getFeed();
 
+                        RSS_NAME = feed.getName();
+                        Log.i("RSS_NAME", RSS_NAME);
+
                     } catch (ParserConfigurationException e) {
                         e.printStackTrace();
                     } catch (SAXException e) {
@@ -115,6 +124,7 @@ public class RssRequestByOkHttp {
                                         + "   ----"
                                         + "description:" + description);
                             }
+
                         } else {
                             Log.e("添加feed", "该feed已添加");
 //

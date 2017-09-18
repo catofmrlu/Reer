@@ -175,9 +175,9 @@ public class starredFragment extends Fragment implements AdapterView.OnItemClick
         itemlist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                final String title = mRssUnreadList.get(position).get("title");
+                final String title = mapList.get(position).get("title");
                 new AlertDialog.Builder(getActivity())
-                        .setTitle("删除rss订阅源")
+                        .setTitle("删除标记条目")
                         .setMessage("是否删除「 " + title + " 」？")
                         .setPositiveButton("是的", new DialogInterface.OnClickListener() {
                             @Override
