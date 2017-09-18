@@ -40,7 +40,6 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
     private SimpleAdapter adapter;
     private List<Map<String, String>> mRssUnreadList;
     private SQLiteHandle mSqLiteHandle;
-    public String rssItemCount = "0";
 
     View view;
     ListView itemlist;
@@ -68,6 +67,8 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     public void init() {
         mRssUnreadList = new ArrayList<Map<String, String>>();
+        int rssItemCount = 0;
+
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab_add);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +112,7 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
             ArrayMap<String, String> map = new ArrayMap<String, String>();
             map.put("rssName", "全部未读");
-            map.put("rssCount", rssItemCount);
+            map.put("rssCount", Integer.toString(rssItemCount));
             mRssUnreadList.add(map);
 
             Log.i("count数", String.valueOf(cursor.getCount()));
@@ -123,12 +124,13 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                 ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
                 arrayMap.put("rssName", name);
                 arrayMap.put("rssCount", String.valueOf(count));
+                rssItemCount += count;
                 mRssUnreadList.add(arrayMap);
             }
-
         } else {
             Log.i("过程打印", "不存在Feed");
         }
+        mRssUnreadList.get(0).put("rssCount", Integer.toString(rssItemCount));
 
         cursor.close();
         mSqLiteHandle.dbClose();
@@ -224,6 +226,7 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
 
     public void loadSQLiteData() {
         {
+            int allCount = 0;
             mSqLiteHandle = new SQLiteHandle(getActivity());
             Cursor cursor = mSqLiteHandle.queryUnappearFeeds();
 
@@ -234,16 +237,17 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                 while (cursor.moveToNext()) {
                     String name = cursor.getString(cursor.getColumnIndex("RssName"));
                     int count = cursor.getInt(cursor.getColumnIndex("ItemsCount"));
+                    allCount += count;
 
                     ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
                     arrayMap.put("rssName", name);
                     arrayMap.put("rssCount", String.valueOf(count));
                     mRssUnreadList.add(arrayMap);
                 }
-
             } else {
                 Log.i("过程打印", "不存在Feed");
             }
+            mRssUnreadList.get(0).put("rssCount", Integer.toString(allCount));
 
             mSqLiteHandle.updateUnAppearFeeds();
 

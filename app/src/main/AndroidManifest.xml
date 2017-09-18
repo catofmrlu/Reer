@@ -23,6 +23,7 @@
         <activity android:name=".Controller.openScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -44,6 +45,7 @@
         <!-- </intent-filter> -->
         <!-- </receiver> -->
         <activity android:name=".Controller.ItemBrowserActivity" />
+        <activity android:name=".Controller.AppUseGuiderActivity"></activity>
     </application>
 
 </manifest>
