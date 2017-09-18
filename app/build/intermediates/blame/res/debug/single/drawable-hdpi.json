@@ -72,14 +72,6 @@
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/search.png"
     },
     {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ap3.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/ap3.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ap1.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/ap1.png"
-    },
-    {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/zhihu.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/zhihu.png"
     },
@@ -110,9 +102,5 @@
     {
         "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ithome.png",
         "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/ithome.png"
-    },
-    {
-        "merged": "/Users/luxin/工程/github/Reer/app/build/intermediates/res/merged/debug/drawable-hdpi/ap2.png",
-        "source": "/Users/luxin/工程/github/Reer/app/src/main/res/drawable-hdpi/ap2.png"
     }
 ]

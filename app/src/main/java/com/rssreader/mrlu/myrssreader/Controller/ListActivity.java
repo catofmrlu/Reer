@@ -261,7 +261,6 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         Log.i("过程打印", mapList.get(position).get("itemLink"));
         Log.i("过程打印", mapList.get(position).get("rssName"));
 
-
         bundle.putString("title", mapList.get(position).get("title"));
         bundle.putString("description", mapList.get(position).get("description"));
         bundle.putString("pubdate", mapList.get(position).get("pubdate"));
