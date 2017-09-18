@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+    <view
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_foot"
+        android:text="下面没有了"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <view
+        android:layout_height="1dp"
+        android:layout_width="0dp"
+        android:layout_weight="3"/>
+</LinearLayout>

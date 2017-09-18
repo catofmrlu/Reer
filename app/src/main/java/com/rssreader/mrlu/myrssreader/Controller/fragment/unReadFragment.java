@@ -237,16 +237,19 @@ public class unReadFragment extends Fragment implements AdapterView.OnItemClickL
                 while (cursor.moveToNext()) {
                     String name = cursor.getString(cursor.getColumnIndex("RssName"));
                     int count = cursor.getInt(cursor.getColumnIndex("ItemsCount"));
-                    allCount += count;
 
                     ArrayMap<String, String> arrayMap = new ArrayMap<String, String>();
                     arrayMap.put("rssName", name);
                     arrayMap.put("rssCount", String.valueOf(count));
                     mRssUnreadList.add(arrayMap);
                 }
+
             } else {
                 Log.i("过程打印", "不存在Feed");
             }
+
+            //更新全部未读数目
+            allCount = mSqLiteHandle.queryAllUnreadItems().getCount();
             mRssUnreadList.get(0).put("rssCount", Integer.toString(allCount));
 
             mSqLiteHandle.updateUnAppearFeeds();

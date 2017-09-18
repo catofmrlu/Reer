@@ -85,17 +85,16 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 Log.i("appear-item", map.get("title") + ":" + map.get("pubdate") + ":" + map.get("itemLink"));
                 mapList.add(map);
             }
-
             showListView(mapList);
         } else {
             Log.i("ListActivity", "cursor为空");
         }
-
     }
 
     //列表显示获取的RSS
     private void showListView(List<Map<String, String>> list) {
         SwipeMenuListView itemlist = (SwipeMenuListView) findViewById(R.id.smlv_rssList);
+
 
         mAdapter = new SimpleAdapter(this, list,
                 R.layout.item_list_item, new String[]{
@@ -104,11 +103,13 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
                 new int[]{
                         R.id.tv_rssname, R.id.tv_itemname, R.id.tv_itempubdate
                 });
+//
+//        View footView = (View) LayoutInflater.from(this).inflate(R.layout.foot_view, null);
+//        itemlist.addFooterView(footView);
 
         itemlist.setAdapter(mAdapter);
         itemlist.setOnItemClickListener(this);
         itemlist.setSelection(0);
-
         //处理列表的滑动操作，以实现滑动去全屏
 //        itemlist.setOnTouchListener(new View.OnTouchListener() {
 //            @Override

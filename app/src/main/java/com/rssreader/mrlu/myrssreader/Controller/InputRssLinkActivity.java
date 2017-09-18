@@ -144,8 +144,8 @@ public class InputRssLinkActivity extends AppCompatActivity implements View.OnCl
         ivHuxiu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("打印rssLink", "https://www.huxiu.com/rss/0");
-                getFeed("https://www.huxiu.com/rss/0");
+                Log.i("打印rssLink", "https://www.huxiu.com/rss/0.xml");
+                getFeed("https://www.huxiu.com/rss/0.xml");
             }
         });
 
