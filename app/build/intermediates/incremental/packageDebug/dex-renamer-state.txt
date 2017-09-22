@@ -1,4 +1,4 @@
-#Mon Sep 18 22:58:25 CST 2017
+#Wed Sep 20 20:19:17 CST 2017
 base.0=/Users/luxin/工程/github/Reer/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2ca8742f02087d4a7b59c731c40c322bff23ae72
 renamed.1=classes.dex
 renamed.0=classes2.dex
