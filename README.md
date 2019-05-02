@@ -1,13 +1,12 @@
 ## **Reer**
-
+![](https://img.shields.io/badge/平台-Android-brightgreen.svg)
+![](https://img.shields.io/badge/类型-RSS-orange.svg)
+---
 > 一个建设中的离线RSS阅读器。个人第一个正式项目，虽然RSS现在是一个小众的需求，但本人因为是RSS的重度用户，所以希望为安卓平台贡献一个好用的客户端。
 >
 > 我希望Reer可以像ios下的Castro、Reeder亦或是android下的Press一样有自己的开发哲学，来指导app的交互、动画、功能的设计，而不是亦步亦趋地跟随所谓的风尚的脚步。
 
-
-
 ---
-
 **最新版本下载地址**
 
 百度云：http://pan.baidu.com/s/1gfxkDqj
